@@ -8,11 +8,6 @@
   },
   "Data": [
     {
-      "Version": "10240",
-      "FullVersion": "10.0.10240",
-      "Build": "1507 (RTM)"
-    },
-    {
       "Version": "10586",
       "FullVersion": "10.0.10586",
       "Build": "1511"

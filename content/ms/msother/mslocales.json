@@ -7,12 +7,6 @@
   },
   "Data": [
     {
-      "LangCode": 1025,
-      "LangCodeHex": "0401",
-      "LangName": "Arabic - Saudi Arabia",
-      "LangTag": "ar-SA"
-    },
-    {
       "LangCode": 1026,
       "LangCodeHex": "0402",
       "LangName": "Bulgarian",

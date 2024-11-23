@@ -7,10 +7,6 @@
   },
   "Data": [
     {
-      "AsrName": "Block Office communication application from creating child processes",
-      "AsrGuid": "26190899-1602-49e8-8b27-eb1d0a1ce869"
-    },
-    {
       "AsrName": "Block rebooting machine in Safe Mode (preview)",
       "AsrGuid": "33ddedf1-c6e0-47cb-833e-de6133960387"
     },

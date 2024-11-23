@@ -8,13 +8,6 @@
   "Data": [
     {
       "ReleaseDate": "2024-11-12",
-      "Channel": "Current",
-      "Build": "18129.20158",
-      "Version": "2410",
-      "FullBuild": "16.0.18129.20158"
-    },
-    {
-      "ReleaseDate": "2024-11-12",
       "Channel": "Monthly Enterprise",
       "Build": "18025.20214",
       "Version": "2409",

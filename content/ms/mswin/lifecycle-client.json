@@ -11,12 +11,6 @@
   "Data": [
     {
       "Version": "1507",
-      "SKU": "Windows 10 Home and Pro",
-      "StartDate": "2015-07-29",
-      "EndDate": "2017-05-10"
-    },
-    {
-      "Version": "1507",
       "SKU": "Windows 10 Enterprise and Education",
       "StartDate": "2015-07-29",
       "EndDate": "2017-05-10"

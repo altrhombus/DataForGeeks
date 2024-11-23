@@ -13,12 +13,6 @@
   },
   "Data": [
     {
-      "Version": "Windows Server 2008",
-      "StartDate": "2008-05-06",
-      "MainstreamEndDate": "2015-01-14",
-      "ExtendedEndDate": "2020-01-15"
-    },
-    {
       "Version": "Windows Server 2008 R2",
       "StartDate": "2009-10-22",
       "MainstreamEndDate": "2015-01-14",
