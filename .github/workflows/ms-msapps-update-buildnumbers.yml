@@ -19,10 +19,11 @@ jobs:
       - name: Run the PowerShell Script
         shell: pwsh
         run: ./scripts/ms/msapps/m365buildnumbers.ps1
-      - name: Submit a Pull Request
+      - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v7.0.5
         with:
+          branch-token: ${{ steps.generate-token.outputs.token }}
           commit-message: Updated Microsoft Windows Build Numbers JSON
           branch: au/ms-msapps-update-buildnumbers
           delete-branch: true
