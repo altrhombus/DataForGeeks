@@ -1,11 +1,19 @@
 {
-  "DataForNerds": {
-    "LastUpdatedUTC": "2024-07-04T21:15:42.3139133Z",
+  "DataForGeeks": {
+    "LastUpdatedUTC": "2024-11-23T05:50:15.9030053Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference"
     ]
   },
   "Data": [
+    {
+      "AsrName": "Block executable files from running unless they meet a prevalence, age, or trusted list criterion",
+      "AsrGuid": "01443614-cd74-433a-b99e-2ecdc07bfc25"
+    },
+    {
+      "AsrName": "Block Office communication application from creating child processes",
+      "AsrGuid": "26190899-1602-49e8-8b27-eb1d0a1ce869"
+    },
     {
       "AsrName": "Block rebooting machine in Safe Mode (preview)",
       "AsrGuid": "33ddedf1-c6e0-47cb-833e-de6133960387"
