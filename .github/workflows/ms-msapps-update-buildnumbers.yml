@@ -22,10 +22,10 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           branch-token: ${{ steps.generate-token.outputs.token }}
-          commit-message: Updated Microsoft Windows Build Numbers JSON
+          commit-message: Refresh msapps buildnumbers.json with latest M365 apps build numbers
           branch: au/ms-msapps-update-buildnumbers
           delete-branch: true
-          title: Automatic Update of M365 App Build Numbers
+          title: Refresh M365 apps build numbers
       - name: Enable Pull Request Automerge
         run: gh pr merge --merge --auto "${{ steps.cpr.outputs.pull-request-number }}"
         env:
