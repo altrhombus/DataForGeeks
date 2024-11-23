@@ -1,11 +1,18 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2024-11-23T05:24:59.5757957Z",
+    "LastUpdatedUTC": "2024-11-23T05:56:09.2959671Z",
     "SourceList": [
       "https://docs.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ]
   },
   "Data": [
+    {
+      "ReleaseDate": "2024-11-12",
+      "Channel": "Current",
+      "Build": "18129.20158",
+      "Version": "2410",
+      "FullBuild": "16.0.18129.20158"
+    },
     {
       "ReleaseDate": "2024-11-12",
       "Channel": "Monthly Enterprise",
