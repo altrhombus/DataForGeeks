@@ -1,6 +1,6 @@
 {
-  "DataForNerds": {
-    "LastUpdatedUTC": "2024-11-21T22:21:33.8214645Z",
+  "DataForGeeks": {
+    "LastUpdatedUTC": "2024-11-23T05:50:33.4679306Z",
     "SourceList": [
       "https://aka.ms/WindowsUpdateHistory",
       "https://aka.ms/Windows11UpdateHistory",
@@ -8,6 +8,15 @@
     ]
   },
   "Data": [
+    {
+      "Win10Version": "10.0.10586.104",
+      "Version": "10586.104",
+      "ReleaseDate": "2016-02-09",
+      "Article": "KB3135173",
+      "KBTitle": "February 9, 2016 — KB3135173 (OS Build 10586.104)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
     {
       "Win10Version": "10.0.10240.16683",
       "Version": "10240.16683",
