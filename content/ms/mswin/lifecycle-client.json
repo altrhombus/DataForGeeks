@@ -1,6 +1,6 @@
 {
-  "DataForNerds": {
-    "LastUpdatedUTC": "2024-10-01T17:14:32.1496102Z",
+  "DataForGeeks": {
+    "LastUpdatedUTC": "2024-11-23T05:58:51.0406986Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education",
@@ -9,6 +9,12 @@
     ]
   },
   "Data": [
+    {
+      "Version": "1507",
+      "SKU": "Windows 10 Home and Pro",
+      "StartDate": "2015-07-29",
+      "EndDate": "2017-05-10"
+    },
     {
       "Version": "1507",
       "SKU": "Windows 10 Enterprise and Education",
