@@ -27,7 +27,7 @@ jobs:
           delete-branch: true
           title: Automatic Update of M365 App Build Numbers
       - name: Enable Pull Request Automerge
-        run: gh pr merge --merge --auto "1"
+        run: gh pr merge --merge --auto "${{ steps.cpr.outputs.pull-request-number }}"
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
       - name: Check outputs
