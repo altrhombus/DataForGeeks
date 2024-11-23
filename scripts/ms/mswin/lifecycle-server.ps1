@@ -23,7 +23,7 @@ $releaseList = $releaseList | Sort-Object Version | Select-Object Version,StartD
 $outputData = [PSCustomObject]@{
     "DataForGeeks"=[PSCustomObject]@{
         "LastUpdatedUTC" = (Get-Date).ToUniversalTime()
-        "SourceList" = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012-r2", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2016", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2019", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022")
+        "SourceList" = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012-r2", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2016", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2019", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025")
     }
     "Data" = $releaseList
 }
