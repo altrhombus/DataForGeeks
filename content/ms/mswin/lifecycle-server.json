@@ -1,6 +1,6 @@
 {
-  "DataForNerds": {
-    "LastUpdatedUTC": "2024-03-14T03:22:32.1498512Z",
+  "DataForGeeks": {
+    "LastUpdatedUTC": "2024-11-23T05:50:35.6858388Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2",
@@ -12,6 +12,12 @@
     ]
   },
   "Data": [
+    {
+      "Version": "Windows Server 2008",
+      "StartDate": "2008-05-06",
+      "MainstreamEndDate": "2015-01-14",
+      "ExtendedEndDate": "2020-01-15"
+    },
     {
       "Version": "Windows Server 2008 R2",
       "StartDate": "2009-10-22",
@@ -47,6 +53,12 @@
       "StartDate": "2021-08-18",
       "MainstreamEndDate": "2026-10-14",
       "ExtendedEndDate": "2031-10-15"
+    },
+    {
+      "Version": "Windows Server 2025",
+      "StartDate": "2024-11-01",
+      "MainstreamEndDate": "2029-10-10",
+      "ExtendedEndDate": "2034-10-11"
     }
   ]
 }
