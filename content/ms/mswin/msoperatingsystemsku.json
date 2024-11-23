@@ -1,11 +1,17 @@
 {
-  "DataForNerds": {
-    "LastUpdatedUTC": "2024-03-14T15:15:16.217851Z",
+  "DataForGeeks": {
+    "LastUpdatedUTC": "2024-11-23T05:58:08.5852289Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo"
     ]
   },
   "Data": [
+    {
+      "Value": "PRODUCT_UNDEFINED",
+      "Hex": "0x00000000",
+      "Dec": 0,
+      "Meaning": "An unknown product"
+    },
     {
       "Value": "PRODUCT_ULTIMATE",
       "Hex": "0x00000001",
