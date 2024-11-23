@@ -1,0 +1,42 @@
+{
+  "DataForNerds": {
+    "LastUpdatedUTC": "2024-10-03T03:20:11.7901469Z",
+    "SourceList": [
+      "https://learn.microsoft.com/en-us/windows/release-health/release-information"
+    ]
+  },
+  "Data": [
+    {
+      "Version": "2015 (1507/RTM)",
+      "ServicingOption": "Long-Term Servicing Branch (LTSB)",
+      "Build": "10240",
+      "StartDate": "2015-07-29",
+      "MainstreamEndDate": "End of servicing",
+      "ExtendedEndDate": "2025-10-14"
+    },
+    {
+      "Version": "2016 (1607)",
+      "ServicingOption": "Long-Term Servicing Branch (LTSB)",
+      "Build": "14393",
+      "StartDate": "2016-08-02",
+      "MainstreamEndDate": "End of servicing",
+      "ExtendedEndDate": "2026-10-13"
+    },
+    {
+      "Version": "2019 (1809)",
+      "ServicingOption": "Long-Term Servicing Channel (LTSC)",
+      "Build": "17763",
+      "StartDate": "2018-11-13",
+      "MainstreamEndDate": "End of servicing",
+      "ExtendedEndDate": "2029-01-09"
+    },
+    {
+      "Version": "2021 (21H2)",
+      "ServicingOption": "Long-Term Servicing Channel (LTSC)",
+      "Build": "19044",
+      "StartDate": "2021-11-16",
+      "MainstreamEndDate": "2027-01-12",
+      "ExtendedEndDate": "2032-01-13 (IoT Enterprise only)<sup>1</sup>"
+    }
+  ]
+}
