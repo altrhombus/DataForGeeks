@@ -1,11 +1,15 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2024-11-23T05:50:15.9030053Z",
+    "LastUpdatedUTC": "2024-11-23T06:22:34.8863878Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference"
     ]
   },
   "Data": [
+    {
+      "AsrName": "Block executable files from running unless they meet a prevalence, age, or trusted list criterion",
+      "AsrGuid": "01443614-cd74-433a-b99e-2ecdc07bfc25"
+    },
     {
       "AsrName": "Block Office communication application from creating child processes",
       "AsrGuid": "26190899-1602-49e8-8b27-eb1d0a1ce869"
