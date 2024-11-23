@@ -1,12 +1,17 @@
 {
-  "DataForNerds": {
-    "LastUpdatedUTC": "2024-10-01T17:14:57.8721161Z",
+  "DataForGeeks": {
+    "LastUpdatedUTC": "2024-11-23T05:55:09.8670798Z",
     "SourceList": [
       "https://docs.microsoft.com/en-us/windows/release-health/release-information",
       "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information"
     ]
   },
   "Data": [
+    {
+      "Version": "10240",
+      "FullVersion": "10.0.10240",
+      "Build": "1507 (RTM)"
+    },
     {
       "Version": "10586",
       "FullVersion": "10.0.10586",
