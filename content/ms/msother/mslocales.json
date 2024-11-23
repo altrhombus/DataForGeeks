@@ -1,11 +1,17 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2024-11-23T06:03:22.3873748Z",
+    "LastUpdatedUTC": "2024-11-23T07:09:19.9869653Z",
     "SourceList": [
       "https://docs.microsoft.com/en-us/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a"
     ]
   },
   "Data": [
+    {
+      "LangCode": 1025,
+      "LangCodeHex": "0401",
+      "LangName": "Arabic - Saudi Arabia",
+      "LangTag": "ar-SA"
+    },
     {
       "LangCode": 1026,
       "LangCodeHex": "0402",
