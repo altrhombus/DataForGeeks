@@ -27,7 +27,7 @@ jobs:
           delete-branch: true
           title: Refresh Windows OS releases
       - name: Enable Pull Request Automerge
-        run: gh pr merge --merge --auto "${{ steps.cpr.outputs.pull-request-number }}"
+        run: gh pr merge --merge --auto "${{ steps.cpr.outputs.pull-request-number }}" --delete-branch
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
       - name: Check outputs
