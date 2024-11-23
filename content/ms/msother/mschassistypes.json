@@ -1,11 +1,15 @@
 {
-  "DataForNerds": {
-    "LastUpdatedUTC": "2024-03-14T17:42:26.4993623Z",
+  "DataForGeeks": {
+    "LastUpdatedUTC": "2024-11-23T05:57:11.8293102Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/cim-chassis"
     ]
   },
   "Data": [
+    {
+      "Value": "Other",
+      "Number": "1"
+    },
     {
       "Value": "Notebook",
       "Number": "10"
