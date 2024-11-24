@@ -28,7 +28,7 @@ Properties: `LangCode`, `LangHex`, `LangName`, `LangTag`
 ### Windows Builds
 https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/mswin/buildnumbers.json
 
-Properties: `Win10Version`, `Version`, `ReleaseDate`, `Article`, `KBTitle`, `LTSCOnly`, `Comment`
+Properties: `Version`, `ReleaseDate`, `Article`, `KBTitle`, `LTSCOnly`, `Comment`
 
 ### Client OS Lifecycle Dates
 https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/mswin/lifecycle-client.json
