@@ -49,6 +49,7 @@ foreach ($sourceURL in $rootPages) {
         ForEach($version in $versionList) {
             $patchList.add(
                 [PSCustomObject]@{
+                    "Win10Version"="10.0.$version"
                     "Version"=$version
                     "ReleaseDate" = $(Get-Date $PatchInfo.groups[1].Value -Format "yyyy-MM-dd")
                     "Article" = $ArticleNumber
