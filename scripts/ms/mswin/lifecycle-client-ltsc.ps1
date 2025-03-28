@@ -5,16 +5,16 @@ $releaseList = New-Object System.Collections.ArrayList
 
 foreach ($sourceURL in $msdata) {
     $source = Invoke-WebRequest $sourceURL -UseBasicParsing
-    $allReleases = [RegEx]::New(('<tr><td>(.*?)</td>\s*<td align="left">(.*?)</td>\s*<td>(.*?)</td>\s*<td>(.*?)</td>\s*<td>(.*?)</td>\s*<td>(.*?)</td>\s*<td>(.*?)</td>\s*</tr>')).Matches($source.RawContent)
+    $allReleases = [RegEx]::New(('<tr><td>(.*?)</td>\s*<td align="left">(.*?)</td>\s*<td nowrap="">(.*?)</td>\s*<td nowrap="">(.*?)</td>\s*<td nowrap="">(.*?)</td>\s*<td nowrap="">(.*?)</td>\s*<td nowrap="">(.*?)</td>\s*<td nowrap="">(.*?)</td>\s*</tr>')).Matches($source.RawContent)
     $allReleases.ForEach{
             $releaseList.add(
                 [PSCustomObject]@{
                     Version = $_.Groups[1].Value
                     ServicingOption = $_.Groups[2].Value
-                    Build = $_.Groups[5].Value.Split(".")[0]
+                    Build = $_.Groups[8].Value.Split(".")[0]
                     StartDate = $_.Groups[3].Value
-                    MainstreamEndDate = $_.Groups[6].Value
-                    ExtendedEndDate = $_.Groups[7].Value
+                    MainstreamEndDate = $_.Groups[4].Value
+                    ExtendedEndDate = $_.Groups[5].Value.Split(" ")[0]
                 }
             ) | Out-Null
         
