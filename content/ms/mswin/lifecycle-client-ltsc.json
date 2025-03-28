@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2024-11-23T05:58:30.1783731Z",
+    "LastUpdatedUTC": "2025-03-28T20:17:22.408885Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/windows/release-health/release-information"
     ]
@@ -36,7 +36,7 @@
       "Build": "19044",
       "StartDate": "2021-11-16",
       "MainstreamEndDate": "2027-01-12",
-      "ExtendedEndDate": "2032-01-13 (IoT Enterprise only)<sup>1</sup>"
+      "ExtendedEndDate": "2032-01-13"
     }
   ]
 }
