@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2024-11-23T06:25:37.2936909Z",
+    "LastUpdatedUTC": "2025-04-04T12:35:50.9593448Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference"
     ]
@@ -15,7 +15,7 @@
       "AsrGuid": "26190899-1602-49e8-8b27-eb1d0a1ce869"
     },
     {
-      "AsrName": "Block rebooting machine in Safe Mode (preview)",
+      "AsrName": "Block rebooting machine in Safe Mode",
       "AsrGuid": "33ddedf1-c6e0-47cb-833e-de6133960387"
     },
     {
@@ -59,7 +59,7 @@
       "AsrGuid": "be9ba2d9-53ea-4cdc-84e5-9b1eeee46550"
     },
     {
-      "AsrName": "Block use of copied or impersonated system tools (preview)",
+      "AsrName": "Block use of copied or impersonated system tools",
       "AsrGuid": "c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb"
     },
     {
