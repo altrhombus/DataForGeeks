@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-04-09T02:58:02.1226127Z",
+    "LastUpdatedUTC": "2025-04-09T16:17:38.4407989Z",
     "SourceList": [
       "https://docs.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ]
@@ -33,6 +33,13 @@
       "Build": "18526.20264",
       "Version": "2502",
       "FullBuild": "16.0.18526.20264"
+    },
+    {
+      "ReleaseDate": "2025-04-08",
+      "Channel": "Semi-Annual Enterprise",
+      "Build": "17928.20512",
+      "Version": "2408",
+      "FullBuild": "16.0.17928.20512"
     },
     {
       "ReleaseDate": "2025-04-08",
