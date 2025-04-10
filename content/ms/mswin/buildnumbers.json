@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-04-10T01:11:05.5778175Z",
+    "LastUpdatedUTC": "2025-04-10T21:13:53.3565333Z",
     "SourceList": [
       "https://aka.ms/WindowsUpdateHistory",
       "https://aka.ms/Windows11UpdateHistory",
@@ -12258,11 +12258,11 @@
       "LTSCOnly": true
     },
     {
-      "Win10Version": "10.0.22631.5191",
-      "Version": "22631.5191",
+      "Win10Version": "10.0.22631.5189",
+      "Version": "22631.5189",
       "ReleaseDate": "2025-04-08",
       "Article": "KB5055528",
-      "KBTitle": "April 8, 2025—KB5055528 (OS Builds 22621.5191 and 22631.5191)",
+      "KBTitle": "April 8, 2025—KB5055528 (OS Builds 22621.5189 and 22631.5189)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -12272,6 +12272,15 @@
       "ReleaseDate": "2025-04-08",
       "Article": "KB5055518",
       "KBTitle": "April 8, 2025—KB5055518 (OS Builds 19044.5737 and 19045.5737)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.22631.5191",
+      "Version": "22631.5191",
+      "ReleaseDate": "2025-04-08",
+      "Article": "KB5055528",
+      "KBTitle": "April 8, 2025—KB5055528 (OS Builds 22621.5191 and 22631.5191)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -12290,6 +12299,15 @@
       "ReleaseDate": "2025-04-08",
       "Article": "KB5055523",
       "KBTitle": "April 8, 2025—KB5055523 (OS Build 26100.3775)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.22621.5189",
+      "Version": "22621.5189",
+      "ReleaseDate": "2025-04-08",
+      "Article": "KB5055528",
+      "KBTitle": "April 8, 2025—KB5055528 (OS Builds 22621.5189 and 22631.5189)",
       "LTSCOnly": false,
       "Comment": ""
     },
