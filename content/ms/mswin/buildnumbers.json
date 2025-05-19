@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-05-19T17:14:07.4442316Z",
+    "LastUpdatedUTC": "2025-05-19T19:12:24.5381797Z",
     "SourceList": [
       "https://aka.ms/WindowsUpdateHistory",
       "https://aka.ms/Windows11UpdateHistory",
@@ -12438,20 +12438,20 @@
       "Comment": "Preview"
     },
     {
-      "Win10Version": "10.0.19045.5852",
-      "Version": "19045.5852",
+      "Win10Version": "10.0.19045.5854",
+      "Version": "19045.5854",
       "ReleaseDate": "2025-05-13",
       "Article": "KB5058379",
-      "KBTitle": "May 13, 2025—KB5058379 (OS Builds 19044.5852 and 19045.5852)",
+      "KBTitle": "May 13, 2025—KB5058379 (OS Builds 19044.5854 and 19045.5854)",
       "LTSCOnly": false,
       "Comment": ""
     },
     {
-      "Win10Version": "10.0.19044.5852",
-      "Version": "19044.5852",
+      "Win10Version": "10.0.19044.5854",
+      "Version": "19044.5854",
       "ReleaseDate": "2025-05-13",
       "Article": "KB5058379",
-      "KBTitle": "May 13, 2025—KB5058379 (OS Builds 19044.5852 and 19045.5852)",
+      "KBTitle": "May 13, 2025—KB5058379 (OS Builds 19044.5854 and 19045.5854)",
       "LTSCOnly": false,
       "Comment": ""
     },
