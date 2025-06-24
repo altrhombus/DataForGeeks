@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-06-24T18:22:21.9715158Z",
+    "LastUpdatedUTC": "2025-06-24T23:15:09.7652309Z",
     "SourceList": [
       "https://aka.ms/WindowsUpdateHistory",
       "https://aka.ms/Windows11UpdateHistory",
@@ -12528,11 +12528,11 @@
       "Comment": ""
     },
     {
-      "Win10Version": "10.0.17763.7312",
-      "Version": "17763.7312",
+      "Win10Version": "10.0.17763.7314",
+      "Version": "17763.7314",
       "ReleaseDate": "2025-05-13",
       "Article": "KB5058392",
-      "KBTitle": "May 13, 2025—KB5058392 (OS Build 17763.7312)",
+      "KBTitle": "May 13, 2025—KB5058392 (OS Build 17763.7314)",
       "Comment": "",
       "LTSCOnly": true
     },
