@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2024-11-23T05:50:35.6858388Z",
+    "LastUpdatedUTC": "2025-07-08T21:08:19.3561453Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2",
@@ -8,7 +8,8 @@
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012-r2",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2016",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2019",
-      "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022"
+      "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022",
+      "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025"
     ]
   },
   "Data": [
@@ -57,8 +58,8 @@
     {
       "Version": "Windows Server 2025",
       "StartDate": "2024-11-01",
-      "MainstreamEndDate": "2029-10-10",
-      "ExtendedEndDate": "2034-10-11"
+      "MainstreamEndDate": "2029-11-14",
+      "ExtendedEndDate": "2034-11-15"
     }
   ]
 }
