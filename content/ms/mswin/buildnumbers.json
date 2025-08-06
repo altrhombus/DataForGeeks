@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-07-24T20:17:43.7050718Z",
+    "LastUpdatedUTC": "2025-08-06T23:17:15.0582959Z",
     "SourceList": [
       "https://aka.ms/WindowsUpdateHistory",
       "https://aka.ms/Windows11UpdateHistory",
@@ -12874,7 +12874,7 @@
       "Version": "20348.3932",
       "ReleaseDate": "2025-07-08",
       "Article": "KB5062572",
-      "KBTitle": "July 8, 2025—KB 5062572 (OS Build 20348.3932)",
+      "KBTitle": "July 8, 2025—KB5062572 (OS Build 20348.3932)",
       "LTSCOnly": false,
       "Comment": ""
     },
