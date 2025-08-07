@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-08-06T23:17:15.0582959Z",
+    "LastUpdatedUTC": "2025-08-07T01:25:04.096316Z",
     "SourceList": [
       "https://aka.ms/WindowsUpdateHistory",
       "https://aka.ms/Windows11UpdateHistory",
@@ -12667,7 +12667,7 @@
       "Version": "20348.3807",
       "ReleaseDate": "2025-06-10",
       "Article": "KB5060526",
-      "KBTitle": "June 10, 2025— KB5060526 (OS Build 20348.3807)",
+      "KBTitle": "June 10, 2025—KB5060526 (OS Build 20348.3807)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -12730,7 +12730,7 @@
       "Version": "22621.5472",
       "ReleaseDate": "2025-06-10",
       "Article": "KB5060999",
-      "KBTitle": "June 10, 2025—KB5060999 (OS Builds OS Builds 22621.5472 and 22631.5472)",
+      "KBTitle": "June 10, 2025—KB5060999 (OS Builds OS 22621.5472 and 22631.5472)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -12748,7 +12748,25 @@
       "Version": "22631.5472",
       "ReleaseDate": "2025-06-10",
       "Article": "KB5060999",
-      "KBTitle": "June 10, 2025—KB5060999 (OS Builds OS Builds 22621.5472 and 22631.5472)",
+      "KBTitle": "June 10, 2025—KB5060999 (OS Builds OS 22621.5472 and 22631.5472)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.22631.5472",
+      "Version": "22631.5472",
+      "ReleaseDate": "2025-06-10",
+      "Article": "KB5060999",
+      "KBTitle": "June 10, 2025—KB5060999 (OS Builds 22621.5472 and 22631.5472)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.22621.5472",
+      "Version": "22621.5472",
+      "ReleaseDate": "2025-06-10",
+      "Article": "KB5060999",
+      "KBTitle": "June 10, 2025—KB5060999 (OS Builds 22621.5472 and 22631.5472)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -12904,15 +12922,6 @@
       "KBTitle": "July 8, 2025—KB5062552 (OS Builds 22621.5624 and 22631.5624)",
       "LTSCOnly": false,
       "Comment": ""
-    },
-    {
-      "Win10Version": "10.0.26100.4656",
-      "Version": "26100.4656",
-      "ReleaseDate": "2025-07-13",
-      "Article": "KB5064489",
-      "KBTitle": "July 13, 2025— KB5064489 (OS Build 26100.4656) Out-of-band",
-      "LTSCOnly": false,
-      "Comment": "Out-of-band"
     },
     {
       "Win10Version": "10.0.26100.4656",
