@@ -1,19 +1,11 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-03-28T20:17:22.408885Z",
+    "LastUpdatedUTC": "2025-09-04T06:17:45.4358238Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/windows/release-health/release-information"
     ]
   },
   "Data": [
-    {
-      "Version": "2015 (1507/RTM)",
-      "ServicingOption": "Long-Term Servicing Branch (LTSB)",
-      "Build": "10240",
-      "StartDate": "2015-07-29",
-      "MainstreamEndDate": "End of servicing",
-      "ExtendedEndDate": "2025-10-14"
-    },
     {
       "Version": "2016 (1607)",
       "ServicingOption": "Long-Term Servicing Branch (LTSB)",
