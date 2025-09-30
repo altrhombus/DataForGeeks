@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2024-11-23T05:58:51.0406986Z",
+    "LastUpdatedUTC": "2025-09-30T17:17:57.2202361Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education",
@@ -35,27 +35,27 @@
     },
     {
       "Version": "1607",
-      "SKU": "Windows 10 Home and Pro",
-      "StartDate": "2016-08-02",
-      "EndDate": "2018-04-11"
-    },
-    {
-      "Version": "1607",
       "SKU": "Windows 10 Enterprise and Education",
       "StartDate": "2016-08-02",
       "EndDate": "2019-04-10"
     },
     {
-      "Version": "1703",
+      "Version": "1607",
       "SKU": "Windows 10 Home and Pro",
-      "StartDate": "2017-04-11",
-      "EndDate": "2018-10-10"
+      "StartDate": "2016-08-02",
+      "EndDate": "2018-04-11"
     },
     {
       "Version": "1703",
       "SKU": "Windows 10 Enterprise and Education",
       "StartDate": "2017-04-11",
       "EndDate": "2019-10-09"
+    },
+    {
+      "Version": "1703",
+      "SKU": "Windows 10 Home and Pro",
+      "StartDate": "2017-04-11",
+      "EndDate": "2018-10-10"
     },
     {
       "Version": "1709",
@@ -107,15 +107,15 @@
     },
     {
       "Version": "1909",
-      "SKU": "Windows 10 Enterprise and Education",
-      "StartDate": "2019-11-12",
-      "EndDate": "2022-05-11"
-    },
-    {
-      "Version": "1909",
       "SKU": "Windows 10 Home and Pro",
       "StartDate": "2019-11-12",
       "EndDate": "2021-05-12"
+    },
+    {
+      "Version": "1909",
+      "SKU": "Windows 10 Enterprise and Education",
+      "StartDate": "2019-11-12",
+      "EndDate": "2022-05-11"
     },
     {
       "Version": "2004",
@@ -224,6 +224,18 @@
       "SKU": "Windows 11 Home and Pro",
       "StartDate": "2024-10-01",
       "EndDate": "2026-10-14"
+    },
+    {
+      "Version": "25H2",
+      "SKU": "Windows 11 Enterprise and Education",
+      "StartDate": "2025-09-30",
+      "EndDate": "2028-10-11"
+    },
+    {
+      "Version": "25H2",
+      "SKU": "Windows 11 Home and Pro",
+      "StartDate": "2025-09-30",
+      "EndDate": "2027-10-13"
     }
   ]
 }
