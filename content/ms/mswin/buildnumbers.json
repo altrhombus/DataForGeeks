@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2026-03-26T21:27:31.9340762Z",
+    "LastUpdatedUTC": "2026-03-31T14:57:53.9615308Z",
     "SourceList": [
       "https://aka.ms/WindowsUpdateHistory",
       "https://aka.ms/Windows11UpdateHistory",
@@ -1525,9 +1525,9 @@
       "Version": "14393.2248",
       "ReleaseDate": "2018-05-08",
       "Article": "KB4103723",
-      "KBTitle": "May 8, 2018—KB4103723 (OS Build 14393.2248)",
+      "KBTitle": "May 8, 2018—KB4103723 (OS Build 14393.2248)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.15063.1112",
@@ -2047,9 +2047,9 @@
       "Version": "14393.2551",
       "ReleaseDate": "2018-10-09",
       "Article": "KB4462917",
-      "KBTitle": "October 9, 2018—KB4462917 (OS Build 14393.2551)",
+      "KBTitle": "October 9, 2018—KB4462917 (OS Build 14393.2551)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17134.345",
@@ -2137,9 +2137,9 @@
       "Version": "14393.2608",
       "ReleaseDate": "2018-11-13",
       "Article": "KB4467691",
-      "KBTitle": "November 13, 2018—KB4467691 (OS Build 14393.2608)",
+      "KBTitle": "November 13, 2018—KB4467691 (OS Build 14393.2608)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.16299.785",
@@ -2812,9 +2812,9 @@
       "Version": "14393.2969",
       "ReleaseDate": "2019-05-14",
       "Article": "KB4494440",
-      "KBTitle": "May 14, 2019—KB4494440 (OS Build 14393.2969)",
+      "KBTitle": "May 14, 2019—KB4494440 (OS Build 14393.2969)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17134.765",
@@ -7636,9 +7636,9 @@
       "Version": "14393.5066",
       "ReleaseDate": "2022-04-12",
       "Article": "KB5012596",
-      "KBTitle": "April 12, 2022—KB5012596 (OS Build 14393.5066)",
+      "KBTitle": "April 12, 2022—KB5012596 (OS Build 14393.5066)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.1645",
@@ -7789,9 +7789,9 @@
       "Version": "14393.5125",
       "ReleaseDate": "2022-05-10",
       "Article": "KB5013952",
-      "KBTitle": "May 10, 2022—KB5013952 (OS Build 14393.5125)",
+      "KBTitle": "May 10, 2022—KB5013952 (OS Build 14393.5125)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19043.1706",
@@ -7978,9 +7978,9 @@
       "Version": "14393.5192",
       "ReleaseDate": "2022-06-14",
       "Article": "KB5014702",
-      "KBTitle": "June 14, 2022—KB5014702 (OS Build 14393.5192)",
+      "KBTitle": "June 14, 2022—KB5014702 (OS Build 14393.5192)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.3046",
@@ -8149,9 +8149,9 @@
       "Version": "14393.5246",
       "ReleaseDate": "2022-07-12",
       "Article": "KB5015808",
-      "KBTitle": "July 12, 2022—KB5015808 (OS Build 14393.5246)",
+      "KBTitle": "July 12, 2022—KB5015808 (OS Build 14393.5246)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.22000.795",
@@ -8275,9 +8275,9 @@
       "Version": "14393.5291",
       "ReleaseDate": "2022-08-09",
       "Article": "KB5016622",
-      "KBTitle": "August 9, 2022—KB5016622 (OS Build 14393.5291)",
+      "KBTitle": "August 9, 2022—KB5016622 (OS Build 14393.5291)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.3287",
@@ -8401,9 +8401,9 @@
       "Version": "14393.5356",
       "ReleaseDate": "2022-09-13",
       "Article": "KB5017305",
-      "KBTitle": "September 13, 2022—KB5017305 (OS Build 14393.5356)",
+      "KBTitle": "September 13, 2022—KB5017305 (OS Build 14393.5356)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.20348.1006",
@@ -8419,8 +8419,8 @@
       "Version": "17763.3406",
       "ReleaseDate": "2022-09-13",
       "Article": "KB5017315",
-      "KBTitle": "September 13, 2022—KB5017315 (OS Build 17763.3406)",
-      "Comment": "",
+      "KBTitle": "September 13, 2022—KB5017315 (OS Build 17763.3406)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -8514,6 +8514,15 @@
       "Comment": ""
     },
     {
+      "Win10Version": "10.0.19042.2130",
+      "Version": "19042.2130",
+      "ReleaseDate": "2022-10-11",
+      "Article": "KB5018410",
+      "KBTitle": "October 11, 2022—KB5018410 (OS Builds 19042.2130, 19043.2130, and 19044.2130)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
       "Win10Version": "10.0.22621.674",
       "Version": "22621.674",
       "ReleaseDate": "2022-10-11",
@@ -8536,8 +8545,8 @@
       "Version": "17763.3532",
       "ReleaseDate": "2022-10-11",
       "Article": "KB5018419",
-      "KBTitle": "October 11, 2022—KB5018419 (OS Build 17763.3532)",
-      "Comment": "",
+      "KBTitle": "October 11, 2022—KB5018419 (OS Build 17763.3532)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -8563,9 +8572,27 @@
       "Version": "14393.5427",
       "ReleaseDate": "2022-10-11",
       "Article": "KB5018411",
-      "KBTitle": "October 11, 2022—KB5018411 (OS Build 14393.5427)",
+      "KBTitle": "October 11, 2022—KB5018411 (OS Build 14393.5427)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.2130",
+      "Version": "19044.2130",
+      "ReleaseDate": "2022-10-11",
+      "Article": "KB5018410",
+      "KBTitle": "October 11, 2022—KB5018410 (OS Builds 19042.2130, 19043.2130, and 19044.2130)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19043.2130",
+      "Version": "19043.2130",
+      "ReleaseDate": "2022-10-11",
+      "Article": "KB5018410",
+      "KBTitle": "October 11, 2022—KB5018410 (OS Builds 19042.2130, 19043.2130, and 19044.2130)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19042.2132",
@@ -8743,13 +8770,49 @@
       "Version": "19045.2251",
       "ReleaseDate": "2022-11-08",
       "Article": "KB5019959",
-      "KBTitle": "November 8, 2022—KB5019959 (OS Builds 19042.2251, 19043.2251, 19044.2251, and 19045.2251)",
+      "KBTitle": "November 8, 2022—KB5019959 (OS Builds 19042.2251, 19043.2251, 19044.2251, and 19045.2251)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.2251",
       "Version": "19044.2251",
+      "ReleaseDate": "2022-11-08",
+      "Article": "KB5019959",
+      "KBTitle": "November 8, 2022—KB5019959 (OS Builds 19042.2251, 19043.2251, 19044.2251, and 19045.2251)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19043.2251",
+      "Version": "19043.2251",
+      "ReleaseDate": "2022-11-08",
+      "Article": "KB5019959",
+      "KBTitle": "November 8, 2022—KB5019959 (OS Builds 19042.2251, 19043.2251, 19044.2251, and 19045.2251)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19042.2251",
+      "Version": "19042.2251",
+      "ReleaseDate": "2022-11-08",
+      "Article": "KB5019959",
+      "KBTitle": "November 8, 2022—KB5019959 (OS Builds 19042.2251, 19043.2251, 19044.2251, and 19045.2251)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.20348.1249",
+      "Version": "20348.1249",
+      "ReleaseDate": "2022-11-08",
+      "Article": "KB5019081",
+      "KBTitle": "November 8, 2022—KB5019081 (OS Build 20348.1249)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19043.2251",
+      "Version": "19043.2251",
       "ReleaseDate": "2022-11-08",
       "Article": "KB5019959",
       "KBTitle": "November 8, 2022—KB5019959 (OS Builds 19042.2251, 19043.2251, 19044.2251, and 19045.2251)",
@@ -8757,8 +8820,17 @@
       "Comment": ""
     },
     {
-      "Win10Version": "10.0.19043.2251",
-      "Version": "19043.2251",
+      "Win10Version": "10.0.19045.2251",
+      "Version": "19045.2251",
+      "ReleaseDate": "2022-11-08",
+      "Article": "KB5019959",
+      "KBTitle": "November 8, 2022—KB5019959 (OS Builds 19042.2251, 19043.2251, 19044.2251, and 19045.2251)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19044.2251",
+      "Version": "19044.2251",
       "ReleaseDate": "2022-11-08",
       "Article": "KB5019959",
       "KBTitle": "November 8, 2022—KB5019959 (OS Builds 19042.2251, 19043.2251, 19044.2251, and 19045.2251)",
@@ -8775,22 +8847,13 @@
       "Comment": ""
     },
     {
-      "Win10Version": "10.0.20348.1249",
-      "Version": "20348.1249",
-      "ReleaseDate": "2022-11-08",
-      "Article": "KB5019081",
-      "KBTitle": "November 8, 2022—KB5019081 (OS Build 20348.1249)",
-      "LTSCOnly": false,
-      "Comment": ""
-    },
-    {
       "Win10Version": "10.0.14393.5501",
       "Version": "14393.5501",
       "ReleaseDate": "2022-11-08",
       "Article": "KB5019964",
-      "KBTitle": "November 8, 2022—KB5019964 (OS Build 14393.5501)",
+      "KBTitle": "November 8, 2022—KB5019964 (OS Build 14393.5501)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.10240.19567",
@@ -8806,8 +8869,8 @@
       "Version": "17763.3650",
       "ReleaseDate": "2022-11-08",
       "Article": "KB5019966",
-      "KBTitle": "November 8, 2022—KB5019966 (OS Build 17763.3650)",
-      "Comment": "",
+      "KBTitle": "November 8, 2022—KB5019966 (OS Build 17763.3650)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -8995,17 +9058,17 @@
       "Version": "14393.5582",
       "ReleaseDate": "2022-12-13",
       "Article": "KB5021235",
-      "KBTitle": "December 13, 2022—KB5021235 (OS Build 14393.5582) ",
+      "KBTitle": "December 13, 2022—KB5021235 (OS Build 14393.5582)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.3770",
       "Version": "17763.3770",
       "ReleaseDate": "2022-12-13",
       "Article": "KB5021237",
-      "KBTitle": "December 13, 2022—KB5021237 (OS Build 17763.3770)",
-      "Comment": "",
+      "KBTitle": "December 13, 2022—KB5021237 (OS Build 17763.3770)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -9058,9 +9121,27 @@
       "Version": "19045.2486",
       "ReleaseDate": "2023-01-10",
       "Article": "KB5022282",
-      "KBTitle": "January 10, 2023—KB5022282 (OS Builds 19042.2486, 19044.2486, and 19045.2486)",
+      "KBTitle": "January 10, 2023—KB5022282 (OS Builds 19042.2486, 19044.2486, and 19045.2486)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.2486",
+      "Version": "19044.2486",
+      "ReleaseDate": "2023-01-10",
+      "Article": "KB5022282",
+      "KBTitle": "January 10, 2023—KB5022282 (OS Builds 19042.2486, 19044.2486, and 19045.2486)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19042.2486",
+      "Version": "19042.2486",
+      "ReleaseDate": "2023-01-10",
+      "Article": "KB5022282",
+      "KBTitle": "January 10, 2023—KB5022282 (OS Builds 19042.2486, 19044.2486, and 19045.2486)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.10240.19685",
@@ -9094,9 +9175,18 @@
       "Version": "17763.3887",
       "ReleaseDate": "2023-01-10",
       "Article": "KB5022286",
-      "KBTitle": "January 10, 2023—KB5022286 (OS Build 17763.3887)",
-      "Comment": "",
+      "KBTitle": "January 10, 2023—KB5022286 (OS Build 17763.3887)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
+    },
+    {
+      "Win10Version": "10.0.19045.2486",
+      "Version": "19045.2486",
+      "ReleaseDate": "2023-01-10",
+      "Article": "KB5022282",
+      "KBTitle": "January 10, 2023—KB5022282 (OS Builds 19042.2486, 19044.2486, and 19045.2486)",
+      "LTSCOnly": false,
+      "Comment": ""
     },
     {
       "Win10Version": "10.0.20348.1487",
@@ -9166,6 +9256,42 @@
       "Version": "19042.2604",
       "ReleaseDate": "2023-02-14",
       "Article": "KB5022834",
+      "KBTitle": "February 14, 2023—KB5022834 (OS Builds 19042.2604, 19044.2604, and 19045.2604)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.2604",
+      "Version": "19044.2604",
+      "ReleaseDate": "2023-02-14",
+      "Article": "KB5022834",
+      "KBTitle": "February 14, 2023—KB5022834 (OS Builds 19042.2604, 19044.2604, and 19045.2604)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.2604",
+      "Version": "19045.2604",
+      "ReleaseDate": "2023-02-14",
+      "Article": "KB5022834",
+      "KBTitle": "February 14, 2023—KB5022834 (OS Builds 19042.2604, 19044.2604, and 19045.2604)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.17763.4010",
+      "Version": "17763.4010",
+      "ReleaseDate": "2023-02-14",
+      "Article": "KB5022840",
+      "KBTitle": "February 14, 2023—KB5022840 (OS Build 17763.4010)- EXPIRED",
+      "Comment": "- EXPIRED",
+      "LTSCOnly": true
+    },
+    {
+      "Win10Version": "10.0.19042.2604",
+      "Version": "19042.2604",
+      "ReleaseDate": "2023-02-14",
+      "Article": "KB5022834",
       "KBTitle": "February 14, 2023—KB5022834 (OS Builds 19042.2604, 19044.2604, and 19045.2604)",
       "LTSCOnly": false,
       "Comment": ""
@@ -9189,15 +9315,6 @@
       "Comment": ""
     },
     {
-      "Win10Version": "10.0.17763.4010",
-      "Version": "17763.4010",
-      "ReleaseDate": "2023-02-14",
-      "Article": "KB5022840",
-      "KBTitle": "February 14, 2023—KB5022840 (OS Build 17763.4010)",
-      "Comment": "",
-      "LTSCOnly": true
-    },
-    {
       "Win10Version": "10.0.22000.1574",
       "Version": "22000.1574",
       "ReleaseDate": "2023-02-14",
@@ -9211,9 +9328,9 @@
       "Version": "14393.5717",
       "ReleaseDate": "2023-02-14",
       "Article": "KB5022838",
-      "KBTitle": "February 14, 2023—KB5022838 (OS Build 14393.5717) ",
+      "KBTitle": "February 14, 2023—KB5022838 (OS Build 14393.5717)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.20348.1547",
@@ -9328,9 +9445,9 @@
       "Version": "14393.5786",
       "ReleaseDate": "2023-03-14",
       "Article": "KB5023697",
-      "KBTitle": "March 14, 2023—KB5023697 (OS Build 14393.5786) ",
+      "KBTitle": "March 14, 2023—KB5023697 (OS Build 14393.5786)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.20348.1607",
@@ -9342,12 +9459,30 @@
       "Comment": ""
     },
     {
+      "Win10Version": "10.0.19042.2728",
+      "Version": "19042.2728",
+      "ReleaseDate": "2023-03-14",
+      "Article": "KB5023696",
+      "KBTitle": "March 14, 2023—KB5023696 (OS Builds 19042.2728, 19044.2728, and 19045.2728)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.2728",
+      "Version": "19045.2728",
+      "ReleaseDate": "2023-03-14",
+      "Article": "KB5023696",
+      "KBTitle": "March 14, 2023—KB5023696 (OS Builds 19042.2728, 19044.2728, and 19045.2728)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
       "Win10Version": "10.0.17763.4131",
       "Version": "17763.4131",
       "ReleaseDate": "2023-03-14",
       "Article": "KB5023702",
-      "KBTitle": "March 14, 2023—KB5023702 (OS Build 17763.4131)",
-      "Comment": "",
+      "KBTitle": "March 14, 2023—KB5023702 (OS Build 17763.4131)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -9358,6 +9493,15 @@
       "KBTitle": "March 14, 2023—KB5023698 (OS Build 22000.1696)",
       "LTSCOnly": false,
       "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19044.2728",
+      "Version": "19044.2728",
+      "ReleaseDate": "2023-03-14",
+      "Article": "KB5023696",
+      "KBTitle": "March 14, 2023—KB5023696 (OS Builds 19042.2728, 19044.2728, and 19045.2728)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.2788",
@@ -9409,16 +9553,34 @@
       "Version": "19042.2846",
       "ReleaseDate": "2023-04-11",
       "Article": "KB5025221",
-      "KBTitle": "April 11, 2023—KB5025221 (OS Builds 19042.2846, 19044.2846, and 19045.2846)",
+      "KBTitle": "April 11, 2023—KB5025221 (OS Builds 19042.2846, 19044.2846, and 19045.2846)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.2846",
       "Version": "19044.2846",
       "ReleaseDate": "2023-04-11",
       "Article": "KB5025221",
-      "KBTitle": "April 11, 2023—KB5025221 (OS Builds 19042.2846, 19044.2846, and 19045.2846)",
+      "KBTitle": "April 11, 2023—KB5025221 (OS Builds 19042.2846, 19044.2846, and 19045.2846)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.2846",
+      "Version": "19045.2846",
+      "ReleaseDate": "2023-04-11",
+      "Article": "KB5025221",
+      "KBTitle": "April 11, 2023—KB5025221 (OS Builds 19042.2846, 19044.2846, and 19045.2846)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.20348.1668",
+      "Version": "20348.1668",
+      "ReleaseDate": "2023-04-11",
+      "Article": "KB5025230",
+      "KBTitle": "April 11, 2023—KB5025230 (OS Build 20348.1668)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -9428,15 +9590,6 @@
       "ReleaseDate": "2023-04-11",
       "Article": "KB5025221",
       "KBTitle": "April 11, 2023—KB5025221 (OS Builds 19042.2846, 19044.2846, and 19045.2846)",
-      "LTSCOnly": false,
-      "Comment": ""
-    },
-    {
-      "Win10Version": "10.0.20348.1668",
-      "Version": "20348.1668",
-      "ReleaseDate": "2023-04-11",
-      "Article": "KB5025230",
-      "KBTitle": "April 11, 2023—KB5025230 (OS Build 20348.1668)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -9468,21 +9621,39 @@
       "Comment": "- EXPIRED"
     },
     {
+      "Win10Version": "10.0.19044.2846",
+      "Version": "19044.2846",
+      "ReleaseDate": "2023-04-11",
+      "Article": "KB5025221",
+      "KBTitle": "April 11, 2023—KB5025221 (OS Builds 19042.2846, 19044.2846, and 19045.2846)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19042.2846",
+      "Version": "19042.2846",
+      "ReleaseDate": "2023-04-11",
+      "Article": "KB5025221",
+      "KBTitle": "April 11, 2023—KB5025221 (OS Builds 19042.2846, 19044.2846, and 19045.2846)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
       "Win10Version": "10.0.14393.5850",
       "Version": "14393.5850",
       "ReleaseDate": "2023-04-11",
       "Article": "KB5025228",
-      "KBTitle": "April 11, 2023—KB5025228 (OS Build 14393.5850) ",
+      "KBTitle": "April 11, 2023—KB5025228 (OS Build 14393.5850)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.4252",
       "Version": "17763.4252",
       "ReleaseDate": "2023-04-11",
       "Article": "KB5025229",
-      "KBTitle": "April 11, 2023—KB5025229 (OS Build 17763.4252)",
-      "Comment": "",
+      "KBTitle": "April 11, 2023—KB5025229 (OS Build 17763.4252)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -9526,17 +9697,17 @@
       "Version": "14393.5921",
       "ReleaseDate": "2023-05-09",
       "Article": "KB5026363",
-      "KBTitle": "May 9, 2023—KB5026363 (OS Build 14393.5921) ",
+      "KBTitle": "May 9, 2023—KB5026363 (OS Build 14393.5921)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.4377",
       "Version": "17763.4377",
       "ReleaseDate": "2023-05-09",
       "Article": "KB5026362",
-      "KBTitle": "May 9, 2023—KB5026362 (OS Build 17763.4377)",
-      "Comment": "",
+      "KBTitle": "May 9, 2023—KB5026362 (OS Build 17763.4377)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -9562,9 +9733,9 @@
       "Version": "19045.2965",
       "ReleaseDate": "2023-05-09",
       "Article": "KB5026361",
-      "KBTitle": "May 9, 2023—KB5026361 (OS Builds 19042.2965, 19044.2965, and 19045.2965)",
+      "KBTitle": "May 9, 2023—KB5026361 (OS Builds 19042.2965, 19044.2965, and 19045.2965)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19042.2965",
@@ -9574,6 +9745,60 @@
       "KBTitle": "May 9, 2023—KB5026361 (OS Builds 19042.2965, 19044.2965, and 19045.2965)",
       "LTSCOnly": false,
       "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19044.2965",
+      "Version": "19044.2965",
+      "ReleaseDate": "2023-05-09",
+      "Article": "KB5026361",
+      "KBTitle": "May 9, 2023—KB5026361 (OS Builds 19042.2965, 19044.2965, and 19045.2965)-",
+      "LTSCOnly": false,
+      "Comment": "-"
+    },
+    {
+      "Win10Version": "10.0.19042.2965",
+      "Version": "19042.2965",
+      "ReleaseDate": "2023-05-09",
+      "Article": "KB5026361",
+      "KBTitle": "May 9, 2023—KB5026361 (OS Builds 19042.2965, 19044.2965, and 19045.2965)-",
+      "LTSCOnly": false,
+      "Comment": "-"
+    },
+    {
+      "Win10Version": "10.0.19045.2965",
+      "Version": "19045.2965",
+      "ReleaseDate": "2023-05-09",
+      "Article": "KB5026361",
+      "KBTitle": "May 9, 2023—KB5026361 (OS Builds 19042.2965, 19044.2965, and 19045.2965)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19045.2965",
+      "Version": "19045.2965",
+      "ReleaseDate": "2023-05-09",
+      "Article": "KB5026361",
+      "KBTitle": "May 9, 2023—KB5026361 (OS Builds 19042.2965, 19044.2965, and 19045.2965)-",
+      "LTSCOnly": false,
+      "Comment": "-"
+    },
+    {
+      "Win10Version": "10.0.19044.2965",
+      "Version": "19044.2965",
+      "ReleaseDate": "2023-05-09",
+      "Article": "KB5026361",
+      "KBTitle": "May 9, 2023—KB5026361 (OS Builds 19042.2965, 19044.2965, and 19045.2965)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19042.2965",
+      "Version": "19042.2965",
+      "ReleaseDate": "2023-05-09",
+      "Article": "KB5026361",
+      "KBTitle": "May 9, 2023—KB5026361 (OS Builds 19042.2965, 19044.2965, and 19045.2965)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.2965",
@@ -9625,8 +9850,8 @@
       "Version": "17763.4499",
       "ReleaseDate": "2023-06-13",
       "Article": "KB5027222",
-      "KBTitle": "June 13, 2023—KB5027222 (OS Build 17763.4499)",
-      "Comment": "",
+      "KBTitle": "June 13, 2023—KB5027222 (OS Build 17763.4499)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -9657,13 +9882,31 @@
       "Comment": "- EXPIRED"
     },
     {
+      "Win10Version": "10.0.19045.3086",
+      "Version": "19045.3086",
+      "ReleaseDate": "2023-06-13",
+      "Article": "KB5027215",
+      "KBTitle": "June 13, 2023—KB5027215 (OS Builds 19044.3086 and 19045.3086)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.3086",
+      "Version": "19044.3086",
+      "ReleaseDate": "2023-06-13",
+      "Article": "KB5027215",
+      "KBTitle": "June 13, 2023—KB5027215 (OS Builds 19044.3086 and 19045.3086)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
       "Win10Version": "10.0.14393.5989",
       "Version": "14393.5989",
       "ReleaseDate": "2023-06-13",
       "Article": "KB5027219",
-      "KBTitle": "June 13, 2023—KB5027219 (OS Build 14393.5989) ",
+      "KBTitle": "June 13, 2023—KB5027219 (OS Build 14393.5989)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.22621.1848",
@@ -9742,8 +9985,8 @@
       "Version": "17763.4645",
       "ReleaseDate": "2023-07-11",
       "Article": "KB5028168",
-      "KBTitle": "July 11, 2023—KB5028168 (OS Build 17763.4645)",
-      "Comment": "",
+      "KBTitle": "July 11, 2023—KB5028168 (OS Build 17763.4645)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -9751,27 +9994,27 @@
       "Version": "19044.3208",
       "ReleaseDate": "2023-07-11",
       "Article": "KB5028166",
-      "KBTitle": "July 11, 2023—KB5028166 (OS Builds 19044.3208 and 19045.3208)",
+      "KBTitle": "July 11, 2023—KB5028166 (OS Builds 19044.3208 and 19045.3208)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.14393.6085",
       "Version": "14393.6085",
       "ReleaseDate": "2023-07-11",
       "Article": "KB5028169",
-      "KBTitle": "July 11, 2023—KB5028169 (OS Build 14393.6085) ",
+      "KBTitle": "July 11, 2023—KB5028169 (OS Build 14393.6085)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19045.3208",
       "Version": "19045.3208",
       "ReleaseDate": "2023-07-11",
       "Article": "KB5028166",
-      "KBTitle": "July 11, 2023—KB5028166 (OS Builds 19044.3208 and 19045.3208)",
+      "KBTitle": "July 11, 2023—KB5028166 (OS Builds 19044.3208 and 19045.3208)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.20348.1850",
@@ -9832,18 +10075,18 @@
       "Version": "19045.3324",
       "ReleaseDate": "2023-08-08",
       "Article": "KB5029244",
-      "KBTitle": "August 8, 2023—KB5029244 (OS Builds 19044.3324 and 19045.3324)",
+      "KBTitle": "August 8, 2023—KB5029244 (OS Builds 19044.3324 and 19045.3324)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.3324",
       "Version": "19044.3324",
       "ReleaseDate": "2023-08-08",
       "Article": "KB5029244",
-      "KBTitle": "August 8, 2023—KB5029244 (OS Builds 19044.3324 and 19045.3324)",
+      "KBTitle": "August 8, 2023—KB5029244 (OS Builds 19044.3324 and 19045.3324)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.22621.2134",
@@ -9851,6 +10094,15 @@
       "ReleaseDate": "2023-08-08",
       "Article": "KB5029263",
       "KBTitle": "August 8, 2023—KB5029263 (OS Build 22621.2134)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19045.3324",
+      "Version": "19045.3324",
+      "ReleaseDate": "2023-08-08",
+      "Article": "KB5029244",
+      "KBTitle": "August 8, 2023—KB5029244 (OS Builds 19044.3324 and 19045.3324)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -9873,13 +10125,22 @@
       "Comment": ""
     },
     {
+      "Win10Version": "10.0.19044.3324",
+      "Version": "19044.3324",
+      "ReleaseDate": "2023-08-08",
+      "Article": "KB5029244",
+      "KBTitle": "August 8, 2023—KB5029244 (OS Builds 19044.3324 and 19045.3324)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
       "Win10Version": "10.0.14393.6167",
       "Version": "14393.6167",
       "ReleaseDate": "2023-08-08",
       "Article": "KB5029242",
-      "KBTitle": "August 8, 2023—KB5029242 (OS Build 14393.6167) ",
+      "KBTitle": "August 8, 2023—KB5029242 (OS Build 14393.6167)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.10240.20107",
@@ -9895,8 +10156,8 @@
       "Version": "17763.4737",
       "ReleaseDate": "2023-08-08",
       "Article": "KB5029247",
-      "KBTitle": "August 8, 2023—KB5029247 (OS Build 17763.4737)",
-      "Comment": "",
+      "KBTitle": "August 8, 2023—KB5029247 (OS Build 17763.4737)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -9940,17 +10201,17 @@
       "Version": "19045.3448",
       "ReleaseDate": "2023-09-12",
       "Article": "KB5030211",
-      "KBTitle": "September 12, 2023—KB5030211 (OS Builds 19044.3448 and 19045.3448)",
+      "KBTitle": "September 12, 2023—KB5030211 (OS Builds 19044.3448 and 19045.3448)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.4851",
       "Version": "17763.4851",
       "ReleaseDate": "2023-09-12",
       "Article": "KB5030214",
-      "KBTitle": "September 12, 2023—KB5030214 (OS Build 17763.4851)",
-      "Comment": "",
+      "KBTitle": "September 12, 2023—KB5030214 (OS Build 17763.4851)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -9985,6 +10246,24 @@
       "Version": "19044.3448",
       "ReleaseDate": "2023-09-12",
       "Article": "KB5030211",
+      "KBTitle": "September 12, 2023—KB5030211 (OS Builds 19044.3448 and 19045.3448)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.3448",
+      "Version": "19045.3448",
+      "ReleaseDate": "2023-09-12",
+      "Article": "KB5030211",
+      "KBTitle": "September 12, 2023—KB5030211 (OS Builds 19044.3448 and 19045.3448)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19044.3448",
+      "Version": "19044.3448",
+      "ReleaseDate": "2023-09-12",
+      "Article": "KB5030211",
       "KBTitle": "September 12, 2023—KB5030211 (OS Builds 19044.3448 and 19045.3448)",
       "LTSCOnly": false,
       "Comment": ""
@@ -9994,9 +10273,9 @@
       "Version": "14393.6252",
       "ReleaseDate": "2023-09-12",
       "Article": "KB5030213",
-      "KBTitle": "September 12, 2023—KB5030213 (OS Build 14393.6252) ",
+      "KBTitle": "September 12, 2023—KB5030213 (OS Build 14393.6252)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19045.3516",
@@ -10030,9 +10309,9 @@
       "Version": "19045.3570",
       "ReleaseDate": "2023-10-10",
       "Article": "KB5031356",
-      "KBTitle": "October 10, 2023—KB5031356 (OS Builds 19044.3570 and 19045.3570)",
+      "KBTitle": "October 10, 2023—KB5031356 (OS Builds 19044.3570 and 19045.3570)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.22000.2538",
@@ -10066,17 +10345,35 @@
       "Version": "14393.6351",
       "ReleaseDate": "2023-10-10",
       "Article": "KB5031362",
-      "KBTitle": "October 10, 2023—KB5031362 (OS Build 14393.6351) ",
+      "KBTitle": "October 10, 2023—KB5031362 (OS Build 14393.6351)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.3570",
+      "Version": "19045.3570",
+      "ReleaseDate": "2023-10-10",
+      "Article": "KB5031356",
+      "KBTitle": "October 10, 2023—KB5031356 (OS Builds 19044.3570 and 19045.3570)",
       "LTSCOnly": false,
       "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19044.3570",
+      "Version": "19044.3570",
+      "ReleaseDate": "2023-10-10",
+      "Article": "KB5031356",
+      "KBTitle": "October 10, 2023—KB5031356 (OS Builds 19044.3570 and 19045.3570)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.4974",
       "Version": "17763.4974",
       "ReleaseDate": "2023-10-10",
       "Article": "KB5031361",
-      "KBTitle": "October 10, 2023—KB5031361 (OS Build 17763.4974)",
-      "Comment": "",
+      "KBTitle": "October 10, 2023—KB5031361 (OS Build 17763.4974)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -10183,8 +10480,8 @@
       "Version": "17763.5122",
       "ReleaseDate": "2023-11-14",
       "Article": "KB5032196",
-      "KBTitle": "November 14, 2023—KB5032196 (OS Build 17763.5122)",
-      "Comment": "",
+      "KBTitle": "November 14, 2023—KB5032196 (OS Build 17763.5122)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -10201,9 +10498,9 @@
       "Version": "14393.6452",
       "ReleaseDate": "2023-11-14",
       "Article": "KB5032197",
-      "KBTitle": "November 14, 2023—KB5032197 (OS Build 14393.6452) ",
+      "KBTitle": "November 14, 2023—KB5032197 (OS Build 14393.6452)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.20348.2113",
@@ -10213,6 +10510,24 @@
       "KBTitle": "November 14, 2023—KB5032198 (OS Build 20348.2113)",
       "LTSCOnly": false,
       "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19045.3693",
+      "Version": "19045.3693",
+      "ReleaseDate": "2023-11-14",
+      "Article": "KB5032189",
+      "KBTitle": "November 14, 2023—KB5032189 (OS Builds 19044.3693 and 19045.3693)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.3693",
+      "Version": "19044.3693",
+      "ReleaseDate": "2023-11-14",
+      "Article": "KB5032189",
+      "KBTitle": "November 14, 2023—KB5032189 (OS Builds 19044.3693 and 19045.3693)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19045.3758",
@@ -10255,9 +10570,9 @@
       "Version": "19045.3803",
       "ReleaseDate": "2023-12-12",
       "Article": "KB5033372",
-      "KBTitle": "December 12, 2023—KB5033372 (OS Builds 19044.3803 and 19045.3803)",
+      "KBTitle": "December 12, 2023—KB5033372 (OS Builds 19044.3803 and 19045.3803)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.10240.20345",
@@ -10282,6 +10597,24 @@
       "Version": "19044.3803",
       "ReleaseDate": "2023-12-12",
       "Article": "KB5033372",
+      "KBTitle": "December 12, 2023—KB5033372 (OS Builds 19044.3803 and 19045.3803)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.3803",
+      "Version": "19044.3803",
+      "ReleaseDate": "2023-12-12",
+      "Article": "KB5033372",
+      "KBTitle": "December 12, 2023—KB5033372 (OS Builds 19044.3803 and 19045.3803)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19045.3803",
+      "Version": "19045.3803",
+      "ReleaseDate": "2023-12-12",
+      "Article": "KB5033372",
       "KBTitle": "December 12, 2023—KB5033372 (OS Builds 19044.3803 and 19045.3803)",
       "LTSCOnly": false,
       "Comment": ""
@@ -10300,8 +10633,8 @@
       "Version": "17763.5206",
       "ReleaseDate": "2023-12-12",
       "Article": "KB5033371",
-      "KBTitle": "December 12, 2023—KB5033371 (OS Build 17763.5206)",
-      "Comment": "",
+      "KBTitle": "December 12, 2023—KB5033371 (OS Build 17763.5206)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -10318,9 +10651,9 @@
       "Version": "14393.6529",
       "ReleaseDate": "2023-12-12",
       "Article": "KB5033373",
-      "KBTitle": "December 12, 2023—KB5033373 (OS Build 14393.6529) ",
+      "KBTitle": "December 12, 2023—KB5033373 (OS Build 14393.6529)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.25398.584",
@@ -10390,8 +10723,8 @@
       "Version": "17763.5329",
       "ReleaseDate": "2024-01-09",
       "Article": "KB5034127",
-      "KBTitle": "January 9, 2024—KB5034127 (OS Build 17763.5329)",
-      "Comment": "",
+      "KBTitle": "January 9, 2024—KB5034127 (OS Build 17763.5329)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -10413,13 +10746,31 @@
       "Comment": ""
     },
     {
+      "Win10Version": "10.0.19044.3930",
+      "Version": "19044.3930",
+      "ReleaseDate": "2024-01-09",
+      "Article": "KB5034122",
+      "KBTitle": "January 9, 2024—KB5034122 (OS Builds 19044.3930 and 19045.3930)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.3930",
+      "Version": "19045.3930",
+      "ReleaseDate": "2024-01-09",
+      "Article": "KB5034122",
+      "KBTitle": "January 9, 2024—KB5034122 (OS Builds 19044.3930 and 19045.3930)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
       "Win10Version": "10.0.14393.6614",
       "Version": "14393.6614",
       "ReleaseDate": "2024-01-09",
       "Article": "KB5034119",
-      "KBTitle": "January 9, 2024—KB5034119 (OS Build 14393.6614) ",
+      "KBTitle": "January 9, 2024—KB5034119 (OS Build 14393.6614)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19045.3996",
@@ -10453,13 +10804,22 @@
       "Version": "19044.4046",
       "ReleaseDate": "2024-02-13",
       "Article": "KB5034763",
-      "KBTitle": "February 13, 2024—KB5034763 (OS Builds 19044.4046 and 19045.4046)",
+      "KBTitle": "February 13, 2024—KB5034763 (OS Builds 19044.4046 and 19045.4046)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19045.4046",
       "Version": "19045.4046",
+      "ReleaseDate": "2024-02-13",
+      "Article": "KB5034763",
+      "KBTitle": "February 13, 2024—KB5034763 (OS Builds 19044.4046 and 19045.4046)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.4046",
+      "Version": "19044.4046",
       "ReleaseDate": "2024-02-13",
       "Article": "KB5034763",
       "KBTitle": "February 13, 2024—KB5034763 (OS Builds 19044.4046 and 19045.4046)",
@@ -10471,8 +10831,8 @@
       "Version": "17763.5458",
       "ReleaseDate": "2024-02-13",
       "Article": "KB5034768",
-      "KBTitle": "February 13, 2024—KB5034768 (OS Build 17763.5458)",
-      "Comment": "",
+      "KBTitle": "February 13, 2024—KB5034768 (OS Build 17763.5458)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -10481,6 +10841,15 @@
       "ReleaseDate": "2024-02-13",
       "Article": "KB5034765",
       "KBTitle": "February 13, 2024—KB5034765 (OS Builds 22621.3155 and 22631.3155)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19045.4046",
+      "Version": "19045.4046",
+      "ReleaseDate": "2024-02-13",
+      "Article": "KB5034763",
+      "KBTitle": "February 13, 2024—KB5034763 (OS Builds 19044.4046 and 19045.4046)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -10498,9 +10867,9 @@
       "Version": "14393.6709",
       "ReleaseDate": "2024-02-13",
       "Article": "KB5034767",
-      "KBTitle": "February 13, 2024—KB5034767 (OS Build 14393.6709) ",
+      "KBTitle": "February 13, 2024—KB5034767 (OS Build 14393.6709)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.10240.20469",
@@ -10579,9 +10948,9 @@
       "Version": "14393.6796",
       "ReleaseDate": "2024-03-12",
       "Article": "KB5035855",
-      "KBTitle": "March 12, 2024—KB5035855 (OS Build 14393.6796) ",
+      "KBTitle": "March 12, 2024—KB5035855 (OS Build 14393.6796)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.4170",
@@ -10642,8 +11011,8 @@
       "Version": "17763.5576",
       "ReleaseDate": "2024-03-12",
       "Article": "KB5035849",
-      "KBTitle": "March 12, 2024—KB5035849 (OS Build 17763.5576)",
-      "Comment": "",
+      "KBTitle": "March 12, 2024—KB5035849 (OS Build 17763.5576)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -10652,6 +11021,24 @@
       "ReleaseDate": "2024-03-12",
       "Article": "KB5035858",
       "KBTitle": "March 12, 2024-KB5035858 (OS Build 10240.20526) - EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.4170",
+      "Version": "19045.4170",
+      "ReleaseDate": "2024-03-12",
+      "Article": "KB5035845",
+      "KBTitle": "March 12, 2024—KB5035845 (OS Builds 19044.4170 and 19045.4170)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.4170",
+      "Version": "19044.4170",
+      "ReleaseDate": "2024-03-12",
+      "Article": "KB5035845",
+      "KBTitle": "March 12, 2024—KB5035845 (OS Builds 19044.4170 and 19045.4170)- EXPIRED",
       "LTSCOnly": false,
       "Comment": "- EXPIRED"
     },
@@ -10714,8 +11101,8 @@
       "Version": "17763.5696",
       "ReleaseDate": "2024-04-09",
       "Article": "KB5036896",
-      "KBTitle": "April 9, 2024—KB5036896 (OS Build 17763.5696)",
-      "Comment": "",
+      "KBTitle": "April 9, 2024—KB5036896 (OS Build 17763.5696)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -10759,6 +11146,24 @@
       "Version": "19045.4291",
       "ReleaseDate": "2024-04-09",
       "Article": "KB5036892",
+      "KBTitle": "April 9, 2024—KB5036892 (OS Builds 19044.4291 and 19045.4291)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.4291",
+      "Version": "19044.4291",
+      "ReleaseDate": "2024-04-09",
+      "Article": "KB5036892",
+      "KBTitle": "April 9, 2024—KB5036892 (OS Builds 19044.4291 and 19045.4291)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.4291",
+      "Version": "19045.4291",
+      "ReleaseDate": "2024-04-09",
+      "Article": "KB5036892",
       "KBTitle": "April 9, 2024—KB5036892 (OS Builds 19044.4291 and 19045.4291)",
       "LTSCOnly": false,
       "Comment": ""
@@ -10786,9 +11191,9 @@
       "Version": "14393.6897",
       "ReleaseDate": "2024-04-09",
       "Article": "KB5036899",
-      "KBTitle": "April 9, 2024—KB5036899 (OS Build 14393.6897)",
+      "KBTitle": "April 9, 2024—KB5036899 (OS Build 14393.6897)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.10240.20596",
@@ -10881,13 +11286,31 @@
       "Comment": "- EXPIRED"
     },
     {
+      "Win10Version": "10.0.19045.4412",
+      "Version": "19045.4412",
+      "ReleaseDate": "2024-05-14",
+      "Article": "KB5037768",
+      "KBTitle": "May 14, 2024—KB5037768 (OS Builds 19044.4412 and 19045.4412)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
       "Win10Version": "10.0.14393.6981",
       "Version": "14393.6981",
       "ReleaseDate": "2024-05-14",
       "Article": "KB5037763",
-      "KBTitle": "May 14, 2024—KB5037763 (OS Build 14393.6981)",
+      "KBTitle": "May 14, 2024—KB5037763 (OS Build 14393.6981)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.4412",
+      "Version": "19044.4412",
+      "ReleaseDate": "2024-05-14",
+      "Article": "KB5037768",
+      "KBTitle": "May 14, 2024—KB5037768 (OS Builds 19044.4412 and 19045.4412)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.25398.887",
@@ -10912,8 +11335,8 @@
       "Version": "17763.5820",
       "ReleaseDate": "2024-05-14",
       "Article": "KB5037765",
-      "KBTitle": "May 14, 2024—KB5037765 (OS Build 17763.5820)",
-      "Comment": "",
+      "KBTitle": "May 14, 2024—KB5037765 (OS Build 17763.5820)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -10921,8 +11344,8 @@
       "Version": "17763.5830",
       "ReleaseDate": "2024-05-23",
       "Article": "KB5039705",
-      "KBTitle": "May 23, 2024—KB5039705 (OS Build 17763.5830) Out-of-band",
-      "Comment": "Out-of-band",
+      "KBTitle": "May 23, 2024—KB5039705 (OS Build 17763.5830) Out-of-band- EXPIRED",
+      "Comment": "Out-of-band- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -10975,8 +11398,8 @@
       "Version": "17763.5936",
       "ReleaseDate": "2024-06-11",
       "Article": "KB5039217",
-      "KBTitle": "June 11, 2024—KB5039217 (OS Build 17763.5936)",
-      "Comment": "",
+      "KBTitle": "June 11, 2024—KB5039217 (OS Build 17763.5936)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -11020,9 +11443,27 @@
       "Version": "14393.7070",
       "ReleaseDate": "2024-06-11",
       "Article": "KB5039214",
-      "KBTitle": "June 11, 2024—KB5039214 (OS Build 14393.7070)",
+      "KBTitle": "June 11, 2024—KB5039214 (OS Build 14393.7070)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.4529",
+      "Version": "19044.4529",
+      "ReleaseDate": "2024-06-11",
+      "Article": "KB5039211",
+      "KBTitle": "June 11, 2024—KB5039211 (OS Builds 19044.4529 and 19045.4529)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.4529",
+      "Version": "19045.4529",
+      "ReleaseDate": "2024-06-11",
+      "Article": "KB5039211",
+      "KBTitle": "June 11, 2024—KB5039211 (OS Builds 19044.4529 and 19045.4529)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.25398.950",
@@ -11146,8 +11587,8 @@
       "Version": "17763.6054",
       "ReleaseDate": "2024-07-09",
       "Article": "KB5040430",
-      "KBTitle": "July 9, 2024—KB5040430 (OS Build 17763.6054)",
-      "Comment": "",
+      "KBTitle": "July 9, 2024—KB5040430 (OS Build 17763.6054)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -11155,9 +11596,9 @@
       "Version": "14393.7159",
       "ReleaseDate": "2024-07-09",
       "Article": "KB5040434",
-      "KBTitle": "July 9, 2024—KB5040434 (OS Build 14393.7159)",
+      "KBTitle": "July 9, 2024—KB5040434 (OS Build 14393.7159)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.10240.20710",
@@ -11185,6 +11626,24 @@
       "KBTitle": "July 9, 2024—KB5040431 (OS Build 22000.3079)",
       "LTSCOnly": false,
       "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19045.4651",
+      "Version": "19045.4651",
+      "ReleaseDate": "2024-07-09",
+      "Article": "KB5040427",
+      "KBTitle": "July 9, 2024—KB5040427 (OS Builds 19044.4651 and 19045.4651)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.4651",
+      "Version": "19044.4651",
+      "ReleaseDate": "2024-07-09",
+      "Article": "KB5040427",
+      "KBTitle": "July 9, 2024—KB5040427 (OS Builds 19044.4651 and 19045.4651)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.20348.2582",
@@ -11304,6 +11763,15 @@
       "Comment": ""
     },
     {
+      "Win10Version": "10.0.19044.4780",
+      "Version": "19044.4780",
+      "ReleaseDate": "2024-08-13",
+      "Article": "KB5041580",
+      "KBTitle": "August 13, 2024—KB5041580 (OS Builds 19044.4780 and 19045.4780)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
       "Win10Version": "10.0.10240.20751",
       "Version": "10240.20751",
       "ReleaseDate": "2024-08-13",
@@ -11317,18 +11785,27 @@
       "Version": "14393.7259",
       "ReleaseDate": "2024-08-13",
       "Article": "KB5041773",
-      "KBTitle": "August 13, 2024—KB5041773 (OS Build 14393.7259)",
+      "KBTitle": "August 13, 2024—KB5041773 (OS Build 14393.7259)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.6189",
       "Version": "17763.6189",
       "ReleaseDate": "2024-08-13",
       "Article": "KB5041578",
-      "KBTitle": "August 13, 2024—KB5041578 (OS Build 17763.6189)",
-      "Comment": "",
+      "KBTitle": "August 13, 2024—KB5041578 (OS Build 17763.6189)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
+    },
+    {
+      "Win10Version": "10.0.19045.4780",
+      "Version": "19045.4780",
+      "ReleaseDate": "2024-08-13",
+      "Article": "KB5041580",
+      "KBTitle": "August 13, 2024—KB5041580 (OS Builds 19044.4780 and 19045.4780)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.22631.4112",
@@ -11407,9 +11884,9 @@
       "Version": "14393.7336",
       "ReleaseDate": "2024-09-10",
       "Article": "KB5043051",
-      "KBTitle": "September 10, 2024—KB5043051 (OS Build 14393.7336)",
+      "KBTitle": "September 10, 2024—KB5043051 (OS Build 14393.7336)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.20348.2700",
@@ -11425,8 +11902,8 @@
       "Version": "17763.6293",
       "ReleaseDate": "2024-09-10",
       "Article": "KB5043050",
-      "KBTitle": "September 10, 2024—KB5043050 (OS Build 17763.6293)",
-      "Comment": "",
+      "KBTitle": "September 10, 2024—KB5043050 (OS Build 17763.6293)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -11446,6 +11923,24 @@
       "KBTitle": "September 10, 2024—KB5043055 (OS Build 25398.1128)",
       "LTSCOnly": false,
       "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19044.4894",
+      "Version": "19044.4894",
+      "ReleaseDate": "2024-09-10",
+      "Article": "KB5043064",
+      "KBTitle": "September 10, 2024—KB5043064 (OS Builds 19044.4894 and 19045.4894)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.4894",
+      "Version": "19045.4894",
+      "ReleaseDate": "2024-09-10",
+      "Article": "KB5043064",
+      "KBTitle": "September 10, 2024—KB5043064 (OS Builds 19044.4894 and 19045.4894)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.26100.1742",
@@ -11542,18 +12037,18 @@
       "Version": "19045.5011",
       "ReleaseDate": "2024-10-08",
       "Article": "KB5044273",
-      "KBTitle": "October 8, 2024—KB5044273 (OS Builds 19044.5011 and 19045.5011)",
+      "KBTitle": "October 8, 2024—KB5044273 (OS Builds 19044.5011 and 19045.5011)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.5011",
       "Version": "19044.5011",
       "ReleaseDate": "2024-10-08",
       "Article": "KB5044273",
-      "KBTitle": "October 8, 2024—KB5044273 (OS Builds 19044.5011 and 19045.5011)",
+      "KBTitle": "October 8, 2024—KB5044273 (OS Builds 19044.5011 and 19045.5011)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.25398.1189",
@@ -11574,6 +12069,15 @@
       "Comment": ""
     },
     {
+      "Win10Version": "10.0.19045.5011",
+      "Version": "19045.5011",
+      "ReleaseDate": "2024-10-08",
+      "Article": "KB5044273",
+      "KBTitle": "October 8, 2024—KB5044273 (OS Builds 19044.5011 and 19045.5011)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
       "Win10Version": "10.0.20348.2762",
       "Version": "20348.2762",
       "ReleaseDate": "2024-10-08",
@@ -11583,21 +12087,30 @@
       "Comment": ""
     },
     {
+      "Win10Version": "10.0.19044.5011",
+      "Version": "19044.5011",
+      "ReleaseDate": "2024-10-08",
+      "Article": "KB5044273",
+      "KBTitle": "October 8, 2024—KB5044273 (OS Builds 19044.5011 and 19045.5011)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
       "Win10Version": "10.0.14393.7428",
       "Version": "14393.7428",
       "ReleaseDate": "2024-10-08",
       "Article": "KB5044293",
-      "KBTitle": "October 8, 2024—KB5044293 (OS Build 14393.7428)",
+      "KBTitle": "October 8, 2024—KB5044293 (OS Build 14393.7428)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.6414",
       "Version": "17763.6414",
       "ReleaseDate": "2024-10-08",
       "Article": "KB5044277",
-      "KBTitle": "October 8, 2024—KB5044277 (OS Build 17763.6414)",
-      "Comment": "",
+      "KBTitle": "October 8, 2024—KB5044277 (OS Build 17763.6414)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -11650,8 +12163,8 @@
       "Version": "17763.6532",
       "ReleaseDate": "2024-11-12",
       "Article": "KB5046615",
-      "KBTitle": "November 12, 2024—KB5046615 (OS Build 17763.6532)",
-      "Comment": "",
+      "KBTitle": "November 12, 2024—KB5046615 (OS Build 17763.6532)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -11704,9 +12217,9 @@
       "Version": "19045.5131",
       "ReleaseDate": "2024-11-12",
       "Article": "KB5046613",
-      "KBTitle": "November 12, 2024—KB5046613 (OS Builds 19044.5131 and 19045.5131)",
+      "KBTitle": "November 12, 2024—KB5046613 (OS Builds 19044.5131 and 19045.5131)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.26100.2314",
@@ -11718,6 +12231,15 @@
       "Comment": ""
     },
     {
+      "Win10Version": "10.0.19045.5131",
+      "Version": "19045.5131",
+      "ReleaseDate": "2024-11-12",
+      "Article": "KB5046613",
+      "KBTitle": "November 12, 2024—KB5046613 (OS Builds 19044.5131 and 19045.5131)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
       "Win10Version": "10.0.19044.5131",
       "Version": "19044.5131",
       "ReleaseDate": "2024-11-12",
@@ -11725,6 +12247,15 @@
       "KBTitle": "November 12, 2024—KB5046613 (OS Builds 19044.5131 and 19045.5131)",
       "LTSCOnly": false,
       "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19044.5131",
+      "Version": "19044.5131",
+      "ReleaseDate": "2024-11-12",
+      "Article": "KB5046613",
+      "KBTitle": "November 12, 2024—KB5046613 (OS Builds 19044.5131 and 19045.5131)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.22631.4541",
@@ -11776,6 +12307,15 @@
       "Version": "19044.5247",
       "ReleaseDate": "2024-12-10",
       "Article": "KB5048652",
+      "KBTitle": "December 10, 2024—KB5048652 (OS Builds 19044.5247 and 19045.5247)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.5247",
+      "Version": "19044.5247",
+      "ReleaseDate": "2024-12-10",
+      "Article": "KB5048652",
       "KBTitle": "December 10, 2024—KB5048652 (OS Builds 19044.5247 and 19045.5247)",
       "LTSCOnly": false,
       "Comment": ""
@@ -11794,9 +12334,9 @@
       "Version": "19045.5247",
       "ReleaseDate": "2024-12-10",
       "Article": "KB5048652",
-      "KBTitle": "December 10, 2024—KB5048652 (OS Builds 19044.5247 and 19045.5247)",
+      "KBTitle": "December 10, 2024—KB5048652 (OS Builds 19044.5247 and 19045.5247)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.22621.4602",
@@ -11830,8 +12370,8 @@
       "Version": "17763.6659",
       "ReleaseDate": "2024-12-10",
       "Article": "KB5048661",
-      "KBTitle": "December 10, 2024—KB5048661 (OS Build 17763.6659)",
-      "Comment": "",
+      "KBTitle": "December 10, 2024—KB5048661 (OS Build 17763.6659)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -11840,6 +12380,15 @@
       "ReleaseDate": "2024-12-10",
       "Article": "KB5048667",
       "KBTitle": "December 10, 2024—KB5048667 (OS Build 26100.2605)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19045.5247",
+      "Version": "19045.5247",
+      "ReleaseDate": "2024-12-10",
+      "Article": "KB5048652",
+      "KBTitle": "December 10, 2024—KB5048652 (OS Builds 19044.5247 and 19045.5247)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -11889,6 +12438,15 @@
       "Comment": ""
     },
     {
+      "Win10Version": "10.0.19045.5371",
+      "Version": "19045.5371",
+      "ReleaseDate": "2025-01-14",
+      "Article": "KB5049981",
+      "KBTitle": "January 14, 2025—KB5049981 (OS Builds 19044.5371 and 19045.5371)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
       "Win10Version": "10.0.25398.1369",
       "Version": "25398.1369",
       "ReleaseDate": "2025-01-14",
@@ -11896,6 +12454,15 @@
       "KBTitle": "January 14, 2025—KB5049984 (OS Build 25398.1369)",
       "LTSCOnly": false,
       "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19044.5371",
+      "Version": "19044.5371",
+      "ReleaseDate": "2025-01-14",
+      "Article": "KB5049981",
+      "KBTitle": "January 14, 2025—KB5049981 (OS Builds 19044.5371 and 19045.5371)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.5371",
@@ -11983,8 +12550,8 @@
       "Version": "17763.6893",
       "ReleaseDate": "2025-02-11",
       "Article": "KB5052000",
-      "KBTitle": "February 11, 2025—KB5052000 (OS Build 17763.6893)",
-      "Comment": "",
+      "KBTitle": "February 11, 2025—KB5052000 (OS Build 17763.6893)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -12064,6 +12631,24 @@
       "Version": "19045.5487",
       "ReleaseDate": "2025-02-11",
       "Article": "KB5051974",
+      "KBTitle": "February 11, 2025—KB5051974 (OS Builds 19044.5487 and 19045.5487)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.5487",
+      "Version": "19044.5487",
+      "ReleaseDate": "2025-02-11",
+      "Article": "KB5051974",
+      "KBTitle": "February 11, 2025—KB5051974 (OS Builds 19044.5487 and 19045.5487)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.5487",
+      "Version": "19045.5487",
+      "ReleaseDate": "2025-02-11",
+      "Article": "KB5051974",
       "KBTitle": "February 11, 2025—KB5051974 (OS Builds 19044.5487 and 19045.5487)",
       "LTSCOnly": false,
       "Comment": ""
@@ -12136,18 +12721,18 @@
       "Version": "19045.5608",
       "ReleaseDate": "2025-03-11",
       "Article": "KB5053606",
-      "KBTitle": "March 11, 2025—KB5053606 (OS Builds 19044.5608 and 19045.5608)",
+      "KBTitle": "March 11, 2025—KB5053606 (OS Builds 19044.5608 and 19045.5608)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.19044.5608",
       "Version": "19044.5608",
       "ReleaseDate": "2025-03-11",
       "Article": "KB5053606",
-      "KBTitle": "March 11, 2025—KB5053606 (OS Builds 19044.5608 and 19045.5608)",
+      "KBTitle": "March 11, 2025—KB5053606 (OS Builds 19044.5608 and 19045.5608)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.26100.3476",
@@ -12172,9 +12757,18 @@
       "Version": "17763.7009",
       "ReleaseDate": "2025-03-11",
       "Article": "KB5053596",
-      "KBTitle": "March 11, 2025—KB5053596 (OS Build 17763.7009)",
-      "Comment": "",
+      "KBTitle": "March 11, 2025—KB5053596 (OS Build 17763.7009)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
+    },
+    {
+      "Win10Version": "10.0.19044.5608",
+      "Version": "19044.5608",
+      "ReleaseDate": "2025-03-11",
+      "Article": "KB5053606",
+      "KBTitle": "March 11, 2025—KB5053606 (OS Builds 19044.5608 and 19045.5608)",
+      "LTSCOnly": false,
+      "Comment": ""
     },
     {
       "Win10Version": "10.0.25398.1486",
@@ -12191,6 +12785,15 @@
       "ReleaseDate": "2025-03-11",
       "Article": "KB5053603",
       "KBTitle": "March 11, 2025—KB5053603 (OS Build 20348.3328)",
+      "LTSCOnly": false,
+      "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19045.5608",
+      "Version": "19045.5608",
+      "ReleaseDate": "2025-03-11",
+      "Article": "KB5053606",
+      "KBTitle": "March 11, 2025—KB5053606 (OS Builds 19044.5608 and 19045.5608)",
       "LTSCOnly": false,
       "Comment": ""
     },
@@ -12235,9 +12838,9 @@
       "Version": "19045.5736",
       "ReleaseDate": "2025-04-08",
       "Article": "KB5055518",
-      "KBTitle": "April 8, 2025—KB5055518 (OS Builds 19044.5736 and 19045.5736)",
+      "KBTitle": "April 8, 2025—KB5055518 (OS Builds 19044.5736 and 19045.5736)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.20348.3453",
@@ -12262,9 +12865,9 @@
       "Version": "19044.5736",
       "ReleaseDate": "2025-04-08",
       "Article": "KB5055518",
-      "KBTitle": "April 8, 2025—KB5055518 (OS Builds 19044.5736 and 19045.5736)",
+      "KBTitle": "April 8, 2025—KB5055518 (OS Builds 19044.5736 and 19045.5736)- EXPIRED",
       "LTSCOnly": false,
-      "Comment": ""
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.22621.5189",
@@ -12307,8 +12910,8 @@
       "Version": "17763.7136",
       "ReleaseDate": "2025-04-08",
       "Article": "KB5055519",
-      "KBTitle": "April 8, 2025—KB5055519 (OS Build 17763.7136)",
-      "Comment": "",
+      "KBTitle": "April 8, 2025—KB5055519 (OS Build 17763.7136)- EXPIRED",
+      "Comment": "- EXPIRED",
       "LTSCOnly": true
     },
     {
@@ -12546,6 +13149,24 @@
       "LTSCOnly": true
     },
     {
+      "Win10Version": "10.0.19044.5854",
+      "Version": "19044.5854",
+      "ReleaseDate": "2025-05-13",
+      "Article": "KB5058379",
+      "KBTitle": "May 13, 2025—KB5058379 (OS Builds 19044.5854 and 19045.5854)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19045.5854",
+      "Version": "19045.5854",
+      "ReleaseDate": "2025-05-13",
+      "Article": "KB5058379",
+      "KBTitle": "May 13, 2025—KB5058379 (OS Builds 19044.5854 and 19045.5854)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
       "Win10Version": "10.0.19044.5856",
       "Version": "19044.5856",
       "ReleaseDate": "2025-05-19",
@@ -12688,6 +13309,24 @@
       "KBTitle": "June 10, 2025—KB5060998 (OS Build 10240.21034)",
       "LTSCOnly": false,
       "Comment": ""
+    },
+    {
+      "Win10Version": "10.0.19045.5965",
+      "Version": "19045.5965",
+      "ReleaseDate": "2025-06-10",
+      "Article": "KB5060533",
+      "KBTitle": "June 10, 2025—KB5060533 (OS Builds 19044.5965 and 19045.5965)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
+    },
+    {
+      "Win10Version": "10.0.19044.5965",
+      "Version": "19044.5965",
+      "ReleaseDate": "2025-06-10",
+      "Article": "KB5060533",
+      "KBTitle": "June 10, 2025—KB5060533 (OS Builds 19044.5965 and 19045.5965)- EXPIRED",
+      "LTSCOnly": false,
+      "Comment": "- EXPIRED"
     },
     {
       "Win10Version": "10.0.17763.7434",
