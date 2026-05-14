@@ -1,8 +1,8 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-03-18T22:09:48.820908Z",
+    "LastUpdatedUTC": "2026-05-14T01:42:39.103718Z",
     "SourceList": [
-      "https://docs.microsoft.com/en-us/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a"
+      "https://learn.microsoft.com/en-us/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a"
     ]
   },
   "Data": [
@@ -280,7 +280,7 @@
       "LangCode": 1070,
       "LangCodeHex": "042E",
       "LangName": "Sorbian",
-      "LangTag": "wen-DE "
+      "LangTag": "wen-DE"
     },
     {
       "LangCode": 1071,
@@ -562,7 +562,7 @@
       "LangCode": 1117,
       "LangCodeHex": "045D",
       "LangName": "Inuktitut",
-      "LangTag": "iu-Cans-CA "
+      "LangTag": "iu-Cans-CA"
     },
     {
       "LangCode": 1118,

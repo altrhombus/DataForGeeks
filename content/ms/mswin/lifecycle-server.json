@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-07-08T21:08:19.3561453Z",
+    "LastUpdatedUTC": "2026-05-14T02:18:10.32503Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2",
@@ -14,48 +14,126 @@
   },
   "Data": [
     {
+      "Product": "Windows Server 2008",
+      "Version": "Extended Security Update Year 2",
+      "StartDate": "2021-01-13",
+      "MainstreamEndDate": "2022-01-12",
+      "ExtendedEndDate": "2021-01-13"
+    },
+    {
+      "Product": "Windows Server 2008",
+      "Version": "Extended Security Update Year 4 (Azure only)",
+      "StartDate": "2023-01-11",
+      "MainstreamEndDate": "2024-01-10",
+      "ExtendedEndDate": "2023-01-11"
+    },
+    {
+      "Product": "Windows Server 2008",
+      "Version": "Service Pack 2",
+      "StartDate": "2009-04-29",
+      "MainstreamEndDate": "2020-01-15",
+      "ExtendedEndDate": "2011-07-13"
+    },
+    {
+      "Product": "Windows Server 2008",
       "Version": "Windows Server 2008",
       "StartDate": "2008-05-06",
       "MainstreamEndDate": "2015-01-14",
       "ExtendedEndDate": "2020-01-15"
     },
     {
+      "Product": "Windows Server 2008 R2",
+      "Version": "Extended Security Update Year 2",
+      "StartDate": "2021-01-13",
+      "MainstreamEndDate": "2022-01-12",
+      "ExtendedEndDate": "2021-01-13"
+    },
+    {
+      "Product": "Windows Server 2008 R2",
+      "Version": "Extended Security Update Year 4 (Azure only)",
+      "StartDate": "2023-01-11",
+      "MainstreamEndDate": "2024-01-10",
+      "ExtendedEndDate": "2023-01-11"
+    },
+    {
+      "Product": "Windows Server 2008 R2",
+      "Version": "Service Pack 1",
+      "StartDate": "2011-02-22",
+      "MainstreamEndDate": "2020-01-15",
+      "ExtendedEndDate": "2013-04-10"
+    },
+    {
+      "Product": "Windows Server 2008 R2",
       "Version": "Windows Server 2008 R2",
       "StartDate": "2009-10-22",
       "MainstreamEndDate": "2015-01-14",
       "ExtendedEndDate": "2020-01-15"
     },
     {
+      "Product": "Windows Server 2012",
+      "Version": "Extended Security Update Year 1",
+      "StartDate": "2023-10-11",
+      "MainstreamEndDate": "2024-10-09",
+      "ExtendedEndDate": "2023-10-11"
+    },
+    {
+      "Product": "Windows Server 2012",
+      "Version": "Extended Security Update Year 3",
+      "StartDate": "2025-10-15",
+      "MainstreamEndDate": "2026-10-14",
+      "ExtendedEndDate": "2025-10-15"
+    },
+    {
+      "Product": "Windows Server 2012",
       "Version": "Windows Server 2012",
       "StartDate": "2012-10-30",
       "MainstreamEndDate": "2018-10-10",
       "ExtendedEndDate": "2023-10-11"
     },
     {
+      "Product": "Windows Server 2012 R2",
+      "Version": "Extended Security Update Year 1",
+      "StartDate": "2023-10-11",
+      "MainstreamEndDate": "2024-10-09",
+      "ExtendedEndDate": "2023-10-11"
+    },
+    {
+      "Product": "Windows Server 2012 R2",
+      "Version": "Extended Security Update Year 3",
+      "StartDate": "2025-10-15",
+      "MainstreamEndDate": "2026-10-14",
+      "ExtendedEndDate": "2025-10-15"
+    },
+    {
+      "Product": "Windows Server 2012 R2",
       "Version": "Windows Server 2012 R2",
       "StartDate": "2013-11-25",
       "MainstreamEndDate": "2018-10-10",
       "ExtendedEndDate": "2023-10-11"
     },
     {
+      "Product": "Windows Server 2016",
       "Version": "Windows Server 2016",
       "StartDate": "2016-10-15",
       "MainstreamEndDate": "2022-01-12",
       "ExtendedEndDate": "2027-01-13"
     },
     {
+      "Product": "Windows Server 2019",
       "Version": "Windows Server 2019",
       "StartDate": "2018-11-13",
       "MainstreamEndDate": "2024-01-10",
       "ExtendedEndDate": "2029-01-10"
     },
     {
+      "Product": "Windows Server 2022",
       "Version": "Windows Server 2022",
       "StartDate": "2021-08-18",
       "MainstreamEndDate": "2026-10-14",
       "ExtendedEndDate": "2031-10-15"
     },
     {
+      "Product": "Windows Server 2025",
       "Version": "Windows Server 2025",
       "StartDate": "2024-11-01",
       "MainstreamEndDate": "2029-11-14",

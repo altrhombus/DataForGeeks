@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2024-11-23T05:58:08.5852289Z",
+    "LastUpdatedUTC": "2026-05-14T01:42:32.656074Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo"
     ]
@@ -52,13 +52,13 @@
       "Value": "PRODUCT_STANDARD_SERVER",
       "Hex": "0x00000007",
       "Dec": 7,
-      "Meaning": "Server Standard (full installation. For Server Core installations of Windows Server 2012 and later, use the method, <a href=\"/en-us/previous-versions/windows/desktop/legacy/hh846315(v=vs.85)\" data-linktype=\"absolute-path\">Determining whether Server Core is running</a>.)"
+      "Meaning": "Server Standard (full installation. For Server Core installations of Windows Server 2012 and later, use the method, Determining whether Server Core is running.)"
     },
     {
       "Value": "PRODUCT_DATACENTER_SERVER",
       "Hex": "0x00000008",
       "Dec": 8,
-      "Meaning": "Server Datacenter (full installation. For Server Core installations of Windows Server 2012 and later, use the method, <a href=\"/en-us/previous-versions/windows/desktop/legacy/hh846315(v=vs.85)\" data-linktype=\"absolute-path\">Determining whether Server Core is running</a>.)"
+      "Meaning": "Server Datacenter (full installation. For Server Core installations of Windows Server 2012 and later, use the method, Determining whether Server Core is running.)"
     },
     {
       "Value": "PRODUCT_SMALLBUSINESS_SERVER",
@@ -85,7 +85,7 @@
       "Meaning": "Server Datacenter (core installation, Windows Server 2008 R2 and earlier)"
     },
     {
-      "Value": "PRODUCT_STANDARD_SERVER_CORE ",
+      "Value": "PRODUCT_STANDARD_SERVER_CORE",
       "Hex": "0x0000000D",
       "Dec": 13,
       "Meaning": "Server Standard (core installation, Windows Server 2008 R2 and earlier)"

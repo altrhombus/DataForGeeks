@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2024-11-23T06:30:34.3175544Z",
+    "LastUpdatedUTC": "2026-05-14T02:06:14.051737Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/cim-chassis"
     ]
@@ -9,6 +9,38 @@
     {
       "Value": "Other",
       "Number": "1"
+    },
+    {
+      "Value": "Unknown",
+      "Number": "2"
+    },
+    {
+      "Value": "Desktop",
+      "Number": "3"
+    },
+    {
+      "Value": "Low Profile Desktop",
+      "Number": "4"
+    },
+    {
+      "Value": "Pizza Box",
+      "Number": "5"
+    },
+    {
+      "Value": "Mini Tower",
+      "Number": "6"
+    },
+    {
+      "Value": "Tower",
+      "Number": "7"
+    },
+    {
+      "Value": "Portable",
+      "Number": "8"
+    },
+    {
+      "Value": "Laptop",
+      "Number": "9"
     },
     {
       "Value": "Notebook",
@@ -51,10 +83,6 @@
       "Number": "19"
     },
     {
-      "Value": "Unknown",
-      "Number": "2"
-    },
-    {
       "Value": "Bus Expansion Chassis",
       "Number": "20"
     },
@@ -73,34 +101,6 @@
     {
       "Value": "Sealed-Case PC",
       "Number": "24"
-    },
-    {
-      "Value": "Desktop",
-      "Number": "3"
-    },
-    {
-      "Value": "Low Profile Desktop",
-      "Number": "4"
-    },
-    {
-      "Value": "Pizza Box",
-      "Number": "5"
-    },
-    {
-      "Value": "Mini Tower",
-      "Number": "6"
-    },
-    {
-      "Value": "Tower",
-      "Number": "7"
-    },
-    {
-      "Value": "Portable",
-      "Number": "8"
-    },
-    {
-      "Value": "Laptop",
-      "Number": "9"
     }
   ]
 }
