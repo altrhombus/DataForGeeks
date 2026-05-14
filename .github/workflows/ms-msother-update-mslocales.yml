@@ -1,11 +1,15 @@
-name: ms-msother-update-locales (Update)
+name: ms-msother-update-mslocales (Update)
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 6 1 * *'
   workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/create-github-app-token@v1
         id: generate-token
@@ -28,10 +32,11 @@ jobs:
           title: Refresh locales
       - name: Enable Pull Request Automerge
         if: steps.cpr.outputs.pull-request-url != ''
-        run: gh pr merge --merge --auto "${{ steps.cpr.outputs.pull-request-number }}" --delete-branch
+        run: gh pr merge --merge --auto "${{ steps.cpr.outputs.pull-request-number }}"
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
       - name: Check outputs
+        if: steps.cpr.outputs.pull-request-url != ''
         run: |
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
           echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
