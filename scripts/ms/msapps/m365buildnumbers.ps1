@@ -79,7 +79,7 @@ $outputData = [PSCustomObject]@{
 }
 
 $allProperties = $m365Releases[0].psobject.Properties.Name
-if (Compare-Object $d4gData.Data $outputData.Data -Property $allProperties) {
+if (Compare-Object $d4gData.Data $outputData.Data -Property $allProperties -SyncWindow 0) {
     $outputFolder = Resolve-Path (Join-Path $PSScriptRoot "../../../content/ms/msapps")
     $outputFile   = Join-Path $outputFolder "buildnumbers.json"
     [System.IO.File]::WriteAllText($outputFile, ($outputData | ConvertTo-Json -Depth 10))

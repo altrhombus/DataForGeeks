@@ -1,25 +1,25 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2025-05-27T15:27:50.9593448Z",
+    "LastUpdatedUTC": "2026-05-14T02:58:12.360350Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/graph/api/resources/bitlockerrecoverykey?view=graph-rest-1.0"
     ]
   },
   "Data": [
     {
-      "volumeTypeEnum": "1",
+      "VolumeTypeEnum": 1,
       "Description": "operatingSystemVolume"
     },
     {
-      "volumeTypeEnum": "2",
+      "VolumeTypeEnum": 2,
       "Description": "fixedDataVolume"
     },
     {
-      "volumeTypeEnum": "3",
+      "VolumeTypeEnum": 3,
       "Description": "removableDataVolume"
     },
     {
-      "volumeTypeEnum": "4",
+      "VolumeTypeEnum": 4,
       "Description": "unknownFutureValue"
     }
   ]

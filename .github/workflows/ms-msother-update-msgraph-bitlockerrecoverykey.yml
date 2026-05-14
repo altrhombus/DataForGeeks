@@ -1,0 +1,42 @@
+name: ms-msother-update-msgraph-bitlockerrecoverykey (Update)
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/create-github-app-token@v1
+        id: generate-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+      - name: Clone Repository
+        uses: actions/checkout@v4
+      - name: Run the PowerShell Script
+        shell: pwsh
+        run: ./scripts/ms/msother/msgraph-bitlockerRecoveryKey.ps1
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch-token: ${{ steps.generate-token.outputs.token }}
+          commit-message: Refresh msother msgraph-bitlockerRecoveryKey.json with latest BitLocker volume types
+          branch: au/ms-msother-update-msgraph-bitlockerrecoverykey
+          delete-branch: true
+          title: Refresh BitLocker volume types
+      - name: Enable Pull Request Automerge
+        if: steps.cpr.outputs.pull-request-url != ''
+        run: gh pr merge --merge --auto "${{ steps.cpr.outputs.pull-request-number }}"
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+      - name: Check outputs
+        if: steps.cpr.outputs.pull-request-url != ''
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"

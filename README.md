@@ -20,7 +20,7 @@ No authentication required. All data is served as plain JSON from GitHub's raw c
 | [Chassis Types](#chassis-types) | `content/ms/msother/mschassistypes.json` | Monthly |
 | [Locales](#locales) | `content/ms/msother/mslocales.json` | Monthly |
 | [Windows OS SKUs](#windows-os-skus) | `content/ms/mswin/msoperatingsystemsku.json` | Monthly |
-| [BitLocker Volume Types](#bitlocker-volume-types) | `content/ms/msother/msgraph-bitlockerRecoveryKey.json` | Static |
+| [BitLocker Volume Types](#bitlocker-volume-types) | `content/ms/msother/msgraph-bitlockerRecoveryKey.json` | Monthly |
 
 Raw URLs follow the pattern:
 ```
@@ -230,7 +230,7 @@ Volume type enum values from the Microsoft Graph `bitlockerRecoveryKey` resource
 
 | Field | Description |
 |---|---|
-| `volumeTypeEnum` | Integer enum value |
+| `VolumeTypeEnum` | Integer enum value |
 | `Description` | Volume type name (e.g. `operatingSystemVolume`, `fixedDataVolume`) |
 
 ---
