@@ -29,12 +29,12 @@ foreach ($sourceUrl in $sourceUrls) {
     }
 
     $titleMatch = $rxTitle.Match($pageData.Content)
-    $product    = if ($titleMatch.Success) { $titleMatch.Groups[1].Value.Trim() } else { '' }
+    $version    = if ($titleMatch.Success) { $titleMatch.Groups[1].Value.Trim() } else { '' }
 
     $rxRelease.Matches($pageData.Content).ForEach{
         $releaseList.Add([PSCustomObject]@{
-            Product           = $product
-            Version           = $_.Groups[1].Value.Trim()
+            Version           = $version
+            Tier              = $_.Groups[1].Value.Trim()
             StartDate         = $(Get-Date $_.Groups[2].Value -Format "yyyy-MM-dd")
             MainstreamEndDate = $(Get-Date $_.Groups[3].Value -Format "yyyy-MM-dd")
             ExtendedEndDate   = $(Get-Date $_.Groups[4].Value -Format "yyyy-MM-dd")
@@ -46,7 +46,7 @@ if (-not $releaseList.Count) {
     Throw "No lifecycle entries parsed - the page structure may have changed"
 }
 
-$releaseList = $releaseList | Sort-Object Product, Version | Select-Object Product, Version, StartDate, MainstreamEndDate, ExtendedEndDate -Unique
+$releaseList = $releaseList | Sort-Object Version, Tier | Select-Object Version, Tier, StartDate, MainstreamEndDate, ExtendedEndDate -Unique
 
 $outputData = [PSCustomObject]@{
     DataForGeeks = [PSCustomObject]@{

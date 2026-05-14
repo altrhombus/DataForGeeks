@@ -158,8 +158,8 @@ Mainstream and extended support dates for Windows Server 2008 through 2025, incl
 
 | Field | Description |
 |---|---|
-| `Product` | Windows Server OS name (e.g. `Windows Server 2019`) |
-| `Version` | Release or support tier (e.g. `Windows Server 2019`, `Service Pack 1`, `Extended Security Update Year 1`) |
+| `Version` | Windows Server OS name (e.g. `Windows Server 2019`) |
+| `Tier` | Support tier within the product (e.g. `Windows Server 2019`, `Service Pack 1`, `Extended Security Update Year 1`) |
 | `StartDate` | General availability or tier start date (`yyyy-MM-dd`) |
 | `MainstreamEndDate` | End of mainstream support (`yyyy-MM-dd`) |
 | `ExtendedEndDate` | End of extended support (`yyyy-MM-dd`) |
