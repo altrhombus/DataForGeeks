@@ -1,28 +1,37 @@
-﻿$rootPage = "https://docs.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
-$d4gData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/msapps/buildnumbers.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
+$sourceUrl = "https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
+$d4gData   = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/msapps/buildnumbers.json" -UseBasicParsing |
+             Select-Object -ExpandProperty Content | ConvertFrom-Json
 
-$pageData = Invoke-WebRequest $rootPage -UseBasicParsing
-
-If($pageData.StatusCode -ne 200) {
-    Throw "Error $($pageData.StatusCode) Getting Page Data"
+$pageData = Invoke-WebRequest $sourceUrl -UseBasicParsing
+if ($pageData.StatusCode -ne 200) {
+    Throw "Error $($pageData.StatusCode) retrieving $sourceUrl"
 }
 
-$tables = [regex]::New('(?msi)<table>(?:.*?)<tbody>(.*?)<\/tbody>').Matches($pageData.Content)
+$rxTable       = [regex]::New('(?msi)<table>(?:.*?)<tbody>(.*?)<\/tbody>')
+$rxRow         = [regex]::New('(?msi)<tr>(.*?)<\/tr>')
+$rxCell        = [regex]::New('(?msi)<td(?:[^>]*)>(.*?)<\/td>')
+$rxLink        = [regex]::New('(?msi)<a(?:[^>])*>(.*?)<\/a>')
+$rxVersionBuild = [regex]::New('(?msi)Version (.*?) \(Build {1,}(.*?)\)')
 
-$versionHistoryRows = [regex]::New('(?msi)<tr>(.*?)<\/tr>').Matches($tables[1].Groups[1].Value)
+$tables = $rxTable.Matches($pageData.Content)
+if ($tables.Count -lt 2) {
+    Throw "Expected at least 2 tables; found $($tables.Count) - the page structure may have changed"
+}
 
-$m365Releases = New-Object System.Collections.ArrayList
+# Table at index 1 is the version history table with columns:
+#   Year | Date | Current | Monthly Enterprise | Semi-Annual Enterprise Preview | Semi-Annual Enterprise
+$versionHistoryRows = $rxRow.Matches($tables[1].Groups[1].Value)
 
-$rxInnerLink = [Regex]::New('(?msi)<a(?:[^>])*>(.*?)<\/a>')
-$rxVersionBuild = [Regex]::New('(?msi)Version (.*?) \(Build {1,}(.*?)\)')
+$m365Releases = [System.Collections.ArrayList]::new()
 
 $versionHistoryRows.ForEach{
+    $cellData = $rxCell.Matches($_.Groups[1].Value)
+    if ($cellData.Count -lt 6) { return }
 
-    $cellData = [regex]::New('(?msi)<td(?:[^>]*)>(.*?)<\/td>').Matches($_.Groups[1].Value)
-    $releaseYear = $cellData[0].Groups[1].Value
-    $releaseDate = $($cellData[1].Groups[1].Value -replace "<br(?:[^>])*>","").Trim()
+    $releaseYear = $cellData[0].Groups[1].Value.Trim()
+    $releaseDate = ($cellData[1].Groups[1].Value -replace '<br(?:[^>])*>', '').Trim()
 
-    if(-Not($releaseYear)) {
+    if (-not $releaseYear) {
         $releaseYear = $lastReleaseYear
     } else {
         $lastReleaseYear = $releaseYear
@@ -30,57 +39,50 @@ $versionHistoryRows.ForEach{
 
     $release = $(Get-Date "$releaseDate $releaseYear" -Format "yyyy-MM-dd")
 
-    $channelCurrentLinks = $rxInnerLink.Matches($cellData[2].Groups[1].Value)
-    $channelMonthlyEnterpriseLinks = $rxInnerLink.Matches($cellData[3].Groups[1].Value)
-    $channelSACEnterprisePreviewLinks = $rxInnerLink.Matches($cellData[4].Groups[1].Value)
-    $channelSACEnterpriseLinks = $rxInnerLink.Matches($cellData[5].Groups[1].Value)
+    $channelMap = @{
+        2 = "Current"
+        3 = "Monthly Enterprise"
+        4 = "Semi-Annual Enterprise Preview"
+        5 = "Semi-Annual Enterprise"
+    }
 
-    $allLinks = New-Object System.Collections.ArrayList
+    foreach ($colIndex in $channelMap.Keys) {
+        $channelName  = $channelMap[$colIndex]
+        $channelLinks = $rxLink.Matches($cellData[$colIndex].Groups[1].Value)
 
-    $allLinks.AddRange(@($channelCurrentLinks.groups.where{$_.Name -eq 1} | Select-Object @{Name="Channel";Expression={"Current"}},@{Name="Value";Expression={$_.Value}}))
-    $allLinks.AddRange(@($channelMonthlyEnterpriseLinks.groups.where{$_.Name -eq 1} | Select-Object @{Name="Channel";Expression={"Monthly Enterprise"}},@{Name="Value";Expression={$_.Value}}))
-    $allLinks.AddRange(@($channelSACEnterprisePreviewLinks.groups.where{$_.Name -eq 1} | Select-Object @{Name="Channel";Expression={"Semi-Annual Enterprise Preview"}},@{Name="Value";Expression={$_.Value}}))
-    $allLinks.AddRange(@($channelSACEnterpriseLinks.groups.where{$_.Name -eq 1} | Select-Object @{Name="Channel";Expression={"Semi-Annual Enterprise"}},@{Name="Value";Expression={$_.Value}}))
-
-    $allLinks.ForEach{
-        $versionBuild = $rxVersionBuild.Matches($_.Value)
-            
-        $thisChannel = $_.Channel
-
-        $versionBuild.ForEach{
-            $m365Releases.Add(
-                [PSCustomObject]@{
+        $channelLinks.groups.where{ $_.Name -eq 1 }.ForEach{
+            $rxVersionBuild.Matches($_.Value).ForEach{
+                $m365Releases.Add([PSCustomObject]@{
                     ReleaseDate = $release
-                    Channel = $thisChannel
-                    Build = $_.Groups[2].Value
-                    Version = $_.Groups[1].Value
-                    FullBuild = "16.0.$($_.Groups[2].Value)"
-                }
-            ) | Out-Null
+                    Channel     = $channelName
+                    Build       = $_.Groups[2].Value
+                    Version     = $_.Groups[1].Value
+                    FullBuild   = "16.0.$($_.Groups[2].Value)"
+                }) | Out-Null
+            }
         }
     }
-
 }
 
-$m365Releases = $m365Releases | Sort-Object ReleaseDate -Descending | Select-Object ReleaseDate,Channel,Build,Version,FullBuild -Unique
+if (-not $m365Releases.Count) {
+    Throw "No M365 release entries parsed - the page structure may have changed"
+}
+
+$m365Releases = $m365Releases | Sort-Object ReleaseDate -Descending | Select-Object ReleaseDate, Channel, Build, Version, FullBuild -Unique
 
 $outputData = [PSCustomObject]@{
-    "DataForGeeks"=[PSCustomObject]@{
-        "LastUpdatedUTC" = (Get-Date).ToUniversalTime()
-        "SourceList" = @($rootPage)
+    DataForGeeks = [PSCustomObject]@{
+        LastUpdatedUTC = (Get-Date).ToUniversalTime()
+        SourceList     = @($sourceUrl)
     }
-    "Data" = $m365Releases
+    Data = $m365Releases
 }
 
 $allProperties = $m365Releases[0].psobject.Properties.Name
-
-If(Compare-Object $d4gData.Data $outputData.Data -Property $allProperties) {
-    $outputFolder = Resolve-Path (Join-Path $PSScriptRoot -ChildPath "../../../content/ms/msapps")
-    $outputFile = Join-Path $outputFolder -ChildPath "buildnumbers.json"
-
-    $jsonData = $outputData | ConvertTo-Json
-    [System.IO.File]::WriteAllLines($outputFile, $jsonData)
+if (Compare-Object $d4gData.Data $outputData.Data -Property $allProperties) {
+    $outputFolder = Resolve-Path (Join-Path $PSScriptRoot "../../../content/ms/msapps")
+    $outputFile   = Join-Path $outputFolder "buildnumbers.json"
+    [System.IO.File]::WriteAllText($outputFile, ($outputData | ConvertTo-Json -Depth 10))
 } else {
-    Write-Host "The data has not changed."
+    Write-Host "No changes detected."
 }
-

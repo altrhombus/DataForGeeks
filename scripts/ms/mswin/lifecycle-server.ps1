@@ -1,41 +1,66 @@
-$msdata = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012-r2", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2016", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2019", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025")
-$d4gData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/mswin/lifecycle-server.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
+$sourceUrls = @(
+    "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008",
+    "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2",
+    "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012",
+    "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012-r2",
+    "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2016",
+    "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2019",
+    "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022",
+    "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025"
+)
+$d4gData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/mswin/lifecycle-server.json" -UseBasicParsing |
+           Select-Object -ExpandProperty Content | ConvertFrom-Json
 
-$releaseList = New-Object System.Collections.ArrayList
+# The lifecycle product pages render dates via <local-time> custom elements.
+# The datetime attribute holds the ISO value; the visible text may vary by locale.
+$rxTitle   = [regex]::New('(?msi)<h1>\s*(.*?)\s*<\/h1>')
+$rxRelease = [regex]::New(
+    '(?msi)<td>(.*?)<\/td>\s*<td[^>]*>\s*<local-time[^>]*datetime="(.*?)"[^>]*>.*?<\/local-time>\s*<\/td>\s*' +
+    '<td[^>]*>\s*<local-time[^>]*datetime="(.*?)"[^>]*>.*?<\/local-time>\s*<\/td>\s*' +
+    '<td[^>]*>\s*<local-time[^>]*datetime="(.*?)"[^>]*>.*?<\/local-time>'
+)
 
-foreach ($sourceURL in $msdata) {
-    $source = Invoke-WebRequest $sourceURL -UseBasicParsing
-    $allReleases = [RegEx]::New(('<td>(.*?)<\/td>\s*<td align="right">\s*<local-time timezone="America\/Los_Angeles" format="date" datetime="(.*?)">(.*?)<\/local-time>\s*<\/td>\s*<td align="right">\s*<local-time timezone="America\/Los_Angeles" format="date" datetime="(.*?)">(.*?)<\/local-time>\s*<\/td>\s*<td align="right">\s*<local-time timezone="America\/Los_Angeles" format="date" datetime="(.*?)">(.*?)<\/local-time>')).Matches($source.RawContent)
-    $allReleases.ForEach{
-        $releaseList.add(
-            [PSCustomObject]@{
-                Version = $_.Groups[1].value
-                StartDate = $(Get-Date $_.Groups[2].Value -Format "yyyy-MM-dd")
-                MainstreamEndDate = $(Get-Date $_.Groups[4].Value -Format "yyyy-MM-dd")
-                ExtendedEndDate = $(Get-Date $_.Groups[6].Value -Format "yyyy-MM-dd")
-            }
-        ) | Out-Null
+$releaseList = [System.Collections.ArrayList]::new()
+
+foreach ($sourceUrl in $sourceUrls) {
+    $pageData = Invoke-WebRequest $sourceUrl -UseBasicParsing
+    if ($pageData.StatusCode -ne 200) {
+        Throw "Error $($pageData.StatusCode) retrieving $sourceUrl"
+    }
+
+    $titleMatch = $rxTitle.Match($pageData.Content)
+    $product    = if ($titleMatch.Success) { $titleMatch.Groups[1].Value.Trim() } else { '' }
+
+    $rxRelease.Matches($pageData.Content).ForEach{
+        $releaseList.Add([PSCustomObject]@{
+            Product           = $product
+            Version           = $_.Groups[1].Value.Trim()
+            StartDate         = $(Get-Date $_.Groups[2].Value -Format "yyyy-MM-dd")
+            MainstreamEndDate = $(Get-Date $_.Groups[3].Value -Format "yyyy-MM-dd")
+            ExtendedEndDate   = $(Get-Date $_.Groups[4].Value -Format "yyyy-MM-dd")
+        }) | Out-Null
     }
 }
 
-$releaseList = $releaseList | Sort-Object Version | Select-Object Version,StartDate,MainstreamEndDate,ExtendedEndDate -Unique
+if (-not $releaseList.Count) {
+    Throw "No lifecycle entries parsed - the page structure may have changed"
+}
+
+$releaseList = $releaseList | Sort-Object Product, Version | Select-Object Product, Version, StartDate, MainstreamEndDate, ExtendedEndDate -Unique
 
 $outputData = [PSCustomObject]@{
-    "DataForGeeks"=[PSCustomObject]@{
-        "LastUpdatedUTC" = (Get-Date).ToUniversalTime()
-        "SourceList" = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012-r2", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2016", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2019", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022", "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025")
+    DataForGeeks = [PSCustomObject]@{
+        LastUpdatedUTC = (Get-Date).ToUniversalTime()
+        SourceList     = $sourceUrls
     }
-    "Data" = $releaseList
+    Data = $releaseList
 }
 
 $allProperties = $releaseList[0].psobject.Properties.Name
-
-If(Compare-Object $d4gData.Data $releaseList -Property $allProperties -SyncWindow 0) {
-    $outputFolder = Resolve-Path (Join-Path $PSScriptRoot -ChildPath "../../../content/ms/mswin")
-    $outputFile = Join-Path $outputFolder -ChildPath "lifecycle-server.json"
-
-    $jsonData = $outputData | ConvertTo-Json
-    [System.IO.File]::WriteAllLines($outputFile, $jsonData)   
+if (Compare-Object $d4gData.Data $releaseList -Property $allProperties -SyncWindow 0) {
+    $outputFolder = Resolve-Path (Join-Path $PSScriptRoot "../../../content/ms/mswin")
+    $outputFile   = Join-Path $outputFolder "lifecycle-server.json"
+    [System.IO.File]::WriteAllText($outputFile, ($outputData | ConvertTo-Json -Depth 10))
 } else {
-    Write-Host "The data has not changed."
+    Write-Host "No changes detected."
 }
