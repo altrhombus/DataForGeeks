@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2026-05-16T19:00:33.8589259Z",
+    "LastUpdatedUTC": "2026-05-20T09:26:24.0782632Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ]
@@ -23,9 +23,9 @@
     {
       "ReleaseDate": "2026-05-14",
       "Channel": "Monthly Enterprise",
-      "Build": "19822.20248",
+      "Build": "19822.20240",
       "Version": "2603",
-      "FullBuild": "16.0.19822.20248"
+      "FullBuild": "16.0.19822.20240"
     },
     {
       "ReleaseDate": "2026-05-14",
