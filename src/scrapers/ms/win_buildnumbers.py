@@ -1,5 +1,5 @@
 import re
-from datetime import date
+from datetime import datetime as dt
 from html import unescape
 
 from bs4 import BeautifulSoup
@@ -9,117 +9,177 @@ from src.scrapers.base import BaseScraper
 
 _WIN10_URL = "https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda"
 _WIN11_URL = "https://aka.ms/Windows11UpdateHistory"
+_SERVER2016_URL = "https://support.microsoft.com/en-us/topic/windows-10-and-windows-server-2016-update-history-4acfbc84-a290-1b54-536a-1c0430e9f3fd"
+_SERVER2019_URL = "https://support.microsoft.com/en-us/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059"
 _SERVER2022_URL = "https://support.microsoft.com/en-us/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee"
 _HOTPATCH_URL = "https://support.microsoft.com/en-us/topic/release-notes-for-hotpatch-on-windows-11-enterprise-version-25h2-0bbaa1c7-5070-41ca-a7c9-4ead79602dbf"
 
-# Matches link text like: "May 13, 2026—KB5058411 (OS Build 22621.5192)"
-# Group 1: description ("May 13, 2026—KB5058411")
-# Group 2: one or more build numbers ("22621.5192" or "22621.5192 and 22621.5193")
-# Group 3: trailing comment (usually empty)
+# "May 13, 2026—KB5058411 (OS Build 22621.5192)" or multi-build variant
 _OS_BUILD_RE = re.compile(
     r"(.+?)\s*\(OS Builds?\s+([\d.,\s]+(?:\s+and\s+[\d.,\s]+)?)\)(.*)",
     re.IGNORECASE,
 )
 
-# Matches "May 13, 2026—KB5058411" (em-dash or regular dash)
+# "May 13, 2026—KB5058411"
 _PATCH_DESC_RE = re.compile(
     r"^(.*?\d{1,2}[,]\s*\d{4})\s*[—\-–]+\s*(KB\d+)",
     re.IGNORECASE,
 )
 
-# Matches the hotpatch article URL slug to extract date + build numbers
-# e.g. "january-14-2025-hotpatch-kb5051978-os-builds-26100-2605-and-26100-2606"
+# Hotpatch URL slug: "january-14-2025-hotpatch-kb5051978-os-builds-26100-2605-and-26100-2606"
 _HOTPATCH_HREF_RE = re.compile(
     r"(\w+)-(\d{1,2})-(\d{4})-hotpatch.*?os-builds?-(\d+)-(\d+)-and-(\d+)-(\d+)",
     re.IGNORECASE,
 )
 _KB_RE = re.compile(r"KB\d+", re.IGNORECASE)
 
-# Manually verified: this build was released for Windows Server only
-_SERVER_ONLY_BUILDS = {"10.0.14393.5127"}
+# Nav category title patterns
+_CLIENT_VER_RE = re.compile(r"Windows\s+(?:10|11)\s*[,\s]+[Vv]ersion\s+(\w+)", re.IGNORECASE)
+_SERVER_YEAR_RE = re.compile(r"Windows\s+Server\s+(\d{4})", re.IGNORECASE)
+_SERVER_ANNUAL_RE = re.compile(r"Windows\s+Server,\s+[Vv]ersion\s+(\w+)", re.IGNORECASE)
 
-# 17763.* builds released on or after this date are LTSC-only
-_LTSC_CUTOFF = date(2021, 5, 12)
+# Hotpatch page section heading
+_HOTPATCH_VER_RE = re.compile(r"Windows\s+11[,\s]+[Vv]ersion\s+(\w+)", re.IGNORECASE)
+
+_SERVER_ONLY_BUILDS = {"10.0.14393.5127"}
 
 
 class WinBuildNumbersScraper(BaseScraper):
     dataset = "ms/win/buildnumbers"
-    sources = [_WIN10_URL, _WIN11_URL, _SERVER2022_URL, _HOTPATCH_URL]
+    dataset_name = "windows-update-history"
+    sources = [_WIN10_URL, _WIN11_URL, _SERVER2016_URL, _SERVER2019_URL, _SERVER2022_URL, _HOTPATCH_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:
         records: list[WinBuildNumber] = []
 
-        for url in (_WIN10_URL, _WIN11_URL, _SERVER2022_URL):
-            records.extend(_parse_standard_page(pages[url]))
-
+        records.extend(_parse_standard_page(pages[_WIN10_URL], os_type="client", fixed_major=10))
+        records.extend(_parse_standard_page(pages[_WIN11_URL], os_type="client", fixed_major=11))
+        records.extend(_parse_standard_page(pages[_SERVER2016_URL], os_type="server", fixed_major=None, category_filter="1607"))
+        records.extend(_parse_standard_page(pages[_SERVER2019_URL], os_type="server", fixed_major=None, category_filter="1809"))
+        records.extend(_parse_standard_page(pages[_SERVER2022_URL], os_type="server", fixed_major=None))
         records.extend(_parse_hotpatch_page(pages[_HOTPATCH_URL]))
 
         if not records:
             raise ValueError("No build entries parsed — page structure may have changed")
 
-        # Deduplicate then sort
+        # Include os_type in dedup key so client/server variants of shared builds coexist
         seen: set[tuple] = set()
         unique: list[WinBuildNumber] = []
         for r in sorted(records, key=lambda x: (x.release_date, x.build)):
-            key = (r.full_version, r.release_date, r.kb_article)
+            key = (r.full_version, r.release_date, r.kb_article, r.os_type)
             if key not in seen:
                 seen.add(key)
                 unique.append(r)
 
-        # Manual overrides
         unique = [r for r in unique if r.full_version not in _SERVER_ONLY_BUILDS]
-        for r in unique:
-            if r.full_version.startswith("10.0.17763."):
-                if date.fromisoformat(r.release_date) >= _LTSC_CUTOFF:
-                    object.__setattr__(r, "ltsc_only", True)  # pydantic model
+
+        # KB-level IsExpired normalization: if any record for a KB is expired, all are
+        expired_kbs: set[str] = {r.kb_article for r in unique if r.is_expired}
+        if expired_kbs:
+            for r in unique:
+                if not r.is_expired and r.kb_article in expired_kbs:
+                    object.__setattr__(r, "is_expired", True)
 
         return [r.model_dump() for r in unique]
 
 
-def _parse_standard_page(html: str) -> list[WinBuildNumber]:
+def _parse_standard_page(
+    html: str,
+    os_type: str,
+    fixed_major: int | None,
+    category_filter: str | None = None,
+) -> list[WinBuildNumber]:
+    """Parse a Windows update history page using the supLeftNavCategory nav structure.
+
+    category_filter: if set, only process categories whose title contains this substring.
+    Used for combined Win10+Server pages to isolate the server-specific section.
+    """
     soup = BeautifulSoup(html, "lxml")
     records: list[WinBuildNumber] = []
 
-    for a in soup.find_all("a"):
-        text = unescape(a.get_text(strip=True))
-        m = _OS_BUILD_RE.match(text)
-        if not m:
+    for category in soup.find_all("div", class_="supLeftNavCategory"):
+        title_div = category.find("div", class_="supLeftNavCategoryTitle")
+        if not title_div:
             continue
 
-        description = m.group(1).strip()
-        versions_raw = m.group(2)
-        comment = m.group(3).strip()
+        title_text = title_div.get_text(strip=True)
 
-        pd = _PATCH_DESC_RE.match(description)
-        if not pd:
+        if category_filter and category_filter not in title_text:
             continue
 
-        try:
-            from datetime import datetime
-            release_date = datetime.strptime(pd.group(1).strip(), "%B %d, %Y").strftime("%Y-%m-%d")
-        except ValueError:
-            continue
+        if os_type == "client":
+            m = _CLIENT_VER_RE.search(title_text)
+            if not m:
+                continue
+            current_version = m.group(1).upper()
+            current_major = fixed_major
+        else:
+            m_year = _SERVER_YEAR_RE.search(title_text)
+            m_annual = _SERVER_ANNUAL_RE.search(title_text)
 
-        kb_article = pd.group(2).upper()
+            if m_year:
+                current_major = int(m_year.group(1))
+                # Combined pages (e.g. "1607 and Server 2016") — version from client pattern
+                m_client = _CLIENT_VER_RE.search(title_text)
+                current_version = m_client.group(1).upper() if m_client else m_year.group(1)
+            elif m_annual:
+                current_version = m_annual.group(1).upper()
+                current_major = 2022  # Annual Channel belongs to Server 2022
+            else:
+                continue
 
-        versions = [
-            v.strip()
-            for v in re.split(r"\s+and\s+|,", versions_raw)
-            if v.strip()
-        ]
+        for article in category.find_all("li", class_="supLeftNavArticle"):
+            a = article.find("a")
+            if not a:
+                continue
 
-        for version in versions:
-            records.append(
-                WinBuildNumber(
-                    full_version=f"10.0.{version}",
-                    build=version,
-                    release_date=release_date,
-                    kb_article=kb_article,
-                    kb_title=text,
-                    ltsc_only=False,
-                    comment=comment,
+            text = unescape(a.get_text(strip=True))
+            m = _OS_BUILD_RE.match(text)
+            if not m:
+                continue
+
+            description = m.group(1).strip()
+            versions_raw = m.group(2)
+            suffix = m.group(3).strip()
+
+            pd = _PATCH_DESC_RE.match(description)
+            if not pd:
+                continue
+
+            try:
+                release_date = dt.strptime(pd.group(1).strip(), "%B %d, %Y").strftime("%Y-%m-%d")
+            except ValueError:
+                continue
+
+            kb_article = pd.group(2).upper()
+
+            suffix_up = suffix.upper()
+            desc_up = description.upper()
+            is_expired = "EXPIRED" in suffix_up
+            is_oob = "OUT-OF-BAND" in suffix_up
+            is_preview = "PREVIEW" in suffix_up or "PREVIEW" in desc_up
+            release_type = "Out-of-band" if is_oob else "Preview" if is_preview else "Standard"
+
+            href = a.get("href") or ""
+            if href.startswith("/"):
+                href = "https://support.microsoft.com" + href
+            article_url = href or None
+
+            for version in [v.strip() for v in re.split(r"\s+and\s+|,", versions_raw) if v.strip()]:
+                records.append(
+                    WinBuildNumber(
+                        full_version=f"10.0.{version}",
+                        build=version,
+                        os_type=os_type,
+                        major_version=current_major,
+                        windows_version=current_version,
+                        release_date=release_date,
+                        kb_article=kb_article,
+                        release_type=release_type,
+                        is_expired=is_expired,
+                        article_url=article_url,
+                    )
                 )
-            )
 
     return records
 
@@ -128,14 +188,22 @@ def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
     soup = BeautifulSoup(html, "lxml")
     records: list[WinBuildNumber] = []
 
-    for table in soup.find_all("table"):
-        for row in table.find_all("tr"):
+    current_version = ""
+
+    for el in soup.find_all(["h1", "h2", "h3", "h4", "table"]):
+        if el.name in ("h1", "h2", "h3", "h4"):
+            m = _HOTPATCH_VER_RE.search(el.get_text(strip=True))
+            if m:
+                current_version = m.group(1).upper()
+            continue
+
+        for row in el.find_all("tr"):
             cells = row.find_all(["td", "th"])
             if len(cells) < 4:
                 continue
 
-            patch_type = cells[2].get_text(strip=True)
-            if "baseline" in patch_type.lower():
+            patch_type = cells[2].get_text(strip=True).lower()
+            if "baseline" in patch_type:
                 continue
 
             cell4 = cells[3]
@@ -144,9 +212,13 @@ def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
                 continue
 
             href_match = None
+            article_url = None
             for a in cell4.find_all("a", href=True):
-                href_match = _HOTPATCH_HREF_RE.search(a["href"])
-                if href_match:
+                hm = _HOTPATCH_HREF_RE.search(a["href"])
+                if hm:
+                    href_match = hm
+                    href = a["href"]
+                    article_url = href if href.startswith("http") else "https://support.microsoft.com" + href
                     break
             if not href_match:
                 continue
@@ -159,23 +231,26 @@ def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
             kb_article = kb_match.group(0).upper()
 
             try:
-                from datetime import datetime
-                release_date = datetime.strptime(
-                    f"{month_name} {day}, {year}", "%B %d, %Y"
-                ).strftime("%Y-%m-%d")
+                release_date = dt.strptime(f"{month_name} {day}, {year}", "%B %d, %Y").strftime("%Y-%m-%d")
             except ValueError:
                 continue
+
+            is_oob = "out-of-band" in patch_type or "oob" in patch_type
+            release_type = "Hotpatch-OOB" if is_oob else "Hotpatch"
 
             for build in (build1, build2):
                 records.append(
                     WinBuildNumber(
                         full_version=f"10.0.{build}",
                         build=build,
+                        os_type="client",
+                        major_version=11,
+                        windows_version=current_version or "25H2",
                         release_date=release_date,
                         kb_article=kb_article,
-                        kb_title=f"{month_name} {day}, {year} — {kb_article} (OS Build {build})",
-                        ltsc_only=False,
-                        comment="Hotpatch",
+                        release_type=release_type,
+                        is_expired=False,
+                        article_url=article_url,
                     )
                 )
 
