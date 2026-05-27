@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "provider": "DataForGeeks",
+    "apiVersion": "v2",
+    "dataset": "bitlocker-volume-types",
+    "recordCount": 4,
+    "sourceUrls": [
+      "https://learn.microsoft.com/en-us/graph/api/resources/bitlockerrecoverykey?view=graph-rest-1.0"
+    ],
+    "lastModified": "2026-05-27T17:14:40Z",
+    "lastCollected": "2026-05-27T17:14:40Z"
+  },
+  "data": [
+    {
+      "volume_type_enum": 1,
+      "description": "operatingSystemVolume"
+    },
+    {
+      "volume_type_enum": 2,
+      "description": "fixedDataVolume"
+    },
+    {
+      "volume_type_enum": 3,
+      "description": "removableDataVolume"
+    },
+    {
+      "volume_type_enum": 4,
+      "description": "unknownFutureValue"
+    }
+  ]
+}
