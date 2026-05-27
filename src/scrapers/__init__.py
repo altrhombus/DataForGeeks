@@ -1,8 +1,12 @@
 from src.scrapers.ms.asr_guids import AsrGuidsScraper
 from src.scrapers.ms.bitlocker_volume_types import BitlockerVolumeTypesScraper
 from src.scrapers.ms.chassis_types import ChassisTypesScraper
+from src.scrapers.ms.dotnet_lifecycle import DotnetLifecycleScraper
+from src.scrapers.ms.edge_releases import EdgeReleasesScraper
+from src.scrapers.ms.exchange_buildnumbers import ExchangeBuildNumbersScraper
 from src.scrapers.ms.locales import LocalesScraper
 from src.scrapers.ms.m365_buildnumbers import M365BuildNumbersScraper
+from src.scrapers.ms.sql_buildnumbers import SqlBuildNumbersScraper
 from src.scrapers.ms.win_buildnumbers import WinBuildNumbersScraper
 from src.scrapers.ms.win_lifecycle_client import WinLifecycleClientScraper
 from src.scrapers.ms.win_lifecycle_ltsc import WinLifecycleLtscScraper
@@ -14,8 +18,12 @@ REGISTRY: dict[str, type] = {
     "asr-guids": AsrGuidsScraper,
     "bitlocker-volume-types": BitlockerVolumeTypesScraper,
     "chassis-types": ChassisTypesScraper,
+    "dotnet-lifecycle": DotnetLifecycleScraper,
+    "edge-releases": EdgeReleasesScraper,
+    "exchange-buildnumbers": ExchangeBuildNumbersScraper,
     "locales": LocalesScraper,
     "m365-buildnumbers": M365BuildNumbersScraper,
+    "sql-buildnumbers": SqlBuildNumbersScraper,
     "win-buildnumbers": WinBuildNumbersScraper,
     "win-lifecycle-client": WinLifecycleClientScraper,
     "win-lifecycle-ltsc": WinLifecycleLtscScraper,
