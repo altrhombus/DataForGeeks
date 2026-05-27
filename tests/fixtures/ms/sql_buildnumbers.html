@@ -1,0 +1,5921 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Latest updates and version history for SQL Server - SQL Server | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="This article lists various builds or updates that are available for different versions of SQL Server." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/download-and-install-latest-updates" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Latest updates and version history for SQL Server - SQL Server" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/download-and-install-latest-updates" />
+			<meta property="og:description" content="This article lists various builds or updates that are available for different versions of SQL Server." />
+			<meta name="platform_id" content="0e199a31-dbc6-e488-a180-fc170b61935d" /> <meta name="scope" content="Troubleshoot,sql" />
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-DocsSQL" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="breadcrumb_path" content="/support/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="Standard" />
+	
+		<meta name="recommendations" content="true" />
+	
+		<meta name="feedback_product_url" content="https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0" />
+	
+		<meta name="manager" content="dcscontentpm" />
+	
+		<meta name="audience" content="itpro" />
+	
+		<meta name="author" content="aartig13" />
+	
+		<meta name="ms.author" content="aartigoyle" />
+	
+		<meta name="ms.topic" content="release-notes" />
+	
+		<meta name="ms.service" content="sql" />
+	
+		<meta name="ms.date" content="2026-05-20T00:00:00Z" />
+	
+		<meta name="ms.update-cycle" content="1095-days" />
+	
+		<meta name="ms.custom" content="sap:Installation, Patching, Upgrade, Uninstall, evergreen" />
+	
+		<meta name="ms.reviewer" content="v-six" />
+	
+		<meta name="document_id" content="3e30bb3d-0da6-12c6-cb20-c3aa05226727" />
+	
+		<meta name="document_version_independent_id" content="ea5692dd-7477-9b90-a7a6-9d4c0a9c62df" />
+	
+		<meta name="updated_at" content="2026-05-20T16:41:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/SupportArticles-docs-pr/blob/live/support/sql/releases/download-and-install-latest-updates.md" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/SupportArticles-docs-pr/blob/18b9db30f00f9901a5bf1b14fdf39758426a3e90/support/sql/releases/download-and-install-latest-updates.md" />
+	
+		<meta name="git_commit_id" content="18b9db30f00f9901a5bf1b14fdf39758426a3e90" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.support1-docset" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../toc.json" />
+	
+		<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/MSDN.support1-docset/{branchName}{pdfName}" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="5568" />
+	
+		<meta name="asset_id" content="sql/releases/download-and-install-latest-updates" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="support/sql/releases/download-and-install-latest-updates.md" />
+	
+		<meta name="previous_tlsh_hash" content="63CA0AF23EBD128DAFE6E9CD21B067D88051CE9F46AA145C272BE63D383DE21E035E033F1617005912A21FF3D9F97DE9DC17F718E4107BA2F84A69B2C22A4AD6B587356109" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/SupportArticles-docs/blob/main/support/sql/releases/download-and-install-latest-updates.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/download-and-install-latest-updates?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/cbe4ca68-43ac-4375-aba5-5945a6394c20" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/ced846cc-6a3c-4c8f-9dfb-3de0e90e2742" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/90370425-aca4-4a39-9533-d52e5e002a5d" data-source="generated" />
+	
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03427.7856-752ce836/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			<script src="/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "brand": "",
+    "context": {},
+    "standardFeedback": true,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "MicrosoftDocs/SupportArticles-docs",
+    "feedbackProductUrl": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true,
+    "contributors": [
+      {
+        "name": "aartig13",
+        "url": "https://github.com/aartig13"
+      },
+      {
+        "name": "haywoodsloan",
+        "url": "https://github.com/haywoodsloan"
+      },
+      {
+        "name": "debapsaha",
+        "url": "https://github.com/debapsaha"
+      },
+      {
+        "name": "PiJoCoder",
+        "url": "https://github.com/PiJoCoder"
+      },
+      {
+        "name": "Elena068",
+        "url": "https://github.com/Elena068"
+      },
+      {
+        "name": "nathlaroche",
+        "url": "https://github.com/nathlaroche"
+      },
+      {
+        "name": "przlplx",
+        "url": "https://github.com/przlplx"
+      },
+      {
+        "name": "MikeRayMSFT",
+        "url": "https://github.com/MikeRayMSFT"
+      },
+      {
+        "name": "MonicaChenc",
+        "url": "https://github.com/MonicaChenc"
+      },
+      {
+        "name": "HaiyingYu",
+        "url": "https://github.com/HaiyingYu"
+      },
+      {
+        "name": "clobergc",
+        "url": "https://github.com/clobergc"
+      },
+      {
+        "name": "ramakoni1",
+        "url": "https://github.com/ramakoni1"
+      },
+      {
+        "name": "rwestMSFT",
+        "url": "https://github.com/rwestMSFT"
+      }
+    ]
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script src="/static/assets/0.4.03427.7856-752ce836/scripts/en-us/index-docs.js"></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl font-size-md" aria-hidden="true">
+								<span class="docon docon-panel-left-contract"></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div>
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to plan</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			
+			href="https://github.com/MicrosoftDocs/SupportArticles-docs/blob/main/support/sql/releases/download-and-install-latest-updates.md"
+			data-original_content_git_url="https://github.com/MicrosoftDocs/SupportArticles-docs-pr/blob/live/support/sql/releases/download-and-install-latest-updates.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/support/sql/releases/download-and-install-latest-updates.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="latest-updates-and-version-history-for-sql-server">Latest updates and version history for SQL Server</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	
+					<div class="content"><!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.
+--->
+<p>This article lists various builds or updates that are available for different versions of SQL Server.</p>
+<p><em>Original product version:</em> &nbsp; SQL Server<br>
+<em>Original KB number:</em> &nbsp; 321185</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li><p>A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. <strong><a href="https://aka.ms/sqlserverbuilds" data-linktype="external">Click to download this new Excel file now</a></strong>.</p>
+</li>
+<li><p>To learn what a specific version number of SQL Server maps to, or to find the KB article information for a specific cumulative update package or a service pack, search for the version number in the <a href="#sql-server-complete-version-list-tables" data-linktype="self-bookmark">SQL Server Complete Version</a> list tables.</p>
+</li>
+<li><p>To find the edition of your SQL Server instance, you can use one of the procedures in Method 2 through Method 5 in the <a href="find-my-sql-version" data-linktype="relative-path">Determine which version and edition of SQL Server Database Engine is running</a> section.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>The version information and edition information are in the same output string.</p>
+</div>
+<div class="NOTE">
+<p>Note</p>
+<p>For information about SQL Server Support lifecycle, see <a href="/en-us/lifecycle/products/?products=sql-server&amp;preserve-view=true" data-linktype="absolute-path">SQL Server support lifecycle information</a>.</p>
+</div>
+</li>
+</ul>
+<h2 id="latest-updates-available-for-currently-supported-versions-of-sql-server">Latest updates available for currently supported versions of SQL Server</h2>
+<p>Each of the following links provides information for all of the applicable products and technologies.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Latest service pack</th>
+<th>Latest GDR</th>
+<th>Latest cumulative update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SQL Server 2025</strong><br><br>- <a href="#sql-server-2025" data-linktype="self-bookmark">Build information</a><br>- <a href="/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver17&amp;preserve-view=true" data-linktype="absolute-path">Installation</a></td>
+<td>None</td>
+<td><a href="https://support.microsoft.com/help/5091223" data-linktype="external">GDR</a> <br>(17.0.1115.1 - May 2026)</td>
+<td><a href="sqlserver-2025/cumulativeupdate5" data-linktype="relative-path">CU5 for 2025</a> <br>(17.0.4045.5 - May 2026) <br><br><a href="https://support.microsoft.com/help/5089899" data-linktype="external">CU4 + GDR</a> <br>(17.0.4040.1 - May 2026)</td>
+</tr>
+<tr>
+<td><strong>SQL Server 2022</strong><br><br>- <a href="#sql-server-2022" data-linktype="self-bookmark">Build information</a><br>- <a href="/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&amp;preserve-view=true" data-linktype="absolute-path">Installation</a></td>
+<td>None</td>
+<td><a href="https://support.microsoft.com/help/5091158" data-linktype="external">GDR</a> <br>(16.0.1180.1 - May 2026)</td>
+<td><a href="sqlserver-2022/cumulativeupdate25" data-linktype="relative-path">CU25 for 2022</a> <br>(16.0.4255.1 - May 2026) <br><br><a href="https://support.microsoft.com/help/5089900" data-linktype="external">CU24 + GDR</a> <br>(16.0.4252.3 - May 2026)</td>
+</tr>
+<tr>
+<td><strong>SQL Server 2019</strong><br><br>- <a href="#sql-server-2019" data-linktype="self-bookmark">Build information</a><br>- <a href="/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&amp;preserve-view=true" data-linktype="absolute-path">Installation</a></td>
+<td>None</td>
+<td><a href="https://support.microsoft.com/help/5090408" data-linktype="external">GDR</a> <br>(15.0.2170.1 - May 2026)</td>
+<td><a href="sqlserver-2019/cumulativeupdate32" data-linktype="relative-path">CU32 for 2019</a> <br>(15.0.4430.1 - February 2025)<br><br><a href="https://support.microsoft.com/help/5090407" data-linktype="external">CU32 + GDR</a> <br>(15.0.4470.1 - May 2026)</td>
+</tr>
+<tr>
+<td><strong>SQL Server 2017</strong><br><br>- <a href="#sql-server-2017" data-linktype="self-bookmark">Build information</a><br>- <a href="/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-2017&amp;preserve-view=true" data-linktype="absolute-path">Installation</a></td>
+<td><a href="sqlserver-2017/azureconnect" data-linktype="relative-path">Azure Connect pack</a> <br>(14.0.3490.10 - March 2025)</td>
+<td><a href="https://support.microsoft.com/help/5090347" data-linktype="external">GDR</a> <br>(14.0.2110.2 - May 2026)</td>
+<td><a href="sqlserver-2017/cumulativeupdate31" data-linktype="relative-path">CU31 for 2017</a> <br>(14.0.3456.2 - September 2022)<br><br><a href="https://support.microsoft.com/help/5090354" data-linktype="external">CU31 + GDR</a> <br>(14.0.3530.2 - May 2026)</td>
+</tr>
+<tr>
+<td><strong>SQL Server 2016</strong><br><br>- <a href="#sql-server-2016" data-linktype="self-bookmark">Build information</a><br>- <a href="/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-2016&amp;preserve-view=true" data-linktype="absolute-path">Installation</a></td>
+<td><a href="sqlserver-2016/servicepack3-azureconnect" data-linktype="relative-path">Azure Connect pack</a> <br>(13.0.7000.253 - May 2022)<br><br><a href="sqlserver-2016/servicepack3" data-linktype="relative-path">SP3</a> <br>(13.0.6300.2 - September 2021)<br><br><a href="sqlserver-2016/servicepack2" data-linktype="relative-path">SP2</a> <br>(13.0.5026.0 - April 2018)<br><br><a href="sqlserver-2016/servicepack1" data-linktype="relative-path">SP1</a> <br>(13.0.4001.0 - November 2016)</td>
+<td><a href="https://support.microsoft.com/help/5089270" data-linktype="external">GDR for Azure Connect pack</a> <br>(13.0.7085.1 - May 2026)<br><br><a href="https://support.microsoft.com/help/5089271" data-linktype="external">GDR for SP3</a> <br>(13.0.6490.1 - May 2026)<br><br><a href="https://support.microsoft.com/help/5014365" data-linktype="external">GDR for SP2</a> <br>(13.0.5108.50 - June 2022)<br><br><a href="https://support.microsoft.com/help/4505219" data-linktype="external">GDR for SP1</a> <br>(13.0.4259.0 - July 2019)<br><br><a href="https://support.microsoft.com/help/4058560" data-linktype="external">GDR for RTM</a> <br>(13.0.1745.2 - January 2018)</td>
+<td><a href="https://support.microsoft.com/help/5014351" data-linktype="external">CU17 + GDR for SP2</a> <br>(13.0.5893.48 - June 2022)<br><br><a href="sqlserver-2016/servicepack2-cumulativeupdate17" data-linktype="relative-path">CU17 for 2016 SP2</a> <br>(13.0.5888.11 - March 2021)<br><br><a href="https://support.microsoft.com/help/4505221" data-linktype="external">CU15 + GDR for SP1</a> <br>(13.0.4604.0 - July 2019)<br><br><a href="sqlserver-2016/servicepack1-cumulativeupdate15" data-linktype="relative-path">CU15 for SP1</a> <br>(13.0.4574.0 - May 2019)<br><br><a href="sqlserver-2016/rtm-cumulativeupdate9" data-linktype="relative-path">CU9 for RTM</a> <br>(13.0.2216.0 - November 2017)</td>
+</tr>
+<tr>
+<td><strong>SQL Server 2014</strong><br><br>- <a href="#sql-server-2014" data-linktype="self-bookmark">Build information</a><br>- <a href="/en-us/previous-versions/sql/2014/database-engine/install-windows/installation-for-sql-server" data-linktype="absolute-path">Installation</a></td>
+<td><a href="https://support.microsoft.com/help/4022619" data-linktype="external">SP3</a> <br>(12.0.6024.0 - October 2018)<br><br><a href="https://support.microsoft.com/help/3171021" data-linktype="external">SP2</a> <br>(12.0.5000.0 - July 2016)<br><br><a href="https://support.microsoft.com/help/3058865" data-linktype="external">SP1</a> <br>(12.0.4100.1 - May 2015)</td>
+<td><a href="https://support.microsoft.com/help/5029184" data-linktype="external">GDR for SP3</a> <br>(12.0.6179.1 - October 2023)<br><br><a href="https://support.microsoft.com/help/4505217" data-linktype="external">GDR for SP2</a> <br>(12.0.5223.6 - July 2019)<br><br><a href="https://support.microsoft.com/help/4019091" data-linktype="external">GDR for SP1</a> <br>(August 2017)<br><br><a href="/en-us/security-updates/SecurityBulletins/2015/ms15-058" data-linktype="absolute-path">MS15-058</a> <br>(July 2015)</td>
+<td><a href="https://support.microsoft.com/help/5029185" data-linktype="external">CU4 + GDR for SP3</a> <br>(12.0.6449.1 - October 2023)<br><br><a href="https://support.microsoft.com/help/4500181" data-linktype="external">CU4 for SP3</a> <br>(12.0.6329.1 - July 2019)<br><br><a href="https://support.microsoft.com/help/4500180" data-linktype="external">CU18 for SP2</a> <br>(12.0.5687.1 - July 2019)<br><br><a href="https://support.microsoft.com/help/4019099" data-linktype="external">CU13 for SP1</a> <br>(12.0.4522.0 - August 2017)</td>
+</tr>
+<tr>
+<td><strong>SQL Server 2012</strong><br><br>- <a href="#sql-server-2012" data-linktype="self-bookmark">Build information</a><br>- <a href="/en-us/previous-versions/sql/sql-server-2012/cc281837(v=sql.110)" data-linktype="absolute-path">Installation</a></td>
+<td><a href="https://support.microsoft.com/help/4018073" data-linktype="external">SP4</a> <br>(11.0.7001.0 - September 2017)<br><br><a href="https://support.microsoft.com/help/3072779" data-linktype="external">SP3</a> <br>(11.0.6020.0 - November 2015)<br><br><a href="https://support.microsoft.com/help/2958429" data-linktype="external">SP2</a> <br>(11.0.5058.0 - June 2014)<br><br><a href="https://support.microsoft.com/help/2674319" data-linktype="external">SP1</a> <br>(11.0.3000.0 - November 2012)</td>
+<td><a href="https://support.microsoft.com/help/5021123" data-linktype="external">GDR for SP4</a> <br>(11.0.7512.11 - February 2023)<br><br><a href="https://support.microsoft.com/help/4057115" data-linktype="external">GDR for SP3</a> <br>(January 2018)<br><br><a href="/en-us/security-updates/SecurityBulletins/2016/ms16-136" data-linktype="absolute-path">MS16-136</a> <br>(November 2016)<br><br><a href="/en-us/security-updates/SecurityBulletins/2015/ms15-058" data-linktype="absolute-path">MS15-058</a> <br>(December 2015)</td>
+<td><a href="https://support.microsoft.com/help/4025925" data-linktype="external">CU10 for SP3</a> <br>(11.0.6607.3 - August 2017)<br><br><a href="https://support.microsoft.com/help/3205054" data-linktype="external">CU16 for SP2</a> <br>(11.0.5678.0 - January 2017)<br><br><a href="https://support.microsoft.com/help/3052476" data-linktype="external">CU16 for SP1</a> <br>(11.0.3487.0 - May 2015)</td>
+</tr>
+<tr>
+<td><strong>SQL&nbsp;Server&nbsp;2008&nbsp;R2</strong><br><br>- <a href="#sql-server-2008-r2" data-linktype="self-bookmark">Build information</a><br>- <a href="/en-us/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105)" data-linktype="absolute-path">Installation</a></td>
+<td><a href="https://support.microsoft.com/help/2979597" data-linktype="external">SP3</a> <br>(10.50.6000.34 - September 2014)<br><br><a href="https://support.microsoft.com/help/2630458" data-linktype="external">SP2</a> <br>(10.50.4000.0 - July 2012)</td>
+<td><a href="https://support.microsoft.com/help/5021112" data-linktype="external">GDR for SP3</a> <br>(10.50.6785.2 - February 2023)<br><br><a href="/en-us/security-updates/SecurityBulletins/2015/ms15-058" data-linktype="absolute-path">MS15-058</a> <br>(July 2015)</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>SQL Server 2008</strong><br><br>- <a href="#sql-server-2008" data-linktype="self-bookmark">Build information</a><br>- <a href="/en-us/previous-versions/sql/sql-server-2008/dd638062(v=sql.100)" data-linktype="absolute-path">Servicing</a></td>
+<td><a href="https://support.microsoft.com/help/2979596" data-linktype="external">SP4</a> <br>(10.0.6000.29 - September 2014)<br><br><a href="https://support.microsoft.com/help/2546951" data-linktype="external">SP3</a> <br>(10.00.5500.0 - October 2011)</td>
+<td><a href="https://support.microsoft.com/help/5020863" data-linktype="external">GDR for SP4</a> <br>(10.0.6814.4 - February 2023)<br><br><a href="/en-us/security-updates/SecurityBulletins/2015/ms15-058" data-linktype="absolute-path">MS15-058</a> <br>(July 2015)</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<p>Note</p>
+<p>"Latest" = During the past 12 months</p>
+</div>
+<h2 id="sql-server-complete-version-list-tables">SQL Server complete version list tables</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>These tables use the following format and are ordered by the build number.</p>
+</div>
+<h3 id="sql-server-2025">SQL Server 2025</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17.0.4045.5</td>
+<td>None</td>
+<td>CU5</td>
+<td><a href="sqlserver-2025/cumulativeupdate5" data-linktype="relative-path">KB5084896</a></td>
+<td>May 20, 2026</td>
+</tr>
+<tr>
+<td>17.0.4040.1</td>
+<td>None</td>
+<td>CU4 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5089899" data-linktype="external">KB5089899</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>17.0.1115.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5091223" data-linktype="external">KB5091223</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>17.0.4035.5</td>
+<td>None</td>
+<td>CU4</td>
+<td><a href="sqlserver-2025/cumulativeupdate4" data-linktype="relative-path">KB5081495</a></td>
+<td>April 16, 2026</td>
+</tr>
+<tr>
+<td>17.0.4030.1</td>
+<td>None</td>
+<td>CU3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5083245" data-linktype="external">KB5083245</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>17.0.1110.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5084814" data-linktype="external">KB5084814</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>17.0.4025.3</td>
+<td>None</td>
+<td>CU3</td>
+<td><a href="sqlserver-2025/cumulativeupdate3" data-linktype="relative-path">KB5077896</a></td>
+<td>March 12, 2026</td>
+</tr>
+<tr>
+<td>17.0.4020.2</td>
+<td>None</td>
+<td>CU2 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5077466" data-linktype="external">KB5077466</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>17.0.1105.2</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5077468" data-linktype="external">KB5077468</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>17.0.4015.4</td>
+<td>None</td>
+<td>CU2</td>
+<td><a href="sqlserver-2025/cumulativeupdate2" data-linktype="relative-path">KB5075211</a></td>
+<td>February 12, 2026</td>
+</tr>
+<tr>
+<td>17.0.4006.2</td>
+<td>None</td>
+<td>CU1</td>
+<td><a href="sqlserver-2025/cumulativeupdate1" data-linktype="relative-path">KB5078298</a></td>
+<td>January 29, 2026</td>
+</tr>
+<tr>
+<td>17.0.1050.2</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5073177" data-linktype="external">KB5073177</a></td>
+<td>January 13, 2026</td>
+</tr>
+<tr>
+<td>17.0.1000.7</td>
+<td>None</td>
+<td>RTM/GA</td>
+<td>NA</td>
+<td>November 18, 2025</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2022">SQL Server 2022</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16.0.4255.1</td>
+<td>None</td>
+<td>CU25</td>
+<td><a href="sqlserver-2022/cumulativeupdate25" data-linktype="relative-path">KB5081477</a></td>
+<td>May 20, 2026</td>
+</tr>
+<tr>
+<td>16.0.4252.3</td>
+<td>None</td>
+<td>CU24 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5089900" data-linktype="external">KB5089900</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>16.0.1180.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5091158" data-linktype="external">KB5091158</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>16.0.4250.1</td>
+<td>None</td>
+<td>CU24 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5083252" data-linktype="external">KB5083252</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>16.0.1175.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5084815" data-linktype="external">KB5084815</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>16.0.4245.2</td>
+<td>None</td>
+<td>CU24</td>
+<td><a href="sqlserver-2022/cumulativeupdate24" data-linktype="relative-path">KB5080999</a></td>
+<td>March 12, 2026</td>
+</tr>
+<tr>
+<td>16.0.4240.4</td>
+<td>None</td>
+<td>CU23 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5077464" data-linktype="external">KB5077464</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>16.0.1170.5</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5077465" data-linktype="external">KB5077465</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>16.0.4236.2</td>
+<td>None</td>
+<td>CU23</td>
+<td><a href="sqlserver-2022/cumulativeupdate23" data-linktype="relative-path">KB5078297</a></td>
+<td>January 29, 2026</td>
+</tr>
+<tr>
+<td>16.0.4230.2</td>
+<td>None</td>
+<td>CU22 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5072936" data-linktype="external">KB5072936</a></td>
+<td>January 13, 2026</td>
+</tr>
+<tr>
+<td>16.0.1165.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5073031" data-linktype="external">KB5073031</a></td>
+<td>January 13, 2026</td>
+</tr>
+<tr>
+<td>16.0.4225.2</td>
+<td>None</td>
+<td>CU22</td>
+<td><a href="sqlserver-2022/cumulativeupdate22" data-linktype="relative-path">KB5068450</a></td>
+<td>November 13, 2025</td>
+</tr>
+<tr>
+<td>16.0.4222.2</td>
+<td>None</td>
+<td>CU21 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5068406" data-linktype="external">KB5068406</a></td>
+<td>November 11, 2025</td>
+</tr>
+<tr>
+<td>16.0.1160.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5068407" data-linktype="external">KB5068407</a></td>
+<td>November 11, 2025</td>
+</tr>
+<tr>
+<td>16.0.4215.2</td>
+<td>None</td>
+<td>CU21</td>
+<td><a href="sqlserver-2022/cumulativeupdate21" data-linktype="relative-path">KB5065865</a></td>
+<td>September 11, 2025</td>
+</tr>
+<tr>
+<td>16.0.4212.1</td>
+<td>None</td>
+<td>CU20 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5065220" data-linktype="external">KB5065220</a></td>
+<td>September 09, 2025</td>
+</tr>
+<tr>
+<td>16.0.1150.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5065221" data-linktype="external">KB5065221</a></td>
+<td>September 09, 2025</td>
+</tr>
+<tr>
+<td>16.0.4210.1</td>
+<td>None</td>
+<td>CU20 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5063814" data-linktype="external">KB5063814</a></td>
+<td>August 12, 2025</td>
+</tr>
+<tr>
+<td>16.0.1145.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5063756" data-linktype="external">KB5063756</a></td>
+<td>August 12, 2025</td>
+</tr>
+<tr>
+<td>16.0.4205.1</td>
+<td>None</td>
+<td>CU20</td>
+<td><a href="sqlserver-2022/cumulativeupdate20" data-linktype="relative-path">KB5059390</a></td>
+<td>July 10, 2025</td>
+</tr>
+<tr>
+<td>16.0.4200.1</td>
+<td>None</td>
+<td>CU19 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5058721" data-linktype="external">KB5058721</a></td>
+<td>July 08, 2025</td>
+</tr>
+<tr>
+<td>16.0.1140.6</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5058712" data-linktype="external">KB5058712</a></td>
+<td>July 08, 2025</td>
+</tr>
+<tr>
+<td>16.0.4195.2</td>
+<td>None</td>
+<td>CU19</td>
+<td><a href="sqlserver-2022/cumulativeupdate19" data-linktype="relative-path">KB5054531</a></td>
+<td>May 15, 2025</td>
+</tr>
+<tr>
+<td>16.0.4185.3</td>
+<td>None</td>
+<td>CU18</td>
+<td><a href="sqlserver-2022/cumulativeupdate18" data-linktype="relative-path">KB5050771</a></td>
+<td>March 13, 2025</td>
+</tr>
+<tr>
+<td>16.0.4175.1</td>
+<td>None</td>
+<td>CU17</td>
+<td><a href="sqlserver-2022/cumulativeupdate17" data-linktype="relative-path">KB5048038</a></td>
+<td>January 16, 2025</td>
+</tr>
+<tr>
+<td>16.0.4165.4</td>
+<td>None</td>
+<td>CU16</td>
+<td><a href="sqlserver-2022/cumulativeupdate16" data-linktype="relative-path">KB5048033</a></td>
+<td>November 14, 2024</td>
+</tr>
+<tr>
+<td>16.0.4155.4</td>
+<td>None</td>
+<td>CU15 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046862" data-linktype="external">KB5046862</a></td>
+<td>November 12, 2024</td>
+</tr>
+<tr>
+<td>16.0.1135.2</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5046861" data-linktype="external">KB5046861</a></td>
+<td>November 12, 2024</td>
+</tr>
+<tr>
+<td>16.0.4150.1</td>
+<td>None</td>
+<td>CU15 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046059" data-linktype="external">KB5046059</a></td>
+<td>October 08, 2024</td>
+</tr>
+<tr>
+<td>16.0.1130.5</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5046057" data-linktype="external">KB5046057</a></td>
+<td>October 08, 2024</td>
+</tr>
+<tr>
+<td>16.0.4145.4</td>
+<td>None</td>
+<td>CU15</td>
+<td><a href="sqlserver-2022/cumulativeupdate15" data-linktype="relative-path">KB5041321</a></td>
+<td>September 25, 2024</td>
+</tr>
+<tr>
+<td>16.0.4140.3</td>
+<td>None</td>
+<td>CU14 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5042578" data-linktype="external">KB5042578</a></td>
+<td>September 10, 2024</td>
+</tr>
+<tr>
+<td>16.0.1125.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5042211" data-linktype="external">KB5042211</a></td>
+<td>September 10, 2024</td>
+</tr>
+<tr>
+<td>16.0.4135.4</td>
+<td>None</td>
+<td>CU14</td>
+<td><a href="sqlserver-2022/cumulativeupdate14" data-linktype="relative-path">KB5038325</a></td>
+<td>July 23, 2024</td>
+</tr>
+<tr>
+<td>16.0.4131.2</td>
+<td>None</td>
+<td>CU13 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5040939" data-linktype="external">KB5040939</a></td>
+<td>July 09, 2024</td>
+</tr>
+<tr>
+<td>16.0.1121.4</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5040936" data-linktype="external">KB5040936</a></td>
+<td>July 09, 2024</td>
+</tr>
+<tr>
+<td>16.0.4125.3</td>
+<td>None</td>
+<td>CU13</td>
+<td><a href="sqlserver-2022/cumulativeupdate13" data-linktype="relative-path">KB5036432</a></td>
+<td>May 16, 2024</td>
+</tr>
+<tr>
+<td>16.0.4120.1</td>
+<td>None</td>
+<td>CU12 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5036343" data-linktype="external">KB5036343</a></td>
+<td>April 09, 2024</td>
+</tr>
+<tr>
+<td>16.0.1115.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5035432" data-linktype="external">KB5035432</a></td>
+<td>April 09, 2024</td>
+</tr>
+<tr>
+<td>16.0.4115.5</td>
+<td>None</td>
+<td>CU12</td>
+<td><a href="sqlserver-2022/cumulativeupdate12" data-linktype="relative-path">KB5033663</a></td>
+<td>March 14, 2024</td>
+</tr>
+<tr>
+<td>16.0.4105.2</td>
+<td>None</td>
+<td>CU11</td>
+<td><a href="sqlserver-2022/cumulativeupdate11" data-linktype="relative-path">KB5032679</a></td>
+<td>January 11, 2024</td>
+</tr>
+<tr>
+<td>16.0.4100.1</td>
+<td>None</td>
+<td>CU10 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5033592" data-linktype="external">KB5033592</a></td>
+<td>January 09, 2024</td>
+</tr>
+<tr>
+<td>16.0.1110.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5032968" data-linktype="external">KB5032968</a></td>
+<td>January 09, 2024</td>
+</tr>
+<tr>
+<td>16.0.4095.4</td>
+<td>None</td>
+<td>CU10</td>
+<td><a href="sqlserver-2022/cumulativeupdate10" data-linktype="relative-path">KB5031778</a></td>
+<td>November 16, 2023</td>
+</tr>
+<tr>
+<td>16.0.4085.2</td>
+<td>None</td>
+<td>CU9</td>
+<td><a href="sqlserver-2022/cumulativeupdate9" data-linktype="relative-path">KB5030731</a></td>
+<td>October 12, 2023</td>
+</tr>
+<tr>
+<td>16.0.4080.1</td>
+<td>None</td>
+<td>CU8 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5029503" data-linktype="external">KB5029503</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>16.0.1105.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5029379" data-linktype="external">KB5029379</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>16.0.4075.1</td>
+<td>None</td>
+<td>CU8</td>
+<td><a href="sqlserver-2022/cumulativeupdate8" data-linktype="relative-path">KB5029666</a></td>
+<td>September 14, 2023</td>
+</tr>
+<tr>
+<td>16.0.4065.3</td>
+<td>None</td>
+<td>CU7</td>
+<td><a href="sqlserver-2022/cumulativeupdate7" data-linktype="relative-path">KB5028743</a></td>
+<td>August 10, 2023</td>
+</tr>
+<tr>
+<td>16.0.4055.4</td>
+<td>None</td>
+<td>CU6</td>
+<td><a href="sqlserver-2022/cumulativeupdate6" data-linktype="relative-path">KB5027505</a></td>
+<td>July 13, 2023</td>
+</tr>
+<tr>
+<td>16.0.4045.3</td>
+<td>None</td>
+<td>CU5</td>
+<td><a href="sqlserver-2022/cumulativeupdate5" data-linktype="relative-path">KB5026806</a></td>
+<td>June 15, 2023</td>
+</tr>
+<tr>
+<td>16.0.4035.4</td>
+<td>None</td>
+<td>CU4</td>
+<td><a href="sqlserver-2022/cumulativeupdate4" data-linktype="relative-path">KB5026717</a></td>
+<td>May 11, 2023</td>
+</tr>
+<tr>
+<td>16.0.4025.1</td>
+<td>None</td>
+<td>CU3</td>
+<td><a href="sqlserver-2022/cumulativeupdate3" data-linktype="relative-path">KB5024396</a></td>
+<td>April 13, 2023</td>
+</tr>
+<tr>
+<td>16.0.4015.1</td>
+<td>None</td>
+<td>CU2</td>
+<td><a href="sqlserver-2022/cumulativeupdate2" data-linktype="relative-path">KB5023127</a></td>
+<td>March 15, 2023</td>
+</tr>
+<tr>
+<td>16.0.4003.1</td>
+<td>None</td>
+<td>CU1</td>
+<td><a href="sqlserver-2022/cumulativeupdate1" data-linktype="relative-path">KB5022375</a></td>
+<td>February 16, 2023</td>
+</tr>
+<tr>
+<td>16.0.1050.5</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5021522" data-linktype="external">KB5021522</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>16.0.1000.6</td>
+<td>None</td>
+<td>RTM</td>
+<td>NA</td>
+<td>November 16, 2022</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2019">SQL Server 2019</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15.0.4470.1</td>
+<td>None</td>
+<td>CU32 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5090407" data-linktype="external">KB5090407</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>15.0.2170.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5090408" data-linktype="external">KB5090408</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>15.0.4465.1</td>
+<td>None</td>
+<td>CU32 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5084816" data-linktype="external">KB5084816</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>15.0.2165.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5084817" data-linktype="external">KB5084817</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>15.0.4460.4</td>
+<td>None</td>
+<td>CU32 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5077469" data-linktype="external">KB5077469</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>15.0.2160.4</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5077470" data-linktype="external">KB5077470</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>15.0.4455.2</td>
+<td>None</td>
+<td>CU32 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5068404" data-linktype="external">KB5068404</a></td>
+<td>November 11, 2025</td>
+</tr>
+<tr>
+<td>15.0.2155.2</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5068405" data-linktype="external">KB5068405</a></td>
+<td>November 11, 2025</td>
+</tr>
+<tr>
+<td>15.0.4445.1</td>
+<td>None</td>
+<td>CU32 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5065222" data-linktype="external">KB5065222</a></td>
+<td>September 09, 2025</td>
+</tr>
+<tr>
+<td>15.0.2145.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5065223" data-linktype="external">KB5065223</a></td>
+<td>September 09, 2025</td>
+</tr>
+<tr>
+<td>15.0.4440.1</td>
+<td>None</td>
+<td>CU32 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5063757" data-linktype="external">KB5063757</a></td>
+<td>August 12, 2025</td>
+</tr>
+<tr>
+<td>15.0.2140.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5063758" data-linktype="external">KB5063758</a></td>
+<td>August 12, 2025</td>
+</tr>
+<tr>
+<td>15.0.4435.7</td>
+<td>None</td>
+<td>CU32 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5058722" data-linktype="external">KB5058722</a></td>
+<td>July 08, 2025</td>
+</tr>
+<tr>
+<td>15.0.2135.5</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5058713" data-linktype="external">KB5058713</a></td>
+<td>July 08, 2025</td>
+</tr>
+<tr>
+<td>15.0.4430.1</td>
+<td>None</td>
+<td>CU32</td>
+<td><a href="sqlserver-2019/cumulativeupdate32" data-linktype="relative-path">KB5054833</a></td>
+<td>February 27, 2025</td>
+</tr>
+<tr>
+<td>15.0.4420.2</td>
+<td>None</td>
+<td>CU31</td>
+<td><a href="sqlserver-2019/cumulativeupdate31" data-linktype="relative-path">KB5049296</a></td>
+<td>February 13, 2025</td>
+</tr>
+<tr>
+<td>15.0.4415.2</td>
+<td>None</td>
+<td>CU30</td>
+<td><a href="sqlserver-2019/cumulativeupdate30" data-linktype="relative-path">KB5049235</a></td>
+<td>December 12, 2024</td>
+</tr>
+<tr>
+<td>15.0.4410.1</td>
+<td>None</td>
+<td>CU29 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046860" data-linktype="external">KB5046860</a></td>
+<td>November 12, 2024</td>
+</tr>
+<tr>
+<td>15.0.2130.3</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5046859" data-linktype="external">KB5046859</a></td>
+<td>November 12, 2024</td>
+</tr>
+<tr>
+<td>15.0.4405.4</td>
+<td>None</td>
+<td>CU29</td>
+<td><a href="sqlserver-2019/cumulativeupdate29" data-linktype="relative-path">KB5046365</a></td>
+<td>October 31, 2024</td>
+</tr>
+<tr>
+<td>15.0.4395.2</td>
+<td>None</td>
+<td>CU28 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046060" data-linktype="external">KB5046060</a></td>
+<td>October 08, 2024</td>
+</tr>
+<tr>
+<td>15.0.2125.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5046056" data-linktype="external">KB5046056</a></td>
+<td>October 08, 2024</td>
+</tr>
+<tr>
+<td>15.0.4390.2</td>
+<td>None</td>
+<td>CU28 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5042749" data-linktype="external">KB5042749</a></td>
+<td>September 10, 2024</td>
+</tr>
+<tr>
+<td>15.0.2120.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5042214" data-linktype="external">KB5042214</a></td>
+<td>September 10, 2024</td>
+</tr>
+<tr>
+<td>15.0.4385.2</td>
+<td>None</td>
+<td>CU28</td>
+<td><a href="sqlserver-2019/cumulativeupdate28" data-linktype="relative-path">KB5039747</a></td>
+<td>August 01, 2024</td>
+</tr>
+<tr>
+<td>15.0.4382.1</td>
+<td>None</td>
+<td>CU27 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5040948" data-linktype="external">KB5040948</a></td>
+<td>July 09, 2024</td>
+</tr>
+<tr>
+<td>15.0.2116.2</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5040986" data-linktype="external">KB5040986</a></td>
+<td>July 09, 2024</td>
+</tr>
+<tr>
+<td>15.0.4375.4</td>
+<td>None</td>
+<td>CU27</td>
+<td><a href="sqlserver-2019/cumulativeupdate27" data-linktype="relative-path">KB5037331</a></td>
+<td>June 13, 2024</td>
+</tr>
+<tr>
+<td>15.0.4365.2</td>
+<td>None</td>
+<td>CU26</td>
+<td><a href="sqlserver-2019/cumulativeupdate26" data-linktype="relative-path">KB5035123</a></td>
+<td>April 11, 2024</td>
+</tr>
+<tr>
+<td>15.0.4360.2</td>
+<td>None</td>
+<td>CU25 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5036335" data-linktype="external">KB5036335</a></td>
+<td>April 09, 2024</td>
+</tr>
+<tr>
+<td>15.0.2110.4</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5035434" data-linktype="external">KB5035434</a></td>
+<td>April 09, 2024</td>
+</tr>
+<tr>
+<td>15.0.4355.3</td>
+<td>None</td>
+<td>CU25</td>
+<td><a href="sqlserver-2019/cumulativeupdate25" data-linktype="relative-path">KB5033688</a></td>
+<td>February 15, 2024</td>
+</tr>
+<tr>
+<td>15.0.4345.5</td>
+<td>None</td>
+<td>CU24</td>
+<td><a href="sqlserver-2019/cumulativeupdate24" data-linktype="relative-path">KB5031908</a></td>
+<td>December 14, 2023</td>
+</tr>
+<tr>
+<td>15.0.4335.1</td>
+<td>None</td>
+<td>CU23</td>
+<td><a href="sqlserver-2019/cumulativeupdate23" data-linktype="relative-path">KB5030333</a></td>
+<td>October 12, 2023</td>
+</tr>
+<tr>
+<td>15.0.4326.1</td>
+<td>None</td>
+<td>CU22 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5029378" data-linktype="external">KB5029378</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>15.0.2104.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5029377" data-linktype="external">KB5029377</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>15.0.4322.2</td>
+<td>None</td>
+<td>CU22</td>
+<td><a href="sqlserver-2019/cumulativeupdate22" data-linktype="relative-path">KB5027702</a></td>
+<td>August 14, 2023</td>
+</tr>
+<tr>
+<td>15.0.4316.3</td>
+<td>None</td>
+<td>CU21</td>
+<td><a href="sqlserver-2019/cumulativeupdate21" data-linktype="relative-path">KB5025808</a></td>
+<td>June 15, 2023</td>
+</tr>
+<tr>
+<td>15.0.4312.2</td>
+<td>None</td>
+<td>CU20</td>
+<td><a href="sqlserver-2019/cumulativeupdate20" data-linktype="relative-path">KB5024276</a></td>
+<td>April 13, 2023</td>
+</tr>
+<tr>
+<td>15.0.4298.1</td>
+<td>None</td>
+<td>CU19</td>
+<td><a href="sqlserver-2019/cumulativeupdate19" data-linktype="relative-path">KB5023049</a></td>
+<td>February 16, 2023</td>
+</tr>
+<tr>
+<td>15.0.4280.7</td>
+<td>None</td>
+<td>CU18 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5021124" data-linktype="external">KB5021124</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>15.0.2101.7</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5021125" data-linktype="external">KB5021125</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>15.0.4261.1</td>
+<td>None</td>
+<td>CU18</td>
+<td><a href="sqlserver-2019/cumulativeupdate18" data-linktype="relative-path">KB5017593</a></td>
+<td>September 28, 2022</td>
+</tr>
+<tr>
+<td>15.0.4249.2</td>
+<td>None</td>
+<td>CU17</td>
+<td><a href="sqlserver-2019/cumulativeupdate17" data-linktype="relative-path">KB5016394</a></td>
+<td>August 11, 2022</td>
+</tr>
+<tr>
+<td>15.0.4236.7</td>
+<td>None</td>
+<td>CU16 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5014353" data-linktype="external">KB5014353</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>15.0.2095.3</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5014356" data-linktype="external">KB5014356</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>15.0.4223.1</td>
+<td>None</td>
+<td>CU16</td>
+<td><a href="sqlserver-2019/cumulativeupdate16" data-linktype="relative-path">KB5011644</a></td>
+<td>April 18, 2022</td>
+</tr>
+<tr>
+<td>15.0.4198.2</td>
+<td>None</td>
+<td>CU15</td>
+<td><a href="sqlserver-2019/cumulativeupdate15" data-linktype="relative-path">KB5008996</a></td>
+<td>January 27, 2022</td>
+</tr>
+<tr>
+<td>15.0.4188.2</td>
+<td>None</td>
+<td>CU14</td>
+<td><a href="sqlserver-2019/cumulativeupdate14" data-linktype="relative-path">KB5007182</a></td>
+<td>November 22, 2021</td>
+</tr>
+<tr>
+<td>15.0.4178.1</td>
+<td>None</td>
+<td>CU13</td>
+<td><a href="sqlserver-2019/cumulativeupdate13" data-linktype="relative-path">KB5005679</a></td>
+<td>October 05, 2021</td>
+</tr>
+<tr>
+<td>15.0.4153.1</td>
+<td>None</td>
+<td>CU12</td>
+<td><a href="sqlserver-2019/cumulativeupdate12" data-linktype="relative-path">KB5004524</a></td>
+<td>August 04, 2021</td>
+</tr>
+<tr>
+<td>15.0.4138.2</td>
+<td>None</td>
+<td>CU11</td>
+<td><a href="sqlserver-2019/cumulativeupdate11" data-linktype="relative-path">KB5003249</a></td>
+<td>June 10, 2021</td>
+</tr>
+<tr>
+<td>15.0.4123.1</td>
+<td>None</td>
+<td>CU10</td>
+<td><a href="sqlserver-2019/cumulativeupdate10" data-linktype="relative-path">KB5001090</a></td>
+<td>April 06, 2021</td>
+</tr>
+<tr>
+<td>15.0.4102.2</td>
+<td>None</td>
+<td>CU9</td>
+<td><a href="sqlserver-2019/cumulativeupdate9" data-linktype="relative-path">KB5000642</a></td>
+<td>February 11, 2021</td>
+</tr>
+<tr>
+<td>15.0.4083.2</td>
+<td>None</td>
+<td>CU8 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4583459" data-linktype="external">KB4583459</a></td>
+<td>January 12, 2021</td>
+</tr>
+<tr>
+<td>15.0.2080.9</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4583458" data-linktype="external">KB4583458</a></td>
+<td>January 12, 2021</td>
+</tr>
+<tr>
+<td>15.0.4073.23</td>
+<td>None</td>
+<td>CU8</td>
+<td><a href="sqlserver-2019/cumulativeupdate8" data-linktype="relative-path">KB4577194</a></td>
+<td>September 30, 2020</td>
+</tr>
+<tr>
+<td>15.0.4063.15</td>
+<td>None</td>
+<td>CU7</td>
+<td><a href="sqlserver-2019/cumulativeupdate7" data-linktype="relative-path">KB4570012</a></td>
+<td>September 02, 2020</td>
+</tr>
+<tr>
+<td>15.0.4053.23</td>
+<td>None</td>
+<td>CU6</td>
+<td><a href="sqlserver-2019/cumulativeupdate6" data-linktype="relative-path">KB4563110</a></td>
+<td>August 04, 2020</td>
+</tr>
+<tr>
+<td>15.0.4043.16</td>
+<td>None</td>
+<td>CU5</td>
+<td><a href="sqlserver-2019/cumulativeupdate5" data-linktype="relative-path">KB4552255</a></td>
+<td>June 22, 2020</td>
+</tr>
+<tr>
+<td>15.0.4033.1</td>
+<td>None</td>
+<td>CU4</td>
+<td><a href="sqlserver-2019/cumulativeupdate4" data-linktype="relative-path">KB4548597</a></td>
+<td>March 31, 2020</td>
+</tr>
+<tr>
+<td>15.0.4023.6</td>
+<td>None</td>
+<td>CU3</td>
+<td><a href="sqlserver-2019/cumulativeupdate3" data-linktype="relative-path">KB4538853</a></td>
+<td>March 12, 2020</td>
+</tr>
+<tr>
+<td>15.0.4013.40</td>
+<td>None</td>
+<td>CU2</td>
+<td><a href="sqlserver-2019/cumulativeupdate2" data-linktype="relative-path">KB4536075</a></td>
+<td>February 13, 2020</td>
+</tr>
+<tr>
+<td>15.0.4003.23</td>
+<td>None</td>
+<td>CU1</td>
+<td><a href="sqlserver-2019/cumulativeupdate1" data-linktype="relative-path">KB4527376</a></td>
+<td>January 07, 2020</td>
+</tr>
+<tr>
+<td>15.0.2070.41</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="sqlserver-2019/service-update-rtm" data-linktype="relative-path">KB4517790</a></td>
+<td>November 04, 2019</td>
+</tr>
+<tr>
+<td>15.0.2000.5</td>
+<td>None</td>
+<td>RTM</td>
+<td>NA</td>
+<td>November 04, 2019</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2017">SQL Server 2017</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14.0.3530.2</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5090354" data-linktype="external">KB5090354</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>14.0.2110.2</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5090347" data-linktype="external">KB5090347</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>14.0.3525.1</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5084818" data-linktype="external">KB5084818</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>14.0.2105.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5084819" data-linktype="external">KB5084819</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>14.0.3520.4</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5077471" data-linktype="external">KB5077471</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>14.0.2100.4</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5077472" data-linktype="external">KB5077472</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>14.0.3515.1</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5068402" data-linktype="external">KB5068402</a></td>
+<td>November 11, 2025</td>
+</tr>
+<tr>
+<td>14.0.2095.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5068403" data-linktype="external">KB5068403</a></td>
+<td>November 11, 2025</td>
+</tr>
+<tr>
+<td>14.0.3505.1</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5065225" data-linktype="external">KB5065225</a></td>
+<td>September 09, 2025</td>
+</tr>
+<tr>
+<td>14.0.2085.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5065224" data-linktype="external">KB5065224</a></td>
+<td>September 09, 2025</td>
+</tr>
+<tr>
+<td>14.0.3500.1</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5063759" data-linktype="external">KB5063759</a></td>
+<td>August 12, 2025</td>
+</tr>
+<tr>
+<td>14.0.2080.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5063760" data-linktype="external">KB5063760</a></td>
+<td>August 12, 2025</td>
+</tr>
+<tr>
+<td>14.0.3495.9</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5058714" data-linktype="external">KB5058714</a></td>
+<td>July 08, 2025</td>
+</tr>
+<tr>
+<td>14.0.2075.8</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5058716" data-linktype="external">KB5058716</a></td>
+<td>July 08, 2025</td>
+</tr>
+<tr>
+<td>14.0.3490.10</td>
+<td>None</td>
+<td>Azure Connect pack</td>
+<td><a href="sqlserver-2017/azureconnect" data-linktype="relative-path">KB5050533</a></td>
+<td>March 06, 2025</td>
+</tr>
+<tr>
+<td>14.0.3485.1</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046858" data-linktype="external">KB5046858</a></td>
+<td>November 12, 2024</td>
+</tr>
+<tr>
+<td>14.0.2070.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5046857" data-linktype="external">KB5046857</a></td>
+<td>November 12, 2024</td>
+</tr>
+<tr>
+<td>14.0.3480.1</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046061" data-linktype="external">KB5046061</a></td>
+<td>October 08, 2024</td>
+</tr>
+<tr>
+<td>14.0.2065.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5046058" data-linktype="external">KB5046058</a></td>
+<td>October 08, 2024</td>
+</tr>
+<tr>
+<td>14.0.3475.1</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5042215" data-linktype="external">KB5042215</a></td>
+<td>September 10, 2024</td>
+</tr>
+<tr>
+<td>14.0.2060.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5042217" data-linktype="external">KB5042217</a></td>
+<td>September 10, 2024</td>
+</tr>
+<tr>
+<td>14.0.3471.2</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5040940" data-linktype="external">KB5040940</a></td>
+<td>July 09, 2024</td>
+</tr>
+<tr>
+<td>14.0.2056.2</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5040942" data-linktype="external">KB5040942</a></td>
+<td>July 09, 2024</td>
+</tr>
+<tr>
+<td>14.0.3465.1</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5029376" data-linktype="external">KB5029376</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>14.0.2052.1</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5029375" data-linktype="external">KB5029375</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>14.0.3460.9</td>
+<td>None</td>
+<td>CU31 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5021126" data-linktype="external">KB5021126</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>14.0.2047.8</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5021127" data-linktype="external">KB5021127</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>14.0.3456.2</td>
+<td>None</td>
+<td>CU31</td>
+<td><a href="sqlserver-2017/cumulativeupdate31" data-linktype="relative-path">KB5016884</a></td>
+<td>September 20, 2022</td>
+</tr>
+<tr>
+<td>14.0.3451.2</td>
+<td>None</td>
+<td>CU30</td>
+<td><a href="sqlserver-2017/cumulativeupdate30" data-linktype="relative-path">KB5013756</a></td>
+<td>July 13, 2022</td>
+</tr>
+<tr>
+<td>14.0.3445.2</td>
+<td>None</td>
+<td>CU29 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5014553" data-linktype="external">KB5014553</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>14.0.2042.3</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5014354" data-linktype="external">KB5014354</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>14.0.3436.1</td>
+<td>None</td>
+<td>CU29</td>
+<td><a href="sqlserver-2017/cumulativeupdate29" data-linktype="relative-path">KB5010786</a></td>
+<td>March 30, 2022</td>
+</tr>
+<tr>
+<td>14.0.3430.2</td>
+<td>None</td>
+<td>CU28</td>
+<td><a href="sqlserver-2017/cumulativeupdate28" data-linktype="relative-path">KB5008084</a></td>
+<td>January 13, 2022</td>
+</tr>
+<tr>
+<td>14.0.3421.10</td>
+<td>None</td>
+<td>CU27</td>
+<td><a href="sqlserver-2017/cumulativeupdate27" data-linktype="relative-path">KB5006944</a></td>
+<td>October 27, 2021</td>
+</tr>
+<tr>
+<td>14.0.3411.3</td>
+<td>None</td>
+<td>CU26</td>
+<td><a href="sqlserver-2017/cumulativeupdate26" data-linktype="relative-path">KB5005226</a></td>
+<td>September 14, 2021</td>
+</tr>
+<tr>
+<td>14.0.3401.7</td>
+<td>None</td>
+<td>CU25</td>
+<td><a href="sqlserver-2017/cumulativeupdate25" data-linktype="relative-path">KB5003830</a></td>
+<td>July 12, 2021</td>
+</tr>
+<tr>
+<td>14.0.3391.2</td>
+<td>None</td>
+<td>CU24</td>
+<td><a href="sqlserver-2017/cumulativeupdate24" data-linktype="relative-path">KB5001228</a></td>
+<td>May 10, 2021</td>
+</tr>
+<tr>
+<td>14.0.3381.3</td>
+<td>None</td>
+<td>CU23</td>
+<td><a href="sqlserver-2017/cumulativeupdate23" data-linktype="relative-path">KB5000685</a></td>
+<td>February 24, 2021</td>
+</tr>
+<tr>
+<td>14.0.3370.1</td>
+<td>None</td>
+<td>CU22 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4583457" data-linktype="external">KB4583457</a></td>
+<td>January 12, 2021</td>
+</tr>
+<tr>
+<td>14.0.2037.2</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4583456" data-linktype="external">KB4583456</a></td>
+<td>January 12, 2021</td>
+</tr>
+<tr>
+<td>14.0.3356.20</td>
+<td>None</td>
+<td>CU22</td>
+<td><a href="sqlserver-2017/cumulativeupdate22" data-linktype="relative-path">KB4577467</a></td>
+<td>September 10, 2020</td>
+</tr>
+<tr>
+<td>14.0.3335.7</td>
+<td>None</td>
+<td>CU21</td>
+<td><a href="sqlserver-2017/cumulativeupdate21" data-linktype="relative-path">KB4557397</a></td>
+<td>July 01, 2020</td>
+</tr>
+<tr>
+<td>14.0.3294.2</td>
+<td>None</td>
+<td>CU20</td>
+<td><a href="sqlserver-2017/cumulativeupdate20" data-linktype="relative-path">KB4541283</a></td>
+<td>April 07, 2020</td>
+</tr>
+<tr>
+<td>14.0.3281.6</td>
+<td>None</td>
+<td>CU19</td>
+<td><a href="sqlserver-2017/cumulativeupdate19" data-linktype="relative-path">KB4535007</a></td>
+<td>February 05, 2020</td>
+</tr>
+<tr>
+<td>14.0.3257.3</td>
+<td>None</td>
+<td>CU18</td>
+<td><a href="sqlserver-2017/cumulativeupdate18" data-linktype="relative-path">KB4527377</a></td>
+<td>December 09, 2019</td>
+</tr>
+<tr>
+<td>14.0.3238.1</td>
+<td>None</td>
+<td>CU17</td>
+<td><a href="sqlserver-2017/cumulativeupdate17" data-linktype="relative-path">KB4515579</a></td>
+<td>October 08, 2019</td>
+</tr>
+<tr>
+<td>14.0.3223.3</td>
+<td>None</td>
+<td>CU16</td>
+<td><a href="sqlserver-2017/cumulativeupdate16" data-linktype="relative-path">KB4508218</a></td>
+<td>August 01, 2019</td>
+</tr>
+<tr>
+<td>14.0.3192.2</td>
+<td>None</td>
+<td>CU15 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4505225" data-linktype="external">KB4505225</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>14.0.2027.2</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4505224" data-linktype="external">KB4505224</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>14.0.3162.1</td>
+<td>None</td>
+<td>CU15</td>
+<td><a href="sqlserver-2017/cumulativeupdate15" data-linktype="relative-path">KB4498951</a></td>
+<td>May 23, 2019</td>
+</tr>
+<tr>
+<td>14.0.3103.1</td>
+<td>None</td>
+<td>CU14 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4494352" data-linktype="external">KB4494352</a></td>
+<td>May 14, 2019</td>
+</tr>
+<tr>
+<td>14.0.2014.14</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4494351" data-linktype="external">KB4494351</a></td>
+<td>May 14, 2019</td>
+</tr>
+<tr>
+<td>14.0.3076.1</td>
+<td>None</td>
+<td>CU14</td>
+<td><a href="sqlserver-2017/cumulativeupdate14" data-linktype="relative-path">KB4484710</a></td>
+<td>March 25, 2019</td>
+</tr>
+<tr>
+<td>14.0.3048.4</td>
+<td>None</td>
+<td>CU13</td>
+<td><a href="sqlserver-2017/cumulativeupdate13" data-linktype="relative-path">KB4466404</a></td>
+<td>December 18, 2018</td>
+</tr>
+<tr>
+<td>14.0.3045.24</td>
+<td>None</td>
+<td>CU12</td>
+<td><a href="sqlserver-2017/cumulativeupdate12" data-linktype="relative-path">KB4464082</a></td>
+<td>October 24, 2018</td>
+</tr>
+<tr>
+<td>14.0.3038.14</td>
+<td>None</td>
+<td>CU11</td>
+<td><a href="sqlserver-2017/cumulativeupdate11" data-linktype="relative-path">KB4462262</a></td>
+<td>September 20, 2018</td>
+</tr>
+<tr>
+<td>14.0.3037.1</td>
+<td>None</td>
+<td>CU10</td>
+<td><a href="sqlserver-2017/cumulativeupdate10" data-linktype="relative-path">KB4342123</a></td>
+<td>August 27, 2018</td>
+</tr>
+<tr>
+<td>14.0.2002.14</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4293803" data-linktype="external">KB4293803</a></td>
+<td>August 14, 2018</td>
+</tr>
+<tr>
+<td>14.0.3035.2</td>
+<td>None</td>
+<td>CU9 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4293805" data-linktype="external">KB4293805</a></td>
+<td>August 14, 2018</td>
+</tr>
+<tr>
+<td>14.0.3030.27</td>
+<td>None</td>
+<td>CU9</td>
+<td><a href="sqlserver-2017/cumulativeupdate9" data-linktype="relative-path">KB4341265</a></td>
+<td>July 18, 2018</td>
+</tr>
+<tr>
+<td>14.0.3029.16</td>
+<td>None</td>
+<td>CU8</td>
+<td><a href="sqlserver-2017/cumulativeupdate8" data-linktype="relative-path">KB4338363</a></td>
+<td>June 21, 2018</td>
+</tr>
+<tr>
+<td>14.0.3026.27</td>
+<td>None</td>
+<td>CU7</td>
+<td><a href="sqlserver-2017/cumulativeupdate7" data-linktype="relative-path">KB4229789</a></td>
+<td>May 23, 2018</td>
+</tr>
+<tr>
+<td>14.0.3025.34</td>
+<td>None</td>
+<td>CU6</td>
+<td><a href="sqlserver-2017/cumulativeupdate6" data-linktype="relative-path">KB4101464</a></td>
+<td>April 17, 2018</td>
+</tr>
+<tr>
+<td>14.0.3023.8</td>
+<td>None</td>
+<td>CU5</td>
+<td><a href="sqlserver-2017/cumulativeupdate5" data-linktype="relative-path">KB4092643</a></td>
+<td>March 20, 2018</td>
+</tr>
+<tr>
+<td>14.0.3022.28</td>
+<td>None</td>
+<td>CU4</td>
+<td><a href="sqlserver-2017/cumulativeupdate4" data-linktype="relative-path">KB4056498</a></td>
+<td>February 20, 2018</td>
+</tr>
+<tr>
+<td>14.0.3015.40</td>
+<td>None</td>
+<td>CU3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4058562" data-linktype="external">KB4058562</a></td>
+<td>January 03, 2018</td>
+</tr>
+<tr>
+<td>14.0.3015.40</td>
+<td>None</td>
+<td>CU3</td>
+<td><a href="sqlserver-2017/cumulativeupdate3" data-linktype="relative-path">KB4052987</a></td>
+<td>January 04, 2018</td>
+</tr>
+<tr>
+<td>14.0.2000.63</td>
+<td>None</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4057122" data-linktype="external">KB4057122</a></td>
+<td>January 03, 2018</td>
+</tr>
+<tr>
+<td>14.0.3008.27</td>
+<td>None</td>
+<td>CU2</td>
+<td><a href="sqlserver-2017/cumulativeupdate2" data-linktype="relative-path">KB4052574</a></td>
+<td>November 28, 2017</td>
+</tr>
+<tr>
+<td>14.0.3006.16</td>
+<td>None</td>
+<td>CU1</td>
+<td><a href="sqlserver-2017/cumulativeupdate1" data-linktype="relative-path">KB4038634</a></td>
+<td>October 24, 2017</td>
+</tr>
+<tr>
+<td>14.0.1000.169</td>
+<td>None</td>
+<td>RTM</td>
+<td>NA</td>
+<td>SeptGDR for SP3ember 29, 2017</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2016">SQL Server 2016</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13.0.7085.1</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5089270" data-linktype="external">KB5089270</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>13.0.6490.1</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5089271" data-linktype="external">KB5089271</a></td>
+<td>May 12, 2026</td>
+</tr>
+<tr>
+<td>13.0.7080.1</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5084820" data-linktype="external">KB5084820</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>13.0.6485.1</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5084821" data-linktype="external">KB5084821</a></td>
+<td>April 14, 2026</td>
+</tr>
+<tr>
+<td>13.0.7075.5</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5077473" data-linktype="external">KB5077473</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>13.0.6480.4</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5077474" data-linktype="external">KB5077474</a></td>
+<td>March 10, 2026</td>
+</tr>
+<tr>
+<td>13.0.7070.1</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5068400" data-linktype="external">KB5068400</a></td>
+<td>November 11, 2025</td>
+</tr>
+<tr>
+<td>13.0.6475.1</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5068401" data-linktype="external">KB5068401</a></td>
+<td>November 11, 2025</td>
+</tr>
+<tr>
+<td>13.0.7065.1</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5065227" data-linktype="external">KB5065227</a></td>
+<td>September 09, 2025</td>
+</tr>
+<tr>
+<td>13.0.6470.1</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5065226" data-linktype="external">KB5065226</a></td>
+<td>September 09, 2025</td>
+</tr>
+<tr>
+<td>13.0.7060.1</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5063761" data-linktype="external">KB5063761</a></td>
+<td>August 12, 2025</td>
+</tr>
+<tr>
+<td>13.0.6465.1</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5063762" data-linktype="external">KB5063762</a></td>
+<td>August 12, 2025</td>
+</tr>
+<tr>
+<td>13.0.7055.9</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5058717" data-linktype="external">KB5058717</a></td>
+<td>July 08, 2025</td>
+</tr>
+<tr>
+<td>13.0.6460.7</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5058718" data-linktype="external">KB5058718</a></td>
+<td>July 08, 2025</td>
+</tr>
+<tr>
+<td>13.0.7050.2</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046856" data-linktype="external">KB5046856</a></td>
+<td>November 12, 2024</td>
+</tr>
+<tr>
+<td>13.0.6455.2</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046855" data-linktype="external">KB5046855</a></td>
+<td>November 12, 2024</td>
+</tr>
+<tr>
+<td>13.0.7045.2</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046062" data-linktype="external">KB5046062</a></td>
+<td>October 08, 2024</td>
+</tr>
+<tr>
+<td>13.0.6450.1</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5046063" data-linktype="external">KB5046063</a></td>
+<td>October 08, 2024</td>
+</tr>
+<tr>
+<td>13.0.7040.1</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5042209" data-linktype="external">KB5042209</a></td>
+<td>September 10, 2024</td>
+</tr>
+<tr>
+<td>13.0.6445.1</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5042207" data-linktype="external">KB5042207</a></td>
+<td>September 10, 2024</td>
+</tr>
+<tr>
+<td>13.0.7037.1</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5040944" data-linktype="external">KB5040944</a></td>
+<td>July 09, 2024</td>
+</tr>
+<tr>
+<td>13.0.6441.1</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5040946" data-linktype="external">KB5040946</a></td>
+<td>July 09, 2024</td>
+</tr>
+<tr>
+<td>13.0.7029.3</td>
+<td>None</td>
+<td>Azure Connect Pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5029187" data-linktype="external">KB5029187</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>13.0.6435.1</td>
+<td>None</td>
+<td>SP3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5029186" data-linktype="external">KB5029186</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>13.0.6430.49</td>
+<td>SP3</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5021129" data-linktype="external">KB5021129</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>13.0.7024.30</td>
+<td>SP3</td>
+<td>Azure Connect pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5021128" data-linktype="external">KB5021128</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>13.0.6419.1</td>
+<td>SP3</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5014355" data-linktype="external">KB5014355</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>13.0.7016.1</td>
+<td>SP3</td>
+<td>Azure Connect pack + GDR</td>
+<td><a href="https://support.microsoft.com/help/5015371" data-linktype="external">KB5015371</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>13.0.7000.253</td>
+<td>SP3</td>
+<td>Azure Connect pack</td>
+<td><a href="sqlserver-2016/servicepack3-azureconnect" data-linktype="relative-path">KB5014242</a></td>
+<td>May 19, 2022</td>
+</tr>
+<tr>
+<td>13.0.6300.2</td>
+<td>SP3</td>
+<td>RTW/PCU3</td>
+<td><a href="sqlserver-2016/servicepack3" data-linktype="relative-path">KB5003279</a></td>
+<td>September 15, 2021</td>
+</tr>
+<tr>
+<td>13.0.5893.48</td>
+<td>SP2</td>
+<td>CU17 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5014351" data-linktype="external">KB5014351</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>13.0.5108.50</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5014365" data-linktype="external">KB5014365</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>13.0.5888.11</td>
+<td>SP2</td>
+<td>CU17</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate17" data-linktype="relative-path">KB5001092</a></td>
+<td>March 29, 2021</td>
+</tr>
+<tr>
+<td>13.0.5882.1</td>
+<td>SP2</td>
+<td>CU16</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate16" data-linktype="relative-path">KB5000645</a></td>
+<td>February 11, 2021</td>
+</tr>
+<tr>
+<td>13.0.5865.1</td>
+<td>SP2</td>
+<td>CU15 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4583461" data-linktype="external">KB4583461</a></td>
+<td>January 12, 2021</td>
+</tr>
+<tr>
+<td>13.0.5103.6</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4583460" data-linktype="external">KB4583460</a></td>
+<td>January 12, 2021</td>
+</tr>
+<tr>
+<td>13.0.5850.14</td>
+<td>SP2</td>
+<td>CU15</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate15" data-linktype="relative-path">KB4577775</a></td>
+<td>September 28, 2020</td>
+</tr>
+<tr>
+<td>13.0.5830.85</td>
+<td>SP2</td>
+<td>CU14</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate14" data-linktype="relative-path">KB4564903</a></td>
+<td>August 06, 2020</td>
+</tr>
+<tr>
+<td>13.0.5820.21</td>
+<td>SP2</td>
+<td>CU13</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate13" data-linktype="relative-path">KB4549825</a></td>
+<td>May 28, 2020</td>
+</tr>
+<tr>
+<td>13.0.5698.0</td>
+<td>SP2</td>
+<td>CU12</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate12" data-linktype="relative-path">KB4536648</a></td>
+<td>February 24, 2020</td>
+</tr>
+<tr>
+<td>13.0.5622.0</td>
+<td>SP2</td>
+<td>CU11 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4535706" data-linktype="external">KB4535706</a></td>
+<td>February 11, 2020</td>
+</tr>
+<tr>
+<td>13.0.5102.14</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4532097" data-linktype="external">KB4532097</a></td>
+<td>February 11, 2020</td>
+</tr>
+<tr>
+<td>13.0.5598.27</td>
+<td>SP2</td>
+<td>CU11</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate11" data-linktype="relative-path">KB4527378</a></td>
+<td>December 09, 2019</td>
+</tr>
+<tr>
+<td>13.0.5492.2</td>
+<td>SP2</td>
+<td>CU10</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate10" data-linktype="relative-path">KB4524334</a></td>
+<td>October 08, 2019</td>
+</tr>
+<tr>
+<td>13.0.5426.0</td>
+<td>SP2</td>
+<td>CU8</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate8" data-linktype="relative-path">KB4505830</a></td>
+<td>July 31, 2019</td>
+</tr>
+<tr>
+<td>13.0.5366.0</td>
+<td>SP2</td>
+<td>CU7 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4505222" data-linktype="external">KB4505222</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>13.0.5101.9</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4505220" data-linktype="external">KB4505220</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>13.0.5337.0</td>
+<td>SP2</td>
+<td>CU7</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate7" data-linktype="relative-path">KB4495256</a></td>
+<td>May 22, 2019</td>
+</tr>
+<tr>
+<td>13.0.5292.0</td>
+<td>SP2</td>
+<td>CU6</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate6" data-linktype="relative-path">KB4488536</a></td>
+<td>March 19, 2019</td>
+</tr>
+<tr>
+<td>13.0.5264.1</td>
+<td>SP2</td>
+<td>CU5</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate5" data-linktype="relative-path">KB4475776</a></td>
+<td>January 23, 2019</td>
+</tr>
+<tr>
+<td>13.0.5233.0</td>
+<td>SP2</td>
+<td>CU4</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate4" data-linktype="relative-path">KB4464106</a></td>
+<td>November 13, 2018</td>
+</tr>
+<tr>
+<td>13.0.5216.0</td>
+<td>SP2</td>
+<td>CU3</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate3" data-linktype="relative-path">KB4458871</a></td>
+<td>September 20, 2018</td>
+</tr>
+<tr>
+<td>13.0.5201.2</td>
+<td>SP2</td>
+<td>CU2 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4458621" data-linktype="external">KB4458621</a></td>
+<td>August 21, 2018</td>
+</tr>
+<tr>
+<td>13.0.5081.1</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4293802" data-linktype="external">KB4293802</a></td>
+<td>August 14, 2018</td>
+</tr>
+<tr>
+<td>13.0.5153.0</td>
+<td>SP2</td>
+<td>CU2</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate2" data-linktype="relative-path">KB4340355</a></td>
+<td>July 16 2018</td>
+</tr>
+<tr>
+<td>13.0.5149.0</td>
+<td>SP2</td>
+<td>CU1</td>
+<td><a href="sqlserver-2016/servicepack2-cumulativeupdate1" data-linktype="relative-path">KB4135048</a></td>
+<td>May 30, 2018</td>
+</tr>
+<tr>
+<td>13.0.5026.0</td>
+<td>SP2</td>
+<td>RTW/PCU2</td>
+<td><a href="sqlserver-2016/servicepack2" data-linktype="relative-path">KB4052908</a></td>
+<td>April 24, 2018</td>
+</tr>
+<tr>
+<td>13.0.4604.0</td>
+<td>SP1</td>
+<td>CU15 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4505221" data-linktype="external">KB4505221</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>13.0.4259.0</td>
+<td>SP1</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4505219" data-linktype="external">KB4505219</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>13.0.4574.0</td>
+<td>SP1</td>
+<td>CU15</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate15" data-linktype="relative-path">KB4495257</a></td>
+<td>May 16, 2019</td>
+</tr>
+<tr>
+<td>13.0.4560.0</td>
+<td>SP1</td>
+<td>CU14</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate14" data-linktype="relative-path">KB4488535</a></td>
+<td>March 19, 2019</td>
+</tr>
+<tr>
+<td>13.0.4550.1</td>
+<td>SP1</td>
+<td>CU13</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate13" data-linktype="relative-path">KB4475775</a></td>
+<td>January 23, 2019</td>
+</tr>
+<tr>
+<td>13.0.4541.0</td>
+<td>SP1</td>
+<td>CU12</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate12" data-linktype="relative-path">KB4464343</a></td>
+<td>November 13, 2018</td>
+</tr>
+<tr>
+<td>13.0.4528.0</td>
+<td>SP1</td>
+<td>CU11</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate11" data-linktype="relative-path">KB4459676</a></td>
+<td>September 17, 2018</td>
+</tr>
+<tr>
+<td>13.0.4224.16</td>
+<td>SP1</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4458842" data-linktype="external">KB4458842</a></td>
+<td>August 22, 2018</td>
+</tr>
+<tr>
+<td>13.0.4522.0</td>
+<td>SP1</td>
+<td>CU10 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4293808" data-linktype="external">KB4293808</a></td>
+<td>August 14, 2018</td>
+</tr>
+<tr>
+<td>13.0.4514.0</td>
+<td>SP1</td>
+<td>CU10</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate10" data-linktype="relative-path">KB4341569</a></td>
+<td>July 16, 2018</td>
+</tr>
+<tr>
+<td>13.0.4502.0</td>
+<td>SP1</td>
+<td>CU9</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate9" data-linktype="relative-path">KB4100997</a></td>
+<td>May 30, 2018</td>
+</tr>
+<tr>
+<td>13.0.4474.0</td>
+<td>SP1</td>
+<td>CU8</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate8" data-linktype="relative-path">KB4077064</a></td>
+<td>March 19, 2018</td>
+</tr>
+<tr>
+<td>13.0.4466.4</td>
+<td>SP1</td>
+<td>CU7</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate7" data-linktype="relative-path">KB4057119</a></td>
+<td>January 04, 2018</td>
+</tr>
+<tr>
+<td>13.0.4210.6</td>
+<td>SP1</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4057118" data-linktype="external">KB4057118</a></td>
+<td>January 3, 2018</td>
+</tr>
+<tr>
+<td>13.0.4457.0</td>
+<td>SP1</td>
+<td>CU6</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate6" data-linktype="relative-path">KB4037354</a></td>
+<td>November 20, 2017</td>
+</tr>
+<tr>
+<td>13.0.4451.0</td>
+<td>SP1</td>
+<td>CU5</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate5" data-linktype="relative-path">KB4040714</a></td>
+<td>September 18, 2017</td>
+</tr>
+<tr>
+<td>13.0.4446.0</td>
+<td>SP1</td>
+<td>CU4</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate4" data-linktype="relative-path">KB4024305</a></td>
+<td>August 08, 2017</td>
+</tr>
+<tr>
+<td>13.0.4206.0</td>
+<td>SP1</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4019089" data-linktype="external">KB4019089</a></td>
+<td>August 08, 2017</td>
+</tr>
+<tr>
+<td>13.0.4435.0</td>
+<td>SP1</td>
+<td>CU3</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate3" data-linktype="relative-path">KB4019916</a></td>
+<td>May 15, 2017</td>
+</tr>
+<tr>
+<td>13.0.4422.0</td>
+<td>SP1</td>
+<td>CU2</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate2" data-linktype="relative-path">KB4013106</a></td>
+<td>March 20, 2017</td>
+</tr>
+<tr>
+<td>13.0.4411.0</td>
+<td>SP1</td>
+<td>CU1</td>
+<td><a href="sqlserver-2016/servicepack1-cumulativeupdate1" data-linktype="relative-path">KB3208177</a></td>
+<td>January 17, 2017</td>
+</tr>
+<tr>
+<td>13.0.4001.0</td>
+<td>SP1</td>
+<td>RTW/PCU1</td>
+<td><a href="sqlserver-2016/servicepack1" data-linktype="relative-path">KB3182545</a></td>
+<td>November 16, 2016</td>
+</tr>
+<tr>
+<td>13.0.1745.2</td>
+<td>RTM</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4058560" data-linktype="external">KB4058560</a></td>
+<td>January 06, 2018</td>
+</tr>
+<tr>
+<td>13.0.2218.0</td>
+<td>RTM</td>
+<td>CU9 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4058559" data-linktype="external">KB4058559</a></td>
+<td>January 06, 2018</td>
+</tr>
+<tr>
+<td>13.0.2216.0</td>
+<td>RTM</td>
+<td>CU9</td>
+<td><a href="sqlserver-2016/rtm-cumulativeupdate9" data-linktype="relative-path">KB4037357</a></td>
+<td>November 20, 2017</td>
+</tr>
+<tr>
+<td>13.0.2213.0</td>
+<td>RTM</td>
+<td>CU8</td>
+<td><a href="sqlserver-2016/rtm-cumulativeupdate8" data-linktype="relative-path">KB4040713</a></td>
+<td>September 18, 2017</td>
+</tr>
+<tr>
+<td>13.0.2210.0</td>
+<td>RTM</td>
+<td>CU7</td>
+<td><a href="sqlserver-2016/rtm-cumulativeupdate7" data-linktype="relative-path">KB4024304</a></td>
+<td>August 08, 2017</td>
+</tr>
+<tr>
+<td>13.0.2204.0</td>
+<td>RTM</td>
+<td>CU6</td>
+<td><a href="sqlserver-2016/rtm-cumulativeupdate6" data-linktype="relative-path">KB4019914</a></td>
+<td>May 15, 2017</td>
+</tr>
+<tr>
+<td>13.0.2197.0</td>
+<td>RTM</td>
+<td>CU5</td>
+<td><a href="sqlserver-2016/rtm-cumulativeupdate5" data-linktype="relative-path">KB4013105</a></td>
+<td>March 20, 2017</td>
+</tr>
+<tr>
+<td>13.0.2193.0</td>
+<td>RTM</td>
+<td>CU4</td>
+<td><a href="sqlserver-2016/rtm-cumulativeupdate4" data-linktype="relative-path">KB3205052</a></td>
+<td>January 17, 2017</td>
+</tr>
+<tr>
+<td>13.0.4202.2</td>
+<td>RTM</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/3210089" data-linktype="external">KB3210089</a></td>
+<td>December 16, 2016</td>
+</tr>
+<tr>
+<td>13.0.1728.2</td>
+<td>RTM</td>
+<td>CU3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/3210111" data-linktype="external">KB3210111</a></td>
+<td>December 16, 2016</td>
+</tr>
+<tr>
+<td>13.0.2186.6</td>
+<td>RTM</td>
+<td>CU3</td>
+<td><a href="sqlserver-2016/rtm-cumulativeupdate3" data-linktype="relative-path">KB3205413</a></td>
+<td>November 16, 2016</td>
+</tr>
+<tr>
+<td>13.0.2186.6</td>
+<td>RTM</td>
+<td>CU3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/3194717" data-linktype="external">KB3194717</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>13.0.1722.0</td>
+<td>RTM</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/3194716" data-linktype="external">KB3194716</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>13.0.2164.0</td>
+<td>RTM</td>
+<td>CU2</td>
+<td><a href="sqlserver-2016/rtm-cumulativeupdate2" data-linktype="relative-path">KB3182270</a></td>
+<td>September 22, 2016</td>
+</tr>
+<tr>
+<td>13.0.2149.0</td>
+<td>RTM</td>
+<td>CU1</td>
+<td><a href="sqlserver-2016/rtm-cumulativeupdate1" data-linktype="relative-path">KB3164674</a></td>
+<td>July 25, 2016</td>
+</tr>
+<tr>
+<td>13.0.1601.5</td>
+<td>None</td>
+<td>RTM</td>
+<td>NA</td>
+<td>June 01, 2016</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2014">SQL Server 2014</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12.0.6449.1</td>
+<td>None</td>
+<td>SQL Server 2014 SP3 CU4 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5029185" data-linktype="external">KB5029185</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>12.0.6179.1</td>
+<td>None</td>
+<td>SQL Server 2014 SP3 GDR</td>
+<td><a href="https://support.microsoft.com/help/5029184" data-linktype="external">KB5029184</a></td>
+<td>October 10, 2023</td>
+</tr>
+<tr>
+<td>12.0.6444.4</td>
+<td>SP3</td>
+<td>CU4 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5021045" data-linktype="external">KB5021045</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>12.0.6174.8</td>
+<td>SP3</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5021037" data-linktype="external">KB5021037</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>12.0.6439.10</td>
+<td>SP3</td>
+<td>CU4 + GDR</td>
+<td><a href="https://support.microsoft.com/help/5014164" data-linktype="external">KB5014164</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>12.0.6169.19</td>
+<td>SP3</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/5014165" data-linktype="external">KB5014165</a></td>
+<td>June 14, 2022</td>
+</tr>
+<tr>
+<td>12.0.6433.1</td>
+<td>SP3</td>
+<td>CU4 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4583462" data-linktype="external">KB4583462</a></td>
+<td>January 12, 2021</td>
+</tr>
+<tr>
+<td>12.0.6164.21</td>
+<td>SP3</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4583463" data-linktype="external">KB4583463</a></td>
+<td>January 12, 2021</td>
+</tr>
+<tr>
+<td>12.0.6372.1</td>
+<td>SP3</td>
+<td>CU4 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4535288" data-linktype="external">KB4535288</a></td>
+<td>February 11, 2020</td>
+</tr>
+<tr>
+<td>12.0.6118.4</td>
+<td>SP3</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4532095" data-linktype="external">KB4532095</a></td>
+<td>February 11, 2020</td>
+</tr>
+<tr>
+<td>12.0.6329.1</td>
+<td>SP3</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/4500181" data-linktype="external">KB4500181</a></td>
+<td>July 29, 2019</td>
+</tr>
+<tr>
+<td>12.0.6293.0</td>
+<td>SP3</td>
+<td>CU3 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4505422" data-linktype="external">KB4505422</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>12.0.6108.1</td>
+<td>SP3</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4505218" data-linktype="external">KB4505218</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>12.0.6259.0</td>
+<td>SP3</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/4491539" data-linktype="external">KB4491539</a></td>
+<td>April 16, 2019</td>
+</tr>
+<tr>
+<td>12.0.6214.1</td>
+<td>SP3</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/4482960" data-linktype="external">KB4482960</a></td>
+<td>February 19, 2019</td>
+</tr>
+<tr>
+<td>12.0.6205.1</td>
+<td>SP3</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/4470220" data-linktype="external">KB4470220</a></td>
+<td>December 12, 2018</td>
+</tr>
+<tr>
+<td>12.0.6024.0</td>
+<td>SP3</td>
+<td>RTW/PCU3</td>
+<td><a href="https://support.microsoft.com/help/4022619" data-linktype="external">KB4022619</a></td>
+<td>October 30, 2018</td>
+</tr>
+<tr>
+<td>12.0.5687.1</td>
+<td>SP2</td>
+<td>CU18</td>
+<td><a href="https://support.microsoft.com/help/4500180" data-linktype="external">KB4500180</a></td>
+<td>July 29, 2019</td>
+</tr>
+<tr>
+<td>12.0.5659.1</td>
+<td>SP2</td>
+<td>CU17 + GDR</td>
+<td><a href="https://support.microsoft.com/help/4505419" data-linktype="external">KB4505419</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>12.0.5223.6</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4505217" data-linktype="external">KB4505217</a></td>
+<td>July 09, 2019</td>
+</tr>
+<tr>
+<td>12.0.5632.1</td>
+<td>SP2</td>
+<td>CU17</td>
+<td><a href="https://support.microsoft.com/help/4491540" data-linktype="external">KB4491540</a></td>
+<td>April 16, 2019</td>
+</tr>
+<tr>
+<td>12.0.5626.1</td>
+<td>SP2</td>
+<td>CU16</td>
+<td><a href="https://support.microsoft.com/help/4482967" data-linktype="external">KB4482967</a></td>
+<td>February 19, 2019</td>
+</tr>
+<tr>
+<td>12.0.5605.1</td>
+<td>SP2</td>
+<td>CU15</td>
+<td><a href="https://support.microsoft.com/help/4469137" data-linktype="external">KB4469137</a></td>
+<td>December 12, 2018</td>
+</tr>
+<tr>
+<td>12.0.5600.1</td>
+<td>SP2</td>
+<td>CU14</td>
+<td><a href="https://support.microsoft.com/help/4459860" data-linktype="external">KB4459860</a></td>
+<td>October 15, 2018</td>
+</tr>
+<tr>
+<td>12.0.5590.1</td>
+<td>SP2</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/4456287" data-linktype="external">KB4456287</a></td>
+<td>August 27, 2018</td>
+</tr>
+<tr>
+<td>12.0.5589.7</td>
+<td>SP2</td>
+<td>CU12</td>
+<td><a href="https://support.microsoft.com/help/4130489" data-linktype="external">KB4130489</a></td>
+<td>June 18, 2018</td>
+</tr>
+<tr>
+<td>12.0.5579.0</td>
+<td>SP2</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/4077063" data-linktype="external">KB4077063</a></td>
+<td>March 19, 2018</td>
+</tr>
+<tr>
+<td>12.0.5571.0</td>
+<td>SP2</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/4052725" data-linktype="external">KB4052725</a></td>
+<td>January 16, 2018</td>
+</tr>
+<tr>
+<td>12.0.5214.6</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4057120" data-linktype="external">KB4057120</a></td>
+<td>January 16, 2018</td>
+</tr>
+<tr>
+<td>12.0.5563.0</td>
+<td>SP2</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/4055557" data-linktype="external">KB4055557</a></td>
+<td>December 18, 2017</td>
+</tr>
+<tr>
+<td>12.0.5557.0</td>
+<td>SP2</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/4037356" data-linktype="external">KB4037356</a></td>
+<td>October 16, 2017</td>
+</tr>
+<tr>
+<td>12.0.5556.0</td>
+<td>SP2</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/4032541" data-linktype="external">KB4032541</a></td>
+<td>August 28, 2017</td>
+</tr>
+<tr>
+<td>12.0.5553.0</td>
+<td>SP2</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/4019094" data-linktype="external">KB4019094</a></td>
+<td>August 08, 2017</td>
+</tr>
+<tr>
+<td>12.0.5207.0</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4019093" data-linktype="external">KB4019093</a></td>
+<td>August 08, 2017</td>
+</tr>
+<tr>
+<td>12.0.5546.0</td>
+<td>SP2</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/4013098" data-linktype="external">KB4013098</a></td>
+<td>April 17, 2017</td>
+</tr>
+<tr>
+<td>12.0.5540.0</td>
+<td>SP2</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/4010394" data-linktype="external">KB4010394</a></td>
+<td>February 21, 2017</td>
+</tr>
+<tr>
+<td>12.0.5538.0</td>
+<td>SP2</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/3204388" data-linktype="external">KB3204388</a></td>
+<td>December 19, 2016</td>
+</tr>
+<tr>
+<td>12.0.5532.0</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/3194718" data-linktype="external">KB3194718</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>12.0.5203.0</td>
+<td>SP2</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/3194714" data-linktype="external">KB3194714</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>12.0.5522.0</td>
+<td>SP2</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/3188778" data-linktype="external">KB3188778</a></td>
+<td>October 17, 2016</td>
+</tr>
+<tr>
+<td>12.0.5511.0</td>
+<td>SP2</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/3178925" data-linktype="external">KB3178925</a></td>
+<td>August 25, 2016</td>
+</tr>
+<tr>
+<td>12.0.5000.0</td>
+<td>SP2</td>
+<td>RTW/PCU2</td>
+<td><a href="https://support.microsoft.com/help/3171021" data-linktype="external">KB3171021</a></td>
+<td>July 11, 2016</td>
+</tr>
+<tr>
+<td>12.0.4522.0</td>
+<td>SP1</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/4019099" data-linktype="external">KB4019099</a></td>
+<td>August 08, 2017</td>
+</tr>
+<tr>
+<td>12.0.4237.0</td>
+<td>SP1</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/4019091" data-linktype="external">KB4019091</a></td>
+<td>August 08, 2017</td>
+</tr>
+<tr>
+<td>12.0.4511.0</td>
+<td>SP1</td>
+<td>CU12</td>
+<td><a href="https://support.microsoft.com/help/4017793" data-linktype="external">KB4017793</a></td>
+<td>April 17, 2017</td>
+</tr>
+<tr>
+<td>12.0.4502.0</td>
+<td>SP1</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/4010392" data-linktype="external">KB4010392</a></td>
+<td>February 21, 2017</td>
+</tr>
+<tr>
+<td>12.0.4491.0</td>
+<td>SP1</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/3204399" data-linktype="external">KB3204399</a></td>
+<td>December 19, 2016</td>
+</tr>
+<tr>
+<td>12.0.4487.0</td>
+<td>SP1</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/3194722" data-linktype="external">KB3194722</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>12.0.4232.0</td>
+<td>SP1</td>
+<td>GDR</td>
+<td><a href="https://support.microsoft.com/help/3194720" data-linktype="external">KB3194720</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>12.0.4474.0</td>
+<td>SP1</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/3186964" data-linktype="external">KB3186964</a></td>
+<td>October 17, 2016</td>
+</tr>
+<tr>
+<td>12.0.4468.0</td>
+<td>SP1</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/3174038" data-linktype="external">KB3174038</a></td>
+<td>August 15, 2016</td>
+</tr>
+<tr>
+<td>12.0.4459.0</td>
+<td>SP1</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/3162659" data-linktype="external">KB3162659</a></td>
+<td>June 20, 2016</td>
+</tr>
+<tr>
+<td>12.0.4457.0</td>
+<td>SP1</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/3167392" data-linktype="external">KB3167392</a></td>
+<td>May 30, 2016</td>
+</tr>
+<tr>
+<td>12.0.4449.0</td>
+<td>SP1</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/3144524" data-linktype="external">KB3144524</a></td>
+<td>April 18, 2016</td>
+</tr>
+<tr>
+<td>12.0.4438.0</td>
+<td>SP1</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/3130926" data-linktype="external">KB3130926</a></td>
+<td>February 22, 2016</td>
+</tr>
+<tr>
+<td>12.0.4436.0</td>
+<td>SP1</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/3106660" data-linktype="external">KB3106660</a></td>
+<td>December 21, 2015</td>
+</tr>
+<tr>
+<td>12.0.4427.24</td>
+<td>SP1</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/3094221" data-linktype="external">KB3094221</a></td>
+<td>October 19, 2015</td>
+</tr>
+<tr>
+<td>12.0.4422.0</td>
+<td>SP1</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/3075950" data-linktype="external">KB3075950</a></td>
+<td>August 17, 2015</td>
+</tr>
+<tr>
+<td>12.0.4416.0</td>
+<td>SP1</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/3067839" data-linktype="external">KB3067839</a></td>
+<td>June 19, 2015</td>
+</tr>
+<tr>
+<td>12.0.4213.0</td>
+<td>SP1</td>
+<td>MS15-058: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/3070446" data-linktype="external">KB3070446</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>12.0.4100.1</td>
+<td>SP1</td>
+<td>RTW/PCU1</td>
+<td><a href="https://support.microsoft.com/help/3058865" data-linktype="external">KB3058865</a></td>
+<td>May 04, 2015</td>
+</tr>
+<tr>
+<td>12.0.2569.0</td>
+<td>RTM</td>
+<td>CU14</td>
+<td><a href="https://support.microsoft.com/help/3158271" data-linktype="external">KB3158271</a></td>
+<td>June 20, 2016</td>
+</tr>
+<tr>
+<td>12.0.2568.0</td>
+<td>RTM</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/3144517" data-linktype="external">KB3144517</a></td>
+<td>April 18, 2016</td>
+</tr>
+<tr>
+<td>12.0.2564.0</td>
+<td>RTM</td>
+<td>CU12</td>
+<td><a href="https://support.microsoft.com/help/3130923" data-linktype="external">KB3130923</a></td>
+<td>February 22, 2016</td>
+</tr>
+<tr>
+<td>12.0.2560.0</td>
+<td>RTM</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/3106659" data-linktype="external">KB3106659</a></td>
+<td>December 21, 2015</td>
+</tr>
+<tr>
+<td>12.0.2556.4</td>
+<td>RTM</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/3094220" data-linktype="external">KB3094220</a></td>
+<td>October 19, 2015</td>
+</tr>
+<tr>
+<td>12.0.2553.0</td>
+<td>RTM</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/3075949" data-linktype="external">KB3075949</a></td>
+<td>August 17, 2015</td>
+</tr>
+<tr>
+<td>12.0.2548.0</td>
+<td>RTM</td>
+<td>MS15-058: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045323" data-linktype="external">KB3045323</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>12.0.2546.0</td>
+<td>RTM</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/3067836" data-linktype="external">KB3067836</a></td>
+<td>June 19, 2015</td>
+</tr>
+<tr>
+<td>12.0.2495.0</td>
+<td>RTM</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/3046038" data-linktype="external">KB3046038</a></td>
+<td>April 20, 2015</td>
+</tr>
+<tr>
+<td>12.0.2480.0</td>
+<td>RTM</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/3031047" data-linktype="external">KB3031047</a></td>
+<td>February 16, 2015</td>
+</tr>
+<tr>
+<td>12.0.2456.0</td>
+<td>RTM</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/3011055" data-linktype="external">KB3011055</a></td>
+<td>December 17, 2014</td>
+</tr>
+<tr>
+<td>12.0.2430.0</td>
+<td>RTM</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/2999197" data-linktype="external">KB2999197</a></td>
+<td>October 21, 2014</td>
+</tr>
+<tr>
+<td>12.0.2402.0</td>
+<td>RTM</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/2984923" data-linktype="external">KB2984923</a></td>
+<td>August 18, 2014</td>
+</tr>
+<tr>
+<td>12.0.2381.0</td>
+<td>RTM</td>
+<td>MS14-044: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2977316" data-linktype="external">KB2977316</a></td>
+<td>August 12, 2014</td>
+</tr>
+<tr>
+<td>12.0.2370.0</td>
+<td>RTM</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/2967546" data-linktype="external">KB2967546</a></td>
+<td>Friday, June 27, 2014</td>
+</tr>
+<tr>
+<td>12.0.2342.0</td>
+<td>RTM</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/2931693" data-linktype="external">KB2931693</a></td>
+<td>April 21, 2014</td>
+</tr>
+<tr>
+<td>12.0.2269.0</td>
+<td>RTM</td>
+<td>MS15-058: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045324" data-linktype="external">KB3045324</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>12.0.2254.0</td>
+<td>RTM</td>
+<td>MS14-044: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2977315" data-linktype="external">KB2977315</a></td>
+<td>August 12, 2014</td>
+</tr>
+<tr>
+<td>12.0.2000.8</td>
+<td>RTM</td>
+<td></td>
+<td></td>
+<td>April 01, 2014</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2012">SQL Server 2012</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11.0.7512.11</td>
+<td>SP4</td>
+<td>GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/5021123" data-linktype="external">KB5021123</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>11.0.7507.2</td>
+<td>SP4</td>
+<td>GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/4583465" data-linktype="external">KB4583465</a></td>
+<td>January 12, 2021</td>
+</tr>
+<tr>
+<td>11.0.7493.4</td>
+<td>SP4</td>
+<td>GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/4532098" data-linktype="external">KB4532098</a></td>
+<td>February 11, 2020</td>
+</tr>
+<tr>
+<td>11.0.7462.6</td>
+<td>SP4</td>
+<td>GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/4057116" data-linktype="external">KB4057116</a></td>
+<td>January 16, 2018</td>
+</tr>
+<tr>
+<td>11.0.6614.2</td>
+<td>SP3</td>
+<td>QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/4057121" data-linktype="external">KB4057121</a></td>
+<td>January 16, 2018</td>
+</tr>
+<tr>
+<td>11.0.6260.1</td>
+<td>SP3</td>
+<td>GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/4057115" data-linktype="external">KB4057115</a></td>
+<td>January 16, 2018</td>
+</tr>
+<tr>
+<td>11.0.7001.0</td>
+<td>SP4</td>
+<td>RTW/PCU4</td>
+<td><a href="https://support.microsoft.com/help/4018073" data-linktype="external">KB4018073</a></td>
+<td>October 2, 2017</td>
+</tr>
+<tr>
+<td>11.0.6607.3</td>
+<td>SP3</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/4025925" data-linktype="external">KB4025925</a></td>
+<td>August 08, 2017</td>
+</tr>
+<tr>
+<td>11.0.6251.0</td>
+<td>SP3</td>
+<td>QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/4019092" data-linktype="external">KB4019092</a></td>
+<td>August 08, 2017</td>
+</tr>
+<tr>
+<td>11.0.6598.0</td>
+<td>SP3</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/4016762" data-linktype="external">KB4016762</a></td>
+<td>May 15, 2017</td>
+</tr>
+<tr>
+<td>11.0.6594.0</td>
+<td>SP3</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/4013104" data-linktype="external">KB4013104</a></td>
+<td>March 20, 2017</td>
+</tr>
+<tr>
+<td>11.0.6579.0</td>
+<td>SP3</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/3205051" data-linktype="external">KB3205051</a></td>
+<td>January 17, 2017</td>
+</tr>
+<tr>
+<td>11.0.6567.0</td>
+<td>SP3</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/3194992" data-linktype="external">KB3194992</a></td>
+<td>November 17, 2016</td>
+</tr>
+<tr>
+<td>11.0.6248.0</td>
+<td>SP3</td>
+<td>MS16-136 GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/3194721" data-linktype="external">KB3194721</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>11.0.6567.0</td>
+<td>SP3</td>
+<td>MS16-136 QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3194724" data-linktype="external">KB3194724</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>11.0.5388.0</td>
+<td>SP2</td>
+<td>MS16-136 GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/3194719" data-linktype="external">KB3194719</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>11.0.5676.0</td>
+<td>SP3</td>
+<td>MS16-136 QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3194725" data-linktype="external">KB3194725</a></td>
+<td>November 08, 2016</td>
+</tr>
+<tr>
+<td>11.0.6544.0</td>
+<td>SP3</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/3180915" data-linktype="external">KB3180915</a></td>
+<td>September 19, 2016</td>
+</tr>
+<tr>
+<td>11.0.6540.0</td>
+<td>SP3</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/3165264" data-linktype="external">KB3165264</a></td>
+<td>July 18, 2016</td>
+</tr>
+<tr>
+<td>11.0.6537.0</td>
+<td>SP3</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/3152635" data-linktype="external">KB3152635</a></td>
+<td>May 16, 2016</td>
+</tr>
+<tr>
+<td>11.0.6523.0</td>
+<td>SP3</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/3137746" data-linktype="external">KB3137746</a></td>
+<td>March 21,2016</td>
+</tr>
+<tr>
+<td>11.0.6518.0</td>
+<td>SP3</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/3123299" data-linktype="external">KB3123299</a></td>
+<td>January 19, 2016</td>
+</tr>
+<tr>
+<td>11.0.6020.0</td>
+<td>SP3</td>
+<td>RTW/PCU3</td>
+<td><a href="https://support.microsoft.com/help/3072779" data-linktype="external">KB3072779</a></td>
+<td>November 20, 2015</td>
+</tr>
+<tr>
+<td>11.0.5678.0</td>
+<td>SP2</td>
+<td>CU16</td>
+<td><a href="https://support.microsoft.com/help/3205054" data-linktype="external">KB3205054</a></td>
+<td>November 17, 2016</td>
+</tr>
+<tr>
+<td>11.0.5676.0</td>
+<td>SP2</td>
+<td>CU15</td>
+<td><a href="https://support.microsoft.com/help/3205416" data-linktype="external">KB3205416</a></td>
+<td>November 17, 2016</td>
+</tr>
+<tr>
+<td>11.0.5657.0</td>
+<td>SP2</td>
+<td>CU14</td>
+<td><a href="https://support.microsoft.com/help/3180914" data-linktype="external">KB3180914</a></td>
+<td>September 19, 2016</td>
+</tr>
+<tr>
+<td>11.0.5655.0</td>
+<td>SP2</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/3165266" data-linktype="external">KB3165266</a></td>
+<td>July 18, 2016</td>
+</tr>
+<tr>
+<td>11.0.5649.0</td>
+<td>SP2</td>
+<td>CU12</td>
+<td><a href="https://support.microsoft.com/help/3152637" data-linktype="external">KB3152637</a></td>
+<td>May 16, 2016</td>
+</tr>
+<tr>
+<td>11.0.5646.0</td>
+<td>SP2</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/3137745" data-linktype="external">KB3137745</a></td>
+<td>March 21,2016</td>
+</tr>
+<tr>
+<td>11.0.5644.2</td>
+<td>SP2</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/3120313" data-linktype="external">KB3120313</a></td>
+<td>January 19, 2016</td>
+</tr>
+<tr>
+<td>11.0.5641.0</td>
+<td>SP2</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/3098512" data-linktype="external">KB3098512</a></td>
+<td>November 16, 2015</td>
+</tr>
+<tr>
+<td>11.0.5634.1</td>
+<td>SP2</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/3082561" data-linktype="external">KB3082561</a></td>
+<td>September 21, 2015</td>
+</tr>
+<tr>
+<td>11.0.5623.0</td>
+<td>SP2</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/3072100" data-linktype="external">KB3072100</a></td>
+<td>July 20, 2015</td>
+</tr>
+<tr>
+<td>11.0.5613.0</td>
+<td>SP2</td>
+<td>MS15-058: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045319" data-linktype="external">KB3045319</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>11.0.5592.0</td>
+<td>SP2</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/3052468" data-linktype="external">KB3052468</a></td>
+<td>May 18, 2015</td>
+</tr>
+<tr>
+<td>11.0.5582.0</td>
+<td>SP2</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/3037255" data-linktype="external">KB3037255</a></td>
+<td>March 16, 2015</td>
+</tr>
+<tr>
+<td>11.0.5569.0</td>
+<td>SP2</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/3007556" data-linktype="external">KB3007556</a></td>
+<td>January 19, 2015</td>
+</tr>
+<tr>
+<td>11.0.5556.0</td>
+<td>SP2</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/3002049" data-linktype="external">KB3002049</a></td>
+<td>November 17, 2014</td>
+</tr>
+<tr>
+<td>11.0.5548.0</td>
+<td>SP2</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/2983175" data-linktype="external">KB2983175</a></td>
+<td>September 15, 2014</td>
+</tr>
+<tr>
+<td>11.0.5532.0</td>
+<td>SP2</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/2976982" data-linktype="external">KB2976982</a></td>
+<td>July 23, 2014</td>
+</tr>
+<tr>
+<td>11.0.5343.0</td>
+<td>SP2</td>
+<td>MS15-058: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045321" data-linktype="external">KB3045321</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>11.0.5058.0</td>
+<td>SP2</td>
+<td>RTW/PCU2</td>
+<td><a href="https://support.microsoft.com/help/2958429" data-linktype="external">KB2958429</a></td>
+<td>June 10, 2014</td>
+</tr>
+<tr>
+<td>11.0.3513.0</td>
+<td>SP1</td>
+<td>MS15-058: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045317" data-linktype="external">KB3045317</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>11.0.3482.0</td>
+<td>SP1</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/3002044" data-linktype="external">KB3002044</a></td>
+<td>November 17, 2014</td>
+</tr>
+<tr>
+<td>11.0.3470.0</td>
+<td>SP1</td>
+<td>CU12</td>
+<td><a href="https://support.microsoft.com/help/2991533" data-linktype="external">KB2991533</a></td>
+<td>September 15, 2014</td>
+</tr>
+<tr>
+<td>11.0.3460.0</td>
+<td>SP1</td>
+<td>MS14-044: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2977325" data-linktype="external">KB2977325</a></td>
+<td>August 12, 2014</td>
+</tr>
+<tr>
+<td>11.0.3449.0</td>
+<td>SP1</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/2975396" data-linktype="external">KB2975396</a></td>
+<td>July 21, 2014</td>
+</tr>
+<tr>
+<td>11.0.3431.0</td>
+<td>SP1</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/2954099" data-linktype="external">KB2954099</a></td>
+<td>May 19, 2014</td>
+</tr>
+<tr>
+<td>11.0.3412.0</td>
+<td>SP1</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/2931078" data-linktype="external">KB2931078</a></td>
+<td>March 17, 2014</td>
+</tr>
+<tr>
+<td>11.0.3401.0</td>
+<td>SP1</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/2917531" data-linktype="external">KB2917531</a></td>
+<td>January 20, 2014</td>
+</tr>
+<tr>
+<td>11.0.3393.0</td>
+<td>SP1</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/2894115" data-linktype="external">KB2894115</a></td>
+<td>November 18, 2013</td>
+</tr>
+<tr>
+<td>11.0.3381.0</td>
+<td>SP1</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/2874879" data-linktype="external">KB2874879</a></td>
+<td>September 16, 2013</td>
+</tr>
+<tr>
+<td>11.0.3373.0</td>
+<td>SP1</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/2861107" data-linktype="external">KB2861107</a></td>
+<td>July 15, 2013</td>
+</tr>
+<tr>
+<td>11.0.3368.0</td>
+<td>SP1</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/2833645" data-linktype="external">KB2833645</a></td>
+<td>May 30, 2013</td>
+</tr>
+<tr>
+<td>11.0.3349.0</td>
+<td>SP1</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/2812412" data-linktype="external">KB2812412</a></td>
+<td>March 18, 2013</td>
+</tr>
+<tr>
+<td>11.0.3339.0</td>
+<td>SP1</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/2790947" data-linktype="external">KB2790947</a></td>
+<td>January 21, 2013</td>
+</tr>
+<tr>
+<td>11.0.3321.0</td>
+<td>SP1</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/2765331" data-linktype="external">KB2765331</a></td>
+<td>November 20, 2012</td>
+</tr>
+<tr>
+<td>11.0.3156.0</td>
+<td>SP1</td>
+<td>MS15-058: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045318" data-linktype="external">KB3045318</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>11.0.3153.0</td>
+<td>SP1</td>
+<td>MS14-044: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2977326" data-linktype="external">KB2977326</a></td>
+<td>August 12, 2014</td>
+</tr>
+<tr>
+<td>11.0.3000.0</td>
+<td>SP1</td>
+<td>RTW/PCU1</td>
+<td><a href="https://support.microsoft.com/help/2674319" data-linktype="external">KB2674319</a></td>
+<td>November 07, 2012</td>
+</tr>
+<tr>
+<td>11.0.2424.0</td>
+<td>RTM</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/2908007" data-linktype="external">KB2908007</a></td>
+<td>December 16, 2013</td>
+</tr>
+<tr>
+<td>11.0.2420.0</td>
+<td>RTM</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/2891666" data-linktype="external">KB2891666</a></td>
+<td>October 21, 2013</td>
+</tr>
+<tr>
+<td>11.0.2401.0</td>
+<td>RTM</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/2728897" data-linktype="external">KB2728897</a></td>
+<td>February 18, 2013</td>
+</tr>
+<tr>
+<td>11.0.2395.0</td>
+<td>RTM</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/2777772" data-linktype="external">KB2777772</a></td>
+<td>December 17, 2012</td>
+</tr>
+<tr>
+<td>11.0.2383.0</td>
+<td>RTM</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/2758687" data-linktype="external">KB2758687</a></td>
+<td>October 15, 2012</td>
+</tr>
+<tr>
+<td>11.0.2376.0</td>
+<td>RTM</td>
+<td>MS12-070: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2716441" data-linktype="external">KB2716441</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>11.0.2332.0</td>
+<td>RTM</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/2723749" data-linktype="external">KB2723749</a></td>
+<td>August 31, 2012</td>
+</tr>
+<tr>
+<td>11.0.2325.0</td>
+<td>RTM</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/2703275" data-linktype="external">KB2703275</a></td>
+<td>June 18, 2012</td>
+</tr>
+<tr>
+<td>11.0.2316.0</td>
+<td>RTM</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/2679368" data-linktype="external">KB2679368</a></td>
+<td>April 12, 2012</td>
+</tr>
+<tr>
+<td>11.0.2218.0</td>
+<td>RTM</td>
+<td>MS12-070: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2716442" data-linktype="external">KB2716442</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>11.0.2100.60</td>
+<td>RTM</td>
+<td></td>
+<td></td>
+<td>March 06, 2012</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2008-r2">SQL Server 2008 R2</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.50.6785.2</td>
+<td>SP3</td>
+<td>GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/5021112" data-linktype="external">KB5021112</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>10.50.6560.0</td>
+<td>SP3</td>
+<td>GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/4057113" data-linktype="external">KB4057113</a></td>
+<td>January 06, 2018</td>
+</tr>
+<tr>
+<td>10.50.6529.0</td>
+<td>SP3</td>
+<td>MS15-058: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045314" data-linktype="external">KB3045314</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>10.50.6220.0</td>
+<td>SP3</td>
+<td>MS15-058: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045316" data-linktype="external">KB3045316</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>10.50.6000.34</td>
+<td>SP3</td>
+<td>RTW/PCU3</td>
+<td><a href="https://support.microsoft.com/help/2979597" data-linktype="external">KB2979597</a></td>
+<td>September 26, 2014</td>
+</tr>
+<tr>
+<td>10.50.4339.0</td>
+<td>SP2</td>
+<td>MS15-058: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045312" data-linktype="external">KB3045312</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>10.50.4321.0</td>
+<td>SP2</td>
+<td>MS14-044: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2977319" data-linktype="external">KB2977319</a></td>
+<td>August 14, 2014</td>
+</tr>
+<tr>
+<td>10.50.4319.0</td>
+<td>SP2</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/2967540" data-linktype="external">KB2967540</a></td>
+<td>June 30, 2014</td>
+</tr>
+<tr>
+<td>10.50.4305.0</td>
+<td>SP2</td>
+<td>CU12</td>
+<td><a href="https://support.microsoft.com/help/2938478" data-linktype="external">KB2938478</a></td>
+<td>April 21, 2014</td>
+</tr>
+<tr>
+<td>10.50.4302.0</td>
+<td>SP2</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/2926028" data-linktype="external">KB2926028</a></td>
+<td>February 18, 2014</td>
+</tr>
+<tr>
+<td>10.50.4297.0</td>
+<td>SP2</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/2908087" data-linktype="external">KB2908087</a></td>
+<td>December 17, 2013</td>
+</tr>
+<tr>
+<td>10.50.4295.0</td>
+<td>SP2</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/2887606" data-linktype="external">KB2887606</a></td>
+<td>October 28, 2013</td>
+</tr>
+<tr>
+<td>10.50.4286.0</td>
+<td>SP2</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/2844090" data-linktype="external">KB2844090</a></td>
+<td>June 17, 2013</td>
+</tr>
+<tr>
+<td>10.50.4279.0</td>
+<td>SP2</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/2830140" data-linktype="external">KB2830140</a></td>
+<td>April 15, 2013</td>
+</tr>
+<tr>
+<td>10.50.4276.0</td>
+<td>SP2</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/2797460" data-linktype="external">KB2797460</a></td>
+<td>February 18, 2013</td>
+</tr>
+<tr>
+<td>10.50.4270.0</td>
+<td>SP2</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/2777358" data-linktype="external">KB2777358</a></td>
+<td>December 17, 2012</td>
+</tr>
+<tr>
+<td>10.50.4266.0</td>
+<td>SP2</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/2754552" data-linktype="external">KB2754552</a></td>
+<td>October 15, 2012</td>
+</tr>
+<tr>
+<td>10.50.4263.0</td>
+<td>SP2</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/2740411" data-linktype="external">KB2740411</a></td>
+<td>August 31, 2012</td>
+</tr>
+<tr>
+<td>10.50.4260.0</td>
+<td>SP2</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/2720425" data-linktype="external">KB2720425</a></td>
+<td>July 24, 2012</td>
+</tr>
+<tr>
+<td>10.50.4042.0</td>
+<td>SP2</td>
+<td>MS15-058: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045313" data-linktype="external">KB3045313</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>10.50.4033.0</td>
+<td>SP2</td>
+<td>MS14-044: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2977320" data-linktype="external">KB2977320</a></td>
+<td>August 12, 2014</td>
+</tr>
+<tr>
+<td>10.50.4000.0</td>
+<td>SP2</td>
+<td>RTW/PCU2</td>
+<td><a href="https://support.microsoft.com/help/2630458" data-linktype="external">KB2630458</a></td>
+<td>July 26, 2012</td>
+</tr>
+<tr>
+<td>10.50.2881.0</td>
+<td>SP1</td>
+<td>CU14</td>
+<td><a href="https://support.microsoft.com/help/2868244" data-linktype="external">KB2868244</a></td>
+<td>August 08, 2013</td>
+</tr>
+<tr>
+<td>10.50.2876.0</td>
+<td>SP1</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/2855792" data-linktype="external">KB2855792</a></td>
+<td>June 17, 2013</td>
+</tr>
+<tr>
+<td>10.50.2874.0</td>
+<td>SP1</td>
+<td>CU12</td>
+<td><a href="https://support.microsoft.com/help/2828727" data-linktype="external">KB2828727</a></td>
+<td>April 15, 2013</td>
+</tr>
+<tr>
+<td>10.50.2869.0</td>
+<td>SP1</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/2812683" data-linktype="external">KB2812683</a></td>
+<td>February 18, 2013</td>
+</tr>
+<tr>
+<td>10.50.2866.0</td>
+<td>SP1</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/2756574" data-linktype="external">KB2756574</a></td>
+<td>October 15, 2012</td>
+</tr>
+<tr>
+<td>10.50.2861.0</td>
+<td>SP1</td>
+<td>MS12-070: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2716439" data-linktype="external">KB2716439</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>10.50.2822.0</td>
+<td>SP1</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/2723743" data-linktype="external">KB2723743</a></td>
+<td>August 31, 2012</td>
+</tr>
+<tr>
+<td>10.50.2817.0</td>
+<td>SP1</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/2703282" data-linktype="external">KB2703282</a></td>
+<td>June 18, 2012</td>
+</tr>
+<tr>
+<td>10.50.2811.0</td>
+<td>SP1</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/2679367" data-linktype="external">KB2679367</a></td>
+<td>April 16, 2012</td>
+</tr>
+<tr>
+<td>10.50.2806.0</td>
+<td>SP1</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/2659694" data-linktype="external">KB2659694</a></td>
+<td>February 22, 2012</td>
+</tr>
+<tr>
+<td>10.50.2796.0</td>
+<td>SP1</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/2633146" data-linktype="external">KB2633146</a></td>
+<td>December 19, 2011</td>
+</tr>
+<tr>
+<td>10.50.2789.0</td>
+<td>SP1</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/2591748" data-linktype="external">KB2591748</a></td>
+<td>October 17, 2011</td>
+</tr>
+<tr>
+<td>10.50.2772.0</td>
+<td>SP1</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/2567714" data-linktype="external">KB2567714</a></td>
+<td>August 15, 2011</td>
+</tr>
+<tr>
+<td>10.50.2769.0</td>
+<td>SP1</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/2544793" data-linktype="external">KB2544793</a></td>
+<td>July 18, 2011</td>
+</tr>
+<tr>
+<td>10.50.2550.0</td>
+<td>SP1</td>
+<td>MS12-070: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2754849" data-linktype="external">KB2754849</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>10.50.2500.0</td>
+<td>SP1</td>
+<td>RTW/PCU1</td>
+<td><a href="https://support.microsoft.com/help/2528583" data-linktype="external">KB2528583</a></td>
+<td>July 12, 2011</td>
+</tr>
+<tr>
+<td>10.50.1815.0</td>
+<td>RTM</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/2679366" data-linktype="external">KB2679366</a></td>
+<td>April 16, 2012</td>
+</tr>
+<tr>
+<td>10.50.1810.0</td>
+<td>RTM</td>
+<td>CU12</td>
+<td><a href="https://support.microsoft.com/help/2659692" data-linktype="external">KB2659692</a></td>
+<td>February 21, 2012</td>
+</tr>
+<tr>
+<td>10.50.1807.0</td>
+<td>RTM</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/2591746" data-linktype="external">KB2591746</a></td>
+<td>October 17, 2011</td>
+</tr>
+<tr>
+<td>10.50.1804.0</td>
+<td>RTM</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/2567713" data-linktype="external">KB2567713</a></td>
+<td>August 15, 2011</td>
+</tr>
+<tr>
+<td>10.50.1790.0</td>
+<td>RTM</td>
+<td>MS11-049: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2494086" data-linktype="external">KB2494086</a></td>
+<td>June 14, 2011</td>
+</tr>
+<tr>
+<td>10.50.1777.0</td>
+<td>RTM</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/2507770" data-linktype="external">KB2507770</a></td>
+<td>April 18, 2011</td>
+</tr>
+<tr>
+<td>10.50.1765.0</td>
+<td>RTM</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/2489376" data-linktype="external">KB2489376</a></td>
+<td>February 21, 2011</td>
+</tr>
+<tr>
+<td>10.50.1753.0</td>
+<td>RTM</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/2438347" data-linktype="external">KB2438347</a></td>
+<td>December 20, 2010</td>
+</tr>
+<tr>
+<td>10.50.1746.0</td>
+<td>RTM</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/2345451" data-linktype="external">KB2345451</a></td>
+<td>October 18, 2010</td>
+</tr>
+<tr>
+<td>10.50.1734.0</td>
+<td>RTM</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/2261464" data-linktype="external">KB2261464</a></td>
+<td>August 16, 2010</td>
+</tr>
+<tr>
+<td>10.50.1720.0</td>
+<td>RTM</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/2072493" data-linktype="external">KB2072493</a></td>
+<td>June 21, 2010</td>
+</tr>
+<tr>
+<td>10.50.1702.0</td>
+<td>RTM</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/981355" data-linktype="external">KB981355</a></td>
+<td>May 18, 2010</td>
+</tr>
+<tr>
+<td>10.50.1617.0</td>
+<td>RTM</td>
+<td>MS11-049: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2494088" data-linktype="external">KB2494088</a></td>
+<td>June 14, 2011</td>
+</tr>
+<tr>
+<td>10.50.1600.1</td>
+<td>RTM</td>
+<td></td>
+<td></td>
+<td>May 10, 2010</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2008">SQL Server 2008</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.0.6814.4</td>
+<td>SP4</td>
+<td>GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/5020863" data-linktype="external">KB5020863</a></td>
+<td>February 14, 2023</td>
+</tr>
+<tr>
+<td>10.00.6535.0</td>
+<td>SP4</td>
+<td>MS15-058: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045308" data-linktype="external">KB3045308</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>10.00.6241.0</td>
+<td>SP4</td>
+<td>MS15-058: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045311" data-linktype="external">KB3045311</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>10.00.5890.0</td>
+<td>SP3</td>
+<td>MS15-058: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045303" data-linktype="external">KB3045303</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>10.00.5869.0</td>
+<td>SP3</td>
+<td>MS14-044: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2984340" data-linktype="external">KB2984340</a><br><a href="https://support.microsoft.com/help/2977322" data-linktype="external">2977322</a></td>
+<td>August 12, 2014</td>
+</tr>
+<tr>
+<td>10.00.5867.0</td>
+<td>(on-demand update package)</td>
+<td></td>
+<td><a href="https://support.microsoft.com/help/2877204" data-linktype="external">KB2877204</a></td>
+<td></td>
+</tr>
+<tr>
+<td>10.00.5861.0</td>
+<td>SP3</td>
+<td>CU17</td>
+<td><a href="https://support.microsoft.com/help/2958696" data-linktype="external">KB2958696</a></td>
+<td>May 19, 2014</td>
+</tr>
+<tr>
+<td>10.00.5852.0</td>
+<td>SP3</td>
+<td>CU16</td>
+<td><a href="https://support.microsoft.com/help/2936421" data-linktype="external">KB2936421</a></td>
+<td>March 17, 2014</td>
+</tr>
+<tr>
+<td>10.00.5850.0</td>
+<td>SP3</td>
+<td>CU15</td>
+<td><a href="https://support.microsoft.com/help/2923520" data-linktype="external">KB2923520</a></td>
+<td>January 20, 2014</td>
+</tr>
+<tr>
+<td>10.00.5848.0</td>
+<td>SP3</td>
+<td>CU14</td>
+<td><a href="https://support.microsoft.com/help/2893410" data-linktype="external">KB2893410</a></td>
+<td>November 18, 2013</td>
+</tr>
+<tr>
+<td>10.00.5846.0</td>
+<td>SP3</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/2880350" data-linktype="external">KB2880350</a></td>
+<td>September 16, 2013</td>
+</tr>
+<tr>
+<td>10.00.5844.0</td>
+<td>SP3</td>
+<td>CU12</td>
+<td><a href="https://support.microsoft.com/help/2863205" data-linktype="external">KB2863205</a></td>
+<td>July 15, 2013</td>
+</tr>
+<tr>
+<td>10.00.5840.0</td>
+<td>SP3</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/2834048" data-linktype="external">KB2834048</a></td>
+<td>May 20, 2013</td>
+</tr>
+<tr>
+<td>10.00.5835.0</td>
+<td>SP3</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/2814783" data-linktype="external">KB2814783</a></td>
+<td>March 18, 2013</td>
+</tr>
+<tr>
+<td>10.00.5829.0</td>
+<td>SP3</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/2799883" data-linktype="external">KB2799883</a></td>
+<td>January 21, 2013</td>
+</tr>
+<tr>
+<td>10.00.5828.0</td>
+<td>SP3</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/2771833" data-linktype="external">KB2771833</a></td>
+<td>November 19, 2012</td>
+</tr>
+<tr>
+<td>10.00.5826.0</td>
+<td>SP3</td>
+<td>MS12-070: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2716435" data-linktype="external">KB2716435</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>10.00.5794.0</td>
+<td>SP3</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/2738350" data-linktype="external">KB2738350</a></td>
+<td>September 17, 2012</td>
+</tr>
+<tr>
+<td>10.00.5788.0</td>
+<td>SP3</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/2715953" data-linktype="external">KB2715953</a></td>
+<td>July 16, 2012</td>
+</tr>
+<tr>
+<td>10.00.5785.0</td>
+<td>SP3</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/2696626" data-linktype="external">KB2696626</a></td>
+<td>May 21, 2012</td>
+</tr>
+<tr>
+<td>10.00.5768.0</td>
+<td>SP3</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/2633143" data-linktype="external">KB2633143</a></td>
+<td>November 21, 2011</td>
+</tr>
+<tr>
+<td>10.00.5766.0</td>
+<td>SP3</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/2617146" data-linktype="external">KB2617146</a></td>
+<td>October 17, 2011</td>
+</tr>
+<tr>
+<td>10.00.5538.0</td>
+<td>SP3</td>
+<td>MS15-058: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/3045305" data-linktype="external">KB3045305</a></td>
+<td>July 14, 2015</td>
+</tr>
+<tr>
+<td>10.00.5520.0</td>
+<td>SP3</td>
+<td>MS14-044: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2977321" data-linktype="external">KB2977321</a></td>
+<td>August 12, 2014</td>
+</tr>
+<tr>
+<td>10.00.5512.0</td>
+<td>SP3</td>
+<td>MS12-070: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2716436" data-linktype="external">KB2716436</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>10.00.5500.0</td>
+<td>SP3</td>
+<td>RTW / PCU 3</td>
+<td><a href="https://support.microsoft.com/help/2546951" data-linktype="external">KB2546951</a></td>
+<td>October 06, 2011</td>
+</tr>
+<tr>
+<td>10.00.4371.0</td>
+<td>SP2</td>
+<td>MS12-070: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2716433" data-linktype="external">KB2716433</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>10.00.4332.0</td>
+<td>SP2</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/2696625" data-linktype="external">KB2696625</a></td>
+<td>May 21, 2012</td>
+</tr>
+<tr>
+<td>10.00.4330.0</td>
+<td>SP2</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/2673382" data-linktype="external">KB2673382</a></td>
+<td>March 19, 2012</td>
+</tr>
+<tr>
+<td>10.00.4326.0</td>
+<td>SP2</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/2648096" data-linktype="external">KB2648096</a></td>
+<td>January 16, 2012</td>
+</tr>
+<tr>
+<td>10.00.4323.0</td>
+<td>SP2</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/2617148" data-linktype="external">KB2617148</a></td>
+<td>November 21, 2011</td>
+</tr>
+<tr>
+<td>10.00.4321.0</td>
+<td>SP2</td>
+<td>CU6</td>
+<td><a href="https://support.microsoft.com/help/2582285" data-linktype="external">KB2582285</a></td>
+<td>September 19, 2011</td>
+</tr>
+<tr>
+<td>10.00.4316.0</td>
+<td>SP2</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/2555408" data-linktype="external">KB2555408</a></td>
+<td>July 18, 2011</td>
+</tr>
+<tr>
+<td>10.00.4311.0</td>
+<td>SP2</td>
+<td>MS11-049: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2494094" data-linktype="external">KB2494094</a></td>
+<td>June 14, 2011</td>
+</tr>
+<tr>
+<td>10.00.4285.0</td>
+<td>SP2</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/2527180" data-linktype="external">KB2527180</a></td>
+<td>May 16, 2011</td>
+</tr>
+<tr>
+<td>10.00.4279.0</td>
+<td>SP2</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/2498535" data-linktype="external">KB2498535</a></td>
+<td>March 17, 2011</td>
+</tr>
+<tr>
+<td>10.00.4266.0</td>
+<td>SP2</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/2289254" data-linktype="external">KB2289254</a></td>
+<td>November 15, 2010</td>
+</tr>
+<tr>
+<td>10.00.4067.0</td>
+<td>SP2</td>
+<td>MS12-070: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2716434" data-linktype="external">KB2716434</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>10.00.4064.0</td>
+<td>SP2</td>
+<td>MS11-049: GDR Security Update</td>
+<td><a href="https://support.microsoft.com/help/2494089" data-linktype="external">KB2494089</a></td>
+<td>June 14, 2011</td>
+</tr>
+<tr>
+<td>10.00.4000.0</td>
+<td>SP2</td>
+<td>RTW / PCU 2</td>
+<td><a href="https://support.microsoft.com/help/2285068" data-linktype="external">KB2285068</a></td>
+<td>September 29, 2010</td>
+</tr>
+<tr>
+<td>10.00.2850.0</td>
+<td>SP1</td>
+<td>CU16</td>
+<td><a href="https://support.microsoft.com/help/2582282" data-linktype="external">KB2582282</a></td>
+<td>September 19, 2011</td>
+</tr>
+<tr>
+<td>10.00.2847.0</td>
+<td>SP1</td>
+<td>CU15</td>
+<td><a href="https://support.microsoft.com/help/2555406" data-linktype="external">KB2555406</a></td>
+<td>July 18, 2011</td>
+</tr>
+<tr>
+<td>10.00.2841.0</td>
+<td>SP1</td>
+<td>MS11-049: QFE Security Update</td>
+<td><a href="https://support.microsoft.com/help/2494100" data-linktype="external">KB2494100</a></td>
+<td>June 14, 2011</td>
+</tr>
+<tr>
+<td>10.00.2821.0</td>
+<td>SP1</td>
+<td>CU14</td>
+<td><a href="https://support.microsoft.com/help/2527187" data-linktype="external">KB2527187</a></td>
+<td>May 16, 2011</td>
+</tr>
+<tr>
+<td>10.00.2816.0</td>
+<td>SP1</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/2497673" data-linktype="external">KB2497673</a></td>
+<td>March 17, 2011</td>
+</tr>
+<tr>
+<td>10.00.2804.0</td>
+<td>SP1</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/2413738" data-linktype="external">KB2413738</a></td>
+<td>November 15, 2010</td>
+</tr>
+<tr>
+<td>10.00.2775.0</td>
+<td>SP1</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/981702" data-linktype="external">KB981702</a></td>
+<td>May 17, 2010</td>
+</tr>
+<tr>
+<td>10.00.2746.0</td>
+<td>SP1</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/975977" data-linktype="external">KB975977</a></td>
+<td>November 16, 2009</td>
+</tr>
+<tr>
+<td>10.00.2734.0</td>
+<td>SP1</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/973602" data-linktype="external">KB973602</a></td>
+<td>September 21, 2009</td>
+</tr>
+<tr>
+<td>10.00.2723.0</td>
+<td>SP1</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/971491" data-linktype="external">KB971491</a></td>
+<td>July 20, 2009</td>
+</tr>
+<tr>
+<td>10.00.2714.0</td>
+<td>SP1</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/970315" data-linktype="external">KB970315</a></td>
+<td>May 18, 2009</td>
+</tr>
+<tr>
+<td>10.00.2710.0</td>
+<td>SP1</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/969099" data-linktype="external">KB969099</a></td>
+<td>April 16, 2009</td>
+</tr>
+<tr>
+<td>10.00.2573.0</td>
+<td>SP1</td>
+<td>MS11-049: GDR Security update</td>
+<td><a href="https://support.microsoft.com/help/2494096" data-linktype="external">KB2494096</a></td>
+<td>June 14, 2011</td>
+</tr>
+<tr>
+<td>10.00.2531.0</td>
+<td>SP1</td>
+<td>RTW / PCU 1</td>
+<td></td>
+<td>April, 2009</td>
+</tr>
+<tr>
+<td>10.00.1835.0</td>
+<td>RTM</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/979064" data-linktype="external">KB979064</a></td>
+<td>March 15, 2010</td>
+</tr>
+<tr>
+<td>10.00.1823.0</td>
+<td>RTM</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/975976" data-linktype="external">KB975976</a></td>
+<td>November 16, 2009</td>
+</tr>
+<tr>
+<td>10.00.1787.0</td>
+<td>RTM</td>
+<td>CU3</td>
+<td><a href="https://support.microsoft.com/help/960484" data-linktype="external">KB960484</a></td>
+<td>January 19, 2009</td>
+</tr>
+<tr>
+<td>10.00.1779.0</td>
+<td>RTM</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/958186" data-linktype="external">KB958186</a></td>
+<td>November 19, 2008</td>
+</tr>
+<tr>
+<td>10.00.1763.0</td>
+<td>RTM</td>
+<td>CU1</td>
+<td><a href="https://support.microsoft.com/help/956717" data-linktype="external">KB956717</a></td>
+<td>September 22, 2008</td>
+</tr>
+<tr>
+<td>10.00.1600.22</td>
+<td>RTM</td>
+<td></td>
+<td></td>
+<td>August 6, 2008</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2005">SQL Server 2005</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Service pack</th>
+<th>Update</th>
+<th>Knowledge Base number</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9.00.5324</td>
+<td>SP4</td>
+<td>MS12-070: QFE Security update</td>
+<td><a href="https://support.microsoft.com/help/2716427" data-linktype="external">KB2716427</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>9.00.5292</td>
+<td>SP4</td>
+<td>MS11-049: QFE Security update</td>
+<td><a href="https://support.microsoft.com/help/2494123" data-linktype="external">KB2494123</a></td>
+<td>June 14, 2011</td>
+</tr>
+<tr>
+<td>9.00.5069</td>
+<td>SP4</td>
+<td>MS12-070: GDR Security update</td>
+<td><a href="https://support.microsoft.com/help/2716429" data-linktype="external">KB2716429</a></td>
+<td>October 09, 2012</td>
+</tr>
+<tr>
+<td>9.00.5057</td>
+<td>SP4</td>
+<td>MS11-049: GDR Security update</td>
+<td><a href="https://support.microsoft.com/help/2494120" data-linktype="external">KB2494120</a></td>
+<td>June 14, 2011</td>
+</tr>
+<tr>
+<td>9.00.5000</td>
+<td>SP4</td>
+<td>RTW / PCU4</td>
+<td></td>
+<td>December 16, 2010</td>
+</tr>
+<tr>
+<td>9.00.4309</td>
+<td>SP3</td>
+<td>CU11</td>
+<td><a href="https://support.microsoft.com/help/2258854" data-linktype="external">KB2258854</a></td>
+<td>August 16, 2010</td>
+</tr>
+<tr>
+<td>9.00.4305</td>
+<td>SP3</td>
+<td>CU10</td>
+<td><a href="https://support.microsoft.com/help/983329" data-linktype="external">KB983329</a></td>
+<td>June 21, 2010</td>
+</tr>
+<tr>
+<td>9.00.4285</td>
+<td>SP3</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/978915" data-linktype="external">KB978915</a></td>
+<td>February 16, 2010</td>
+</tr>
+<tr>
+<td>9.00.4230</td>
+<td>SP3</td>
+<td>CU5</td>
+<td><a href="https://support.microsoft.com/help/972511" data-linktype="external">KB972511</a></td>
+<td>August 17, 2009</td>
+</tr>
+<tr>
+<td>9.00.4226</td>
+<td>SP3</td>
+<td>CU4</td>
+<td><a href="https://support.microsoft.com/help/970279" data-linktype="external">KB970279</a></td>
+<td>June 15, 2009</td>
+</tr>
+<tr>
+<td>9.00.4211</td>
+<td>SP3</td>
+<td>CU2</td>
+<td><a href="https://support.microsoft.com/help/961930" data-linktype="external">KB961930</a></td>
+<td>February 16, 2009</td>
+</tr>
+<tr>
+<td>9.00.4060</td>
+<td>SP3</td>
+<td>MS11-049: GDR Security update</td>
+<td><a href="https://support.microsoft.com/help/2494113" data-linktype="external">KB2494113</a></td>
+<td>June 14, 2011</td>
+</tr>
+<tr>
+<td>9.00.4035</td>
+<td>SP3</td>
+<td>RTW</td>
+<td><a href="https://support.microsoft.com/help/955706" data-linktype="external">KB955706</a></td>
+<td>December 15, 2008</td>
+</tr>
+<tr>
+<td>9.00.3325</td>
+<td>SP2</td>
+<td>CU13</td>
+<td><a href="https://support.microsoft.com/help/967908" data-linktype="external">KB967908</a></td>
+<td>April 20, 2009</td>
+</tr>
+<tr>
+<td>9.00.3282</td>
+<td>SP2</td>
+<td>CU9</td>
+<td><a href="https://support.microsoft.com/help/953752" data-linktype="external">KB953752</a></td>
+<td>August 18, 2008</td>
+</tr>
+<tr>
+<td>9.00.3257</td>
+<td>SP2</td>
+<td>CU8</td>
+<td><a href="https://support.microsoft.com/help/951217" data-linktype="external">KB951217</a></td>
+<td>June 16, 2008</td>
+</tr>
+<tr>
+<td>9.00.3239</td>
+<td>SP2</td>
+<td>CU7</td>
+<td><a href="https://support.microsoft.com/help/949095" data-linktype="external">KB949095</a></td>
+<td>April 14, 2008</td>
+</tr>
+<tr>
+<td>9.00.3077</td>
+<td>SP4</td>
+<td>MS09-004: GDR Security update</td>
+<td><a href="https://support.microsoft.com/help/960089" data-linktype="external">KB960089</a></td>
+<td>February 10, 2009</td>
+</tr>
+<tr>
+<td>9.00.3042</td>
+<td>SP2</td>
+<td></td>
+<td><a href="https://support.microsoft.com/help/937137" data-linktype="external">KB937137</a></td>
+<td></td>
+</tr>
+<tr>
+<td>9.00.2047</td>
+<td>SP1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9.00.1399</td>
+<td>RTM</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-2000">SQL Server 2000</h3>
+<table>
+<thead>
+<tr>
+<th>Build number or version</th>
+<th>Version description, (KB number for that update), release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8.00.2283</td>
+<td>Post-SP4 hotfix for MS09-004 (971524)</td>
+</tr>
+<tr>
+<td>8.00.2282</td>
+<td>MS09-004: KB959420 October 29, 2008</td>
+</tr>
+<tr>
+<td>8.00.2273</td>
+<td>MS08-040 - KB 948111 July 08, 2008</td>
+</tr>
+<tr>
+<td>8.00.2040</td>
+<td>Post-SP4 AWE fix (899761)</td>
+</tr>
+<tr>
+<td>8.00.2039</td>
+<td>SQL Server 2000 SP4</td>
+</tr>
+<tr>
+<td>8.00.1007</td>
+<td>Update.exe Hotfix Installer Baseline 2 (891640)</td>
+</tr>
+<tr>
+<td>8.00.977</td>
+<td>Update.exe Hotfix Installer Baseline 1 (884856)</td>
+</tr>
+<tr>
+<td>8.00.818</td>
+<td>(821277)</td>
+</tr>
+<tr>
+<td>8.00.765</td>
+<td>Post SP3 hotfix rollup</td>
+</tr>
+<tr>
+<td>8.00.760</td>
+<td>SQL Server 2000 SP3 or SP3a (8.00.766 ssnetlib.dll)</td>
+</tr>
+<tr>
+<td>8.00.701</td>
+<td>Hotfix Installer v.1 released</td>
+</tr>
+<tr>
+<td>8.00.534</td>
+<td>SQL Server 2000 SP2</td>
+</tr>
+<tr>
+<td>8.00.384</td>
+<td>SQL Server 2000 SP1</td>
+</tr>
+<tr>
+<td>8.00.194</td>
+<td>SQL Server 2000 RTM or MSDE 2.0</td>
+</tr>
+</tbody>
+</table>
+<p>Older versions of SQL Server</p>
+<h3 id="sql-server-70">SQL Server 7.0</h3>
+<p>Use the version number in the following table to identify the product or service pack level.</p>
+<table>
+<thead>
+<tr>
+<th>Version number</th>
+<th>Service pack</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7.00.1063</td>
+<td>SQL Server 7.0 Service Pack 4</td>
+</tr>
+<tr>
+<td>7.00.961</td>
+<td>SQL Server 7.0 Service Pack 3</td>
+</tr>
+<tr>
+<td>7.00.842</td>
+<td>SQL Server 7.0 Service Pack 2</td>
+</tr>
+<tr>
+<td>7.00.699</td>
+<td>SQL Server 7.0 Service Pack 1</td>
+</tr>
+<tr>
+<td>7.00.623</td>
+<td>SQL Server 7.0 RTM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-65">SQL Server 6.5</h3>
+<p>Use the version number in the following table to identify the product or service pack level.</p>
+<table>
+<thead>
+<tr>
+<th>Version number</th>
+<th>Service pack</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.50.479</td>
+<td>SQL Server 6.5 Service Pack 5a Update</td>
+</tr>
+<tr>
+<td>6.50.416</td>
+<td>SQL Server 6.5 Service Pack 5a</td>
+</tr>
+<tr>
+<td>6.50.415</td>
+<td>SQL Server 6.5 Service Pack 5</td>
+</tr>
+<tr>
+<td>6.50.281</td>
+<td>SQL Server 6.5 Service Pack 4</td>
+</tr>
+<tr>
+<td>6.50.258</td>
+<td>SQL Server 6.5 Service Pack 3</td>
+</tr>
+<tr>
+<td>6.50.240</td>
+<td>SQL Server 6.5 Service Pack 2</td>
+</tr>
+<tr>
+<td>6.50.213</td>
+<td>SQL Server 6.5 Service Pack 1</td>
+</tr>
+<tr>
+<td>6.50.201</td>
+<td>SQL Server 6.5 RTM</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="components-client-tools-versions" data-linktype="relative-path">Determine version information of SQL Server components and client tools</a></li>
+<li><a href="find-my-sql-version" data-linktype="relative-path">Determine which version and edition of SQL Server Database Engine is running</a></li>
+</ul>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2026-05-20T08:00:00.000Z"
+		data-article-date-source="calculated"
+		class="is-invisible"
+	>
+		2026-05-20
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+			
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="display-flex flex-wrap-nowrap">
+					<button
+						class="thumb-rating-button like inner-focus"
+						data-test-id="right-rail-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						aria-label="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike inner-focus"
+						id="right-rail-no-button"
+						hidden
+						data-test-id="right-rail-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						aria-label="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+					</button>
+					<details class="popover popover-right" id="help-popover" data-test-id="feedback-popover">
+						<summary
+							tabindex="0"
+							class="thumb-rating-button dislike inner-focus"
+							data-test-id="details-right-rail-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							aria-label="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading-right-rail"
+							aria-describedby="popover-description-right-rail"
+						>
+							<p
+								id="popover-heading-right-rail"
+								class="font-size-lg margin-bottom-xxs font-weight-semibold"
+							>
+								Need help with this topic?
+							</p>
+							<p id="popover-description-right-rail" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-expanded="false"
+				title="Theme"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="light"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="dark"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="high-contrast"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		</html>
