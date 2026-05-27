@@ -1,3 +1,7 @@
+from src.scrapers.apple.ios_releases import IosReleasesScraper
+from src.scrapers.apple.macos_releases import MacOsReleasesScraper
+from src.scrapers.google.android_releases import AndroidReleasesScraper
+from src.scrapers.linux.ubuntu_releases import UbuntuReleasesScraper
 from src.scrapers.ms.asr_guids import AsrGuidsScraper
 from src.scrapers.ms.bitlocker_volume_types import BitlockerVolumeTypesScraper
 from src.scrapers.ms.chassis_types import ChassisTypesScraper
@@ -15,15 +19,19 @@ from src.scrapers.ms.win_releases import WinReleasesScraper
 from src.scrapers.ms.win_sku import WinSkuScraper
 
 REGISTRY: dict[str, type] = {
+    "android-releases": AndroidReleasesScraper,
     "asr-guids": AsrGuidsScraper,
     "bitlocker-volume-types": BitlockerVolumeTypesScraper,
     "chassis-types": ChassisTypesScraper,
     "dotnet-lifecycle": DotnetLifecycleScraper,
     "edge-releases": EdgeReleasesScraper,
     "exchange-buildnumbers": ExchangeBuildNumbersScraper,
+    "ios-releases": IosReleasesScraper,
     "locales": LocalesScraper,
     "m365-buildnumbers": M365BuildNumbersScraper,
+    "macos-releases": MacOsReleasesScraper,
     "sql-buildnumbers": SqlBuildNumbersScraper,
+    "ubuntu-releases": UbuntuReleasesScraper,
     "win-buildnumbers": WinBuildNumbersScraper,
     "win-lifecycle-client": WinLifecycleClientScraper,
     "win-lifecycle-ltsc": WinLifecycleLtscScraper,
