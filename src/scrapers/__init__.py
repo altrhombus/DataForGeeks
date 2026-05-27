@@ -1,0 +1,25 @@
+from src.scrapers.ms.asr_guids import AsrGuidsScraper
+from src.scrapers.ms.bitlocker_volume_types import BitlockerVolumeTypesScraper
+from src.scrapers.ms.chassis_types import ChassisTypesScraper
+from src.scrapers.ms.locales import LocalesScraper
+from src.scrapers.ms.m365_buildnumbers import M365BuildNumbersScraper
+from src.scrapers.ms.win_buildnumbers import WinBuildNumbersScraper
+from src.scrapers.ms.win_lifecycle_client import WinLifecycleClientScraper
+from src.scrapers.ms.win_lifecycle_ltsc import WinLifecycleLtscScraper
+from src.scrapers.ms.win_lifecycle_server import WinLifecycleServerScraper
+from src.scrapers.ms.win_releases import WinReleasesScraper
+from src.scrapers.ms.win_sku import WinSkuScraper
+
+REGISTRY: dict[str, type] = {
+    "asr-guids": AsrGuidsScraper,
+    "bitlocker-volume-types": BitlockerVolumeTypesScraper,
+    "chassis-types": ChassisTypesScraper,
+    "locales": LocalesScraper,
+    "m365-buildnumbers": M365BuildNumbersScraper,
+    "win-buildnumbers": WinBuildNumbersScraper,
+    "win-lifecycle-client": WinLifecycleClientScraper,
+    "win-lifecycle-ltsc": WinLifecycleLtscScraper,
+    "win-lifecycle-server": WinLifecycleServerScraper,
+    "win-releases": WinReleasesScraper,
+    "win-sku": WinSkuScraper,
+}
