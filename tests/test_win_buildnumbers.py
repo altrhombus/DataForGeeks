@@ -9,7 +9,7 @@ from src.scrapers.ms.win_buildnumbers import (
     WinBuildNumbersScraper,
     _parse_hotpatch_page,
     _parse_standard_page,
-    _WIN10_URL, _WIN11_URL, _SERVER2016_URL, _SERVER2019_URL, _SERVER2022_URL, _HOTPATCH_URL,
+    _WIN10_URL, _WIN11_URL, _SERVER2016_URL, _SERVER2019_URL, _SERVER2022_URL, _SERVER2025_URL, _HOTPATCH_URL,
 )
 
 FIXTURES = Path(__file__).parent / "fixtures" / "ms"
@@ -46,18 +46,24 @@ def server2022_html() -> str:
 
 
 @pytest.fixture(scope="module")
+def server2025_html() -> str:
+    return (FIXTURES / "server2025_update_history.html").read_text(encoding="utf-8")
+
+
+@pytest.fixture(scope="module")
 def hotpatch_html() -> str:
     return (FIXTURES / "win11_hotpatch.html").read_text(encoding="utf-8")
 
 
 @pytest.fixture(scope="module")
-def all_pages(win10_html, win11_html, server2016_html, server2019_html, server2022_html, hotpatch_html) -> dict[str, str]:
+def all_pages(win10_html, win11_html, server2016_html, server2019_html, server2022_html, server2025_html, hotpatch_html) -> dict[str, str]:
     return {
         _WIN10_URL: win10_html,
         _WIN11_URL: win11_html,
         _SERVER2016_URL: server2016_html,
         _SERVER2019_URL: server2019_html,
         _SERVER2022_URL: server2022_html,
+        _SERVER2025_URL: server2025_html,
         _HOTPATCH_URL: hotpatch_html,
     }
 
@@ -145,6 +151,18 @@ class TestParseStandardPage:
         records = _parse_standard_page(server2022_html, os_type="server", fixed_major=None)
         assert len(records) > 20
 
+    def test_server2025_page_parses(self, server2025_html):
+        records = _parse_standard_page(server2025_html, os_type="server", fixed_major=None, category_filter="2025")
+        assert len(records) > 20
+
+    def test_server2025_major_version(self, server2025_html):
+        for r in _parse_standard_page(server2025_html, os_type="server", fixed_major=None, category_filter="2025"):
+            assert r.major_version == 2025
+
+    def test_server2025_windows_version(self, server2025_html):
+        for r in _parse_standard_page(server2025_html, os_type="server", fixed_major=None, category_filter="2025"):
+            assert r.windows_version == "2025"
+
     def test_server_os_type(self, server2022_html):
         for r in _parse_standard_page(server2022_html, os_type="server", fixed_major=None):
             assert r.os_type == "server"
@@ -226,4 +244,4 @@ class TestWinBuildNumbersScraper:
         assert WinBuildNumbersScraper.dataset_name == "windows-update-history"
 
     def test_sources_count(self):
-        assert len(WinBuildNumbersScraper.sources) == 6
+        assert len(WinBuildNumbersScraper.sources) == 7

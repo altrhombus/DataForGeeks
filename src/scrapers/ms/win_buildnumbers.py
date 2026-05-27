@@ -12,6 +12,7 @@ _WIN11_URL = "https://aka.ms/Windows11UpdateHistory"
 _SERVER2016_URL = "https://support.microsoft.com/en-us/topic/windows-10-and-windows-server-2016-update-history-4acfbc84-a290-1b54-536a-1c0430e9f3fd"
 _SERVER2019_URL = "https://support.microsoft.com/en-us/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059"
 _SERVER2022_URL = "https://support.microsoft.com/en-us/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee"
+_SERVER2025_URL = "https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7"
 _HOTPATCH_URL = "https://support.microsoft.com/en-us/topic/release-notes-for-hotpatch-on-windows-11-enterprise-version-25h2-0bbaa1c7-5070-41ca-a7c9-4ead79602dbf"
 
 # "May 13, 2026—KB5058411 (OS Build 22621.5192)" or multi-build variant
@@ -47,7 +48,7 @@ _SERVER_ONLY_BUILDS = {"10.0.14393.5127"}
 class WinBuildNumbersScraper(BaseScraper):
     dataset = "ms/win/buildnumbers"
     dataset_name = "windows-update-history"
-    sources = [_WIN10_URL, _WIN11_URL, _SERVER2016_URL, _SERVER2019_URL, _SERVER2022_URL, _HOTPATCH_URL]
+    sources = [_WIN10_URL, _WIN11_URL, _SERVER2016_URL, _SERVER2019_URL, _SERVER2022_URL, _SERVER2025_URL, _HOTPATCH_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:
         records: list[WinBuildNumber] = []
@@ -57,6 +58,7 @@ class WinBuildNumbersScraper(BaseScraper):
         records.extend(_parse_standard_page(pages[_SERVER2016_URL], os_type="server", fixed_major=None, category_filter="1607"))
         records.extend(_parse_standard_page(pages[_SERVER2019_URL], os_type="server", fixed_major=None, category_filter="1809"))
         records.extend(_parse_standard_page(pages[_SERVER2022_URL], os_type="server", fixed_major=None))
+        records.extend(_parse_standard_page(pages[_SERVER2025_URL], os_type="server", fixed_major=None, category_filter="2025"))
         records.extend(_parse_hotpatch_page(pages[_HOTPATCH_URL]))
 
         if not records:
