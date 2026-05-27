@@ -1,0 +1,3341 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>[MS-OE376]: Part 4 Section 7.6.2.39, LCID (Locale ID) | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="a.   The standard says LCID represents the source&#39;s language.    Word uses LCID as the language to format the source when" />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="[MS-OE376]: Part 4 Section 7.6.2.39, LCID (Locale ID)" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a" />
+			<meta property="og:description" content="a.   The standard says LCID represents the source&#39;s language.    Word uses LCID as the language to format the source when" />
+			<meta name="platform_id" content="af5bb037-df71-9ba8-ab8d-5553d9d443d9" /> <meta name="scope" content="OpenSpecs" />
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-OpenSpecs" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="ms.service" content="openspecs-office" />
+	
+		<meta name="ROBOTS" content="INDEX, FOLLOW" />
+	
+		<meta name="ms.topic" content="reference" />
+	
+		<meta name="ms.author" content="cindyle" />
+	
+		<meta name="protocol_rendering" content="true" />
+	
+		<meta name="author" content="mrsgit09" />
+	
+		<meta name="document_id" content="503b204a-4758-6d9d-1ce6-b5682fe6cecb" />
+	
+		<meta name="document_version_independent_id" content="ab5c231f-f234-83f9-4f0d-4e8dd2056f41" />
+	
+		<meta name="updated_at" content="2025-03-18T16:13:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/open_specs_office/blob/live/documentation/office_standards/MS-OE376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a.md" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/open_specs_office/blob/ba347afcdbc6d2c7711dae91f9d470541dce5e1d/documentation/office_standards/MS-OE376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a.md" />
+	
+		<meta name="git_commit_id" content="ba347afcdbc6d2c7711dae91f9d470541dce5e1d" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.open_specs_office" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="toc.json" />
+	
+		<meta name="feedback_system" content="None" />
+	
+		<meta name="feedback_product_url" content="" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="1092" />
+	
+		<meta name="asset_id" content="office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="documentation/office_standards/MS-OE376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a.md" />
+	
+		<meta name="previous_tlsh_hash" content="F8E5A6D1B6142E11AF921B220F8C43D4C0EA6F6A9AE8511EE98098E707FC3606AE110FAB73FFFED3389E515F94877249F91589AEA6A6D6712C231D3963854F071433775C75" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/open_specs_office/blob/live/documentation/office_standards/MS-OE376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/c6f99e62-1cf6-4b71-af9b-649b05f80cce" data-source="generated" />
+	
+		<meta name="spProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/3f56b378-07a9-4fa1-afe8-9889fdc77628" data-source="generated" />
+	
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03427.7856-752ce836/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			<script src="/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "None",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": false,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": false,
+    "contributors": [
+      {
+        "name": "mrsgit09",
+        "url": "https://github.com/mrsgit09"
+      },
+      {
+        "name": "cassiew77",
+        "url": "https://github.com/cassiew77"
+      },
+      {
+        "name": "damabe",
+        "url": "https://github.com/damabe"
+      }
+    ]
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script src="/static/assets/0.4.03427.7856-752ce836/scripts/en-us/index-docs.js"></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl font-size-md" aria-hidden="true">
+								<span class="docon docon-panel-left-contract"></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div>
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to plan</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			hidden
+			href=""
+			data-original_content_git_url="https://github.com/MicrosoftDocs/open_specs_office/blob/live/documentation/office_standards/MS-OE376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/documentation/office_standards/MS-OE376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="211907-part-4-section-76239-lcid-locale-id">2.1.1907 Part 4 Section 7.6.2.39, LCID (Locale ID)</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	
+					<div class="content"><p>a.&nbsp;&nbsp; <i>The standard says LCID represents the
+source's language.</i></p>
+<dl>
+<dd>
+<p>Word uses LCID as the language to format the source
+when the documentation style in use has language-dependant variability.</p>
+</dd></dl>
+<p>b.&nbsp;&nbsp; <i>The standard does not allow 0 as a value for
+LCID.</i></p>
+<dl>
+<dd>
+<p>Word sets LCID to 0 to mean the value should be&nbsp;
+determined at runtime by the application.</p>
+</dd></dl>
+<p>c.&nbsp;&nbsp; <i>The standard states that the LCID table in
+ST_LangCode shall be used to associate language IDs with languages.</i></p>
+<p>In Office, this element represents the language that shall
+be used to format the source. The set of locale IDs used by Office are
+specified in the following table.</p>
+<table><thead>
+  <tr>
+   <th>
+   <p>Language Code </p>
+   </th>
+   <th>
+   <p>Description (informative)</p>
+   </th>
+   <th>
+   <p>BCP 47 Code</p>
+   </th>
+  </tr>
+ </thead><tbody><tr>
+  <td>
+  <p><i>1025</i></p>
+  </td>
+  <td>
+  <p>Arabic - Saudi Arabia</p>
+  </td>
+  <td>
+  <p>ar-SA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1026</i></p>
+  </td>
+  <td>
+  <p>Bulgarian</p>
+  </td>
+  <td>
+  <p>bg-BG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1027</i></p>
+  </td>
+  <td>
+  <p>Catalan</p>
+  </td>
+  <td>
+  <p>ca-ES</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1028</i></p>
+  </td>
+  <td>
+  <p>Chinese - Taiwan</p>
+  </td>
+  <td>
+  <p>zh-TW</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1029</i></p>
+  </td>
+  <td>
+  <p>Czech</p>
+  </td>
+  <td>
+  <p>cs-CZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1030</i></p>
+  </td>
+  <td>
+  <p>Danish</p>
+  </td>
+  <td>
+  <p>da-DK</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1031</i></p>
+  </td>
+  <td>
+  <p>German - Germany</p>
+  </td>
+  <td>
+  <p>de-DE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1032</i></p>
+  </td>
+  <td>
+  <p>Greek</p>
+  </td>
+  <td>
+  <p>el-GR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1033</i></p>
+  </td>
+  <td>
+  <p>English - United States</p>
+  </td>
+  <td>
+  <p>en-US</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1034</i></p>
+  </td>
+  <td>
+  <p>Spanish - Spain (Traditional Sort)</p>
+  </td>
+  <td>
+  <p>es-ES</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1035</i></p>
+  </td>
+  <td>
+  <p>Finnish</p>
+  </td>
+  <td>
+  <p>fi-FI</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1036</i></p>
+  </td>
+  <td>
+  <p>French - France</p>
+  </td>
+  <td>
+  <p>fr-FR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1037</i></p>
+  </td>
+  <td>
+  <p>Hebrew</p>
+  </td>
+  <td>
+  <p>he-IL</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1038</i></p>
+  </td>
+  <td>
+  <p>Hungarian</p>
+  </td>
+  <td>
+  <p>hu-HU</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1039</i></p>
+  </td>
+  <td>
+  <p>Icelandic</p>
+  </td>
+  <td>
+  <p>is-IS</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1040</i></p>
+  </td>
+  <td>
+  <p>Italian - Italy</p>
+  </td>
+  <td>
+  <p>it-IT</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1041</i></p>
+  </td>
+  <td>
+  <p>Japanese</p>
+  </td>
+  <td>
+  <p>ja-JP</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1042</i></p>
+  </td>
+  <td>
+  <p>Korean</p>
+  </td>
+  <td>
+  <p>ko-KR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1043</i></p>
+  </td>
+  <td>
+  <p>Dutch - Netherlands</p>
+  </td>
+  <td>
+  <p>nl-NL</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1044</i></p>
+  </td>
+  <td>
+  <p>Norwegian (Bokmål)</p>
+  </td>
+  <td>
+  <p>nb-NO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1045</i></p>
+  </td>
+  <td>
+  <p>Polish</p>
+  </td>
+  <td>
+  <p>pl-PL</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1046</i></p>
+  </td>
+  <td>
+  <p>Portuguese - Brazil</p>
+  </td>
+  <td>
+  <p>pt-BR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1047</i></p>
+  </td>
+  <td>
+  <p>Rhaeto-Romanic</p>
+  </td>
+  <td>
+  <p>rm-CH</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1048</i></p>
+  </td>
+  <td>
+  <p>Romanian</p>
+  </td>
+  <td>
+  <p>ro-RO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1049</i></p>
+  </td>
+  <td>
+  <p>Russian</p>
+  </td>
+  <td>
+  <p>ru-RU</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1050</i></p>
+  </td>
+  <td>
+  <p>Croatian</p>
+  </td>
+  <td>
+  <p>hr-HR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1051</i></p>
+  </td>
+  <td>
+  <p>Slovak</p>
+  </td>
+  <td>
+  <p>sk-SK</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1052</i></p>
+  </td>
+  <td>
+  <p>Albanian - Albania</p>
+  </td>
+  <td>
+  <p>sq-AL</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1053</i></p>
+  </td>
+  <td>
+  <p>Swedish</p>
+  </td>
+  <td>
+  <p>sv-SE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1054</i></p>
+  </td>
+  <td>
+  <p>Thai</p>
+  </td>
+  <td>
+  <p>th-TH</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1055</i></p>
+  </td>
+  <td>
+  <p>Turkish</p>
+  </td>
+  <td>
+  <p>tr-TR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1056</i></p>
+  </td>
+  <td>
+  <p>Urdu - Pakistan</p>
+  </td>
+  <td>
+  <p>ur-PK</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1057</i></p>
+  </td>
+  <td>
+  <p>Indonesian</p>
+  </td>
+  <td>
+  <p>id-ID</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1058</i></p>
+  </td>
+  <td>
+  <p>Ukrainian</p>
+  </td>
+  <td>
+  <p>uk-UA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1059</i></p>
+  </td>
+  <td>
+  <p>Belarusian</p>
+  </td>
+  <td>
+  <p>be-BY</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1060</i></p>
+  </td>
+  <td>
+  <p>Slovenian</p>
+  </td>
+  <td>
+  <p>sl-SI</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1061</i></p>
+  </td>
+  <td>
+  <p>Estonian</p>
+  </td>
+  <td>
+  <p>et-EE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1062</i></p>
+  </td>
+  <td>
+  <p>Latvian</p>
+  </td>
+  <td>
+  <p>lv-LV</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1063</i></p>
+  </td>
+  <td>
+  <p>Lithuanian</p>
+  </td>
+  <td>
+  <p>lt-LT</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1064</i></p>
+  </td>
+  <td>
+  <p>Tajik</p>
+  </td>
+  <td>
+  <p>tg-Cyrl-TJ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1065</i></p>
+  </td>
+  <td>
+  <p>Persian</p>
+  </td>
+  <td>
+  <p>fa-IR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1066</i></p>
+  </td>
+  <td>
+  <p>Vietnamese</p>
+  </td>
+  <td>
+  <p>vi-VN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1067</i></p>
+  </td>
+  <td>
+  <p>Armenian - Armenia</p>
+  </td>
+  <td>
+  <p>hy-AM</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1068</i></p>
+  </td>
+  <td>
+  <p>Azeri (Latin)</p>
+  </td>
+  <td>
+  <p>az-Latn-AZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1069</i></p>
+  </td>
+  <td>
+  <p>Basque</p>
+  </td>
+  <td>
+  <p>eu-ES</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1070</i></p>
+  </td>
+  <td>
+  <p>Sorbian</p>
+  </td>
+  <td>
+  <p>wen-DE </p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1071</i></p>
+  </td>
+  <td>
+  <p>F.Y.R.O. Macedonian</p>
+  </td>
+  <td>
+  <p>mk-MK</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1072</i></p>
+  </td>
+  <td>
+  <p>Sutu</p>
+  </td>
+  <td>
+  <p>st-ZA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1073</i></p>
+  </td>
+  <td>
+  <p>Tsonga</p>
+  </td>
+  <td>
+  <p>ts-ZA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1074</i></p>
+  </td>
+  <td>
+  <p>Tswana</p>
+  </td>
+  <td>
+  <p>tn-ZA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1075</i></p>
+  </td>
+  <td>
+  <p>Venda</p>
+  </td>
+  <td>
+  <p>ven-ZA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1076</i></p>
+  </td>
+  <td>
+  <p>Xhosa</p>
+  </td>
+  <td>
+  <p>xh-ZA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1077</i></p>
+  </td>
+  <td>
+  <p>Zulu</p>
+  </td>
+  <td>
+  <p>zu-ZA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1078</i></p>
+  </td>
+  <td>
+  <p>Afrikaans - South Africa</p>
+  </td>
+  <td>
+  <p>af-ZA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1079</i></p>
+  </td>
+  <td>
+  <p>Georgian</p>
+  </td>
+  <td>
+  <p>ka-GE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1080</i></p>
+  </td>
+  <td>
+  <p>Faroese</p>
+  </td>
+  <td>
+  <p>fo-FO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1081</i></p>
+  </td>
+  <td>
+  <p>Hindi</p>
+  </td>
+  <td>
+  <p>hi-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1082</i></p>
+  </td>
+  <td>
+  <p>Maltese</p>
+  </td>
+  <td>
+  <p>mt-MT</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1083</i></p>
+  </td>
+  <td>
+  <p>Sami</p>
+  </td>
+  <td>
+  <p>se-NO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1084</i></p>
+  </td>
+  <td>
+  <p>Gaelic (Scotland)</p>
+  </td>
+  <td>
+  <p>gd-GB</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1085</i></p>
+  </td>
+  <td>
+  <p>Yiddish</p>
+  </td>
+  <td>
+  <p>yi</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1086</i></p>
+  </td>
+  <td>
+  <p>Malay - Malaysia</p>
+  </td>
+  <td>
+  <p>ms-MY</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1087</i></p>
+  </td>
+  <td>
+  <p>Kazakh</p>
+  </td>
+  <td>
+  <p>kk-KZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1088</i></p>
+  </td>
+  <td>
+  <p>Kyrgyz (Cyrillic)</p>
+  </td>
+  <td>
+  <p>ky-KG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1089</i></p>
+  </td>
+  <td>
+  <p>Swahili</p>
+  </td>
+  <td>
+  <p>sw-KE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1090</i></p>
+  </td>
+  <td>
+  <p>Turkmen</p>
+  </td>
+  <td>
+  <p>tk-TM</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1091</i></p>
+  </td>
+  <td>
+  <p>Uzbek (Latin)</p>
+  </td>
+  <td>
+  <p>uz-Latn-UZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1092</i></p>
+  </td>
+  <td>
+  <p>Tatar</p>
+  </td>
+  <td>
+  <p>tt-RU</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1093</i></p>
+  </td>
+  <td>
+  <p>Bengali (India)</p>
+  </td>
+  <td>
+  <p>bn-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1094</i></p>
+  </td>
+  <td>
+  <p>Punjabi</p>
+  </td>
+  <td>
+  <p>pa-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1095</i></p>
+  </td>
+  <td>
+  <p>Gujarati</p>
+  </td>
+  <td>
+  <p>gu-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1096</i></p>
+  </td>
+  <td>
+  <p>Oriya</p>
+  </td>
+  <td>
+  <p>or-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1097</i></p>
+  </td>
+  <td>
+  <p>Tamil</p>
+  </td>
+  <td>
+  <p>ta-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1098</i></p>
+  </td>
+  <td>
+  <p>Telugu</p>
+  </td>
+  <td>
+  <p>te-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1099</i></p>
+  </td>
+  <td>
+  <p>Kannada</p>
+  </td>
+  <td>
+  <p>kn-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1100</i></p>
+  </td>
+  <td>
+  <p>Malayalam</p>
+  </td>
+  <td>
+  <p>ml-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1101</i></p>
+  </td>
+  <td>
+  <p>Assamese</p>
+  </td>
+  <td>
+  <p>as-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1102</i></p>
+  </td>
+  <td>
+  <p>Marathi</p>
+  </td>
+  <td>
+  <p>mr-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1103</i></p>
+  </td>
+  <td>
+  <p>Sanskrit</p>
+  </td>
+  <td>
+  <p>sa-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1104</i></p>
+  </td>
+  <td>
+  <p>Mongolian (Cyrillic)</p>
+  </td>
+  <td>
+  <p>mn-MN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1105</i></p>
+  </td>
+  <td>
+  <p>Tibetan - People's Republic of China</p>
+  </td>
+  <td>
+  <p>bo-CN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1106</i></p>
+  </td>
+  <td>
+  <p>Welsh</p>
+  </td>
+  <td>
+  <p>cy-GB</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1107</i></p>
+  </td>
+  <td>
+  <p>Khmer</p>
+  </td>
+  <td>
+  <p>km-KH</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1108</i></p>
+  </td>
+  <td>
+  <p>Lao</p>
+  </td>
+  <td>
+  <p>lo-LA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1109</i></p>
+  </td>
+  <td>
+  <p>Burmese</p>
+  </td>
+  <td>
+  <p>my-MM</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1110</i></p>
+  </td>
+  <td>
+  <p>Galician</p>
+  </td>
+  <td>
+  <p>gl-ES</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1111</i></p>
+  </td>
+  <td>
+  <p>Konkani</p>
+  </td>
+  <td>
+  <p>kok-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1112</i></p>
+  </td>
+  <td>
+  <p>Manipuri</p>
+  </td>
+  <td>
+  <p>mni</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1113</i></p>
+  </td>
+  <td>
+  <p>Sindhi - India</p>
+  </td>
+  <td>
+  <p>sd-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1114</i></p>
+  </td>
+  <td>
+  <p>Syriac</p>
+  </td>
+  <td>
+  <p>syr-SY</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1115</i></p>
+  </td>
+  <td>
+  <p>Sinhalese - Sri Lanka</p>
+  </td>
+  <td>
+  <p>si-LK</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1116</i></p>
+  </td>
+  <td>
+  <p>Cherokee - United States</p>
+  </td>
+  <td>
+  <p>chr-US</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1117</i></p>
+  </td>
+  <td>
+  <p>Inuktitut</p>
+  </td>
+  <td>
+  <p>iu-Cans-CA </p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1118</i></p>
+  </td>
+  <td>
+  <p>Amharic - Ethiopia</p>
+  </td>
+  <td>
+  <p>am-ET</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1119</i></p>
+  </td>
+  <td>
+  <p>Tamazight (Arabic)</p>
+  </td>
+  <td>
+  <p>tmz</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1120</i></p>
+  </td>
+  <td>
+  <p>Kashmiri (Arabic)</p>
+  </td>
+  <td>
+  <p>ks-Arab-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1121</i></p>
+  </td>
+  <td>
+  <p>Nepali</p>
+  </td>
+  <td>
+  <p>ne-NP</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1122</i></p>
+  </td>
+  <td>
+  <p>Frisian - Netherlands</p>
+  </td>
+  <td>
+  <p>fy-NL</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1123</i></p>
+  </td>
+  <td>
+  <p>Pashto</p>
+  </td>
+  <td>
+  <p>ps-AF</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1124</i></p>
+  </td>
+  <td>
+  <p>Filipino</p>
+  </td>
+  <td>
+  <p>fil-PH</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1125</i></p>
+  </td>
+  <td>
+  <p>Divehi</p>
+  </td>
+  <td>
+  <p>dv-MV</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1126</i></p>
+  </td>
+  <td>
+  <p>Edo</p>
+  </td>
+  <td>
+  <p>bin-NG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1127</i></p>
+  </td>
+  <td>
+  <p>Fulfulde - Nigeria</p>
+  </td>
+  <td>
+  <p>fuv-NG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1128</i></p>
+  </td>
+  <td>
+  <p>Hausa - Nigeria</p>
+  </td>
+  <td>
+  <p>ha-Latn-NG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1129</i></p>
+  </td>
+  <td>
+  <p>Ibibio - Nigeria</p>
+  </td>
+  <td>
+  <p>ibb-NG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1130</i></p>
+  </td>
+  <td>
+  <p>Yoruba</p>
+  </td>
+  <td>
+  <p>yo-NG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1131</i></p>
+  </td>
+  <td>
+  <p>Quecha - Bolivia</p>
+  </td>
+  <td>
+  <p>quz-BO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1132</i></p>
+  </td>
+  <td>
+  <p>Sepedi</p>
+  </td>
+  <td>
+  <p>nso-ZA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1136</i></p>
+  </td>
+  <td>
+  <p>Igbo - Nigeria</p>
+  </td>
+  <td>
+  <p>ig-NG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1137</i></p>
+  </td>
+  <td>
+  <p>Kanuri - Nigeria</p>
+  </td>
+  <td>
+  <p>kr-NG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1138</i></p>
+  </td>
+  <td>
+  <p>Oromo</p>
+  </td>
+  <td>
+  <p>gaz-ET</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1139</i></p>
+  </td>
+  <td>
+  <p>Tigrigna - Ethiopia</p>
+  </td>
+  <td>
+  <p>ti-ER</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1140</i></p>
+  </td>
+  <td>
+  <p>Guarani - Paraguay</p>
+  </td>
+  <td>
+  <p>gn-PY</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1141</i></p>
+  </td>
+  <td>
+  <p>Hawaiian - United States</p>
+  </td>
+  <td>
+  <p>haw-US</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1142</i></p>
+  </td>
+  <td>
+  <p>Latin</p>
+  </td>
+  <td>
+  <p>la</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1143</i></p>
+  </td>
+  <td>
+  <p>Somali</p>
+  </td>
+  <td>
+  <p>so-SO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1144</i></p>
+  </td>
+  <td>
+  <p>Yi</p>
+  </td>
+  <td>
+  <p>ii-CN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1145</i></p>
+  </td>
+  <td>
+  <p>Papiamentu</p>
+  </td>
+  <td>
+  <p>pap-AN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1152</i></p>
+  </td>
+  <td>
+  <p>Uighur - China</p>
+  </td>
+  <td>
+  <p>ug-Arab-CN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>1153</i></p>
+  </td>
+  <td>
+  <p>Maori - New Zealand</p>
+  </td>
+  <td>
+  <p>mi-NZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2049</i></p>
+  </td>
+  <td>
+  <p>Arabic - Iraq</p>
+  </td>
+  <td>
+  <p>ar-IQ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2052</i></p>
+  </td>
+  <td>
+  <p>Chinese - People's Republic of China</p>
+  </td>
+  <td>
+  <p>zh-CN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2055</i></p>
+  </td>
+  <td>
+  <p>German - Switzerland</p>
+  </td>
+  <td>
+  <p>de-CH</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2057</i></p>
+  </td>
+  <td>
+  <p>English - United Kingdom</p>
+  </td>
+  <td>
+  <p>en-GB</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2058</i></p>
+  </td>
+  <td>
+  <p>Spanish - Mexico</p>
+  </td>
+  <td>
+  <p>es-MX</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2060</i></p>
+  </td>
+  <td>
+  <p>French - Belgium</p>
+  </td>
+  <td>
+  <p>fr-BE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2064</i></p>
+  </td>
+  <td>
+  <p>Italian - Switzerland</p>
+  </td>
+  <td>
+  <p>it-CH</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2067</i></p>
+  </td>
+  <td>
+  <p>Dutch - Belgium</p>
+  </td>
+  <td>
+  <p>nl-BE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2068</i></p>
+  </td>
+  <td>
+  <p>Norwegian (Nynorsk)</p>
+  </td>
+  <td>
+  <p>nn-NO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2070</i></p>
+  </td>
+  <td>
+  <p>Portuguese - Portugal</p>
+  </td>
+  <td>
+  <p>pt-PT</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2072</i></p>
+  </td>
+  <td>
+  <p>Romanian - Moldava</p>
+  </td>
+  <td>
+  <p>ro-MD</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2073</i></p>
+  </td>
+  <td>
+  <p>Russian - Moldava</p>
+  </td>
+  <td>
+  <p>ru-MD</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2074</i></p>
+  </td>
+  <td>
+  <p>Serbian (Latin)</p>
+  </td>
+  <td>
+  <p>sr-Latn-CS</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2077</i></p>
+  </td>
+  <td>
+  <p>Swedish - Finland</p>
+  </td>
+  <td>
+  <p>sv-FI</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2080</i></p>
+  </td>
+  <td>
+  <p>Urdu - India</p>
+  </td>
+  <td>
+  <p>ur-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2092</i></p>
+  </td>
+  <td>
+  <p>Azeri (Cyrillic)</p>
+  </td>
+  <td>
+  <p>az-Cyrl-AZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2108</i></p>
+  </td>
+  <td>
+  <p>Gaelic (Ireland)</p>
+  </td>
+  <td>
+  <p>ga-IE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2110</i></p>
+  </td>
+  <td>
+  <p>Malay - Brunei Darussalam</p>
+  </td>
+  <td>
+  <p>ms-BN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2115</i></p>
+  </td>
+  <td>
+  <p>Uzbek (Cyrillic)</p>
+  </td>
+  <td>
+  <p>uz-Cyrl-UZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2117</i></p>
+  </td>
+  <td>
+  <p>Bengali (Bangladesh)</p>
+  </td>
+  <td>
+  <p>bn-BD</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2118</i></p>
+  </td>
+  <td>
+  <p>Punjabi (Pakistan)</p>
+  </td>
+  <td>
+  <p>pa-PK</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2128</i></p>
+  </td>
+  <td>
+  <p>Mongolian (Mongolian)</p>
+  </td>
+  <td>
+  <p>mn-Mong-CN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2129</i></p>
+  </td>
+  <td>
+  <p>Tibetan - Bhutan</p>
+  </td>
+  <td>
+  <p>bo-BT</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2137</i></p>
+  </td>
+  <td>
+  <p>Sindhi - Pakistan</p>
+  </td>
+  <td>
+  <p>sd-PK</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2143</i></p>
+  </td>
+  <td>
+  <p>Tamazight (Latin)</p>
+  </td>
+  <td>
+  <p>tzm-Latn-DZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2144</i></p>
+  </td>
+  <td>
+  <p>Kashmiri (Devanagari)</p>
+  </td>
+  <td>
+  <p>ks-Deva-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2145</i></p>
+  </td>
+  <td>
+  <p>Nepali - India</p>
+  </td>
+  <td>
+  <p>ne-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2155</i></p>
+  </td>
+  <td>
+  <p>Quecha - Ecuador</p>
+  </td>
+  <td>
+  <p>quz-EC</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>2163</i></p>
+  </td>
+  <td>
+  <p>Tigrigna - Eritrea</p>
+  </td>
+  <td>
+  <p>ti-ET</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>3073</i></p>
+  </td>
+  <td>
+  <p>Arabic - Egypt</p>
+  </td>
+  <td>
+  <p>ar-EG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>3076</i></p>
+  </td>
+  <td>
+  <p>Chinese - Hong Kong SAR</p>
+  </td>
+  <td>
+  <p>zh-HK</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>3079</i></p>
+  </td>
+  <td>
+  <p>German - Austria</p>
+  </td>
+  <td>
+  <p>de-AT</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>3081</i></p>
+  </td>
+  <td>
+  <p>English - Australia</p>
+  </td>
+  <td>
+  <p>en-AU</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>3082</i></p>
+  </td>
+  <td>
+  <p>Spanish - Spain (Modern Sort)</p>
+  </td>
+  <td>
+  <p>es-ES</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>3084</i></p>
+  </td>
+  <td>
+  <p>French - Canada</p>
+  </td>
+  <td>
+  <p>fr-CA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>3098</i></p>
+  </td>
+  <td>
+  <p>Serbian (Cyrillic)</p>
+  </td>
+  <td>
+  <p>sr-Cyrl-CS</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>3179</i></p>
+  </td>
+  <td>
+  <p>Quecha - Peru</p>
+  </td>
+  <td>
+  <p>quz-PE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>4097</i></p>
+  </td>
+  <td>
+  <p>Arabic - Libya</p>
+  </td>
+  <td>
+  <p>ar-LY</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>4100</i></p>
+  </td>
+  <td>
+  <p>Chinese - Singapore</p>
+  </td>
+  <td>
+  <p>zh-SG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>4103</i></p>
+  </td>
+  <td>
+  <p>German - Luxembourg</p>
+  </td>
+  <td>
+  <p>de-LU</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>4105</i></p>
+  </td>
+  <td>
+  <p>English - Canada</p>
+  </td>
+  <td>
+  <p>en-CA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>4106</i></p>
+  </td>
+  <td>
+  <p>Spanish - Guatemala</p>
+  </td>
+  <td>
+  <p>es-GT</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>4108</i></p>
+  </td>
+  <td>
+  <p>French - Switzerland</p>
+  </td>
+  <td>
+  <p>fr-CH</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>4122</i></p>
+  </td>
+  <td>
+  <p>Croatian (Bosnia/Herzegovina)</p>
+  </td>
+  <td>
+  <p>hr-BA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>5121</i></p>
+  </td>
+  <td>
+  <p>Arabic - Algeria</p>
+  </td>
+  <td>
+  <p>ar-DZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>5124</i></p>
+  </td>
+  <td>
+  <p>Chinese - Macao SAR</p>
+  </td>
+  <td>
+  <p>zh-MO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>5127</i></p>
+  </td>
+  <td>
+  <p>German - Liechtenstein</p>
+  </td>
+  <td>
+  <p>de-LI</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>5129</i></p>
+  </td>
+  <td>
+  <p>English - New Zealand</p>
+  </td>
+  <td>
+  <p>en-NZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>5130</i></p>
+  </td>
+  <td>
+  <p>Spanish - Costa Rica</p>
+  </td>
+  <td>
+  <p>es-CR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>5132</i></p>
+  </td>
+  <td>
+  <p>French - Luxembourg</p>
+  </td>
+  <td>
+  <p>fr-LU</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>5146</i></p>
+  </td>
+  <td>
+  <p>Bosnian (Bosnia/Herzegovina)</p>
+  </td>
+  <td>
+  <p>bs-Latn-BA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>6145</i></p>
+  </td>
+  <td>
+  <p>Arabic - Morocco</p>
+  </td>
+  <td>
+  <p>ar-MO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>6153</i></p>
+  </td>
+  <td>
+  <p>English - Ireland</p>
+  </td>
+  <td>
+  <p>en-IE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>6154</i></p>
+  </td>
+  <td>
+  <p>Spanish - Panama</p>
+  </td>
+  <td>
+  <p>es-PA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>6156</i></p>
+  </td>
+  <td>
+  <p>French - Monaco</p>
+  </td>
+  <td>
+  <p>fr-MC</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>7169</i></p>
+  </td>
+  <td>
+  <p>Arabic - Tunisia</p>
+  </td>
+  <td>
+  <p>ar-TN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>7177</i></p>
+  </td>
+  <td>
+  <p>English - South Africa</p>
+  </td>
+  <td>
+  <p>en-ZA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>7178</i></p>
+  </td>
+  <td>
+  <p>Spanish - Dominican Republic</p>
+  </td>
+  <td>
+  <p>es-DO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>7180</i></p>
+  </td>
+  <td>
+  <p>French - West Indies</p>
+  </td>
+  <td>
+  <p>fr-029</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>8193</i></p>
+  </td>
+  <td>
+  <p>Arabic - Oman</p>
+  </td>
+  <td>
+  <p>ar-OM</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>8201</i></p>
+  </td>
+  <td>
+  <p>English - Jamaica</p>
+  </td>
+  <td>
+  <p>en-JM</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>8202</i></p>
+  </td>
+  <td>
+  <p>Spanish - Venezuela</p>
+  </td>
+  <td>
+  <p>es-VE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>8204</i></p>
+  </td>
+  <td>
+  <p>French - Reunion</p>
+  </td>
+  <td>
+  <p>fr-RE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>9217</i></p>
+  </td>
+  <td>
+  <p>Arabic - Yemen</p>
+  </td>
+  <td>
+  <p>ar-YE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>9225</i></p>
+  </td>
+  <td>
+  <p>English - Caribbean</p>
+  </td>
+  <td>
+  <p>en-029</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>9226</i></p>
+  </td>
+  <td>
+  <p>Spanish - Colombia</p>
+  </td>
+  <td>
+  <p>es-CO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>9228</i></p>
+  </td>
+  <td>
+  <p>French - Democratic Rep. of Congo</p>
+  </td>
+  <td>
+  <p>fr-CG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>10241</i></p>
+  </td>
+  <td>
+  <p>Arabic - Syria</p>
+  </td>
+  <td>
+  <p>ar-SY</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>10249</i></p>
+  </td>
+  <td>
+  <p>English - Belize</p>
+  </td>
+  <td>
+  <p>en-BZ</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>10250</i></p>
+  </td>
+  <td>
+  <p>Spanish - Peru</p>
+  </td>
+  <td>
+  <p>es-PE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>10252</i></p>
+  </td>
+  <td>
+  <p>French - Senegal</p>
+  </td>
+  <td>
+  <p>fr-SN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>11265</i></p>
+  </td>
+  <td>
+  <p>Arabic - Jordan</p>
+  </td>
+  <td>
+  <p>ar-JO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>11273</i></p>
+  </td>
+  <td>
+  <p>English - Trinidad</p>
+  </td>
+  <td>
+  <p>en-TT</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>11274</i></p>
+  </td>
+  <td>
+  <p>Spanish - Argentina</p>
+  </td>
+  <td>
+  <p>es-AR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>11276</i></p>
+  </td>
+  <td>
+  <p>French - Cameroon</p>
+  </td>
+  <td>
+  <p>fr-CM</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>12289</i></p>
+  </td>
+  <td>
+  <p>Arabic - Lebanon</p>
+  </td>
+  <td>
+  <p>ar-LB</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>12297</i></p>
+  </td>
+  <td>
+  <p>English - Zimbabwe</p>
+  </td>
+  <td>
+  <p>en-ZW</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>12298</i></p>
+  </td>
+  <td>
+  <p>Spanish - Ecuador</p>
+  </td>
+  <td>
+  <p>es-EC</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>12300</i></p>
+  </td>
+  <td>
+  <p>French - Cote d'Ivoire</p>
+  </td>
+  <td>
+  <p>fr-CI</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>13313</i></p>
+  </td>
+  <td>
+  <p>Arabic - Kuwait</p>
+  </td>
+  <td>
+  <p>ar-KW</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>13321</i></p>
+  </td>
+  <td>
+  <p>English - Philippines</p>
+  </td>
+  <td>
+  <p>en-PH</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>13322</i></p>
+  </td>
+  <td>
+  <p>Spanish - Chile</p>
+  </td>
+  <td>
+  <p>es-CL</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>13324</i></p>
+  </td>
+  <td>
+  <p>French - Mali</p>
+  </td>
+  <td>
+  <p>fr-ML</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>14337</i></p>
+  </td>
+  <td>
+  <p>Arabic - U.A.E.</p>
+  </td>
+  <td>
+  <p>ar-AE</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>14345</i></p>
+  </td>
+  <td>
+  <p>English - Indonesia</p>
+  </td>
+  <td>
+  <p>en-ID</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>14346</i></p>
+  </td>
+  <td>
+  <p>Spanish - Uruguay</p>
+  </td>
+  <td>
+  <p>es-UY</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>14348</i></p>
+  </td>
+  <td>
+  <p>French - Morocco</p>
+  </td>
+  <td>
+  <p>fr-MA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>15361</i></p>
+  </td>
+  <td>
+  <p>Arabic - Bahrain</p>
+  </td>
+  <td>
+  <p>ar-BH</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>15369</i></p>
+  </td>
+  <td>
+  <p>English - Hong Kong SAR</p>
+  </td>
+  <td>
+  <p>en-HK</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>15370</i></p>
+  </td>
+  <td>
+  <p>Spanish - Paraguay</p>
+  </td>
+  <td>
+  <p>es-PY</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>15372</i></p>
+  </td>
+  <td>
+  <p>French - Haiti</p>
+  </td>
+  <td>
+  <p>fr-HT</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>16385</i></p>
+  </td>
+  <td>
+  <p>Arabic - Qatar</p>
+  </td>
+  <td>
+  <p>ar-QA</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>16393</i></p>
+  </td>
+  <td>
+  <p>English - India</p>
+  </td>
+  <td>
+  <p>en-IN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>16394</i></p>
+  </td>
+  <td>
+  <p>Spanish - Bolivia</p>
+  </td>
+  <td>
+  <p>es-BO</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>17417</i></p>
+  </td>
+  <td>
+  <p>English - Malaysia</p>
+  </td>
+  <td>
+  <p>en-MY</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>17418</i></p>
+  </td>
+  <td>
+  <p>Spanish - El Salvador</p>
+  </td>
+  <td>
+  <p>es-SV</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>18441</i></p>
+  </td>
+  <td>
+  <p>English - Singapore</p>
+  </td>
+  <td>
+  <p>en-SG</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>18442</i></p>
+  </td>
+  <td>
+  <p>Spanish - Honduras</p>
+  </td>
+  <td>
+  <p>es-HN</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>19466</i></p>
+  </td>
+  <td>
+  <p>Spanish - Nicaragua</p>
+  </td>
+  <td>
+  <p>es-NI</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>20490</i></p>
+  </td>
+  <td>
+  <p>Spanish - Puerto Rico</p>
+  </td>
+  <td>
+  <p>es-PR</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>21514</i></p>
+  </td>
+  <td>
+  <p>Spanish - United States</p>
+  </td>
+  <td>
+  <p>es-US</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>58378</i></p>
+  </td>
+  <td>
+  <p>Spanish - Latin America</p>
+  </td>
+  <td>
+  <p>es-419</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p><i>58380</i></p>
+  </td>
+  <td>
+  <p>French - North Africa</p>
+  </td>
+  <td>
+  <p>fr-015</p>
+  </td>
+ </tr><tr>
+  <td>
+  <p>Any other value</p>
+  </td>
+  <td>
+  <p>Undefined. Shall not be used.</p>
+  </td>
+  <td>
+  <p> </p>
+  </td>
+ </tr></tbody></table>
+<p> </p>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2022-08-16T16:31:00.000Z"
+		data-article-date-source="calculated"
+		class="is-invisible"
+	>
+		2022-08-16
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+			
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-expanded="false"
+				title="Theme"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="light"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="dark"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="high-contrast"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		</html>
