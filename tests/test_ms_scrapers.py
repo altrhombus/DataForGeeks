@@ -76,25 +76,35 @@ class TestWinReleasesScraper:
 
     def test_record_keys(self, win_releases_pages):
         records = WinReleasesScraper().parse(win_releases_pages)
-        assert set(records[0].keys()) == {"version", "full_version", "build"}
+        assert set(records[0].keys()) == {"os_type", "major_version", "windows_version", "os_build", "full_version"}
 
     def test_full_version_prefix(self, win_releases_pages):
         for r in WinReleasesScraper().parse(win_releases_pages):
             assert r["full_version"].startswith("10.0.")
 
-    def test_version_matches_full_version(self, win_releases_pages):
+    def test_os_build_matches_full_version(self, win_releases_pages):
         for r in WinReleasesScraper().parse(win_releases_pages):
-            assert r["full_version"] == f"10.0.{r['version']}"
+            assert r["full_version"] == f"10.0.{r['os_build']}"
+
+    def test_os_type_client(self, win_releases_pages):
+        for r in WinReleasesScraper().parse(win_releases_pages):
+            assert r["os_type"] == "client"
+
+    def test_major_versions_present(self, win_releases_pages):
+        records = WinReleasesScraper().parse(win_releases_pages)
+        majors = {r["major_version"] for r in records}
+        assert 10 in majors
+        assert 11 in majors
 
     def test_no_duplicates(self, win_releases_pages):
         records = WinReleasesScraper().parse(win_releases_pages)
-        versions = [r["version"] for r in records]
-        assert len(versions) == len(set(versions))
+        builds = [r["os_build"] for r in records]
+        assert len(builds) == len(set(builds))
 
-    def test_sorted_by_version(self, win_releases_pages):
+    def test_sorted_by_os_build(self, win_releases_pages):
         records = WinReleasesScraper().parse(win_releases_pages)
-        versions = [r["version"] for r in records]
-        assert versions == sorted(versions)
+        builds = [r["os_build"] for r in records]
+        assert builds == sorted(builds)
 
 
 # ---------------------------------------------------------------------------

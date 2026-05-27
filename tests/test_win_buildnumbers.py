@@ -9,9 +9,15 @@ from src.scrapers.ms.win_buildnumbers import (
     WinBuildNumbersScraper,
     _parse_hotpatch_page,
     _parse_standard_page,
+    _WIN10_URL, _WIN11_URL, _SERVER2016_URL, _SERVER2019_URL, _SERVER2022_URL, _HOTPATCH_URL,
 )
 
 FIXTURES = Path(__file__).parent / "fixtures" / "ms"
+
+_EXPECTED_KEYS = {
+    "full_version", "build", "os_type", "major_version", "windows_version",
+    "release_date", "kb_article", "release_type", "is_expired", "article_url",
+}
 
 
 @pytest.fixture(scope="module")
@@ -25,6 +31,16 @@ def win11_html() -> str:
 
 
 @pytest.fixture(scope="module")
+def server2016_html() -> str:
+    return (FIXTURES / "server2016_update_history.html").read_text(encoding="utf-8")
+
+
+@pytest.fixture(scope="module")
+def server2019_html() -> str:
+    return (FIXTURES / "server2019_update_history.html").read_text(encoding="utf-8")
+
+
+@pytest.fixture(scope="module")
 def server2022_html() -> str:
     return (FIXTURES / "server2022_update_history.html").read_text(encoding="utf-8")
 
@@ -35,13 +51,12 @@ def hotpatch_html() -> str:
 
 
 @pytest.fixture(scope="module")
-def all_pages(win10_html, win11_html, server2022_html, hotpatch_html) -> dict[str, str]:
-    from src.scrapers.ms.win_buildnumbers import (
-        _WIN10_URL, _WIN11_URL, _SERVER2022_URL, _HOTPATCH_URL,
-    )
+def all_pages(win10_html, win11_html, server2016_html, server2019_html, server2022_html, hotpatch_html) -> dict[str, str]:
     return {
         _WIN10_URL: win10_html,
         _WIN11_URL: win11_html,
+        _SERVER2016_URL: server2016_html,
+        _SERVER2019_URL: server2019_html,
         _SERVER2022_URL: server2022_html,
         _HOTPATCH_URL: hotpatch_html,
     }
@@ -49,47 +64,90 @@ def all_pages(win10_html, win11_html, server2022_html, hotpatch_html) -> dict[st
 
 class TestParseStandardPage:
     def test_returns_records(self, win10_html):
-        records = _parse_standard_page(win10_html)
+        records = _parse_standard_page(win10_html, os_type="client", fixed_major=10)
         assert len(records) > 100
 
     def test_record_schema(self, win10_html):
-        records = _parse_standard_page(win10_html)
-        r = records[0]
-        assert set(r.__dict__.keys()) == {
-            "full_version", "build", "release_date", "kb_article", "kb_title",
-            "ltsc_only", "comment",
-        }
+        records = _parse_standard_page(win10_html, os_type="client", fixed_major=10)
+        assert set(records[0].model_dump().keys()) == _EXPECTED_KEYS
 
     def test_full_version_prefix(self, win10_html):
-        for r in _parse_standard_page(win10_html):
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
             assert r.full_version.startswith("10.0.")
 
     def test_build_matches_full_version(self, win10_html):
-        for r in _parse_standard_page(win10_html):
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
             assert r.full_version == f"10.0.{r.build}"
 
     def test_release_date_format(self, win10_html):
-        for r in _parse_standard_page(win10_html):
-            # Will raise ValueError if format is wrong
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
             date.fromisoformat(r.release_date)
 
     def test_kb_article_format(self, win10_html):
-        for r in _parse_standard_page(win10_html):
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
             assert r.kb_article.startswith("KB")
             assert r.kb_article[2:].isdigit()
 
-    def test_ltsc_only_default_false(self, win10_html):
-        records = _parse_standard_page(win10_html)
-        # Before overrides are applied all records are False
-        assert all(not r.ltsc_only for r in records)
+    def test_os_type_client(self, win10_html):
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
+            assert r.os_type == "client"
+
+    def test_major_version_win10(self, win10_html):
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
+            assert r.major_version == 10
+
+    def test_windows_version_populated(self, win10_html):
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
+            assert r.windows_version != ""
+
+    def test_release_type_valid(self, win10_html):
+        valid = {"Standard", "Preview", "Out-of-band"}
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
+            assert r.release_type in valid
+
+    def test_is_expired_is_bool(self, win10_html):
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
+            assert isinstance(r.is_expired, bool)
 
     def test_win11_page_parses(self, win11_html):
-        records = _parse_standard_page(win11_html)
+        records = _parse_standard_page(win11_html, os_type="client", fixed_major=11)
         assert len(records) > 50
 
-    def test_server2022_page_parses(self, server2022_html):
-        records = _parse_standard_page(server2022_html)
+    def test_win11_major_version(self, win11_html):
+        for r in _parse_standard_page(win11_html, os_type="client", fixed_major=11):
+            assert r.major_version == 11
+
+    def test_server2016_page_parses(self, server2016_html):
+        records = _parse_standard_page(server2016_html, os_type="server", fixed_major=None, category_filter="1607")
         assert len(records) > 20
+
+    def test_server2016_major_version(self, server2016_html):
+        for r in _parse_standard_page(server2016_html, os_type="server", fixed_major=None, category_filter="1607"):
+            assert r.major_version == 2016
+
+    def test_server2016_windows_version(self, server2016_html):
+        for r in _parse_standard_page(server2016_html, os_type="server", fixed_major=None, category_filter="1607"):
+            assert r.windows_version == "1607"
+
+    def test_server2019_page_parses(self, server2019_html):
+        records = _parse_standard_page(server2019_html, os_type="server", fixed_major=None, category_filter="1809")
+        assert len(records) > 20
+
+    def test_server2019_major_version(self, server2019_html):
+        for r in _parse_standard_page(server2019_html, os_type="server", fixed_major=None, category_filter="1809"):
+            assert r.major_version == 2019
+
+    def test_server2019_windows_version(self, server2019_html):
+        for r in _parse_standard_page(server2019_html, os_type="server", fixed_major=None, category_filter="1809"):
+            assert r.windows_version == "1809"
+
+    def test_server2022_page_parses(self, server2022_html):
+        records = _parse_standard_page(server2022_html, os_type="server", fixed_major=None)
+        assert len(records) > 20
+
+    def test_server_os_type(self, server2022_html):
+        for r in _parse_standard_page(server2022_html, os_type="server", fixed_major=None):
+            assert r.os_type == "server"
 
 
 class TestParseHotpatchPage:
@@ -97,71 +155,75 @@ class TestParseHotpatchPage:
         records = _parse_hotpatch_page(hotpatch_html)
         assert len(records) > 0
 
-    def test_comment_is_hotpatch(self, hotpatch_html):
+    def test_release_type_hotpatch(self, hotpatch_html):
         for r in _parse_hotpatch_page(hotpatch_html):
-            assert r.comment == "Hotpatch"
+            assert r.release_type in {"Hotpatch", "Hotpatch-OOB"}
+
+    def test_os_type_client(self, hotpatch_html):
+        for r in _parse_hotpatch_page(hotpatch_html):
+            assert r.os_type == "client"
+
+    def test_major_version_11(self, hotpatch_html):
+        for r in _parse_hotpatch_page(hotpatch_html):
+            assert r.major_version == 11
 
     def test_build_format(self, hotpatch_html):
         for r in _parse_hotpatch_page(hotpatch_html):
             major, minor = r.build.split(".")
-            assert major.isdigit()
-            assert minor.isdigit()
+            assert major.isdigit() and minor.isdigit()
 
-    def test_skips_baseline_rows(self, hotpatch_html):
-        records = _parse_hotpatch_page(hotpatch_html)
-        # Baseline rows should not appear in output
-        # Verify by checking that all entries are paired (come in twos by build)
-        assert all(r.full_version.startswith("10.0.") for r in records)
+    def test_full_version_prefix(self, hotpatch_html):
+        for r in _parse_hotpatch_page(hotpatch_html):
+            assert r.full_version.startswith("10.0.")
 
 
 class TestWinBuildNumbersScraper:
     def test_parse_total_records(self, all_pages):
-        scraper = WinBuildNumbersScraper()
-        records = scraper.parse(all_pages)
+        records = WinBuildNumbersScraper().parse(all_pages)
         assert len(records) > 500
 
+    def test_record_keys(self, all_pages):
+        for r in WinBuildNumbersScraper().parse(all_pages):
+            assert set(r.keys()) == _EXPECTED_KEYS
+
     def test_no_duplicates(self, all_pages):
-        scraper = WinBuildNumbersScraper()
-        records = scraper.parse(all_pages)
-        keys = [(r["full_version"], r["release_date"], r["kb_article"]) for r in records]
+        records = WinBuildNumbersScraper().parse(all_pages)
+        # os_type is part of the dedup key: shared builds (e.g. 14393.x) coexist as client + server
+        keys = [(r["full_version"], r["release_date"], r["kb_article"], r["os_type"]) for r in records]
         assert len(keys) == len(set(keys))
 
     def test_sorted_by_date_then_build(self, all_pages):
-        scraper = WinBuildNumbersScraper()
-        records = scraper.parse(all_pages)
+        records = WinBuildNumbersScraper().parse(all_pages)
         dates = [(r["release_date"], r["build"]) for r in records]
         assert dates == sorted(dates)
 
     def test_server_only_build_excluded(self, all_pages):
-        scraper = WinBuildNumbersScraper()
-        records = scraper.parse(all_pages)
-        full_versions = {r["full_version"] for r in records}
+        full_versions = {r["full_version"] for r in WinBuildNumbersScraper().parse(all_pages)}
         assert "10.0.14393.5127" not in full_versions
 
-    def test_ltsc_override_applied(self, all_pages):
-        scraper = WinBuildNumbersScraper()
-        records = scraper.parse(all_pages)
-        ltsc_records = [r for r in records if r["ltsc_only"]]
-        assert len(ltsc_records) > 0
-        for r in ltsc_records:
-            assert r["full_version"].startswith("10.0.17763.")
-            assert date.fromisoformat(r["release_date"]) >= date(2021, 5, 12)
-
     def test_hotpatch_entries_present(self, all_pages):
-        scraper = WinBuildNumbersScraper()
-        records = scraper.parse(all_pages)
-        hotpatch = [r for r in records if r["comment"] == "Hotpatch"]
+        records = WinBuildNumbersScraper().parse(all_pages)
+        hotpatch = [r for r in records if r["release_type"] in {"Hotpatch", "Hotpatch-OOB"}]
         assert len(hotpatch) > 0
 
-    def test_record_keys(self, all_pages):
-        scraper = WinBuildNumbersScraper()
-        records = scraper.parse(all_pages)
-        expected_keys = {"full_version", "build", "release_date", "kb_article", "kb_title", "ltsc_only", "comment"}
+    def test_os_types_present(self, all_pages):
+        records = WinBuildNumbersScraper().parse(all_pages)
+        os_types = {r["os_type"] for r in records}
+        assert "client" in os_types
+        assert "server" in os_types
+
+    def test_is_expired_propagation(self, all_pages):
+        records = WinBuildNumbersScraper().parse(all_pages)
+        expired_kbs = {r["kb_article"] for r in records if r["is_expired"]}
         for r in records:
-            assert set(r.keys()) == expected_keys
+            if r["kb_article"] in expired_kbs:
+                assert r["is_expired"], f"{r['kb_article']} should be expired for all builds"
 
     def test_dataset_slug(self):
         assert WinBuildNumbersScraper.dataset == "ms/win/buildnumbers"
 
+    def test_dataset_name(self):
+        assert WinBuildNumbersScraper.dataset_name == "windows-update-history"
+
     def test_sources_count(self):
-        assert len(WinBuildNumbersScraper.sources) == 4
+        assert len(WinBuildNumbersScraper.sources) == 6
