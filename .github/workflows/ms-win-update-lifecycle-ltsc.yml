@@ -37,7 +37,7 @@ jobs:
           title: Refresh Windows LTSC lifecycle data
       - name: Enable Pull Request Automerge
         if: steps.cpr.outputs.pull-request-url != ''
-        run: gh pr merge --merge --auto "${{ steps.cpr.outputs.pull-request-number }}"
+        run: gh pr merge --merge --squash "${{ steps.cpr.outputs.pull-request-number }}"
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
       - name: Check outputs
