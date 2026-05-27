@@ -8,6 +8,7 @@ _SOURCE_URL = "https://learn.microsoft.com/en-us/openspecs/office_standards/ms-o
 
 class LocalesScraper(BaseScraper):
     dataset = "ms/other/locales"
+    dataset_name = "locales"
     sources = [_SOURCE_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:

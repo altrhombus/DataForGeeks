@@ -8,6 +8,7 @@ _SOURCE_URL = "https://learn.microsoft.com/en-us/windows/release-health/release-
 
 class WinLifecycleLtscScraper(BaseScraper):
     dataset = "ms/win/lifecycle-ltsc"
+    dataset_name = "windows-lifecycle-ltsc"
     sources = [_SOURCE_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:

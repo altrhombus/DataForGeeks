@@ -20,6 +20,7 @@ _CHANNELS = {
 
 class M365BuildNumbersScraper(BaseScraper):
     dataset = "ms/apps/buildnumbers"
+    dataset_name = "m365-update-history"
     sources = [_SOURCE_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:

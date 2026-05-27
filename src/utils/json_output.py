@@ -6,18 +6,23 @@ from src.scrapers.base import BaseScraper
 
 
 def build_envelope(scraper: BaseScraper, data: list[dict]) -> dict:
+    now = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+    label = scraper.dataset_name or scraper.dataset
     return {
-        "schema_version": "2.0",
-        "dataset": scraper.dataset,
-        "last_updated_utc": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "sources": scraper.sources,
-        "record_count": len(data),
+        "metadata": {
+            "provider": "DataForGeeks",
+            "apiVersion": "v2",
+            "dataset": label,
+            "recordCount": len(data),
+            "sourceUrls": scraper.sources,
+            "lastModified": now,
+            "lastCollected": now,
+        },
         "data": data,
     }
 
 
 def write_if_changed(output_path: Path, envelope: dict) -> bool:
-    """Write envelope to disk only if the data changed. Returns True if written."""
     if output_path.exists():
         existing = json.loads(output_path.read_text(encoding="utf-8"))
         if existing.get("data") == envelope.get("data"):

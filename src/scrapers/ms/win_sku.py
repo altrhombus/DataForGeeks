@@ -18,6 +18,7 @@ _HTML_TAG_RE = re.compile(r"<[^>]+>")
 
 class WinSkuScraper(BaseScraper):
     dataset = "ms/win/sku"
+    dataset_name = "windows-sku"
     sources = [_SOURCE_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:

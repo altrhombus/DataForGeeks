@@ -11,6 +11,7 @@ _ENTRY_RE = re.compile(r"<strong>([^<]+)</strong>\s*\((\d+)\)")
 
 class ChassisTypesScraper(BaseScraper):
     dataset = "ms/other/chassis-types"
+    dataset_name = "chassis-types"
     sources = [_SOURCE_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:

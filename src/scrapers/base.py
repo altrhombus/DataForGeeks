@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 
 class BaseScraper(ABC):
     dataset: str        # slug that doubles as output path, e.g. "ms/win/buildnumbers"
+    dataset_name: str = ""  # human-readable envelope label; falls back to dataset if empty
     sources: list[str]  # URLs included in the JSON envelope
 
     def fetch(self) -> dict[str, str]:

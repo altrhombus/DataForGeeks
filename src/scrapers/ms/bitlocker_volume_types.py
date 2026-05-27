@@ -11,6 +11,7 @@ _ENTRY_RE = re.compile(r"<code>(\d+)</code>\s*\(for\s*<code>([^<]+)</code>\)")
 
 class BitlockerVolumeTypesScraper(BaseScraper):
     dataset = "ms/other/bitlocker-volume-types"
+    dataset_name = "bitlocker-volume-types"
     sources = [_SOURCE_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:

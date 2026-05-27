@@ -15,6 +15,7 @@ _UUID_RE = re.compile(
 
 class AsrGuidsScraper(BaseScraper):
     dataset = "ms/other/asr-guids"
+    dataset_name = "asr-guids"
     sources = [_SOURCE_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:

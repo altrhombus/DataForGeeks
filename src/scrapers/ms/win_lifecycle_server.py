@@ -17,6 +17,7 @@ _SOURCES = [
 
 class WinLifecycleServerScraper(BaseScraper):
     dataset = "ms/win/lifecycle-server"
+    dataset_name = "windows-lifecycle-server"
     sources = _SOURCES
 
     def parse(self, pages: dict[str, str]) -> list[dict]:
