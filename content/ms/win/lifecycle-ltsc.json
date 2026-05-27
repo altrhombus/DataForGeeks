@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "provider": "DataForGeeks",
+    "apiVersion": "v2",
+    "dataset": "windows-lifecycle-ltsc",
+    "recordCount": 3,
+    "sourceUrls": [
+      "https://learn.microsoft.com/en-us/windows/release-health/release-information"
+    ],
+    "lastModified": "2026-05-27T17:10:50Z",
+    "lastCollected": "2026-05-27T17:10:50Z"
+  },
+  "data": [
+    {
+      "version": "2016 (1607)",
+      "servicing_option": "Long-Term Servicing Branch (LTSB)",
+      "build": "14393",
+      "start_date": "2016-08-02",
+      "mainstream_end_date": "End of updates",
+      "extended_end_date": "2026-10-13"
+    },
+    {
+      "version": "2019 (1809)",
+      "servicing_option": "Long-Term Servicing Channel (LTSC)",
+      "build": "17763",
+      "start_date": "2018-11-13",
+      "mainstream_end_date": "End of updates",
+      "extended_end_date": "2029-01-09"
+    },
+    {
+      "version": "2021 (21H2)",
+      "servicing_option": "Long-Term Servicing Channel (LTSC)",
+      "build": "19044",
+      "start_date": "2021-11-16",
+      "mainstream_end_date": "2027-01-12",
+      "extended_end_date": "2032-01-13"
+    }
+  ]
+}
