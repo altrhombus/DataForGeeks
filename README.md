@@ -169,7 +169,7 @@ Mainstream and extended support dates for Windows Long-Term Servicing Channel (L
 | `servicing_option` | `Long-Term Servicing Channel (LTSC)` or `Long-Term Servicing Branch (LTSB)` |
 | `build` | Base build number (`19044`) |
 | `start_date` | General availability date |
-| `mainstream_end_date` | End of mainstream support |
+| `mainstream_end_date` | End of mainstream support — may be the string `"End of updates"` for older LTSB releases where Microsoft does not publish a discrete date |
 | `extended_end_date` | End of extended support |
 
 ---
