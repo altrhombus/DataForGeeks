@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "provider": "DataForGeeks",
+    "apiVersion": "v2",
+    "dataset": "android-releases",
+    "recordCount": 28,
+    "sourceUrls": [
+      "https://developer.android.com/tools/releases/platforms"
+    ],
+    "lastModified": "2026-05-28T02:04:37Z",
+    "lastCollected": "2026-05-28T02:04:37Z"
+  },
+  "data": [
+    {
+      "version": "16",
+      "api_level": 36,
+      "release_date": "2025-03-01"
+    },
+    {
+      "version": "15",
+      "api_level": 35,
+      "release_date": "2024-06-01"
+    },
+    {
+      "version": "14",
+      "api_level": 34,
+      "release_date": "2023-06-01"
+    },
+    {
+      "version": "13",
+      "api_level": 33,
+      "release_date": "2022-06-01"
+    },
+    {
+      "version": "12L",
+      "api_level": 32,
+      "release_date": "2022-03-01"
+    },
+    {
+      "version": "12",
+      "api_level": 31,
+      "release_date": "2021-08-01"
+    },
+    {
+      "version": "11",
+      "api_level": 30,
+      "release_date": "2020-07-01"
+    },
+    {
+      "version": "10",
+      "api_level": 29,
+      "release_date": "2020-07-01"
+    },
+    {
+      "version": "9",
+      "api_level": 28,
+      "release_date": "2018-08-01"
+    },
+    {
+      "version": "8.1",
+      "api_level": 27,
+      "release_date": "2017-12-01"
+    },
+    {
+      "version": "8.0",
+      "api_level": 26,
+      "release_date": "2017-08-01"
+    },
+    {
+      "version": "7.1",
+      "api_level": 25,
+      "release_date": "2016-10-01"
+    },
+    {
+      "version": "7.0",
+      "api_level": 24,
+      "release_date": "2016-08-01"
+    },
+    {
+      "version": "6.0",
+      "api_level": 23,
+      "release_date": "2015-08-01"
+    },
+    {
+      "version": "5.1",
+      "api_level": 22,
+      "release_date": "2015-03-01"
+    },
+    {
+      "version": "5.0",
+      "api_level": 21,
+      "release_date": "2014-10-01"
+    },
+    {
+      "version": "4.4W",
+      "api_level": 20,
+      "release_date": "2014-06-01"
+    },
+    {
+      "version": "4.4",
+      "api_level": 19,
+      "release_date": "2013-10-01"
+    },
+    {
+      "version": "4.3",
+      "api_level": 18,
+      "release_date": "2013-07-01"
+    },
+    {
+      "version": "4.2",
+      "api_level": 17,
+      "release_date": "2012-11-01"
+    },
+    {
+      "version": "4.1",
+      "api_level": 16,
+      "release_date": "2012-06-01"
+    },
+    {
+      "version": "4.0.3",
+      "api_level": 15,
+      "release_date": "2011-12-01"
+    },
+    {
+      "version": "4.0",
+      "api_level": 14,
+      "release_date": "2011-10-01"
+    },
+    {
+      "version": "3.2",
+      "api_level": 13,
+      "release_date": "2011-07-01"
+    },
+    {
+      "version": "3.1",
+      "api_level": 12,
+      "release_date": "2011-05-01"
+    },
+    {
+      "version": "3.0",
+      "api_level": 11,
+      "release_date": "2011-02-01"
+    },
+    {
+      "version": "2.3.3",
+      "api_level": 10,
+      "release_date": "2011-02-01"
+    },
+    {
+      "version": "2.3",
+      "api_level": 9,
+      "release_date": "2010-12-01"
+    }
+  ]
+}
