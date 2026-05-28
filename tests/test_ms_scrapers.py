@@ -5,16 +5,26 @@ from pathlib import Path
 
 import pytest
 
-from src.scrapers.ms.asr_guids import AsrGuidsScraper, _SOURCE_URL as ASR_URL
-from src.scrapers.ms.bitlocker_volume_types import BitlockerVolumeTypesScraper, _SOURCE_URL as BL_URL
-from src.scrapers.ms.chassis_types import ChassisTypesScraper, _SOURCE_URL as CHASSIS_URL
-from src.scrapers.ms.locales import LocalesScraper, _SOURCE_URL as LOCALES_URL
-from src.scrapers.ms.m365_buildnumbers import M365BuildNumbersScraper, _SOURCE_URL as M365_URL
-from src.scrapers.ms.win_lifecycle_client import WinLifecycleClientScraper, _SOURCES as LC_SOURCES
-from src.scrapers.ms.win_lifecycle_ltsc import WinLifecycleLtscScraper, _SOURCE_URL as LTSC_URL
-from src.scrapers.ms.win_lifecycle_server import WinLifecycleServerScraper, _SOURCES as LS_SOURCES
-from src.scrapers.ms.win_releases import WinReleasesScraper, _WIN10_URL, _WIN11_URL
-from src.scrapers.ms.win_sku import WinSkuScraper, _SOURCE_URL as SKU_URL
+from src.exceptions import StructureChangedError
+from src.scrapers.ms.asr_guids import _SOURCE_URL as ASR_URL
+from src.scrapers.ms.asr_guids import AsrGuidsScraper
+from src.scrapers.ms.bitlocker_volume_types import _SOURCE_URL as BL_URL
+from src.scrapers.ms.bitlocker_volume_types import BitlockerVolumeTypesScraper
+from src.scrapers.ms.chassis_types import _SOURCE_URL as CHASSIS_URL
+from src.scrapers.ms.chassis_types import ChassisTypesScraper
+from src.scrapers.ms.locales import _SOURCE_URL as LOCALES_URL
+from src.scrapers.ms.locales import LocalesScraper
+from src.scrapers.ms.m365_buildnumbers import _SOURCE_URL as M365_URL
+from src.scrapers.ms.m365_buildnumbers import M365BuildNumbersScraper
+from src.scrapers.ms.win_lifecycle_client import _SOURCES as LC_SOURCES
+from src.scrapers.ms.win_lifecycle_client import WinLifecycleClientScraper
+from src.scrapers.ms.win_lifecycle_ltsc import _SOURCE_URL as LTSC_URL
+from src.scrapers.ms.win_lifecycle_ltsc import WinLifecycleLtscScraper
+from src.scrapers.ms.win_lifecycle_server import _SOURCES as LS_SOURCES
+from src.scrapers.ms.win_lifecycle_server import WinLifecycleServerScraper
+from src.scrapers.ms.win_releases import _WIN10_URL, _WIN11_URL, WinReleasesScraper
+from src.scrapers.ms.win_sku import _SOURCE_URL as SKU_URL
+from src.scrapers.ms.win_sku import WinSkuScraper
 
 F = Path(__file__).parent / "fixtures" / "ms"
 
@@ -42,7 +52,7 @@ def lifecycle_client_pages():
         "win10_lifecycle_home_pro.html",
         "win11_lifecycle_home_pro.html",
     ]
-    return {url: (F / name).read_text() for url, name in zip(LC_SOURCES, names)}
+    return {url: (F / name).read_text() for url, name in zip(LC_SOURCES, names, strict=True)}
 
 
 @pytest.fixture(scope="module")
@@ -361,3 +371,61 @@ class TestBitlockerVolumeTypesScraper:
         records = BitlockerVolumeTypesScraper().parse({BL_URL: (F / "bitlocker_recovery_key.html").read_text()})
         enums = [r["volume_type_enum"] for r in records]
         assert enums == sorted(enums)
+
+
+# ---------------------------------------------------------------------------
+# ValueError guard tests (empty / malformed HTML)
+# ---------------------------------------------------------------------------
+
+_EMPTY = "<html><body></body></html>"
+
+
+class TestValueErrorGuards:
+    def test_win_releases_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            WinReleasesScraper().parse({_WIN10_URL: _EMPTY, _WIN11_URL: _EMPTY})
+
+    def test_win_lifecycle_client_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            WinLifecycleClientScraper().parse({url: _EMPTY for url in LC_SOURCES})
+
+    def test_win_lifecycle_ltsc_raises_on_missing_table(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            WinLifecycleLtscScraper().parse({LTSC_URL: _EMPTY})
+
+    def test_win_lifecycle_server_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            WinLifecycleServerScraper().parse({url: _EMPTY for url in LS_SOURCES})
+
+    def test_win_sku_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            WinSkuScraper().parse({SKU_URL: _EMPTY})
+
+    def test_m365_raises_on_too_few_tables(self):
+        html = "<html><body><table><tr><td>only one table</td></tr></table></body></html>"
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            M365BuildNumbersScraper().parse({M365_URL: html})
+
+    def test_asr_guids_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            AsrGuidsScraper().parse({ASR_URL: _EMPTY})
+
+    def test_chassis_raises_when_boundary_missing(self):
+        # No CreationClassName strong element — boundary detection fails
+        html = "<html><body><strong>NotTheRight</strong> (1)</body></html>"
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            ChassisTypesScraper().parse({CHASSIS_URL: html})
+
+    def test_chassis_raises_when_boundary_present_but_no_entries(self):
+        # Boundary exists but nothing before it matches the number pattern
+        html = "<html><body><strong>CreationClassName</strong></body></html>"
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            ChassisTypesScraper().parse({CHASSIS_URL: html})
+
+    def test_locales_raises_on_no_tables(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            LocalesScraper().parse({LOCALES_URL: _EMPTY})
+
+    def test_bitlocker_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            BitlockerVolumeTypesScraper().parse({BL_URL: _EMPTY})

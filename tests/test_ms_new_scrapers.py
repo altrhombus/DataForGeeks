@@ -5,10 +5,14 @@ from pathlib import Path
 
 import pytest
 
-from src.scrapers.ms.sql_buildnumbers import SqlBuildNumbersScraper, _SOURCE_URL as SQL_URL
-from src.scrapers.ms.exchange_buildnumbers import ExchangeBuildNumbersScraper, _SOURCE_URL as EXCH_URL
-from src.scrapers.ms.dotnet_lifecycle import DotnetLifecycleScraper, _FRAMEWORK_URL, _DOTNET_URL
-from src.scrapers.ms.edge_releases import EdgeReleasesScraper, _SOURCE_URL as EDGE_URL, _ARCHIVE_URL
+from src.exceptions import StructureChangedError
+from src.scrapers.ms.dotnet_lifecycle import _DOTNET_URL, _FRAMEWORK_URL, DotnetLifecycleScraper
+from src.scrapers.ms.edge_releases import _ARCHIVE_URL, EdgeReleasesScraper
+from src.scrapers.ms.edge_releases import _SOURCE_URL as EDGE_URL
+from src.scrapers.ms.exchange_buildnumbers import _SOURCE_URL as EXCH_URL
+from src.scrapers.ms.exchange_buildnumbers import ExchangeBuildNumbersScraper
+from src.scrapers.ms.sql_buildnumbers import _SOURCE_URL as SQL_URL
+from src.scrapers.ms.sql_buildnumbers import SqlBuildNumbersScraper
 
 FIXTURES = Path(__file__).parent / "fixtures" / "ms"
 
@@ -239,3 +243,52 @@ class TestEdgeReleases:
 
     def test_sources_count(self):
         assert len(EdgeReleasesScraper.sources) == 2
+
+
+# ── ValueError guard tests ────────────────────────────────────────────────────
+
+_EMPTY = "<html><body></body></html>"
+
+
+class TestValueErrorGuards:
+    def test_sql_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            SqlBuildNumbersScraper().parse({SQL_URL: _EMPTY})
+
+    def test_exchange_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            ExchangeBuildNumbersScraper().parse({EXCH_URL: _EMPTY})
+
+    def test_dotnet_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            DotnetLifecycleScraper().parse({_FRAMEWORK_URL: _EMPTY, _DOTNET_URL: _EMPTY})
+
+    def test_edge_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            EdgeReleasesScraper().parse({EDGE_URL: _EMPTY, _ARCHIVE_URL: _EMPTY})
+
+
+# ── Malformed-date tests ───────────────────────────────────────────────────────
+
+
+class TestMalformedDates:
+    def test_exchange_drops_row_with_bad_date(self):
+        html = """<html><body>
+        <h3>Exchange Server 2019</h3>
+        <table>
+        <tr><th>Product</th><th>Date</th><th>Build</th><th>Long Build</th></tr>
+        <tr><td>Exchange 2019 CU14</td><td>March 1, 2024</td><td>15.2.1544.4</td><td>15.02.1544.004</td></tr>
+        <tr><td>Exchange 2019 CU13</td><td>NOT A DATE</td><td>15.2.1258.28</td><td>15.02.1258.028</td></tr>
+        </table></body></html>"""
+        records = ExchangeBuildNumbersScraper().parse({EXCH_URL: html})
+        assert len(records) == 1
+        assert records[0]["build"] == "15.2.1544.4"
+
+    def test_edge_drops_version_with_bad_date(self):
+        html = """<html><body>
+        <h2>## Version 120.0.1234.56: January 10, 2024 (Stable)</h2>
+        <h2>## Version 119.0.2151.97: NOT_A_DATE (Stable)</h2>
+        </body></html>"""
+        records = EdgeReleasesScraper().parse({EDGE_URL: html, _ARCHIVE_URL: _EMPTY})
+        assert len(records) == 1
+        assert records[0]["version"] == "120.0.1234.56"

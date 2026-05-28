@@ -5,11 +5,18 @@ from pathlib import Path
 
 import pytest
 
+from src.exceptions import StructureChangedError
 from src.scrapers.ms.win_buildnumbers import (
+    _HOTPATCH_URL,
+    _SERVER2016_URL,
+    _SERVER2019_URL,
+    _SERVER2022_URL,
+    _SERVER2025_URL,
+    _WIN10_URL,
+    _WIN11_URL,
     WinBuildNumbersScraper,
     _parse_hotpatch_page,
     _parse_standard_page,
-    _WIN10_URL, _WIN11_URL, _SERVER2016_URL, _SERVER2019_URL, _SERVER2022_URL, _SERVER2025_URL, _HOTPATCH_URL,
 )
 
 FIXTURES = Path(__file__).parent / "fixtures" / "ms"
@@ -245,3 +252,23 @@ class TestWinBuildNumbersScraper:
 
     def test_sources_count(self):
         assert len(WinBuildNumbersScraper.sources) == 7
+
+
+# ── ValueError guard test ─────────────────────────────────────────────────────
+
+_EMPTY = "<html><body></body></html>"
+
+
+class TestValueErrorGuard:
+    def test_raises_on_empty_html(self):
+        pages = {
+            _WIN10_URL: _EMPTY,
+            _WIN11_URL: _EMPTY,
+            _SERVER2016_URL: _EMPTY,
+            _SERVER2019_URL: _EMPTY,
+            _SERVER2022_URL: _EMPTY,
+            _SERVER2025_URL: _EMPTY,
+            _HOTPATCH_URL: _EMPTY,
+        }
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            WinBuildNumbersScraper().parse(pages)

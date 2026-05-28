@@ -5,14 +5,29 @@ from pathlib import Path
 
 import pytest
 
-from src.scrapers.linux.ubuntu_releases import UbuntuReleasesScraper, _API_URL as UBUNTU_URL
-from src.scrapers.apple.macos_releases import (
-    MacOsReleasesScraper, _SOURCE_URL as MACOS_URL, _ARCHIVE_URL as MACOS_ARCHIVE_URL,
+from src.exceptions import StructureChangedError
+from src.scrapers.apple.ios_releases import (
+    _ARCHIVE_URL as IOS_ARCHIVE_URL,
 )
 from src.scrapers.apple.ios_releases import (
-    IosReleasesScraper, _SOURCE_URL as IOS_URL, _ARCHIVE_URL as IOS_ARCHIVE_URL,
+    _SOURCE_URL as IOS_URL,
 )
-from src.scrapers.google.android_releases import AndroidReleasesScraper, _SOURCE_URL as ANDROID_URL
+from src.scrapers.apple.ios_releases import (
+    IosReleasesScraper,
+)
+from src.scrapers.apple.macos_releases import (
+    _ARCHIVE_URL as MACOS_ARCHIVE_URL,
+)
+from src.scrapers.apple.macos_releases import (
+    _SOURCE_URL as MACOS_URL,
+)
+from src.scrapers.apple.macos_releases import (
+    MacOsReleasesScraper,
+)
+from src.scrapers.google.android_releases import _SOURCE_URL as ANDROID_URL
+from src.scrapers.google.android_releases import AndroidReleasesScraper
+from src.scrapers.linux.ubuntu_releases import _API_URL as UBUNTU_URL
+from src.scrapers.linux.ubuntu_releases import UbuntuReleasesScraper
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -245,3 +260,50 @@ class TestAndroidReleases:
 
     def test_sources_count(self):
         assert len(AndroidReleasesScraper.sources) == 1
+
+
+# ── ValueError guard tests ────────────────────────────────────────────────────
+
+_EMPTY_HTML = "<html><body></body></html>"
+
+
+class TestValueErrorGuards:
+    def test_ubuntu_raises_on_empty_entries(self):
+        import json
+        with pytest.raises(StructureChangedError, match="API response may have changed"):
+            UbuntuReleasesScraper().parse({UBUNTU_URL: json.dumps({"entries": []})})
+
+    def test_macos_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            MacOsReleasesScraper().parse({MACOS_URL: _EMPTY_HTML, MACOS_ARCHIVE_URL: _EMPTY_HTML})
+
+    def test_ios_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            IosReleasesScraper().parse({IOS_URL: _EMPTY_HTML, IOS_ARCHIVE_URL: _EMPTY_HTML})
+
+    def test_android_raises_on_empty(self):
+        with pytest.raises(StructureChangedError, match="page structure may have changed"):
+            AndroidReleasesScraper().parse({ANDROID_URL: _EMPTY_HTML})
+
+
+# ── Malformed-date tests ───────────────────────────────────────────────────────
+
+
+class TestMalformedDates:
+    def test_macos_drops_row_with_bad_date(self):
+        html = """<html><body><table><tbody>
+        <tr><td>macOS Sequoia 15.1</td><td></td><td>28 Oct 2024</td></tr>
+        <tr><td>macOS Sequoia 15.0</td><td></td><td>NOT_A_DATE</td></tr>
+        </tbody></table></body></html>"""
+        records = MacOsReleasesScraper().parse({MACOS_URL: html, MACOS_ARCHIVE_URL: _EMPTY_HTML})
+        assert len(records) == 1
+        assert records[0]["version"] == "15.1"
+
+    def test_ios_drops_row_with_bad_date(self):
+        html = """<html><body><table><tbody>
+        <tr><td>iOS 18.1</td><td></td><td>28 Oct 2024</td></tr>
+        <tr><td>iOS 18.0</td><td></td><td>NOT_A_DATE</td></tr>
+        </tbody></table></body></html>"""
+        records = IosReleasesScraper().parse({IOS_URL: html, IOS_ARCHIVE_URL: _EMPTY_HTML})
+        assert len(records) == 1
+        assert records[0]["version"] == "18.1"
