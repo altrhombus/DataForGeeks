@@ -37,7 +37,11 @@ jobs:
           title: Refresh BitLocker volume type data
       - name: Enable Pull Request Automerge
         if: steps.cpr.outputs.pull-request-url != ''
-        run: gh pr merge --merge --squash "${{ steps.cpr.outputs.pull-request-number }}"
+        run: |
+          for i in 1 2 3; do
+            gh pr merge --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}" && break
+            [ $i -lt 3 ] && echo "Merge attempt $i failed, retrying in 15s..." && sleep 15
+          done
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
       - name: Check outputs
