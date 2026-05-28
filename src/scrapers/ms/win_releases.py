@@ -1,7 +1,9 @@
 import re
 
+from src.exceptions import StructureChangedError
 from src.models.ms.win_release import WinRelease
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted
 
 _WIN10_URL = "https://learn.microsoft.com/en-us/windows/release-health/release-information"
 _WIN11_URL = "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information"
@@ -14,6 +16,8 @@ _VERSION_RE = re.compile(
 
 
 class WinReleasesScraper(BaseScraper):
+    """Scrapes Windows 10/11 release version-to-build mappings from learn.microsoft.com."""
+
     dataset = "ms/win/releases"
     dataset_name = "windows-release-history"
     sources = [_WIN10_URL, _WIN11_URL]
@@ -21,7 +25,7 @@ class WinReleasesScraper(BaseScraper):
     def parse(self, pages: dict[str, str]) -> list[dict]:
         records: list[WinRelease] = []
 
-        for url, major_version in zip(self.sources, [10, 11]):
+        for url, major_version in zip(self.sources, [10, 11], strict=True):
             for m in _VERSION_RE.finditer(pages[url]):
                 records.append(
                     WinRelease(
@@ -34,13 +38,7 @@ class WinReleasesScraper(BaseScraper):
                 )
 
         if not records:
-            raise ValueError("No release entries parsed — page structure may have changed")
+            raise StructureChangedError("No release entries parsed — page structure may have changed")
 
-        seen: set[str] = set()
-        unique: list[WinRelease] = []
-        for r in sorted(records, key=lambda x: x.os_build):
-            if r.os_build not in seen:
-                seen.add(r.os_build)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: r.os_build)
         return [r.model_dump() for r in unique]

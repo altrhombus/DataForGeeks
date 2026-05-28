@@ -1,8 +1,10 @@
+import contextlib
 import re
 from datetime import datetime as dt
 
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.google.android_release import AndroidRelease
 from src.scrapers.base import BaseScraper
 
@@ -32,10 +34,8 @@ def _earliest_revision_date(h4_elements) -> str | None:
         rev_num = int(m.group(1))
         if rev_num < best_rev:
             best_rev = rev_num
-            try:
+            with contextlib.suppress(ValueError):
                 best_date = dt.strptime(f"{m.group(2)} {m.group(3)}", "%B %Y").strftime("%Y-%m-01")
-            except ValueError:
-                pass
     return best_date
 
 
@@ -51,6 +51,8 @@ def _h4s_until_next_h2(h2):
 
 
 class AndroidReleasesScraper(BaseScraper):
+    """Scrapes Android platform release versions, API levels, and dates from developer.android.com."""
+
     dataset = "google/android/releases"
     dataset_name = "android-releases"
     sources = [_SOURCE_URL]
@@ -60,7 +62,7 @@ class AndroidReleasesScraper(BaseScraper):
         records: list[AndroidRelease] = []
 
         for h2 in soup.find_all("h2", {"data-text": True}):
-            data_text = h2.get("data-text", "")
+            data_text = str(h2.get("data-text") or "")
 
             # Single API level: "Android 15 (API level 35)"
             single_m = _H2_SINGLE_RE.match(data_text)
@@ -99,6 +101,6 @@ class AndroidReleasesScraper(BaseScraper):
                         ))
 
         if not records:
-            raise ValueError("No Android release entries parsed — page structure may have changed")
+            raise StructureChangedError("No Android release entries parsed — page structure may have changed")
 
         return [r.model_dump() for r in sorted(records, key=lambda x: x.api_level, reverse=True)]

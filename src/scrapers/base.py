@@ -1,7 +1,13 @@
+"""Abstract base class shared by all DataForGeeks scrapers."""
+
+import logging
 from abc import ABC, abstractmethod
+
+logger = logging.getLogger(__name__)
 
 
 class BaseScraper(ABC):
+    """Base class for all scrapers. Subclasses define dataset, sources, and parse()."""
     dataset: str        # slug that doubles as output path, e.g. "ms/win/buildnumbers"
     dataset_name: str = ""  # human-readable envelope label; falls back to dataset if empty
     sources: list[str]  # URLs included in the JSON envelope
@@ -17,4 +23,7 @@ class BaseScraper(ABC):
         ...
 
     def run(self) -> list[dict]:
-        return self.parse(self.fetch())
+        logger.info("Running %s (%s)", self.__class__.__name__, self.dataset)
+        data = self.parse(self.fetch())
+        logger.info("Parsed %d records from %s", len(data), self.dataset)
+        return data

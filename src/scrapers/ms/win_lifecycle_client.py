@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.ms.win_lifecycle_client import WinLifecycleClient
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted
 
 _SOURCES = [
     "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
@@ -12,6 +14,8 @@ _SOURCES = [
 
 
 class WinLifecycleClientScraper(BaseScraper):
+    """Scrapes Windows 10/11 client lifecycle start and end dates from learn.microsoft.com."""
+
     dataset = "ms/win/lifecycle-client"
     dataset_name = "windows-lifecycle-client"
     sources = _SOURCES
@@ -39,8 +43,8 @@ class WinLifecycleClientScraper(BaseScraper):
                 if len(local_times) < 2:
                     continue
 
-                start_date = local_times[0].get("datetime", "")[:10]
-                end_date = local_times[1].get("datetime", "")[:10]
+                start_date = str(local_times[0].get("datetime") or "")[:10]
+                end_date = str(local_times[1].get("datetime") or "")[:10]
 
                 records.append(
                     WinLifecycleClient(
@@ -52,14 +56,7 @@ class WinLifecycleClientScraper(BaseScraper):
                 )
 
         if not records:
-            raise ValueError("No lifecycle entries parsed — page structure may have changed")
+            raise StructureChangedError("No lifecycle entries parsed — page structure may have changed")
 
-        seen: set[tuple] = set()
-        unique: list[WinLifecycleClient] = []
-        for r in sorted(records, key=lambda x: x.version):
-            key = (r.version, r.sku)
-            if key not in seen:
-                seen.add(key)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: r.version, key_fn=lambda r: (r.version, r.sku))
         return [r.model_dump() for r in unique]

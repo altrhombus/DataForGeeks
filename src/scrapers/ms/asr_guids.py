@@ -2,8 +2,10 @@ import re
 
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.ms.asr_guid import AsrGuid
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted
 
 _SOURCE_URL = "https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference"
 
@@ -14,6 +16,8 @@ _UUID_RE = re.compile(
 
 
 class AsrGuidsScraper(BaseScraper):
+    """Scrapes Attack Surface Reduction rule names and GUIDs from learn.microsoft.com."""
+
     dataset = "ms/other/asr-guids"
     dataset_name = "asr-guids"
     sources = [_SOURCE_URL]
@@ -42,13 +46,7 @@ class AsrGuidsScraper(BaseScraper):
                     break
 
         if not records:
-            raise ValueError("No ASR GUID entries parsed — page structure may have changed")
+            raise StructureChangedError("No ASR GUID entries parsed — page structure may have changed")
 
-        seen: set[str] = set()
-        unique: list[AsrGuid] = []
-        for r in sorted(records, key=lambda x: x.asr_guid):
-            if r.asr_guid not in seen:
-                seen.add(r.asr_guid)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: r.asr_guid)
         return [r.model_dump() for r in unique]

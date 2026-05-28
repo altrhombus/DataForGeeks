@@ -3,8 +3,10 @@ from datetime import datetime
 
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.ms.m365_build import M365Build
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted
 
 _SOURCE_URL = "https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
 
@@ -19,6 +21,8 @@ _CHANNELS = {
 
 
 class M365BuildNumbersScraper(BaseScraper):
+    """Scrapes Microsoft 365 Apps update history (build numbers by channel) from learn.microsoft.com."""
+
     dataset = "ms/apps/buildnumbers"
     dataset_name = "m365-update-history"
     sources = [_SOURCE_URL]
@@ -28,7 +32,7 @@ class M365BuildNumbersScraper(BaseScraper):
 
         tables = soup.find_all("table")
         if len(tables) < 2:
-            raise ValueError(
+            raise StructureChangedError(
                 f"Expected at least 2 tables, found {len(tables)} — page structure may have changed"
             )
 
@@ -70,14 +74,7 @@ class M365BuildNumbersScraper(BaseScraper):
                     )
 
         if not records:
-            raise ValueError("No M365 release entries parsed — page structure may have changed")
+            raise StructureChangedError("No M365 release entries parsed — page structure may have changed")
 
-        seen: set[tuple] = set()
-        unique: list[M365Build] = []
-        for r in sorted(records, key=lambda x: x.release_date, reverse=True):
-            key = (r.release_date, r.channel, r.build)
-            if key not in seen:
-                seen.add(key)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: r.release_date, key_fn=lambda r: (r.release_date, r.channel, r.build), reverse=True)
         return [r.model_dump() for r in unique]

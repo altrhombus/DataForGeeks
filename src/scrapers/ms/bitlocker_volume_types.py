@@ -1,7 +1,9 @@
 import re
 
+from src.exceptions import StructureChangedError
 from src.models.ms.bitlocker_volume_type import BitlockerVolumeType
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted
 
 _SOURCE_URL = "https://learn.microsoft.com/en-us/graph/api/resources/bitlockerrecoverykey?view=graph-rest-1.0"
 
@@ -10,6 +12,8 @@ _ENTRY_RE = re.compile(r"<code>(\d+)</code>\s*\(for\s*<code>([^<]+)</code>\)")
 
 
 class BitlockerVolumeTypesScraper(BaseScraper):
+    """Scrapes BitLocker volumeType enum values from the Microsoft Graph API reference."""
+
     dataset = "ms/other/bitlocker-volume-types"
     dataset_name = "bitlocker-volume-types"
     sources = [_SOURCE_URL]
@@ -26,13 +30,7 @@ class BitlockerVolumeTypesScraper(BaseScraper):
             )
 
         if not records:
-            raise ValueError("No volumeType enum entries parsed — page structure may have changed")
+            raise StructureChangedError("No volumeType enum entries parsed — page structure may have changed")
 
-        seen: set[int] = set()
-        unique: list[BitlockerVolumeType] = []
-        for r in sorted(records, key=lambda x: x.volume_type_enum):
-            if r.volume_type_enum not in seen:
-                seen.add(r.volume_type_enum)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: r.volume_type_enum)
         return [r.model_dump() for r in unique]

@@ -1,11 +1,20 @@
+import logging
 import re
-from datetime import datetime as dt
 from html import unescape
 
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.ms.win_buildnumber import WinBuildNumber
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import (
+    deduplicate_sorted,
+    iter_versioned_tables,
+    normalize_ms_url,
+    parse_date,
+)
+
+logger = logging.getLogger(__name__)
 
 _WIN10_URL = "https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda"
 _WIN11_URL = "https://aka.ms/Windows11UpdateHistory"
@@ -46,6 +55,8 @@ _SERVER_ONLY_BUILDS = {"10.0.14393.5127"}
 
 
 class WinBuildNumbersScraper(BaseScraper):
+    """Scrapes Windows 10/11 and Server cumulative update build numbers from support.microsoft.com."""
+
     dataset = "ms/win/buildnumbers"
     dataset_name = "windows-update-history"
     sources = [_WIN10_URL, _WIN11_URL, _SERVER2016_URL, _SERVER2019_URL, _SERVER2022_URL, _SERVER2025_URL, _HOTPATCH_URL]
@@ -62,16 +73,10 @@ class WinBuildNumbersScraper(BaseScraper):
         records.extend(_parse_hotpatch_page(pages[_HOTPATCH_URL]))
 
         if not records:
-            raise ValueError("No build entries parsed — page structure may have changed")
+            raise StructureChangedError("No build entries parsed — page structure may have changed")
 
         # Include os_type in dedup key so client/server variants of shared builds coexist
-        seen: set[tuple] = set()
-        unique: list[WinBuildNumber] = []
-        for r in sorted(records, key=lambda x: (x.release_date, x.build)):
-            key = (r.full_version, r.release_date, r.kb_article, r.os_type)
-            if key not in seen:
-                seen.add(key)
-                unique.append(r)
+        unique = deduplicate_sorted(records, sort_key=lambda r: (r.release_date, r.build), key_fn=lambda r: (r.full_version, r.release_date, r.kb_article, r.os_type))
 
         unique = [r for r in unique if r.full_version not in _SERVER_ONLY_BUILDS]
 
@@ -80,7 +85,7 @@ class WinBuildNumbersScraper(BaseScraper):
         if expired_kbs:
             for r in unique:
                 if not r.is_expired and r.kb_article in expired_kbs:
-                    object.__setattr__(r, "is_expired", True)
+                    object.__setattr__(r, "is_expired", True)  # bypass frozen=True intentionally
 
         return [r.model_dump() for r in unique]
 
@@ -111,7 +116,7 @@ def _parse_standard_page(
 
         if os_type == "client":
             m = _CLIENT_VER_RE.search(title_text)
-            if not m:
+            if not m or fixed_major is None:
                 continue
             current_version = m.group(1).upper()
             current_major = fixed_major
@@ -148,9 +153,9 @@ def _parse_standard_page(
             if not pd:
                 continue
 
-            try:
-                release_date = dt.strptime(pd.group(1).strip(), "%B %d, %Y").strftime("%Y-%m-%d")
-            except ValueError:
+            release_date = parse_date(pd.group(1).strip())
+            if not release_date:
+                logger.warning("Skipping row: could not parse date %r", pd.group(1).strip())
                 continue
 
             kb_article = pd.group(2).upper()
@@ -162,10 +167,7 @@ def _parse_standard_page(
             is_preview = "PREVIEW" in suffix_up or "PREVIEW" in desc_up
             release_type = "Out-of-band" if is_oob else "Preview" if is_preview else "Standard"
 
-            href = a.get("href") or ""
-            if href.startswith("/"):
-                href = "https://support.microsoft.com" + href
-            article_url = href or None
+            article_url = normalize_ms_url(str(a.get("href") or ""))
 
             for version in [v.strip() for v in re.split(r"\s+and\s+|,", versions_raw) if v.strip()]:
                 records.append(
@@ -190,25 +192,18 @@ def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
     soup = BeautifulSoup(html, "lxml")
     records: list[WinBuildNumber] = []
 
-    current_version = ""
-
-    for el in soup.find_all(["h1", "h2", "h3", "h4", "table"]):
-        if el.name in ("h1", "h2", "h3", "h4"):
-            m = _HOTPATCH_VER_RE.search(el.get_text(strip=True))
-            if m:
-                current_version = m.group(1).upper()
-            continue
-
-        for row in el.find_all("tr"):
+    for version_raw, table in iter_versioned_tables(soup, _HOTPATCH_VER_RE, skip_unversioned=False):
+        current_version = version_raw.upper() if version_raw else ""
+        for row in table.find_all("tr"):
             cells = row.find_all(["td", "th"])
             if len(cells) < 4:
                 continue
 
-            patch_type = cells[2].get_text(strip=True).lower()
+            patch_type = cells[2].get_text(strip=True).lower()  # col 2: Patch Type (Baseline / Standard / OOB)
             if "baseline" in patch_type:
                 continue
 
-            cell4 = cells[3]
+            cell4 = cells[3]  # col 3: KB article number + href
             kb_match = _KB_RE.search(cell4.get_text())
             if not kb_match:
                 continue
@@ -216,11 +211,10 @@ def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
             href_match = None
             article_url = None
             for a in cell4.find_all("a", href=True):
-                hm = _HOTPATCH_HREF_RE.search(a["href"])
+                hm = _HOTPATCH_HREF_RE.search(str(a["href"]))
                 if hm:
                     href_match = hm
-                    href = a["href"]
-                    article_url = href if href.startswith("http") else "https://support.microsoft.com" + href
+                    article_url = normalize_ms_url(str(a["href"]))
                     break
             if not href_match:
                 continue
@@ -232,9 +226,9 @@ def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
             build2 = f"{href_match.group(6)}.{href_match.group(7)}"
             kb_article = kb_match.group(0).upper()
 
-            try:
-                release_date = dt.strptime(f"{month_name} {day}, {year}", "%B %d, %Y").strftime("%Y-%m-%d")
-            except ValueError:
+            release_date = parse_date(f"{month_name} {day}, {year}")
+            if not release_date:
+                logger.warning("Skipping row: could not parse date %r", f"{month_name} {day}, {year}")
                 continue
 
             is_oob = "out-of-band" in patch_type or "oob" in patch_type

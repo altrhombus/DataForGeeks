@@ -1,6 +1,7 @@
 import json
 from datetime import date, timedelta
 
+from src.exceptions import StructureChangedError
 from src.models.linux.ubuntu_release import UbuntuRelease
 from src.scrapers.base import BaseScraper
 
@@ -36,6 +37,8 @@ def _add_months(d: date, months: int) -> str:
 
 
 class UbuntuReleasesScraper(BaseScraper):
+    """Scrapes Ubuntu release series, versions, and support dates from the Launchpad API."""
+
     dataset = "linux/ubuntu/releases"
     dataset_name = "ubuntu-releases"
     sources = [_API_URL]
@@ -72,6 +75,6 @@ class UbuntuReleasesScraper(BaseScraper):
             ))
 
         if not records:
-            raise ValueError("No Ubuntu release entries parsed — API response may have changed")
+            raise StructureChangedError("No Ubuntu release entries parsed — API response may have changed")
 
         return [r.model_dump() for r in sorted(records, key=lambda x: x.release_date, reverse=True)]

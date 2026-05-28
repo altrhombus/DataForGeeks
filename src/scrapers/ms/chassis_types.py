@@ -1,43 +1,56 @@
 import re
 
+from bs4 import BeautifulSoup
+
+from src.exceptions import StructureChangedError
 from src.models.ms.chassis_type import ChassisType
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted
 
 _SOURCE_URL = "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/cim-chassis"
 
-# ChassisTypes entries appear as: <strong>Name</strong> (Number)
-_ENTRY_RE = re.compile(r"<strong>([^<]+)</strong>\s*\((\d+)\)")
+# Matches " (42)" following a <strong> element
+_NUMBER_RE = re.compile(r"\((\d+)\)")
 
 
 class ChassisTypesScraper(BaseScraper):
+    """Scrapes CIM chassis type names and numeric codes from learn.microsoft.com."""
+
     dataset = "ms/other/chassis-types"
     dataset_name = "chassis-types"
     sources = [_SOURCE_URL]
 
     def parse(self, pages: dict[str, str]) -> list[dict]:
-        html = pages[_SOURCE_URL]
+        soup = BeautifulSoup(pages[_SOURCE_URL], "lxml")
 
-        # The ChassisTypes section precedes CreationClassName alphabetically.
-        # Split on the CreationClassName heading to avoid false matches.
-        boundary = "<strong>CreationClassName</strong>"
-        if boundary not in html:
-            raise ValueError("CreationClassName section boundary not found — page structure may have changed")
-        chassis_section = html.split(boundary)[0]
+        # ChassisTypes entries appear before CreationClassName alphabetically.
+        # Stop iteration when we hit that <strong> to avoid false matches.
+        boundary = next(
+            (s for s in soup.find_all("strong") if s.get_text(strip=True) == "CreationClassName"),
+            None,
+        )
+        if boundary is None:
+            raise StructureChangedError(
+                "CreationClassName section boundary not found — page structure may have changed"
+            )
 
         records: list[ChassisType] = []
-        for m in _ENTRY_RE.finditer(chassis_section):
-            value = m.group(1).strip()
-            number = int(m.group(2))
-            records.append(ChassisType(value=value, number=number))
+        for strong in soup.find_all("strong"):
+            if strong is boundary:
+                break
+            sibling = strong.next_sibling
+            if not sibling:
+                continue
+            m = _NUMBER_RE.search(str(sibling))
+            if m:
+                records.append(
+                    ChassisType(value=strong.get_text(strip=True), number=int(m.group(1)))
+                )
 
         if not records:
-            raise ValueError("No chassis type entries parsed — page structure may have changed")
+            raise StructureChangedError(
+                "No chassis type entries parsed — page structure may have changed"
+            )
 
-        seen: set[int] = set()
-        unique: list[ChassisType] = []
-        for r in sorted(records, key=lambda x: x.number):
-            if r.number not in seen:
-                seen.add(r.number)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: r.number)
         return [r.model_dump() for r in unique]

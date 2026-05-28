@@ -1,10 +1,14 @@
+import logging
 import re
-from datetime import datetime as dt
 
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.ms.exchange_buildnumber import ExchangeBuildNumber
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted, iter_versioned_tables, parse_date
+
+logger = logging.getLogger(__name__)
 
 _SOURCE_URL = "https://learn.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates"
 
@@ -14,6 +18,8 @@ _DATE_RE = re.compile(r"[A-Za-z]+ \d{1,2}, \d{4}")
 
 
 class ExchangeBuildNumbersScraper(BaseScraper):
+    """Scrapes Exchange Server build numbers and release dates from learn.microsoft.com."""
+
     dataset = "ms/exchange/buildnumbers"
     dataset_name = "exchange-server-build-numbers"
     sources = [_SOURCE_URL]
@@ -22,19 +28,9 @@ class ExchangeBuildNumbersScraper(BaseScraper):
         soup = BeautifulSoup(pages[_SOURCE_URL], "lxml")
         records: list[ExchangeBuildNumber] = []
 
-        current_version = ""
-
-        for el in soup.find_all(["h1", "h2", "h3", "h4", "table"]):
-            if el.name in ("h1", "h2", "h3", "h4"):
-                m = _VERSION_HEADING_RE.search(el.get_text(strip=True))
-                if m:
-                    current_version = m.group(1).upper()
-                continue
-
-            if not current_version:
-                continue
-
-            rows = el.find_all("tr")
+        for version_raw, table in iter_versioned_tables(soup, _VERSION_HEADING_RE):
+            current_version = version_raw.upper()
+            rows = table.find_all("tr")
             if len(rows) < 2:
                 continue
 
@@ -47,10 +43,10 @@ class ExchangeBuildNumbersScraper(BaseScraper):
                 if len(cells) < 4:
                     continue
 
-                product_name = cells[0].get_text(strip=True)
-                date_raw = cells[1].get_text(strip=True)
-                build = cells[2].get_text(strip=True)
-                build_long = cells[3].get_text(strip=True)
+                product_name = cells[0].get_text(strip=True)   # col 0: Product name
+                date_raw = cells[1].get_text(strip=True)        # col 1: Release date
+                build = cells[2].get_text(strip=True)           # col 2: Build number (short)
+                build_long = cells[3].get_text(strip=True)      # col 3: Build number (long)
 
                 if not product_name or not build:
                     continue
@@ -62,9 +58,9 @@ class ExchangeBuildNumbersScraper(BaseScraper):
                 d_match = _DATE_RE.search(date_raw)
                 if not d_match:
                     continue
-                try:
-                    release_date = dt.strptime(d_match.group(0), "%B %d, %Y").strftime("%Y-%m-%d")
-                except ValueError:
+                release_date = parse_date(d_match.group(0))
+                if not release_date:
+                    logger.warning("Skipping row: could not parse date %r", d_match.group(0))
                     continue
 
                 records.append(
@@ -78,14 +74,7 @@ class ExchangeBuildNumbersScraper(BaseScraper):
                 )
 
         if not records:
-            raise ValueError("No Exchange build entries parsed — page structure may have changed")
+            raise StructureChangedError("No Exchange build entries parsed — page structure may have changed")
 
-        seen: set[tuple] = set()
-        unique: list[ExchangeBuildNumber] = []
-        for r in sorted(records, key=lambda x: (x.exchange_version, x.release_date, x.build)):
-            key = (r.build, r.release_date)
-            if key not in seen:
-                seen.add(key)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: (r.exchange_version, r.release_date, r.build), key_fn=lambda r: (r.build, r.release_date))
         return [r.model_dump() for r in unique]

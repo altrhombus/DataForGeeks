@@ -1,12 +1,16 @@
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.ms.win_lifecycle_ltsc import WinLifecycleLtsc
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted
 
 _SOURCE_URL = "https://learn.microsoft.com/en-us/windows/release-health/release-information"
 
 
 class WinLifecycleLtscScraper(BaseScraper):
+    """Scrapes Windows LTSC build and lifecycle data from the release health page on learn.microsoft.com."""
+
     dataset = "ms/win/lifecycle-ltsc"
     dataset_name = "windows-lifecycle-ltsc"
     sources = [_SOURCE_URL]
@@ -22,7 +26,7 @@ class WinLifecycleLtscScraper(BaseScraper):
                 break
 
         if ltsc_table is None:
-            raise ValueError("LTSC summary table not found — page structure may have changed")
+            raise StructureChangedError("LTSC summary table not found — page structure may have changed")
 
         records: list[WinLifecycleLtsc] = []
         for row in ltsc_table.find_all("tr"):
@@ -30,6 +34,8 @@ class WinLifecycleLtscScraper(BaseScraper):
             if len(cells) != 8:
                 continue
 
+            # Table columns: Version | Servicing Option | Start | Mainstream End |
+            #   Extended End | (unused) | (unused) | Latest Build
             version = cells[0].get_text(strip=True)
             if not version or version.lower() == "version":
                 continue
@@ -37,12 +43,12 @@ class WinLifecycleLtscScraper(BaseScraper):
             servicing_option = cells[1].get_text(strip=True)
             start_date = cells[2].get_text(strip=True)
             mainstream_end = cells[3].get_text(strip=True)
-            # Cell 4 may have trailing text after the date; take the first token
+            # col 4 may have trailing text after the date; take the first token
             extended_raw = cells[4].get_text(strip=True)
             extended_end = extended_raw.split()[0] if extended_raw else ""
-            # Cell 7 has the latest build as "NNNNN.XXXX"; take the major part only
+            # col 7: latest build as "NNNNN.XXXX"; keep only the base build (before the dot)
             latest_build_text = cells[7].get_text(strip=True)
-            build = latest_build_text.split(".")[0] if latest_build_text else ""
+            build = latest_build_text.partition(".")[0] if latest_build_text else ""
 
             records.append(
                 WinLifecycleLtsc(
@@ -56,13 +62,7 @@ class WinLifecycleLtscScraper(BaseScraper):
             )
 
         if not records:
-            raise ValueError("No LTSC entries parsed — page structure may have changed")
+            raise StructureChangedError("No LTSC entries parsed — page structure may have changed")
 
-        seen: set[str] = set()
-        unique: list[WinLifecycleLtsc] = []
-        for r in sorted(records, key=lambda x: x.version):
-            if r.version not in seen:
-                seen.add(r.version)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: r.version)
         return [r.model_dump() for r in unique]

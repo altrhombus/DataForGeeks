@@ -1,3 +1,5 @@
+"""JSON envelope builder and write-if-changed output helper."""
+
 import json
 from datetime import UTC, datetime
 from pathlib import Path

@@ -1,10 +1,19 @@
+import logging
 import re
-from datetime import datetime as dt
 
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.ms.sql_buildnumber import SqlBuildNumber
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import (
+    deduplicate_sorted,
+    iter_versioned_tables,
+    normalize_ms_url,
+    parse_date,
+)
+
+logger = logging.getLogger(__name__)
 
 _SOURCE_URL = "https://learn.microsoft.com/en-us/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server"
 
@@ -15,6 +24,8 @@ _DATE_RE = re.compile(r"[A-Za-z]+ \d{1,2}, \d{4}")
 
 
 class SqlBuildNumbersScraper(BaseScraper):
+    """Scrapes SQL Server build numbers, KB articles, and release dates from learn.microsoft.com."""
+
     dataset = "ms/sql/buildnumbers"
     dataset_name = "sql-server-build-numbers"
     sources = [_SOURCE_URL]
@@ -23,21 +34,10 @@ class SqlBuildNumbersScraper(BaseScraper):
         soup = BeautifulSoup(pages[_SOURCE_URL], "lxml")
         records: list[SqlBuildNumber] = []
 
-        current_version = ""
-        current_major = 0
-
-        for el in soup.find_all(["h1", "h2", "h3", "h4", "table"]):
-            if el.name in ("h1", "h2", "h3", "h4"):
-                m = _VERSION_HEADING_RE.search(el.get_text(strip=True))
-                if m:
-                    current_major = int(m.group(1))
-                    current_version = f"SQL Server {current_major}"
-                continue
-
-            if not current_version:
-                continue
-
-            rows = el.find_all("tr")
+        for version_raw, table in iter_versioned_tables(soup, _VERSION_HEADING_RE):
+            current_major = int(version_raw)
+            current_version = f"SQL Server {current_major}"
+            rows = table.find_all("tr")
             if len(rows) < 2:
                 continue
 
@@ -51,11 +51,11 @@ class SqlBuildNumbersScraper(BaseScraper):
                 if len(cells) < 5:
                     continue
 
-                build_raw = cells[0].get_text(strip=True)
-                sp_raw = cells[1].get_text(strip=True)
-                update_raw = cells[2].get_text(strip=True)
-                kb_cell = cells[3]
-                date_raw = cells[4].get_text(strip=True)
+                build_raw = cells[0].get_text(strip=True)   # col 0: Build number
+                sp_raw = cells[1].get_text(strip=True)      # col 1: Service pack label
+                update_raw = cells[2].get_text(strip=True)  # col 2: Update type (CU, GDR, RTM)
+                kb_cell = cells[3]                          # col 3: KB article number + href
+                date_raw = cells[4].get_text(strip=True)    # col 4: Release date
 
                 # Build must look like a version number
                 if not re.match(r"\d+\.\d+", build_raw):
@@ -69,9 +69,9 @@ class SqlBuildNumbersScraper(BaseScraper):
                 # Article URL — prefer support.microsoft.com links, fall back to KB number
                 article_url: str | None = None
                 for a in kb_cell.find_all("a", href=True):
-                    href = a["href"]
-                    if href.startswith("http") and "support.microsoft.com" in href:
-                        article_url = href
+                    candidate = normalize_ms_url(str(a["href"]))
+                    if candidate and "support.microsoft.com" in candidate:
+                        article_url = candidate
                         break
                 if not article_url and kb_article:
                     article_url = f"https://support.microsoft.com/help/{kb_article[2:]}"
@@ -80,9 +80,9 @@ class SqlBuildNumbersScraper(BaseScraper):
                 d_match = _DATE_RE.search(date_raw)
                 if not d_match:
                     continue
-                try:
-                    release_date = dt.strptime(d_match.group(0), "%B %d, %Y").strftime("%Y-%m-%d")
-                except ValueError:
+                release_date = parse_date(d_match.group(0))
+                if not release_date:
+                    logger.warning("Skipping row: could not parse date %r", d_match.group(0))
                     continue
 
                 sp = sp_raw if sp_raw and sp_raw.upper() not in ("NONE", "N/A", "-") else None
@@ -102,14 +102,7 @@ class SqlBuildNumbersScraper(BaseScraper):
                 )
 
         if not records:
-            raise ValueError("No SQL Server build entries parsed — page structure may have changed")
+            raise StructureChangedError("No SQL Server build entries parsed — page structure may have changed")
 
-        seen: set[tuple] = set()
-        unique: list[SqlBuildNumber] = []
-        for r in sorted(records, key=lambda x: (x.major_version, x.release_date, x.build)):
-            key = (r.build, r.release_date)
-            if key not in seen:
-                seen.add(key)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: (r.major_version, r.release_date, r.build), key_fn=lambda r: (r.build, r.release_date))
         return [r.model_dump() for r in unique]

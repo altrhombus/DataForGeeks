@@ -1,10 +1,15 @@
+import logging
 import re
 from datetime import datetime as dt
 
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.ms.dotnet_lifecycle import DotnetLifecycle
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted
+
+logger = logging.getLogger(__name__)
 
 _FRAMEWORK_URL = "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-net-framework"
 _DOTNET_URL = "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-net-and-net-core"
@@ -70,6 +75,7 @@ def _parse_lifecycle_page(html: str, product_label: str) -> list[DotnetLifecycle
 
             release_date = _parse_date(start_raw)
             if not release_date:
+                logger.warning("Skipping row: could not parse date %r", start_raw)
                 continue
 
             end_date = _parse_date(end_raw)
@@ -87,6 +93,8 @@ def _parse_lifecycle_page(html: str, product_label: str) -> list[DotnetLifecycle
 
 
 class DotnetLifecycleScraper(BaseScraper):
+    """Scrapes .NET and .NET Framework lifecycle dates from learn.microsoft.com."""
+
     dataset = "ms/other/dotnet-lifecycle"
     dataset_name = "dotnet-lifecycle"
     sources = [_FRAMEWORK_URL, _DOTNET_URL]
@@ -97,14 +105,7 @@ class DotnetLifecycleScraper(BaseScraper):
         records.extend(_parse_lifecycle_page(pages[_DOTNET_URL], ".NET"))
 
         if not records:
-            raise ValueError("No .NET lifecycle entries parsed — page structure may have changed")
+            raise StructureChangedError("No .NET lifecycle entries parsed — page structure may have changed")
 
-        seen: set[tuple] = set()
-        unique: list[DotnetLifecycle] = []
-        for r in sorted(records, key=lambda x: (x.product, x.version)):
-            key = (r.product, r.version)
-            if key not in seen:
-                seen.add(key)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: (r.product, r.version))
         return [r.model_dump() for r in unique]

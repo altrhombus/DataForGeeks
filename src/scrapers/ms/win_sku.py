@@ -1,9 +1,9 @@
 import re
 
-from bs4 import BeautifulSoup
-
+from src.exceptions import StructureChangedError
 from src.models.ms.win_sku import WinSku
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted
 
 _SOURCE_URL = "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo"
 
@@ -17,6 +17,8 @@ _HTML_TAG_RE = re.compile(r"<[^>]+>")
 
 
 class WinSkuScraper(BaseScraper):
+    """Scrapes Windows product type (SKU) constants and their hex/decimal values from learn.microsoft.com."""
+
     dataset = "ms/win/sku"
     dataset_name = "windows-sku"
     sources = [_SOURCE_URL]
@@ -45,13 +47,7 @@ class WinSkuScraper(BaseScraper):
             )
 
         if not records:
-            raise ValueError("No OS SKU entries parsed — page structure may have changed")
+            raise StructureChangedError("No OS SKU entries parsed — page structure may have changed")
 
-        seen: set[str] = set()
-        unique: list[WinSku] = []
-        for r in sorted(records, key=lambda x: x.dec):
-            if r.value not in seen:
-                seen.add(r.value)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: r.dec, key_fn=lambda r: r.value)
         return [r.model_dump() for r in unique]

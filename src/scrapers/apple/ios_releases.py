@@ -1,10 +1,14 @@
+import logging
 import re
-from datetime import datetime as dt
 
 from bs4 import BeautifulSoup
 
+from src.exceptions import StructureChangedError
 from src.models.apple.ios_release import IosRelease
 from src.scrapers.base import BaseScraper
+from src.utils.scraper_helpers import deduplicate_sorted, parse_date
+
+logger = logging.getLogger(__name__)
 
 _SOURCE_URL = "https://support.apple.com/en-us/100100"
 _ARCHIVE_URL = "https://support.apple.com/en-us/121012"
@@ -22,15 +26,12 @@ def _parse_apple_page(html: str) -> list[IosRelease]:
         cells = row.find_all("td")
         if len(cells) < 3:
             continue
-        name = cells[0].get_text(separator=" ", strip=True)
-        date_text = cells[2].get_text(strip=True)
-        try:
-            release_date = dt.strptime(date_text, "%d %b %Y").strftime("%Y-%m-%d")
-        except ValueError:
-            try:
-                release_date = dt.strptime(date_text, "%B %d, %Y").strftime("%Y-%m-%d")
-            except ValueError:
-                continue
+        name = cells[0].get_text(separator=" ", strip=True)   # col 0: OS name + version
+        date_text = cells[2].get_text(strip=True)              # col 2: release date (col 1 is CVE links)
+        release_date = parse_date(date_text)
+        if not release_date:
+            logger.warning("Skipping row: could not parse date %r", date_text)
+            continue
 
         combined = _COMBINED_RE.match(name)
         if combined:
@@ -39,13 +40,13 @@ def _parse_apple_page(html: str) -> list[IosRelease]:
             records.append(IosRelease(
                 product="iOS",
                 version=ios_ver,
-                major_version=int(ios_ver.split(".")[0]),
+                major_version=int(ios_ver.partition(".")[0] or 0),
                 release_date=release_date,
             ))
             records.append(IosRelease(
                 product="iPadOS",
                 version=ipad_ver,
-                major_version=int(ipad_ver.split(".")[0]),
+                major_version=int(ipad_ver.partition(".")[0] or 0),
                 release_date=release_date,
             ))
             continue
@@ -60,13 +61,15 @@ def _parse_apple_page(html: str) -> list[IosRelease]:
         records.append(IosRelease(
             product=product,
             version=version,
-            major_version=int(version.split(".")[0]),
+            major_version=int(version.partition(".")[0] or 0),
             release_date=release_date,
         ))
     return records
 
 
 class IosReleasesScraper(BaseScraper):
+    """Scrapes iOS and iPadOS release versions and dates from Apple's security releases page."""
+
     dataset = "apple/ios/releases"
     dataset_name = "ios-releases"
     sources = [_SOURCE_URL, _ARCHIVE_URL]
@@ -77,14 +80,7 @@ class IosReleasesScraper(BaseScraper):
         records.extend(_parse_apple_page(pages[_ARCHIVE_URL]))
 
         if not records:
-            raise ValueError("No iOS/iPadOS release entries parsed — page structure may have changed")
+            raise StructureChangedError("No iOS/iPadOS release entries parsed — page structure may have changed")
 
-        seen: set[tuple] = set()
-        unique: list[IosRelease] = []
-        for r in sorted(records, key=lambda x: (x.release_date, x.product, x.version)):
-            key = (r.product, r.version, r.release_date)
-            if key not in seen:
-                seen.add(key)
-                unique.append(r)
-
+        unique = deduplicate_sorted(records, sort_key=lambda r: (r.release_date, r.product, r.version), key_fn=lambda r: (r.product, r.version, r.release_date))
         return [r.model_dump() for r in unique]

@@ -7,13 +7,17 @@ Example:
     python run.py win-buildnumbers
 """
 
+import logging
 import sys
 from pathlib import Path
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
 CONTENT_DIR = Path(__file__).parent / "content"
 
 
 def main() -> None:
+    from src.exceptions import ScraperError
     from src.scrapers import REGISTRY
     from src.utils.json_output import build_envelope, write_if_changed
 
@@ -26,8 +30,12 @@ def main() -> None:
         print(f"Unknown scraper: {name!r}\nAvailable: {', '.join(sorted(REGISTRY))}")
         sys.exit(1)
 
-    scraper = REGISTRY[name]()
-    data = scraper.run()
+    try:
+        scraper = REGISTRY[name]()
+        data = scraper.run()
+    except ScraperError as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
+        sys.exit(1)
 
     if not data:
         print("ERROR: No records parsed — page structure may have changed.", file=sys.stderr)
