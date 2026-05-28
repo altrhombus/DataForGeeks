@@ -1,7 +1,21 @@
 [project]
 name = "dataforgeeks"
 version = "2.0.0"
+description = "Machine-readable JSON datasets for Microsoft, Apple, Google, and Linux reference data"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Jacob Thornberry"}]
 requires-python = ">=3.12"
+keywords = ["microsoft", "windows", "patch-tuesday", "sysadmin", "json", "datasets", "apple", "android", "ubuntu"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
 dependencies = [
     "httpx>=0.28",
     "beautifulsoup4>=4.12",
@@ -9,11 +23,32 @@ dependencies = [
     "pydantic>=2.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/altrhombus/DataForGeeks"
+Repository = "https://github.com/altrhombus/DataForGeeks"
+"Bug Tracker" = "https://github.com/altrhombus/DataForGeeks/issues"
+
 [dependency-groups]
 dev = [
     "pytest>=8.0",
     "pytest-httpx>=0.35",
+    "ruff>=0.9",
+    "pyright>=1.1",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E501"]  # line-length enforced by formatter, not linter
+
+[tool.pyright]
+include = ["src", "tests"]
+pythonVersion = "3.12"
+typeCheckingMode = "basic"
+reportMissingImports = true
 
 [build-system]
 requires = ["hatchling"]
