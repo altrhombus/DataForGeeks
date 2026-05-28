@@ -1,7 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class IosRelease(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     product: str        # "iOS" or "iPadOS"
     version: str        # "17.2.1"
     major_version: int  # 17

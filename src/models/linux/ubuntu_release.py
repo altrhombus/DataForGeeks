@@ -1,7 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class UbuntuRelease(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     version: str        # "20.04"
     codename: str       # "Focal Fossa"
     series: str         # "focal"

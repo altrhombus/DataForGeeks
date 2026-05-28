@@ -1,7 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class WinLifecycleLtsc(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     version: str              # e.g. "2021 (21H2)"
     servicing_option: str     # e.g. "Long-Term Servicing Channel (LTSC)"
     build: str                # major build number, e.g. "19044"

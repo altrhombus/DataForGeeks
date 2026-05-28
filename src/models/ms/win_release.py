@@ -1,7 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class WinRelease(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     os_type: str         # "client"
     major_version: int   # 10 or 11
     windows_version: str # "22H2"

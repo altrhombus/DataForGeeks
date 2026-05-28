@@ -1,7 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class SqlBuildNumber(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     sql_version: str       # "SQL Server 2022"
     major_version: int     # 2022
     build: str             # "16.0.4185.3"

@@ -1,7 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class M365Build(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     release_date: str  # ISO 8601 date
     channel: str       # e.g. "Current", "Monthly Enterprise"
     build: str         # e.g. "19929.20164"

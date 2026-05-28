@@ -1,7 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class WinBuildNumber(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     full_version: str    # "10.0.22621.5039"
     build: str           # "22621.5039"
     os_type: str         # "client" or "server"

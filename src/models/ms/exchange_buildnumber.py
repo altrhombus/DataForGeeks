@@ -1,7 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class ExchangeBuildNumber(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     product_name: str      # "Exchange Server SE RTM May26HU"
     exchange_version: str  # "SE", "2019", "2016", "2013"
     build: str             # "15.2.2562.41"
