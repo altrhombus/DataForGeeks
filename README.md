@@ -4,40 +4,68 @@
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-Machine-readable JSON datasets for Microsoft, Apple, Google, and Linux reference data — Windows build numbers, lifecycle dates, Exchange/SQL/M365 versions, ASR rules, macOS/iOS/Android releases, Ubuntu support dates, and more. All data is scraped directly from public vendor documentation and updated automatically on a regular schedule.
+19 machine-readable JSON datasets for IT professionals and developers — Windows build numbers, patch dates, lifecycle deadlines, Exchange/SQL/M365 versions, macOS/iOS/Android releases, Ubuntu support schedules, ASR rules, and more. Scraped directly from vendor documentation, updated automatically via GitHub Actions, and served as plain JSON from GitHub's CDN.
 
-No authentication required. All datasets are served as plain JSON from GitHub's raw content CDN.
+No authentication. No rate limits. No sign-up.
 
 ---
 
-## Dataset Catalog
+## Datasets
 
-| Dataset | Path | Updated |
-|---|---|---|
-| [Windows OS Build Numbers](#windows-os-build-numbers) | `content/ms/win/buildnumbers.json` | 4× daily |
-| [Windows OS Releases](#windows-os-releases) | `content/ms/win/releases.json` | 4× daily |
-| [M365 App Build Numbers](#m365-app-build-numbers) | `content/ms/apps/buildnumbers.json` | 4× daily |
-| [Windows Client Lifecycle](#windows-client-lifecycle) | `content/ms/win/lifecycle-client.json` | Daily |
-| [Windows Client LTSC Lifecycle](#windows-client-ltsc-lifecycle) | `content/ms/win/lifecycle-ltsc.json` | Daily |
-| [Windows Server Lifecycle](#windows-server-lifecycle) | `content/ms/win/lifecycle-server.json` | Daily |
-| [Microsoft Edge Releases](#microsoft-edge-releases) | `content/ms/other/edge-releases.json` | Weekly |
-| [Exchange Server Build Numbers](#exchange-server-build-numbers) | `content/ms/exchange/buildnumbers.json` | Monthly |
-| [SQL Server Build Numbers](#sql-server-build-numbers) | `content/ms/sql/buildnumbers.json` | Weekly |
-| [.NET Lifecycle](#net-lifecycle) | `content/ms/other/dotnet-lifecycle.json` | Monthly |
-| [Attack Surface Reduction GUIDs](#attack-surface-reduction-guids) | `content/ms/other/asr-guids.json` | Monthly |
-| [BitLocker Volume Types](#bitlocker-volume-types) | `content/ms/other/bitlocker-volume-types.json` | Monthly |
-| [Chassis Types](#chassis-types) | `content/ms/other/chassis-types.json` | Monthly |
-| [Locales](#locales) | `content/ms/other/locales.json` | Monthly |
-| [Windows OS SKUs](#windows-os-skus) | `content/ms/win/sku.json` | Monthly |
-| [macOS Releases](#macos-releases) | `content/apple/macos/releases.json` | Weekly |
-| [iOS / iPadOS Releases](#ios--ipados-releases) | `content/apple/ios/releases.json` | Weekly |
-| [Android Releases](#android-releases) | `content/google/android/releases.json` | Monthly |
-| [Ubuntu Releases](#ubuntu-releases) | `content/linux/ubuntu/releases.json` | Monthly |
+All raw URLs follow the pattern:
 
-Raw URLs follow the pattern:
 ```
 https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/<path>
 ```
+
+### Microsoft — Windows
+
+| Dataset | Docs | JSON | Updated |
+|---|---|---|---|
+| Windows OS Build Numbers | [↓ docs](#windows-os-build-numbers) | [buildnumbers.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/buildnumbers.json) | 4× daily |
+| Windows OS Releases | [↓ docs](#windows-os-releases) | [releases.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/releases.json) | 4× daily |
+| Windows Client Lifecycle | [↓ docs](#windows-client-lifecycle) | [lifecycle-client.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/lifecycle-client.json) | Daily |
+| Windows Client LTSC Lifecycle | [↓ docs](#windows-client-ltsc-lifecycle) | [lifecycle-ltsc.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/lifecycle-ltsc.json) | Daily |
+| Windows Server Lifecycle | [↓ docs](#windows-server-lifecycle) | [lifecycle-server.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/lifecycle-server.json) | Daily |
+| Windows OS SKUs | [↓ docs](#windows-os-skus) | [sku.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/sku.json) | Monthly |
+
+### Microsoft — Apps & Services
+
+| Dataset | Docs | JSON | Updated |
+|---|---|---|---|
+| M365 App Build Numbers | [↓ docs](#m365-app-build-numbers) | [buildnumbers.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/apps/buildnumbers.json) | 4× daily |
+| Microsoft Edge Releases | [↓ docs](#microsoft-edge-releases) | [edge-releases.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/edge-releases.json) | Weekly |
+| Exchange Server Build Numbers | [↓ docs](#exchange-server-build-numbers) | [buildnumbers.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/exchange/buildnumbers.json) | Monthly |
+| SQL Server Build Numbers | [↓ docs](#sql-server-build-numbers) | [buildnumbers.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/sql/buildnumbers.json) | Weekly |
+| .NET Lifecycle | [↓ docs](#net-lifecycle) | [dotnet-lifecycle.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/dotnet-lifecycle.json) | Monthly |
+
+### Microsoft — Reference
+
+| Dataset | Docs | JSON | Updated |
+|---|---|---|---|
+| Attack Surface Reduction GUIDs | [↓ docs](#attack-surface-reduction-guids) | [asr-guids.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/asr-guids.json) | Monthly |
+| BitLocker Volume Types | [↓ docs](#bitlocker-volume-types) | [bitlocker-volume-types.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/bitlocker-volume-types.json) | Monthly |
+| Chassis Types | [↓ docs](#chassis-types) | [chassis-types.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/chassis-types.json) | Monthly |
+| Locales | [↓ docs](#locales) | [locales.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/locales.json) | Monthly |
+
+### Apple
+
+| Dataset | Docs | JSON | Updated |
+|---|---|---|---|
+| macOS Releases | [↓ docs](#macos-releases) | [releases.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/apple/macos/releases.json) | Weekly |
+| iOS / iPadOS Releases | [↓ docs](#ios--ipados-releases) | [releases.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/apple/ios/releases.json) | Weekly |
+
+### Google
+
+| Dataset | Docs | JSON | Updated |
+|---|---|---|---|
+| Android Releases | [↓ docs](#android-releases) | [releases.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/google/android/releases.json) | Monthly |
+
+### Linux
+
+| Dataset | Docs | JSON | Updated |
+|---|---|---|---|
+| Ubuntu Releases | [↓ docs](#ubuntu-releases) | [releases.json](https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/linux/ubuntu/releases.json) | Monthly |
 
 ---
 
@@ -56,22 +84,30 @@ $data.data | Where-Object { $_.windows_version -eq "24H2" } | Sort-Object releas
 curl -s https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/releases.json | jq '.data'
 ```
 
+### Python
+
+```python
+import httpx
+data = httpx.get("https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/buildnumbers.json").json()
+records = data["data"]
+```
+
 ### Power BI
 
 Use the **Web** connector with the raw URL. When prompted for authentication, select **Anonymous**.
 
 ---
 
-## Response Structure
+## Response Format
 
-Every dataset follows the same envelope:
+Every dataset uses the same envelope:
 
 ```json
 {
   "metadata": {
     "provider": "DataForGeeks",
     "apiVersion": "v2",
-    "dataset": "windows-update-history",
+    "dataset": "windows-build-numbers",
     "recordCount": 4821,
     "sourceUrls": [
       "https://support.microsoft.com/en-us/topic/..."
@@ -83,17 +119,17 @@ Every dataset follows the same envelope:
 }
 ```
 
-All dates in `data` records are `yyyy-MM-dd` strings unless otherwise noted. The records you want are always in `data`.
+The records you want are always in `data`. All dates in `data` records are `yyyy-MM-dd` strings unless otherwise noted.
 
 ---
 
-## Datasets
+## Dataset Reference
 
 ### Windows OS Build Numbers
 
-Every cumulative update released for Windows 10, Windows 11, and Windows Server 2016–2025, sourced from the Microsoft support update history pages. Includes hotpatch entries for Server Azure Edition.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/buildnumbers.json`
 
-**Path:** `content/ms/win/buildnumbers.json`
+Every cumulative update released for Windows 10, Windows 11, and Windows Server 2016–2025, sourced from the Microsoft support update history pages. Includes hotpatch entries for Server Azure Edition.
 
 | Field | Description |
 |---|---|
@@ -112,9 +148,9 @@ Every cumulative update released for Windows 10, Windows 11, and Windows Server 
 
 ### Windows OS Releases
 
-Major Windows 10 and Windows 11 feature releases — not individual cumulative updates.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/releases.json`
 
-**Path:** `content/ms/win/releases.json`
+Major Windows 10 and Windows 11 feature releases — not individual cumulative updates.
 
 | Field | Description |
 |---|---|
@@ -126,27 +162,11 @@ Major Windows 10 and Windows 11 feature releases — not individual cumulative u
 
 ---
 
-### M365 App Build Numbers
-
-Build numbers for Microsoft 365 Apps across all update channels.
-
-**Path:** `content/ms/apps/buildnumbers.json`
-
-| Field | Description |
-|---|---|
-| `release_date` | Date the build was released |
-| `channel` | Update channel (`Current`, `Monthly Enterprise`, `Semi-Annual Enterprise`, etc.) |
-| `build` | Short build number (`19929.20164`) |
-| `version` | Version number (`2604`) |
-| `full_build` | Full build string including major version (`16.0.19929.20164`) |
-
----
-
 ### Windows Client Lifecycle
 
-Mainstream support end dates for Windows 10 and Windows 11 feature releases by SKU.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/lifecycle-client.json`
 
-**Path:** `content/ms/win/lifecycle-client.json`
+Mainstream support end dates for Windows 10 and Windows 11 feature releases by SKU.
 
 | Field | Description |
 |---|---|
@@ -159,9 +179,9 @@ Mainstream support end dates for Windows 10 and Windows 11 feature releases by S
 
 ### Windows Client LTSC Lifecycle
 
-Mainstream and extended support dates for Windows Long-Term Servicing Channel (LTSC) and Long-Term Servicing Branch (LTSB) releases.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/lifecycle-ltsc.json`
 
-**Path:** `content/ms/win/lifecycle-ltsc.json`
+Mainstream and extended support dates for Windows Long-Term Servicing Channel (LTSC) and Long-Term Servicing Branch (LTSB) releases.
 
 | Field | Description |
 |---|---|
@@ -176,9 +196,9 @@ Mainstream and extended support dates for Windows Long-Term Servicing Channel (L
 
 ### Windows Server Lifecycle
 
-Mainstream and extended support dates for Windows Server 2008 through 2025, including Service Pack and Extended Security Update (ESU) year entries.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/lifecycle-server.json`
 
-**Path:** `content/ms/win/lifecycle-server.json`
+Mainstream and extended support dates for Windows Server 2008 through 2025, including Service Pack and Extended Security Update (ESU) year entries.
 
 | Field | Description |
 |---|---|
@@ -190,11 +210,42 @@ Mainstream and extended support dates for Windows Server 2008 through 2025, incl
 
 ---
 
+### Windows OS SKUs
+
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/win/sku.json`
+
+The `GetProductInfo` API enumeration — integer and hex SKU codes returned by `(Get-CimInstance Win32_OperatingSystem).OperatingSystemSKU` and related APIs.
+
+| Field | Description |
+|---|---|
+| `value` | API constant name (`PRODUCT_PROFESSIONAL`) |
+| `hex` | Hex value (`0x00000030`) |
+| `dec` | Decimal integer value |
+| `meaning` | Description of the edition |
+
+---
+
+### M365 App Build Numbers
+
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/apps/buildnumbers.json`
+
+Build numbers for Microsoft 365 Apps across all update channels.
+
+| Field | Description |
+|---|---|
+| `release_date` | Date the build was released |
+| `channel` | Update channel (`Current`, `Monthly Enterprise`, `Semi-Annual Enterprise`, etc.) |
+| `build` | Short build number (`19929.20164`) |
+| `version` | Version number (`2604`) |
+| `full_build` | Full build string including major version (`16.0.19929.20164`) |
+
+---
+
 ### Microsoft Edge Releases
 
-Stable channel releases for Microsoft Edge (Chromium-based).
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/edge-releases.json`
 
-**Path:** `content/ms/other/edge-releases.json`
+Stable channel releases for Microsoft Edge (Chromium-based).
 
 | Field | Description |
 |---|---|
@@ -206,9 +257,9 @@ Stable channel releases for Microsoft Edge (Chromium-based).
 
 ### Exchange Server Build Numbers
 
-Build numbers for all Exchange Server versions and cumulative updates.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/exchange/buildnumbers.json`
 
-**Path:** `content/ms/exchange/buildnumbers.json`
+Build numbers for all Exchange Server versions and cumulative updates.
 
 | Field | Description |
 |---|---|
@@ -222,9 +273,9 @@ Build numbers for all Exchange Server versions and cumulative updates.
 
 ### SQL Server Build Numbers
 
-Cumulative updates and service packs for all SQL Server versions.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/sql/buildnumbers.json`
 
-**Path:** `content/ms/sql/buildnumbers.json`
+Cumulative updates and service packs for all SQL Server versions.
 
 | Field | Description |
 |---|---|
@@ -241,9 +292,9 @@ Cumulative updates and service packs for all SQL Server versions.
 
 ### .NET Lifecycle
 
-Release and end-of-support dates for .NET Framework and .NET (formerly .NET Core) versions.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/dotnet-lifecycle.json`
 
-**Path:** `content/ms/other/dotnet-lifecycle.json`
+Release and end-of-support dates for .NET Framework and .NET (formerly .NET Core) versions.
 
 | Field | Description |
 |---|---|
@@ -256,9 +307,9 @@ Release and end-of-support dates for .NET Framework and .NET (formerly .NET Core
 
 ### Attack Surface Reduction GUIDs
 
-Rule names and GUIDs for all Microsoft Defender Attack Surface Reduction (ASR) rules.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/asr-guids.json`
 
-**Path:** `content/ms/other/asr-guids.json`
+Rule names and GUIDs for all Microsoft Defender Attack Surface Reduction (ASR) rules.
 
 | Field | Description |
 |---|---|
@@ -269,9 +320,9 @@ Rule names and GUIDs for all Microsoft Defender Attack Surface Reduction (ASR) r
 
 ### BitLocker Volume Types
 
-Volume type enum values from the Microsoft Graph `bitlockerRecoveryKey` resource.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/bitlocker-volume-types.json`
 
-**Path:** `content/ms/other/bitlocker-volume-types.json`
+Volume type enum values from the Microsoft Graph `bitlockerRecoveryKey` resource.
 
 | Field | Description |
 |---|---|
@@ -282,9 +333,9 @@ Volume type enum values from the Microsoft Graph `bitlockerRecoveryKey` resource
 
 ### Chassis Types
 
-The `Win32_SystemEnclosure` chassis type enumeration from the WMI CIM schema. Useful for interpreting `ChassisTypes` returned by `Get-CimInstance Win32_SystemEnclosure`.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/chassis-types.json`
 
-**Path:** `content/ms/other/chassis-types.json`
+The `Win32_SystemEnclosure` chassis type enumeration from the WMI CIM schema. Useful for interpreting `ChassisTypes` returned by `Get-CimInstance Win32_SystemEnclosure`.
 
 | Field | Description |
 |---|---|
@@ -295,9 +346,9 @@ The `Win32_SystemEnclosure` chassis type enumeration from the WMI CIM schema. Us
 
 ### Locales
 
-Windows locale identifiers from the MS-OE376 Office Open XML specification, including decimal code, hex code, language name, and IETF language tag.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/ms/other/locales.json`
 
-**Path:** `content/ms/other/locales.json`
+Windows locale identifiers from the MS-OE376 Office Open XML specification, including decimal code, hex code, language name, and IETF language tag.
 
 | Field | Description |
 |---|---|
@@ -308,26 +359,11 @@ Windows locale identifiers from the MS-OE376 Office Open XML specification, incl
 
 ---
 
-### Windows OS SKUs
-
-The `GetProductInfo` API enumeration — integer and hex SKU codes returned by `(Get-CimInstance Win32_OperatingSystem).OperatingSystemSKU` and related APIs.
-
-**Path:** `content/ms/win/sku.json`
-
-| Field | Description |
-|---|---|
-| `value` | API constant name (`PRODUCT_PROFESSIONAL`) |
-| `hex` | Hex value (`0x00000030`) |
-| `dec` | Decimal integer value |
-| `meaning` | Description of the edition |
-
----
-
 ### macOS Releases
 
-All macOS major and minor releases with dates, sourced from Apple's security releases page.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/apple/macos/releases.json`
 
-**Path:** `content/apple/macos/releases.json`
+All macOS major and minor releases with dates, sourced from Apple's security releases page.
 
 | Field | Description |
 |---|---|
@@ -340,9 +376,9 @@ All macOS major and minor releases with dates, sourced from Apple's security rel
 
 ### iOS / iPadOS Releases
 
-All iOS and iPadOS major and minor releases with dates, sourced from Apple's security releases page.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/apple/ios/releases.json`
 
-**Path:** `content/apple/ios/releases.json`
+All iOS and iPadOS major and minor releases with dates, sourced from Apple's security releases page.
 
 | Field | Description |
 |---|---|
@@ -355,9 +391,9 @@ All iOS and iPadOS major and minor releases with dates, sourced from Apple's sec
 
 ### Android Releases
 
-Android platform versions with API levels and initial release dates.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/google/android/releases.json`
 
-**Path:** `content/google/android/releases.json`
+Android platform versions with API levels and initial release dates.
 
 | Field | Description |
 |---|---|
@@ -369,9 +405,9 @@ Android platform versions with API levels and initial release dates.
 
 ### Ubuntu Releases
 
-Ubuntu LTS and standard releases with Canonical support lifecycle dates, sourced from the Launchpad API.
+**Raw URL:** `https://raw.githubusercontent.com/altrhombus/DataForGeeks/main/content/linux/ubuntu/releases.json`
 
-**Path:** `content/linux/ubuntu/releases.json`
+Ubuntu LTS and standard releases with Canonical support lifecycle dates, sourced from the Launchpad API.
 
 | Field | Description |
 |---|---|
@@ -396,16 +432,16 @@ Each dataset is maintained by a Python scraper that:
 4. Compares the result against the current file in this repository
 5. Writes the updated JSON only if the data has changed
 
-A GitHub Actions workflow runs each scraper on the schedule shown in the catalog. If data has changed, the workflow opens a pull request which is automatically merged. If nothing changed, the run exits cleanly with no PR created.
+A GitHub Actions workflow runs each scraper on the schedule shown in the catalog. If the data has changed, the workflow opens a pull request which is automatically merged. If nothing changed, the run exits cleanly with no PR created.
 
-Scrapers live in `src/scrapers/` and output to `content/`. To run a scraper locally:
+Scrapers live in `src/scrapers/` and output to `content/`. To run one locally:
 
 ```bash
 uv sync
 uv run python run.py win-buildnumbers
 ```
 
-Run `uv run python run.py` with no arguments to see all available scraper names.
+Run `uv run python run.py` with no arguments to list all available scraper names.
 
 ---
 
