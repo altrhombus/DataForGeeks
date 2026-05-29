@@ -6,8 +6,6 @@
 
 19 machine-readable JSON datasets for IT professionals and developers — Windows build numbers, patch dates, lifecycle deadlines, Exchange/SQL/M365 versions, macOS/iOS/Android releases, Ubuntu support schedules, ASR rules, and more. Scraped directly from vendor documentation, updated automatically via GitHub Actions, and served as plain JSON from GitHub's CDN.
 
-No authentication. No rate limits. No sign-up.
-
 ---
 
 ## Datasets
