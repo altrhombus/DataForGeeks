@@ -3,13 +3,13 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "ios-releases",
-    "recordCount": 240,
+    "recordCount": 241,
     "sourceUrls": [
       "https://support.apple.com/en-us/100100",
       "https://support.apple.com/en-us/121012"
     ],
-    "lastModified": "2026-05-28T02:13:13Z",
-    "lastCollected": "2026-05-28T02:13:13Z"
+    "lastModified": "2026-06-02T10:44:46Z",
+    "lastCollected": "2026-06-02T10:44:46Z"
   },
   "data": [
     {
@@ -1451,6 +1451,12 @@
       "version": "26.5",
       "major_version": 26,
       "release_date": "2026-05-11"
+    },
+    {
+      "product": "iOS",
+      "version": "26.5.1",
+      "major_version": 26,
+      "release_date": "2026-06-01"
     }
   ]
 }
