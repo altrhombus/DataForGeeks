@@ -1,11 +1,18 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2026-05-27T03:29:06.4405357Z",
+    "LastUpdatedUTC": "2026-06-03T10:52:49.6426176Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ]
   },
   "Data": [
+    {
+      "ReleaseDate": "2026-06-02",
+      "Channel": "Current",
+      "Build": "20026.20140",
+      "Version": "2605",
+      "FullBuild": "16.0.20026.20140"
+    },
     {
       "ReleaseDate": "2026-05-26",
       "Channel": "Current",
@@ -736,10 +743,10 @@
     },
     {
       "ReleaseDate": "2025-07-08",
-      "Channel": "Monthly Enterprise",
-      "Build": "18623.20316",
-      "Version": "2503",
-      "FullBuild": "16.0.18623.20316"
+      "Channel": "Current",
+      "Build": "18925.20158",
+      "Version": "2506",
+      "FullBuild": "16.0.18925.20158"
     },
     {
       "ReleaseDate": "2025-07-08",
@@ -750,10 +757,10 @@
     },
     {
       "ReleaseDate": "2025-07-08",
-      "Channel": "Current",
-      "Build": "18925.20158",
-      "Version": "2506",
-      "FullBuild": "16.0.18925.20158"
+      "Channel": "Monthly Enterprise",
+      "Build": "18623.20316",
+      "Version": "2503",
+      "FullBuild": "16.0.18623.20316"
     },
     {
       "ReleaseDate": "2025-07-08",
@@ -771,14 +778,14 @@
     },
     {
       "ReleaseDate": "2025-07-08",
-      "Channel": "Semi-Annual Enterprise",
+      "Channel": "Semi-Annual Enterprise Preview",
       "Build": "18526.20472",
       "Version": "2502",
       "FullBuild": "16.0.18526.20472"
     },
     {
       "ReleaseDate": "2025-07-08",
-      "Channel": "Semi-Annual Enterprise Preview",
+      "Channel": "Semi-Annual Enterprise",
       "Build": "18526.20472",
       "Version": "2502",
       "FullBuild": "16.0.18526.20472"
