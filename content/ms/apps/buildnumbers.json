@@ -7,8 +7,8 @@
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ],
-    "lastModified": "2026-06-11T20:04:05Z",
-    "lastCollected": "2026-06-11T20:04:05Z"
+    "lastModified": "2026-06-12T02:04:02Z",
+    "lastCollected": "2026-06-12T02:04:02Z"
   },
   "data": [
     {
@@ -43,7 +43,7 @@
       "release_date": "2026-06-09",
       "channel": "Semi-Annual Enterprise",
       "build": "19127.20678",
-      "version": "2608",
+      "version": "2508",
       "full_build": "16.0.19127.20678"
     },
     {
