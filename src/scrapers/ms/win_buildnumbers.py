@@ -76,7 +76,7 @@ class WinBuildNumbersScraper(BaseScraper):
             raise StructureChangedError("No build entries parsed — page structure may have changed")
 
         # Include os_type in dedup key so client/server variants of shared builds coexist
-        unique = deduplicate_sorted(records, sort_key=lambda r: (r.release_date, r.build), key_fn=lambda r: (r.full_version, r.release_date, r.kb_article, r.os_type))
+        unique = deduplicate_sorted(records, sort_key=lambda r: (r.release_date, r.build), key_fn=lambda r: (r.full_version, r.os_type))
 
         unique = [r for r in unique if r.full_version not in _SERVER_ONLY_BUILDS]
 
