@@ -3,7 +3,7 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "windows-update-history",
-    "recordCount": 1871,
+    "recordCount": 1866,
     "sourceUrls": [
       "https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda",
       "https://aka.ms/Windows11UpdateHistory",
@@ -13,8 +13,8 @@
       "https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7",
       "https://support.microsoft.com/en-us/topic/release-notes-for-hotpatch-on-windows-11-enterprise-version-25h2-0bbaa1c7-5070-41ca-a7c9-4ead79602dbf"
     ],
-    "lastModified": "2026-06-09T19:57:36Z",
-    "lastCollected": "2026-06-09T19:57:36Z"
+    "lastModified": "2026-06-18T15:22:13Z",
+    "lastCollected": "2026-06-18T15:22:13Z"
   },
   "data": [
     {
@@ -268,54 +268,6 @@
       "release_type": "Standard",
       "is_expired": false,
       "article_url": "https://support.microsoft.com/en-us/help/4001757"
-    },
-    {
-      "full_version": "10.0.14393.187",
-      "build": "14393.187",
-      "os_type": "client",
-      "major_version": 10,
-      "windows_version": "1607",
-      "release_date": "2016-09-20",
-      "kb_article": "KB3193494",
-      "release_type": "Standard",
-      "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/help/4001756"
-    },
-    {
-      "full_version": "10.0.14393.187",
-      "build": "14393.187",
-      "os_type": "server",
-      "major_version": 2016,
-      "windows_version": "1607",
-      "release_date": "2016-09-20",
-      "kb_article": "KB3193494",
-      "release_type": "Standard",
-      "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/help/4001756"
-    },
-    {
-      "full_version": "10.0.14393.189",
-      "build": "14393.189",
-      "os_type": "client",
-      "major_version": 10,
-      "windows_version": "1607",
-      "release_date": "2016-09-20",
-      "kb_article": "KB3193494",
-      "release_type": "Standard",
-      "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/help/4001756"
-    },
-    {
-      "full_version": "10.0.14393.189",
-      "build": "14393.189",
-      "os_type": "server",
-      "major_version": 2016,
-      "windows_version": "1607",
-      "release_date": "2016-09-20",
-      "kb_article": "KB3193494",
-      "release_type": "Standard",
-      "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/help/4001756"
     },
     {
       "full_version": "10.0.14393.222",
@@ -1876,18 +1828,6 @@
       "release_type": "Standard",
       "is_expired": false,
       "article_url": "https://support.microsoft.com/en-us/help/4090913"
-    },
-    {
-      "full_version": "10.0.15063.936",
-      "build": "15063.936",
-      "os_type": "client",
-      "major_version": 10,
-      "windows_version": "1703",
-      "release_date": "2018-03-08",
-      "kb_article": "KB4092077",
-      "release_type": "Standard",
-      "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/help/4092077"
     },
     {
       "full_version": "10.0.10586.1478",
