@@ -281,4 +281,3 @@ def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
                 )
 
     return records
-    
