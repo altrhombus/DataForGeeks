@@ -51,6 +51,11 @@ _SERVER_ANNUAL_RE = re.compile(r"Windows\s+Server,\s+[Vv]ersion\s+(\w+)", re.IGN
 # Hotpatch page section heading
 _HOTPATCH_VER_RE = re.compile(r"Windows\s+11[,\s]+[Vv]ersion\s+(\w+)", re.IGNORECASE)
 
+# Nav section titles that indicate LTSC or IoT Enterprise variants.
+# These sections use the same version extraction as mainstream client sections
+# but produce os_type="ltsc" records so they can be routed to LTSC lifecycle data.
+_LTSC_TITLE_RE = re.compile(r"\bLTSC\b|\bLTSB\b|Long.Term Servicing|IoT Enterprise", re.IGNORECASE)
+
 _SERVER_ONLY_BUILDS = {"10.0.14393.5127"}
 
 
@@ -75,7 +80,9 @@ class WinBuildNumbersScraper(BaseScraper):
         if not records:
             raise StructureChangedError("No build entries parsed — page structure may have changed")
 
-        # Include os_type in dedup key so client/server variants of shared builds coexist
+        # Dedup: one record per (full_version, os_type). Sort ascending by (release_date, build)
+        # so the earliest occurrence wins — the first release of any base build is always from
+        # the nav section that introduced it, giving the correct windows_version label.
         unique = deduplicate_sorted(records, sort_key=lambda r: (r.release_date, r.build), key_fn=lambda r: (r.full_version, r.os_type))
 
         unique = [r for r in unique if r.full_version not in _SERVER_ONLY_BUILDS]
@@ -86,6 +93,25 @@ class WinBuildNumbersScraper(BaseScraper):
             for r in unique:
                 if not r.is_expired and r.kb_article in expired_kbs:
                     object.__setattr__(r, "is_expired", True)  # bypass frozen=True intentionally
+
+        # Canonical version normalization: for each (base_build, os_type), the windows_version
+        # from the earliest-ever release is the canonical label. Reassigns minority entries that
+        # accumulated during multi-version combined-CU overlap periods (e.g. build 19044 entries
+        # labeled "22H2" from the Oct 2022–Jun 2023 overlap window).
+        earliest_ver: dict[tuple[str, str], tuple[str, str]] = {}
+        for r in unique:
+            base = r.build.split(".")[0] if "." in r.build else r.build
+            key = (base, r.os_type)
+            if key not in earliest_ver or r.release_date < earliest_ver[key][0]:
+                earliest_ver[key] = (r.release_date, r.windows_version)
+
+        canonical_ver = {k: v[1] for k, v in earliest_ver.items()}
+
+        for r in unique:
+            base = r.build.split(".")[0] if "." in r.build else r.build
+            canon = canonical_ver.get((base, r.os_type), r.windows_version)
+            if r.windows_version != canon:
+                object.__setattr__(r, "windows_version", canon)  # bypass frozen=True intentionally
 
         return [r.model_dump() for r in unique]
 
@@ -120,6 +146,9 @@ def _parse_standard_page(
                 continue
             current_version = m.group(1).upper()
             current_major = fixed_major
+            # LTSC and IoT Enterprise nav sections use the same version extraction but
+            # get os_type="ltsc" so they can be joined to LTSC lifecycle data downstream.
+            section_os_type = "ltsc" if _LTSC_TITLE_RE.search(title_text) else "client"
         else:
             m_year = _SERVER_YEAR_RE.search(title_text)
             m_annual = _SERVER_ANNUAL_RE.search(title_text)
@@ -134,6 +163,7 @@ def _parse_standard_page(
                 current_major = 2022  # Annual Channel belongs to Server 2022
             else:
                 continue
+            section_os_type = os_type
 
         for article in category.find_all("li", class_="supLeftNavArticle"):
             a = article.find("a")
@@ -174,7 +204,7 @@ def _parse_standard_page(
                     WinBuildNumber(
                         full_version=f"10.0.{version}",
                         build=version,
-                        os_type=os_type,
+                        os_type=section_os_type,
                         major_version=current_major,
                         windows_version=current_version,
                         release_date=release_date,
