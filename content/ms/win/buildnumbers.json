@@ -13,8 +13,8 @@
       "https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7",
       "https://support.microsoft.com/en-us/topic/release-notes-for-hotpatch-on-windows-11-enterprise-version-25h2-0bbaa1c7-5070-41ca-a7c9-4ead79602dbf"
     ],
-    "lastModified": "2026-06-23T19:50:57Z",
-    "lastCollected": "2026-06-23T19:50:57Z"
+    "lastModified": "2026-06-25T14:06:19Z",
+    "lastCollected": "2026-06-25T14:06:19Z"
   },
   "data": [
     {
@@ -20535,7 +20535,7 @@
       "kb_article": "KB5068966",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/november-11-2025-hotpatch-kb5068966-os-builds-26200-7092-and-26100-7092-d702b84c-d238-40f4-a0b7-1861e0b056fd"
+      "article_url": null
     },
     {
       "full_version": "10.0.26100.7171",
@@ -20571,7 +20571,7 @@
       "kb_article": "KB5068966",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/november-11-2025-hotpatch-kb5068966-os-builds-26200-7092-and-26100-7092-d702b84c-d238-40f4-a0b7-1861e0b056fd"
+      "article_url": null
     },
     {
       "full_version": "10.0.26200.7171",
@@ -20751,7 +20751,7 @@
       "kb_article": "KB5072014",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/december-9-2025-hotpatch-kb5072014-os-builds-26200-7392-and-26100-7392-518e9584-0ab7-4af1-90ac-6671ac39e8e0"
+      "article_url": null
     },
     {
       "full_version": "10.0.26100.7462",
@@ -20787,7 +20787,7 @@
       "kb_article": "KB5072014",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/december-9-2025-hotpatch-kb5072014-os-builds-26200-7392-and-26100-7392-518e9584-0ab7-4af1-90ac-6671ac39e8e0"
+      "article_url": null
     },
     {
       "full_version": "10.0.26200.7462",
@@ -21411,7 +21411,7 @@
       "kb_article": "KB5077212",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/february-10-2026-hotpatch-kb5077212-os-builds-26200-7781-and-26100-7781-722c74c5-ea30-4622-8436-6b8dcb975b2b"
+      "article_url": null
     },
     {
       "full_version": "10.0.26100.7840",
@@ -21435,7 +21435,7 @@
       "kb_article": "KB5077212",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/february-10-2026-hotpatch-kb5077212-os-builds-26200-7781-and-26100-7781-722c74c5-ea30-4622-8436-6b8dcb975b2b"
+      "article_url": null
     },
     {
       "full_version": "10.0.26200.7840",
@@ -21639,7 +21639,7 @@
       "kb_article": "KB5079420",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/march-10-2026-hotpatch-kb5079420-os-builds-26200-7979-and-26100-7979-752485e9-41c1-4628-ad1a-7538dba503e3"
+      "article_url": null
     },
     {
       "full_version": "10.0.26100.8037",
@@ -21663,7 +21663,7 @@
       "kb_article": "KB5079420",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/march-10-2026-hotpatch-kb5079420-os-builds-26200-7979-and-26100-7979-752485e9-41c1-4628-ad1a-7538dba503e3"
+      "article_url": null
     },
     {
       "full_version": "10.0.26200.8037",
@@ -22179,7 +22179,7 @@
       "kb_article": "KB5089466",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/may-12-2026-hotpatch-kb5089466-os-builds-26200-8390-and-26100-8390-8a0dd60b-c2fb-45d6-95f2-2609df309a9a"
+      "article_url": null
     },
     {
       "full_version": "10.0.26100.8457",
@@ -22203,7 +22203,7 @@
       "kb_article": "KB5089466",
       "release_type": "Hotpatch",
       "is_expired": false,
-      "article_url": "https://support.microsoft.com/en-us/topic/may-12-2026-hotpatch-kb5089466-os-builds-26200-8390-and-26100-8390-8a0dd60b-c2fb-45d6-95f2-2609df309a9a"
+      "article_url": null
     },
     {
       "full_version": "10.0.26200.8457",
