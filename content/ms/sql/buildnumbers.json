@@ -3,12 +3,12 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "sql-server-build-numbers",
-    "recordCount": 578,
+    "recordCount": 579,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server"
     ],
-    "lastModified": "2026-06-22T11:53:55Z",
-    "lastCollected": "2026-06-22T11:53:55Z"
+    "lastModified": "2026-07-06T10:20:50Z",
+    "lastCollected": "2026-07-06T10:20:50Z"
   },
   "data": [
     {
@@ -3720,6 +3720,16 @@
       "kb_article": "KB5089270",
       "release_date": "2026-05-12",
       "article_url": "https://support.microsoft.com/help/5089270"
+    },
+    {
+      "sql_version": "SQL Server 2017",
+      "major_version": 2017,
+      "build": "14.0.1000.169",
+      "service_pack": null,
+      "update_type": "RTM",
+      "kb_article": null,
+      "release_date": "2017-09-29",
+      "article_url": null
     },
     {
       "sql_version": "SQL Server 2017",
