@@ -3,12 +3,12 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "sql-server-build-numbers",
-    "recordCount": 579,
+    "recordCount": 591,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server"
     ],
-    "lastModified": "2026-07-06T10:20:50Z",
-    "lastCollected": "2026-07-06T10:20:50Z"
+    "lastModified": "2026-07-20T08:56:45Z",
+    "lastCollected": "2026-07-20T08:56:45Z"
   },
   "data": [
     {
@@ -3722,6 +3722,26 @@
       "article_url": "https://support.microsoft.com/help/5089270"
     },
     {
+      "sql_version": "SQL Server 2016",
+      "major_version": 2016,
+      "build": "13.0.6500.1",
+      "service_pack": null,
+      "update_type": "SP3 + GDR",
+      "kb_article": "KB5102340",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5102340"
+    },
+    {
+      "sql_version": "SQL Server 2016",
+      "major_version": 2016,
+      "build": "13.0.7095.1",
+      "service_pack": null,
+      "update_type": "Azure Connect Pack + GDR",
+      "kb_article": "KB5102339",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5102339"
+    },
+    {
       "sql_version": "SQL Server 2017",
       "major_version": 2017,
       "build": "14.0.1000.169",
@@ -4432,6 +4452,26 @@
       "article_url": "https://support.microsoft.com/help/5090354"
     },
     {
+      "sql_version": "SQL Server 2017",
+      "major_version": 2017,
+      "build": "14.0.2120.1",
+      "service_pack": null,
+      "update_type": "GDR",
+      "kb_article": "KB5102338",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5102338"
+    },
+    {
+      "sql_version": "SQL Server 2017",
+      "major_version": 2017,
+      "build": "14.0.3540.1",
+      "service_pack": null,
+      "update_type": "CU31 + GDR",
+      "kb_article": "KB5102337",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5102337"
+    },
+    {
       "sql_version": "SQL Server 2019",
       "major_version": 2019,
       "build": "15.0.2000.5",
@@ -5092,6 +5132,26 @@
       "article_url": "https://support.microsoft.com/help/5090407"
     },
     {
+      "sql_version": "SQL Server 2019",
+      "major_version": 2019,
+      "build": "15.0.2180.2",
+      "service_pack": null,
+      "update_type": "GDR",
+      "kb_article": "KB5102336",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5102336"
+    },
+    {
+      "sql_version": "SQL Server 2019",
+      "major_version": 2019,
+      "build": "15.0.4480.2",
+      "service_pack": null,
+      "update_type": "CU32 + GDR",
+      "kb_article": "KB5102335",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5102335"
+    },
+    {
       "sql_version": "SQL Server 2022",
       "major_version": 2022,
       "build": "16.0.1000.6",
@@ -5662,6 +5722,36 @@
       "article_url": "https://support.microsoft.com/help/5081477"
     },
     {
+      "sql_version": "SQL Server 2022",
+      "major_version": 2022,
+      "build": "16.0.1190.2",
+      "service_pack": null,
+      "update_type": "GDR",
+      "kb_article": "KB5102334",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5102334"
+    },
+    {
+      "sql_version": "SQL Server 2022",
+      "major_version": 2022,
+      "build": "16.0.4262.2",
+      "service_pack": null,
+      "update_type": "CU25 + GDR",
+      "kb_article": "KB5101347",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5101347"
+    },
+    {
+      "sql_version": "SQL Server 2022",
+      "major_version": 2022,
+      "build": "16.0.4265.3",
+      "service_pack": null,
+      "update_type": "CU26",
+      "kb_article": "KB5093420",
+      "release_date": "2026-07-16",
+      "article_url": "https://support.microsoft.com/help/5093420"
+    },
+    {
       "sql_version": "SQL Server 2025",
       "major_version": 2025,
       "build": "17.0.1000.7",
@@ -5800,6 +5890,36 @@
       "kb_article": "KB5093421",
       "release_date": "2026-06-17",
       "article_url": "https://support.microsoft.com/help/5093421"
+    },
+    {
+      "sql_version": "SQL Server 2025",
+      "major_version": 2025,
+      "build": "17.0.1125.2",
+      "service_pack": null,
+      "update_type": "GDR",
+      "kb_article": "KB5102333",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5102333"
+    },
+    {
+      "sql_version": "SQL Server 2025",
+      "major_version": 2025,
+      "build": "17.0.4060.2",
+      "service_pack": null,
+      "update_type": "CU6 + GDR",
+      "kb_article": "KB5101346",
+      "release_date": "2026-07-14",
+      "article_url": "https://support.microsoft.com/help/5101346"
+    },
+    {
+      "sql_version": "SQL Server 2025",
+      "major_version": 2025,
+      "build": "17.0.4065.4",
+      "service_pack": null,
+      "update_type": "CU7",
+      "kb_article": "KB5096981",
+      "release_date": "2026-07-16",
+      "article_url": "https://support.microsoft.com/help/5096981"
     }
   ]
 }
