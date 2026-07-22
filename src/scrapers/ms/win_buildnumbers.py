@@ -130,8 +130,8 @@ def _parse_standard_page(
     soup = BeautifulSoup(html, "lxml")
     records: list[WinBuildNumber] = []
 
-    for category in soup.find_all("div", class_="supLeftNavCategory"):
-        title_div = category.find("div", class_="supLeftNavCategoryTitle")
+    for category in soup.find_all("div", class_="learnRenderLeftNavCategory"):
+        title_div = category.find("div", class_="learnRenderLeftNavCategoryTitle")
         if not title_div:
             continue
 
@@ -165,7 +165,7 @@ def _parse_standard_page(
                 continue
             section_os_type = os_type
 
-        for article in category.find_all("li", class_="supLeftNavArticle"):
+        for article in category.find_all("li", class_="learnRenderLeftNavArticle"):
             a = article.find("a")
             if not a:
                 continue
