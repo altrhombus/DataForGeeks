@@ -15,3 +15,11 @@ class StructureChangedError(ParseError):
     This typically means the source site has been redesigned and the scraper
     needs to be updated.
     """
+
+
+class RecordCountDropError(ScraperError):
+    """Raised when a new dataset would shrink sharply versus the published one.
+
+    A large drop almost always means a partial parse failure (some sources
+    silently yielding zero records) rather than genuine upstream removal.
+    """
