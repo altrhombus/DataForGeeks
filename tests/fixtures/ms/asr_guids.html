@@ -74,7 +74,7 @@
 	
 		<meta name="ms.collection" content="mde-asr" />
 	
-		<meta name="ms.date" content="2026-05-04T00:00:00Z" />
+		<meta name="ms.date" content="2026-07-02T00:00:00Z" />
 	
 		<meta name="search.appverid" content="met150" />
 	
@@ -84,13 +84,13 @@
 	
 		<meta name="document_version_independent_id" content="340a0f8c-90ef-f5e9-a860-48c1651c86bf" />
 	
-		<meta name="updated_at" content="2026-05-22T07:35:00Z" />
+		<meta name="updated_at" content="2026-07-17T07:34:00Z" />
 	
 		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/defender-docs-pr/blob/live/defender-endpoint/attack-surface-reduction-rules-reference.md" />
 	
-		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/defender-docs-pr/blob/6fc4d32adae7d72249c08de08ce6d36acd92c674/defender-endpoint/attack-surface-reduction-rules-reference.md" />
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/defender-docs-pr/blob/533bc0b99c0c54dde75b72e4d0fc952467530e4e/defender-endpoint/attack-surface-reduction-rules-reference.md" />
 	
-		<meta name="git_commit_id" content="6fc4d32adae7d72249c08de08ce6d36acd92c674" />
+		<meta name="git_commit_id" content="533bc0b99c0c54dde75b72e4d0fc952467530e4e" />
 	
 		<meta name="site_name" content="Docs" />
 	
@@ -104,7 +104,7 @@
 	
 		<meta name="feedback_help_link_url" content="" />
 	
-		<meta name="word_count" content="4602" />
+		<meta name="word_count" content="4468" />
 	
 		<meta name="asset_id" content="attack-surface-reduction-rules-reference" />
 	
@@ -114,7 +114,7 @@
 	
 		<meta name="source_path" content="defender-endpoint/attack-surface-reduction-rules-reference.md" />
 	
-		<meta name="previous_tlsh_hash" content="26A3E3E2C81B47169F92571B9437B14423A1C189FAE13AC0021A698BC0551E6257EC10EEF747A3B6B36B178352C3DE9AB5A3EF3F826D1313069030BEC06D9A8777C93BB5F6" />
+		<meta name="previous_tlsh_hash" content="9EFE34D2B81B47169F92471BD437B14423A5C189FAE13AC0021A5987C0552E625BEC10EEE747A3B6B36B178352C3DE9AB5A3EF3F826D1353069030BEC06D9A8777C93BB5F6" />
 	
 		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/defender-docs/blob/public/defender-endpoint/attack-surface-reduction-rules-reference.md" />
 	
@@ -125,13 +125,52 @@
 		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/f3a81ffb-ee36-4ec7-b54a-01b6681aff65" data-source="generated" />
 	
 
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
 			<!-- assets and js globals -->
 			
-			<link rel="stylesheet" href="/static/assets/0.4.03427.7856-752ce836/styles/site.css" />
+			<link rel="stylesheet" href="/static/assets/0.4.03487.8036-44229b5b/styles/site.css" />
 			
 			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
-			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
-			<script src="/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
 
 			<!-- msdocs global object -->
 			<script id="msdocs-script">
@@ -151,6 +190,7 @@
     "userLocale": "en-us",
     "userDir": "ltr",
     "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
     "brand": "",
     "context": {},
     "standardFeedback": true,
@@ -234,7 +274,10 @@
 	</script>
 
 			<!-- base scripts, msdocs global should be before this -->
-			<script src="/static/assets/0.4.03427.7856-752ce836/scripts/en-us/index-docs.js"></script>
+			<script
+				src="/static/assets/0.4.03487.8036-44229b5b/scripts/en-us/index-docs.js"
+				async
+			></script>
 			
 
 			<!-- json-ld -->
@@ -345,7 +388,7 @@
 					
 		<div
 			id="left-container"
-			class="left-container display-none padding-none display-block-tablet width-full"
+			class="left-container display-none padding-none display-block-tablet width-full display-none-until-layout-restored"
 			data-toc-container="true"
 		>
 			<div
@@ -368,11 +411,17 @@
 							class="button button-clear inner-focus"
 							data-collapsible-toc-toggle
 							aria-expanded="true"
+							hidden
 							aria-controls="ms--toc-content"
 							aria-label="Table of contents"
 						>
 							<span class="icon icon-mirrored-rtl font-size-md" aria-hidden="true">
-								<span class="docon docon-panel-left-contract"></span>
+								<span
+									class="docon docon-panel-left-contract display-none-layout-menu-collapsed"
+								></span>
+								<span
+									class="docon docon-panel-left-expand display-none display-inline-layout-menu-collapsed"
+								></span>
 							</span>
 						</button>
 						<div
@@ -542,7 +591,7 @@
 		<button
 			data-page-action-item="overflow-mobile"
 			type="button"
-			class="button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			class="display-block-layout-menu-collapsed button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
 			data-bi-name="contents-expand"
 			data-contents-button
 			data-popover-close
@@ -598,7 +647,7 @@
 			<span class="icon" aria-hidden="true">
 				<span class="docon docon-circle-addition"></span>
 			</span>
-			<span class="plan-status">Add to plan</span>
+			<span class="plan-status">Add to Plans</span>
 		</button>
 	 
 					
@@ -1035,7 +1084,7 @@
 <td style="text-align: center;">Y</td>
 </tr>
 <tr>
-<td>Block executable files from running unless they meet a prevalence, age, or trusted list criterion[<a href="#CMS1" data-linktype="self-bookmark">1</a>]</td>
+<td>Block executable files from running unless they meet a prevalence, age, or trusted list criterion</td>
 <td style="text-align: center;">Y</td>
 <td style="text-align: center;">1802 or later</td>
 <td style="text-align: center;">Y</td>
@@ -1129,9 +1178,9 @@
 </table>
 <div class="TIP">
 <p>Tip</p>
-<p>You can also configure ASR rules locally on individual devices using Group Policy or <a href="attack-surface-reduction-rules-configure#configure-asr-rules-in-powershell" data-linktype="relative-path">PowerShell</a>. All ASR rules are supported by both methods on local devices.</p>
+<p>The Microsoft Defender portal uses the <a href="endpoint-security-policies-configure" data-linktype="relative-path">same endpoint security policies as Intune</a>, so it supports the same rules shown in the <strong>Intune</strong> column.</p>
+<p>You can also configure ASR rules locally on individual devices using <a href="attack-surface-reduction-rules-configure#configure-asr-rules-and-exclusions-in-group-policy" data-linktype="relative-path">Group Policy</a> or <a href="attack-surface-reduction-rules-configure#configure-asr-rules-in-powershell" data-linktype="relative-path">PowerShell</a>. All ASR rules are supported by both methods on local devices.</p>
 </div>
-<p><a id="CMS1">1</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the other available ASR policy configuration methods or in existing Intune ASR policies created before the issue.</p>
 <p><a name="per-asr-rule-alert-and-notification-details"></a></p>
 <h2 id="alerts-and-notifications-from-asr-rule-actions">Alerts and notifications from ASR rule actions</h2>
 <p>The following table describes the organization and local alerts that active ASR rules can generate.</p>
@@ -1460,10 +1509,6 @@
 </ul>
 </div>
 <h4 id="block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion">Block executable files from running unless they meet a prevalence, age, or trusted list criterion</h4>
-<div class="TIP">
-<p>Tip</p>
-<p>Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the <a href="attack-surface-reduction-rules-configure" data-linktype="relative-path">other available ASR policy configuration methods</a> or in existing Intune ASR policies created before the issue.</p>
-</div>
 <p>This ASR rule blocks executable files (for example, .exe, .dll, or .scr, from launching). Launching untrusted or unknown executable files can be risky, as it's not initially clear if the files are malicious.</p>
 <ul>
 <li><strong>Microsoft Intune name</strong>: <code>Block executable files from running unless they meet a prevalence, age, or trusted list criterion</code></li>
@@ -1656,10 +1701,6 @@
 </li>
 <li><strong>Dependencies</strong>: Microsoft Defender Antivirus</li>
 </ul>
-<div class="NOTE">
-<p>Note</p>
-<p>Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The <a href="attack-surface-reduction-rules-report" data-linktype="relative-path">Attack surface reduction (ASR) rules report</a> shows this rule as <strong>Not applicable</strong>.</p>
-</div>
 <h4 id="block-untrusted-and-unsigned-processes-that-run-from-usb">Block untrusted and unsigned processes that run from USB</h4>
 <p>This ASR rule prevents unsigned or untrusted executable files (for example, .exe, .dll, or .scr) from running from USB removable drives, including SD cards.</p>
 <p>This ASR rule doesn't block the files from being copied from the USB drive to disk. It blocks the copied files from running from disk.</p>
@@ -1690,10 +1731,6 @@
 </li>
 <li><strong>Dependencies</strong>: Microsoft Defender Antivirus</li>
 </ul>
-<div class="NOTE">
-<p>Note</p>
-<p>Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The <a href="attack-surface-reduction-rules-report" data-linktype="relative-path">Attack surface reduction (ASR) rules report</a> shows this rule as <strong>Not applicable</strong>.</p>
-</div>
 <h4 id="block-webshell-creation-for-servers">Block Webshell creation for Servers</h4>
 <p>This ASR rule blocks web shell script creation on Windows servers running Microsoft Exchange. A web shell script is a crafted script that allows an attacker to control the compromised server. A web shell script might include the following functionality:</p>
 <ul>
@@ -1721,7 +1758,6 @@
 <ul>
 <li>This rule isn't supported when deployed via Microsoft Intune to Windows Server 2012 R2 or Windows Server 2016 using the <a href="onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2" data-linktype="relative-path">modern unified solution</a>.</li>
 <li>If you manage ASR rules in Microsoft Defender for Endpoint, don't configure this ASR in Group Policy or other local settings (leave the value as <code>Not Configured</code>). Any other value (for example, <code>Enabled</code> or <code>Disabled</code>) can cause conflicts and prevent the rule from applying correctly.</li>
-<li>Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The <a href="attack-surface-reduction-rules-report" data-linktype="relative-path">Attack surface reduction (ASR) rules report</a> shows this rule as <strong>Not applicable</strong>.</li>
 </ul>
 </div>
 <h4 id="block-win32-api-calls-from-office-macros">Block Win32 API calls from Office macros</h4>
@@ -1776,7 +1812,7 @@
 <li><a href="attack-surface-reduction-rules-deployment-implement" data-linktype="relative-path">Enable attack surface reduction (ASR) rules</a></li>
 <li><a href="attack-surface-reduction-rules-deployment-operationalize" data-linktype="relative-path">Manage and monitor your attack surface reduction (ASR) rules deployment</a></li>
 <li><a href="attack-surface-reduction-rules-report" data-linktype="relative-path">Attack surface reduction (ASR) rules report</a></li>
-<li><a href="defender-endpoint-antivirus-exclusions" data-linktype="relative-path">Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus</a></li>
+<li><a href="defender-endpoint-exclusions-overview" data-linktype="relative-path">Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus</a></li>
 <li><a href="troubleshoot-asr" data-linktype="relative-path">Troubleshoot ASR rules</a></li>
 </ul>
 </div>
@@ -1991,11 +2027,11 @@
 				<li class="visibility-hidden-visual-diff">
 			<span class="badge badge-sm text-wrap-pretty">
 				<span>Last updated on <local-time format="twoDigitNumeric"
-		datetime="2026-05-22T07:35:00.000Z"
+		datetime="2026-07-02T08:00:00.000Z"
 		data-article-date-source="calculated"
 		class="is-invisible"
 	>
-		2026-05-22
+		2026-07-02
 	</local-time></span>
 			</span>
 		</li>
@@ -2266,8 +2302,8 @@
 				data-test-id="theme-selector-button"
 				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
 				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
 				aria-expanded="false"
-				title="Theme"
 				data-bi-name="theme"
 			>
 				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
@@ -2277,11 +2313,14 @@
 				</span>
 			</button>
 			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
-				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
-					<li class="theme display-block">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
 						<button
 							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
 							data-theme-to="light"
+							tabindex="-1"
 						>
 							<span class="theme-light margin-right-xxs">
 								<span
@@ -2300,13 +2339,16 @@
 									</svg>
 								</span>
 							</span>
-							<span role="menuitem"> Light </span>
+							<span> Light </span>
 						</button>
 					</li>
-					<li class="theme display-block">
+					<li class="theme display-block" role="none">
 						<button
 							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
 							data-theme-to="dark"
+							tabindex="-1"
 						>
 							<span class="theme-dark margin-right-xxs">
 								<span
@@ -2325,13 +2367,16 @@
 									</svg>
 								</span>
 							</span>
-							<span role="menuitem"> Dark </span>
+							<span> Dark </span>
 						</button>
 					</li>
-					<li class="theme display-block">
+					<li class="theme display-block" role="none">
 						<button
 							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
 							data-theme-to="high-contrast"
+							tabindex="-1"
 						>
 							<span class="theme-high-contrast margin-right-xxs">
 								<span
@@ -2350,7 +2395,7 @@
 									</svg>
 								</span>
 							</span>
-							<span role="menuitem"> High contrast </span>
+							<span> High contrast </span>
 						</button>
 					</li>
 				</ul>

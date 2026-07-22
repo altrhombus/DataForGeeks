@@ -91,13 +91,52 @@
 		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008?accept=text/markdown" />
 	 
 
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "lifecycle-view";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
 			<!-- assets and js globals -->
 			
-			<link rel="stylesheet" href="/static/assets/0.4.03427.7856-752ce836/styles/site.css" />
+			<link rel="stylesheet" href="/static/assets/0.4.03487.8036-44229b5b/styles/site.css" />
 			
 			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
-			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
-			<script src="/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
 
 			<!-- msdocs global object -->
 			<script id="msdocs-script">
@@ -117,6 +156,11 @@
     "userLocale": "en-us",
     "userDir": "ltr",
     "pageTemplate": "Lifecycle",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "layoutStateExcludesKey": "lifecycle-view",
+    "layoutStateExcludes": [
+      "layout-flyout-active"
+    ],
     "brand": "",
     "context": {},
     "standardFeedback": false,
@@ -148,7 +192,10 @@
 	</script>
 
 			<!-- base scripts, msdocs global should be before this -->
-			<script src="/static/assets/0.4.03427.7856-752ce836/scripts/en-us/index-docs.js"></script>
+			<script
+				src="/static/assets/0.4.03487.8036-44229b5b/scripts/en-us/index-docs.js"
+				async
+			></script>
 			
 
 			<!-- json-ld -->
@@ -348,7 +395,7 @@
 			<span class="icon" aria-hidden="true">
 				<span class="docon docon-circle-addition"></span>
 			</span>
-			<span class="plan-status">Add to plan</span>
+			<span class="plan-status">Add to Plans</span>
 		</button>
 	 
 					
@@ -614,8 +661,8 @@
 				data-test-id="theme-selector-button"
 				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
 				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
 				aria-expanded="false"
-				title="Theme"
 				data-bi-name="theme"
 			>
 				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
@@ -625,11 +672,14 @@
 				</span>
 			</button>
 			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
-				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
-					<li class="theme display-block">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
 						<button
 							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
 							data-theme-to="light"
+							tabindex="-1"
 						>
 							<span class="theme-light margin-right-xxs">
 								<span
@@ -648,13 +698,16 @@
 									</svg>
 								</span>
 							</span>
-							<span role="menuitem"> Light </span>
+							<span> Light </span>
 						</button>
 					</li>
-					<li class="theme display-block">
+					<li class="theme display-block" role="none">
 						<button
 							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
 							data-theme-to="dark"
+							tabindex="-1"
 						>
 							<span class="theme-dark margin-right-xxs">
 								<span
@@ -673,13 +726,16 @@
 									</svg>
 								</span>
 							</span>
-							<span role="menuitem"> Dark </span>
+							<span> Dark </span>
 						</button>
 					</li>
-					<li class="theme display-block">
+					<li class="theme display-block" role="none">
 						<button
 							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
 							data-theme-to="high-contrast"
+							tabindex="-1"
 						>
 							<span class="theme-high-contrast margin-right-xxs">
 								<span
@@ -698,7 +754,7 @@
 									</svg>
 								</span>
 							</span>
-							<span role="menuitem"> High contrast </span>
+							<span> High contrast </span>
 						</button>
 					</li>
 				</ul>

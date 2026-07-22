@@ -18,7 +18,8 @@ from src.scrapers.ms.m365_buildnumbers import _SOURCE_URL as M365_URL
 from src.scrapers.ms.m365_buildnumbers import M365BuildNumbersScraper
 from src.scrapers.ms.win_lifecycle_client import _SOURCES as LC_SOURCES
 from src.scrapers.ms.win_lifecycle_client import WinLifecycleClientScraper
-from src.scrapers.ms.win_lifecycle_ltsc import _SOURCE_URL as LTSC_URL
+from src.scrapers.ms.win_lifecycle_ltsc import _WIN10_URL as LTSC_WIN10_URL
+from src.scrapers.ms.win_lifecycle_ltsc import _WIN11_URL as LTSC_WIN11_URL
 from src.scrapers.ms.win_lifecycle_ltsc import WinLifecycleLtscScraper
 from src.scrapers.ms.win_lifecycle_server import _SOURCES as LS_SOURCES
 from src.scrapers.ms.win_lifecycle_server import WinLifecycleServerScraper
@@ -57,7 +58,10 @@ def lifecycle_client_pages():
 
 @pytest.fixture(scope="module")
 def lifecycle_ltsc_pages():
-    return {LTSC_URL: (F / "win_release_info.html").read_text()}
+    return {
+        LTSC_WIN10_URL: (F / "win_release_info.html").read_text(),
+        LTSC_WIN11_URL: (F / "win11_release_info.html").read_text(),
+    }
 
 
 @pytest.fixture(scope="module")
@@ -176,6 +180,16 @@ class TestWinLifecycleLtscScraper:
         versions = [r["version"] for r in records]
         assert len(versions) == len(set(versions))
 
+    def test_includes_windows11_ltsc_2024(self, lifecycle_ltsc_pages):
+        # Regression: Win11 LTSC 2024 lives on the Windows 11 release-health
+        # page and was missing while only the Windows 10 page was scraped.
+        records = WinLifecycleLtscScraper().parse(lifecycle_ltsc_pages)
+        assert any(r["build"] == "26100" for r in records)
+
+    def test_no_footnote_markers_in_version(self, lifecycle_ltsc_pages):
+        for r in WinLifecycleLtscScraper().parse(lifecycle_ltsc_pages):
+            assert "24H21" not in r["version"]  # "24H2" + <sup>1</sup> footnote
+
 
 # ---------------------------------------------------------------------------
 # WinLifecycleServerScraper
@@ -202,6 +216,15 @@ class TestWinLifecycleServerScraper:
         versions = {r["version"] for r in WinLifecycleServerScraper().parse(lifecycle_server_pages)}
         for year in ("2008", "2012", "2016", "2019", "2022", "2025"):
             assert any(year in v for v in versions), f"Missing Server {year}"
+
+    def test_includes_sp_and_esu_tiers(self, lifecycle_server_pages):
+        # Regression: SP / ESU tier rows come from the per-product releases
+        # table and were dropped when only the listing table was parsed.
+        records = WinLifecycleServerScraper().parse(lifecycle_server_pages)
+        tiers = {r["tier"] for r in records}
+        assert any(t.startswith("Service Pack") for t in tiers)
+        assert any("Extended Security Update" in t for t in tiers)
+        assert len(records) >= 25
 
 
 # ---------------------------------------------------------------------------
@@ -281,6 +304,14 @@ class TestAsrGuidsScraper:
     def test_guids_are_valid_uuids(self):
         for r in AsrGuidsScraper().parse({ASR_URL: (F / "asr_guids.html").read_text()}):
             assert UUID_RE.fullmatch(r["asr_guid"]), f"Invalid UUID: {r['asr_guid']}"
+
+    def test_includes_ransomware_rule(self):
+        # Regression: this rule's section has a descriptive <ul> before the
+        # GUID <ul>, so first-list-only parsing silently skipped it.
+        records = AsrGuidsScraper().parse({ASR_URL: (F / "asr_guids.html").read_text()})
+        guids = {r["asr_guid"] for r in records}
+        assert "c1db55ab-c21a-4637-bb3f-a12568109d35" in guids
+        assert len(records) >= 19
 
     def test_guids_are_lowercase(self):
         for r in AsrGuidsScraper().parse({ASR_URL: (F / "asr_guids.html").read_text()}):
@@ -391,7 +422,7 @@ class TestValueErrorGuards:
 
     def test_win_lifecycle_ltsc_raises_on_missing_table(self):
         with pytest.raises(StructureChangedError, match="page structure may have changed"):
-            WinLifecycleLtscScraper().parse({LTSC_URL: _EMPTY})
+            WinLifecycleLtscScraper().parse({LTSC_WIN10_URL: _EMPTY, LTSC_WIN11_URL: _EMPTY})
 
     def test_win_lifecycle_server_raises_on_empty(self):
         with pytest.raises(StructureChangedError, match="page structure may have changed"):

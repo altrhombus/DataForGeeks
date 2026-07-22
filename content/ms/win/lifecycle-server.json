@@ -3,7 +3,7 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "windows-lifecycle-server",
-    "recordCount": 8,
+    "recordCount": 28,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2",
@@ -14,15 +14,99 @@
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025"
     ],
-    "lastModified": "2026-05-28T02:09:35Z",
-    "lastCollected": "2026-05-28T02:09:35Z"
+    "lastModified": "2026-07-22T17:41:54Z",
+    "lastCollected": "2026-07-22T17:41:54Z"
   },
   "data": [
+    {
+      "version": "Windows Server 2008",
+      "tier": "Extended Security Update Year 1",
+      "start_date": "2020-01-15",
+      "mainstream_end_date": "2021-01-12",
+      "extended_end_date": "2021-01-12"
+    },
+    {
+      "version": "Windows Server 2008",
+      "tier": "Extended Security Update Year 2",
+      "start_date": "2021-01-13",
+      "mainstream_end_date": "2022-01-11",
+      "extended_end_date": "2022-01-11"
+    },
+    {
+      "version": "Windows Server 2008",
+      "tier": "Extended Security Update Year 3",
+      "start_date": "2022-01-12",
+      "mainstream_end_date": "2023-01-10",
+      "extended_end_date": "2023-01-10"
+    },
+    {
+      "version": "Windows Server 2008",
+      "tier": "Extended Security Update Year 4 (Azure only)",
+      "start_date": "2023-01-11",
+      "mainstream_end_date": "2024-01-09",
+      "extended_end_date": "2024-01-09"
+    },
+    {
+      "version": "Windows Server 2008",
+      "tier": "Original Release",
+      "start_date": "2008-05-06",
+      "mainstream_end_date": "2011-07-12",
+      "extended_end_date": "2011-07-12"
+    },
+    {
+      "version": "Windows Server 2008",
+      "tier": "Service Pack 2",
+      "start_date": "2009-04-29",
+      "mainstream_end_date": "2020-01-14",
+      "extended_end_date": "2020-01-14"
+    },
     {
       "version": "Windows Server 2008",
       "tier": "Windows Server 2008",
       "start_date": "2008-05-06",
       "mainstream_end_date": "2015-01-13",
+      "extended_end_date": "2020-01-14"
+    },
+    {
+      "version": "Windows Server 2008 R2",
+      "tier": "Extended Security Update Year 1",
+      "start_date": "2020-01-15",
+      "mainstream_end_date": "2021-01-12",
+      "extended_end_date": "2021-01-12"
+    },
+    {
+      "version": "Windows Server 2008 R2",
+      "tier": "Extended Security Update Year 2",
+      "start_date": "2021-01-13",
+      "mainstream_end_date": "2022-01-11",
+      "extended_end_date": "2022-01-11"
+    },
+    {
+      "version": "Windows Server 2008 R2",
+      "tier": "Extended Security Update Year 3",
+      "start_date": "2022-01-12",
+      "mainstream_end_date": "2023-01-10",
+      "extended_end_date": "2023-01-10"
+    },
+    {
+      "version": "Windows Server 2008 R2",
+      "tier": "Extended Security Update Year 4 (Azure only)",
+      "start_date": "2023-01-11",
+      "mainstream_end_date": "2024-01-09",
+      "extended_end_date": "2024-01-09"
+    },
+    {
+      "version": "Windows Server 2008 R2",
+      "tier": "Original Release",
+      "start_date": "2009-10-22",
+      "mainstream_end_date": "2013-04-09",
+      "extended_end_date": "2013-04-09"
+    },
+    {
+      "version": "Windows Server 2008 R2",
+      "tier": "Service Pack 1",
+      "start_date": "2011-02-22",
+      "mainstream_end_date": "2020-01-14",
       "extended_end_date": "2020-01-14"
     },
     {
@@ -34,9 +118,65 @@
     },
     {
       "version": "Windows Server 2012",
+      "tier": "Extended Security Update Year 1",
+      "start_date": "2023-10-11",
+      "mainstream_end_date": "2024-10-08",
+      "extended_end_date": "2024-10-08"
+    },
+    {
+      "version": "Windows Server 2012",
+      "tier": "Extended Security Update Year 2",
+      "start_date": "2024-10-09",
+      "mainstream_end_date": "2025-10-14",
+      "extended_end_date": "2025-10-14"
+    },
+    {
+      "version": "Windows Server 2012",
+      "tier": "Extended Security Update Year 3",
+      "start_date": "2025-10-15",
+      "mainstream_end_date": "2026-10-13",
+      "extended_end_date": "2026-10-13"
+    },
+    {
+      "version": "Windows Server 2012",
+      "tier": "Original Release",
+      "start_date": "2012-10-30",
+      "mainstream_end_date": "2023-10-10",
+      "extended_end_date": "2023-10-10"
+    },
+    {
+      "version": "Windows Server 2012",
       "tier": "Windows Server 2012",
       "start_date": "2012-10-30",
       "mainstream_end_date": "2018-10-09",
+      "extended_end_date": "2023-10-10"
+    },
+    {
+      "version": "Windows Server 2012 R2",
+      "tier": "Extended Security Update Year 1",
+      "start_date": "2023-10-11",
+      "mainstream_end_date": "2024-10-08",
+      "extended_end_date": "2024-10-08"
+    },
+    {
+      "version": "Windows Server 2012 R2",
+      "tier": "Extended Security Update Year 2",
+      "start_date": "2024-10-09",
+      "mainstream_end_date": "2025-10-14",
+      "extended_end_date": "2025-10-14"
+    },
+    {
+      "version": "Windows Server 2012 R2",
+      "tier": "Extended Security Update Year 3",
+      "start_date": "2025-10-15",
+      "mainstream_end_date": "2026-10-13",
+      "extended_end_date": "2026-10-13"
+    },
+    {
+      "version": "Windows Server 2012 R2",
+      "tier": "Original Release",
+      "start_date": "2013-11-25",
+      "mainstream_end_date": "2023-10-10",
       "extended_end_date": "2023-10-10"
     },
     {
