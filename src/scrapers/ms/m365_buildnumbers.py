@@ -12,11 +12,14 @@ _SOURCE_URL = "https://learn.microsoft.com/en-us/officeupdates/update-history-mi
 
 _VERSION_BUILD_RE = re.compile(r"Version\s+(\S+)\s+\(Build\s+([^)]+)\)", re.IGNORECASE)
 
-_CHANNELS = {
-    2: "Current",
-    3: "Monthly Enterprise",
-    4: "Semi-Annual Enterprise Preview",
-    5: "Semi-Annual Enterprise",
+# Header text → channel label. Column positions are derived from the header
+# row at parse time so a column insertion or reorder cannot silently
+# mislabel channels.
+_CHANNEL_HEADERS = {
+    "Current Channel": "Current",
+    "Monthly Enterprise Channel": "Monthly Enterprise",
+    "Semi-Annual Enterprise Channel (Preview)": "Semi-Annual Enterprise Preview",
+    "Semi-Annual Enterprise Channel": "Semi-Annual Enterprise",
 }
 
 
@@ -30,26 +33,29 @@ class M365BuildNumbersScraper(BaseScraper):
     def parse(self, pages: dict[str, str]) -> list[dict]:
         soup = BeautifulSoup(pages[_SOURCE_URL], "lxml")
 
-        tables = soup.find_all("table")
-        if len(tables) < 2:
-            raise StructureChangedError(
-                f"Expected at least 2 tables, found {len(tables)} — page structure may have changed"
-            )
+        history_table, columns = _find_history_table(soup)
 
-        # Table at index 1: Year | Date | Current | Monthly Enterprise | SAEP | SAE
+        year_idx = columns["Year"]
+        date_idx = columns["Release Date"]
+        channel_cols = {
+            idx: _CHANNEL_HEADERS[header]
+            for header, idx in columns.items()
+            if header in _CHANNEL_HEADERS
+        }
+
         records: list[M365Build] = []
         last_year = ""
 
-        for row in tables[1].find_all("tr"):
+        for row in history_table.find_all("tr"):
             cells = row.find_all("td")
-            if len(cells) < 6:
+            if len(cells) <= max(channel_cols):
                 continue
 
-            year_text = cells[0].get_text(strip=True)
+            year_text = cells[year_idx].get_text(strip=True)
             year = year_text if year_text else last_year
             last_year = year
 
-            date_text = cells[1].get_text(separator=" ", strip=True)
+            date_text = cells[date_idx].get_text(separator=" ", strip=True)
             # Remove any <br>-introduced whitespace artifacts
             date_text = re.sub(r"\s+", " ", date_text).strip()
 
@@ -58,7 +64,7 @@ class M365BuildNumbersScraper(BaseScraper):
             except ValueError:
                 continue
 
-            for col_idx, channel_name in _CHANNELS.items():
+            for col_idx, channel_name in channel_cols.items():
                 cell_text = cells[col_idx].get_text(separator=" ", strip=True)
                 for m in _VERSION_BUILD_RE.finditer(cell_text):
                     version = m.group(1).strip()
@@ -78,3 +84,25 @@ class M365BuildNumbersScraper(BaseScraper):
 
         unique = deduplicate_sorted(records, sort_key=lambda r: r.release_date, key_fn=lambda r: (r.release_date, r.channel, r.build), reverse=True)
         return [r.model_dump() for r in unique]
+
+
+def _find_history_table(soup) -> tuple:
+    """Locate the release-history table by its header row and return it with a
+    {header text: column index} map. Raises StructureChangedError when no table
+    carries the expected Year / Release Date / channel headers."""
+    for table in soup.find_all("table"):
+        header_row = table.find("tr")
+        if header_row is None:
+            continue
+        headers = [c.get_text(strip=True) for c in header_row.find_all(["th", "td"])]
+        columns = {h: i for i, h in enumerate(headers)}
+        if "Year" not in columns or "Release Date" not in columns:
+            continue
+        matched = [h for h in headers if h in _CHANNEL_HEADERS]
+        if len(matched) != len(_CHANNEL_HEADERS):
+            raise StructureChangedError(
+                f"History table channel columns changed: expected {sorted(_CHANNEL_HEADERS)}, "
+                f"found {matched} — page structure may have changed"
+            )
+        return table, columns
+    raise StructureChangedError("Release-history table not found — page structure may have changed")

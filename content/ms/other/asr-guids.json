@@ -3,12 +3,12 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "asr-guids",
-    "recordCount": 18,
+    "recordCount": 19,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference"
     ],
-    "lastModified": "2026-05-28T02:09:15Z",
-    "lastCollected": "2026-05-28T02:09:15Z"
+    "lastModified": "2026-07-22T17:41:55Z",
+    "lastCollected": "2026-07-22T17:41:55Z"
   },
   "data": [
     {
@@ -66,6 +66,10 @@
     {
       "asr_name": "Block use of copied or impersonated system tools",
       "asr_guid": "c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb"
+    },
+    {
+      "asr_name": "Use advanced protection against ransomware",
+      "asr_guid": "c1db55ab-c21a-4637-bb3f-a12568109d35"
     },
     {
       "asr_name": "Block process creations originating from PSExec and WMI commands",
