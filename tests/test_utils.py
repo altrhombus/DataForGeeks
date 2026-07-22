@@ -6,10 +6,16 @@ from unittest.mock import MagicMock, call, patch
 import httpx
 import pytest
 
+from src.exceptions import RecordCountDropError
 from src.scrapers.base import BaseScraper
 from src.utils.http import _HEADERS, get_html
 from src.utils.json_output import build_envelope, write_if_changed
-from src.utils.scraper_helpers import deduplicate_sorted, normalize_ms_url, parse_date
+from src.utils.scraper_helpers import (
+    deduplicate_sorted,
+    kb_article_url,
+    normalize_ms_url,
+    parse_date,
+)
 
 # ---------------------------------------------------------------------------
 # http.py
@@ -183,6 +189,50 @@ def test_write_if_changed_overwrites_when_data_changed(tmp_path):
     assert written["data"] == [{"v": 2}]
 
 
+def test_write_if_changed_rejects_large_count_drop(tmp_path):
+    out = tmp_path / "out.json"
+    scraper = _FakeScraper()
+
+    write_if_changed(out, build_envelope(scraper, [{"v": i} for i in range(100)]))
+
+    with pytest.raises(RecordCountDropError, match="dropped from 100 to 10"):
+        write_if_changed(out, build_envelope(scraper, [{"v": i} for i in range(10)]))
+    # original file untouched
+    assert json.loads(out.read_text())["metadata"]["recordCount"] == 100
+
+
+def test_write_if_changed_allows_small_count_drop(tmp_path):
+    out = tmp_path / "out.json"
+    scraper = _FakeScraper()
+
+    write_if_changed(out, build_envelope(scraper, [{"v": i} for i in range(100)]))
+    result = write_if_changed(out, build_envelope(scraper, [{"v": i} for i in range(95)]))
+
+    assert result is True
+
+
+def test_write_if_changed_allows_count_growth(tmp_path):
+    out = tmp_path / "out.json"
+    scraper = _FakeScraper()
+
+    write_if_changed(out, build_envelope(scraper, [{"v": 1}]))
+    result = write_if_changed(out, build_envelope(scraper, [{"v": i} for i in range(50)]))
+
+    assert result is True
+
+
+def test_write_if_changed_count_drop_override(tmp_path, monkeypatch):
+    out = tmp_path / "out.json"
+    scraper = _FakeScraper()
+    monkeypatch.setenv("ALLOW_RECORD_COUNT_DROP", "1")
+
+    write_if_changed(out, build_envelope(scraper, [{"v": i} for i in range(100)]))
+    result = write_if_changed(out, build_envelope(scraper, [{"v": 1}]))
+
+    assert result is True
+    assert json.loads(out.read_text())["metadata"]["recordCount"] == 1
+
+
 def test_build_envelope_structure():
     scraper = _FakeScraper()
     data = [{"a": 1}]
@@ -268,3 +318,16 @@ def test_normalize_ms_url_empty_returns_none():
 
 def test_normalize_ms_url_unrecognised_returns_none():
     assert normalize_ms_url("javascript:void(0)") is None
+
+
+def test_kb_article_url_standard():
+    assert kb_article_url("KB5099539") == "https://support.microsoft.com/help/5099539"
+
+
+def test_kb_article_url_lowercase_prefix():
+    assert kb_article_url("kb5099539") == "https://support.microsoft.com/help/5099539"
+
+
+def test_kb_article_url_invalid_returns_none():
+    assert kb_article_url("KBabc") is None
+    assert kb_article_url("") is None

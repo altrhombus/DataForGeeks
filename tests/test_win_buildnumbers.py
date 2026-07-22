@@ -122,6 +122,13 @@ class TestParseStandardPage:
         for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
             assert isinstance(r.is_expired, bool)
 
+    def test_article_url_never_null(self, win10_html):
+        # Regression guard: the 2026-07 site redesign switched hrefs to relative
+        # paths, silently nulling every href-derived article_url.
+        for r in _parse_standard_page(win10_html, os_type="client", fixed_major=10):
+            assert r.article_url is not None
+            assert r.article_url == f"https://support.microsoft.com/help/{r.kb_article[2:]}"
+
     def test_win11_page_parses(self, win11_html):
         records = _parse_standard_page(win11_html, os_type="client", fixed_major=11)
         assert len(records) > 50
@@ -230,6 +237,10 @@ class TestWinBuildNumbersScraper:
         records = WinBuildNumbersScraper().parse(all_pages)
         hotpatch = [r for r in records if r["release_type"] in {"Hotpatch", "Hotpatch-OOB"}]
         assert len(hotpatch) > 0
+
+    def test_all_article_urls_populated(self, all_pages):
+        records = WinBuildNumbersScraper().parse(all_pages)
+        assert all(r["article_url"] for r in records)
 
     def test_os_types_present(self, all_pages):
         records = WinBuildNumbersScraper().parse(all_pages)

@@ -10,7 +10,7 @@ from src.scrapers.base import BaseScraper
 from src.utils.scraper_helpers import (
     deduplicate_sorted,
     iter_versioned_tables,
-    normalize_ms_url,
+    kb_article_url,
     parse_date,
 )
 
@@ -122,7 +122,7 @@ def _parse_standard_page(
     fixed_major: int | None,
     category_filter: str | None = None,
 ) -> list[WinBuildNumber]:
-    """Parse a Windows update history page using the supLeftNavCategory nav structure.
+    """Parse a Windows update history page using the learnRenderLeftNavCategory nav structure.
 
     category_filter: if set, only process categories whose title contains this substring.
     Used for combined Win10+Server pages to isolate the server-specific section.
@@ -197,7 +197,7 @@ def _parse_standard_page(
             is_preview = "PREVIEW" in suffix_up or "PREVIEW" in desc_up
             release_type = "Out-of-band" if is_oob else "Preview" if is_preview else "Standard"
 
-            article_url = normalize_ms_url(str(a.get("href") or ""))
+            article_url = kb_article_url(kb_article)
 
             for version in [v.strip() for v in re.split(r"\s+and\s+|,", versions_raw) if v.strip()]:
                 records.append(
@@ -239,12 +239,10 @@ def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
                 continue
 
             href_match = None
-            article_url = None
             for a in cell4.find_all("a", href=True):
                 hm = _HOTPATCH_HREF_RE.search(str(a["href"]))
                 if hm:
                     href_match = hm
-                    article_url = normalize_ms_url(str(a["href"]))
                     break
             if not href_match:
                 continue
@@ -255,6 +253,7 @@ def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
             build1 = f"{href_match.group(4)}.{href_match.group(5)}"
             build2 = f"{href_match.group(6)}.{href_match.group(7)}"
             kb_article = kb_match.group(0).upper()
+            article_url = kb_article_url(kb_article)
 
             release_date = parse_date(f"{month_name} {day}, {year}")
             if not release_date:

@@ -43,7 +43,11 @@ def main() -> None:
 
     envelope = build_envelope(scraper, data)
     output_path = CONTENT_DIR / (scraper.dataset + ".json")
-    write_if_changed(output_path, envelope)
+    try:
+        write_if_changed(output_path, envelope)
+    except ScraperError as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

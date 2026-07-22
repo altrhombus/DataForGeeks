@@ -80,6 +80,20 @@ def iter_versioned_tables(
         yield current_version, el
 
 
+def kb_article_url(kb_article: str) -> str | None:
+    """Return the canonical support.microsoft.com URL for a KB article.
+
+    Uses Microsoft's stable /help/<number> redirect service rather than page
+    hrefs, which are relative and change format with site redesigns (the
+    2026-07 redesign switched nav links to ../../-relative paths, nulling
+    every href-derived URL).
+    """
+    digits = kb_article.upper().removeprefix("KB")
+    if not digits.isdigit():
+        return None
+    return f"{_MS_SUPPORT_BASE}/help/{digits}"
+
+
 def normalize_ms_url(href: str, base: str = _MS_SUPPORT_BASE) -> str | None:
     """Return an absolute URL for a Microsoft support link.
 
