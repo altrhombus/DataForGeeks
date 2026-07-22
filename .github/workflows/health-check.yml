@@ -1,0 +1,93 @@
+name: Workflow Health Check
+on:
+  schedule:
+    - cron: '23 7 * * *'
+  workflow_dispatch:
+permissions:
+  actions: read
+  issues: write
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Collect failed runs from the last 24 hours
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          since=$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)
+          gh api "repos/$REPO/actions/runs?created=%3E$since&per_page=100" --paginate \
+            -q '.workflow_runs[] | select(.conclusion == "failure") | {name, html_url}' > failures.jsonl || true
+
+      - name: Build report
+        id: report
+        run: |
+          python3 - <<'EOF'
+          import json
+          import os
+          from collections import Counter
+          from datetime import UTC, datetime
+
+          failures = []
+          with open("failures.jsonl", encoding="utf-8") as f:
+              for line in f:
+                  if line.strip():
+                      failures.append(json.loads(line))
+
+          if failures:
+              counts = Counter(r["name"] for r in failures)
+              last_url = {r["name"]: r["html_url"] for r in failures}
+              now = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+              lines = [
+                  f"The following workflows had failed runs in the 24 hours before {now}:",
+                  "",
+                  "| Failures | Workflow | A failed run |",
+                  "|---|---|---|",
+              ]
+              for name, count in counts.most_common():
+                  lines.append(f"| {count} | {name} | {last_url[name]} |")
+              lines += [
+                  "",
+                  "_Opened automatically by the Workflow Health Check. Updated daily while "
+                  "failures persist; closed automatically after a failure-free day._",
+              ]
+              with open("body.md", "w", encoding="utf-8") as f:
+                  f.write("\n".join(lines) + "\n")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"has_failures={'true' if failures else 'false'}\n")
+          EOF
+
+      - name: Open, update, or close the health issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          HAS_FAILURES: ${{ steps.report.outputs.has_failures }}
+        run: |
+          set -euo pipefail
+          issue_title="Scheduled workflow failures detected"
+          existing=$(gh issue list --repo "$REPO" --state open --search "\"$issue_title\" in:title" \
+            --json number --jq '.[0].number // empty')
+
+          if [ "$HAS_FAILURES" = "true" ]; then
+            if [ -n "$existing" ]; then
+              gh issue comment "$existing" --repo "$REPO" --body-file body.md
+              echo "Updated existing issue #$existing"
+            else
+              gh issue create --repo "$REPO" --title "$issue_title" --body-file body.md
+              echo "Created new health issue"
+            fi
+            echo "::warning::Failed scheduled runs in the last 24h — see the '$issue_title' issue."
+          else
+            echo "No failed runs in the last 24 hours."
+            if [ -n "$existing" ]; then
+              gh issue close "$existing" --repo "$REPO" \
+                --comment "No failed runs in the last 24 hours — closing automatically."
+              echo "Closed issue #$existing"
+            fi
+          fi
