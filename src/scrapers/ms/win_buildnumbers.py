@@ -9,7 +9,6 @@ from src.models.ms.win_buildnumber import WinBuildNumber
 from src.scrapers.base import BaseScraper
 from src.utils.scraper_helpers import (
     deduplicate_sorted,
-    iter_versioned_tables,
     kb_article_url,
     parse_date,
 )
@@ -36,20 +35,23 @@ _PATCH_DESC_RE = re.compile(
     re.IGNORECASE,
 )
 
-# Hotpatch URL slug: "january-14-2025-hotpatch-kb5051978-os-builds-26100-2605-and-26100-2606"
-_HOTPATCH_HREF_RE = re.compile(
-    r"(\w+)-(\d{1,2})-(\d{4})-hotpatch.*?os-builds?-(\d+)-(\d+)-and-(\d+)-(\d+)",
+# "July 18, 2026—Hotpatch KB5121768" — hotpatch nav-link description prefix
+_HOTPATCH_DESC_RE = re.compile(
+    r"^(.*?\d{1,2}[,]\s*\d{4})\s*[—\-–]+\s*Hotpatch\s+(KB\d+)",
     re.IGNORECASE,
 )
-_KB_RE = re.compile(r"KB\d+", re.IGNORECASE)
 
 # Nav category title patterns
 _CLIENT_VER_RE = re.compile(r"Windows\s+(?:10|11)\s*[,\s]+[Vv]ersion\s+(\w+)", re.IGNORECASE)
 _SERVER_YEAR_RE = re.compile(r"Windows\s+Server\s+(\d{4})", re.IGNORECASE)
 _SERVER_ANNUAL_RE = re.compile(r"Windows\s+Server,\s+[Vv]ersion\s+(\w+)", re.IGNORECASE)
 
-# Hotpatch page section heading
-_HOTPATCH_VER_RE = re.compile(r"Windows\s+11[,\s]+[Vv]ersion\s+(\w+)", re.IGNORECASE)
+# Hotpatch nav category title: "Release notes for Hotpatch on Windows 11 Enterprise version 25H2".
+# Server hotpatch and "Public Preview" sections deliberately do not match.
+_HOTPATCH_TITLE_RE = re.compile(
+    r"Hotpatch\s+on\s+Windows\s+11\s+Enterprise\s+version\s+(\w+)",
+    re.IGNORECASE,
+)
 
 # Nav section titles that indicate LTSC or IoT Enterprise variants.
 # These sections use the same version extraction as mainstream client sections
@@ -219,63 +221,72 @@ def _parse_standard_page(
 
 
 def _parse_hotpatch_page(html: str) -> list[WinBuildNumber]:
+    """Parse the hotpatch release-notes page using the learnRenderLeftNavCategory nav.
+
+    Entries are parsed from nav-link text ("July 18, 2026—Hotpatch KB5121768
+    (OS Builds 26200.8893 and 26100.8893) Out-of-band"), never from URL slugs:
+    slugs are not reliable (out-of-band articles like "kb5121768-hotpatch-out-of-band"
+    carry no date or builds) and single-build releases are valid. Baseline
+    entries carry no "(OS Build …)" suffix and are skipped — they are ordinary
+    cumulative updates already captured from the standard update-history pages.
+    """
     soup = BeautifulSoup(html, "lxml")
     records: list[WinBuildNumber] = []
 
-    for version_raw, table in iter_versioned_tables(soup, _HOTPATCH_VER_RE, skip_unversioned=False):
-        current_version = version_raw.upper() if version_raw else ""
-        for row in table.find_all("tr"):
-            cells = row.find_all(["td", "th"])
-            if len(cells) < 4:
+    for category in soup.find_all("div", class_="learnRenderLeftNavCategory"):
+        title_div = category.find("div", class_="learnRenderLeftNavCategoryTitle")
+        if not title_div:
+            continue
+
+        title_text = title_div.get_text(strip=True)
+        if "public preview" in title_text.lower():
+            continue
+
+        m_title = _HOTPATCH_TITLE_RE.search(title_text)
+        if not m_title:
+            continue
+        current_version = m_title.group(1).upper()
+
+        for article in category.find_all("li", class_="learnRenderLeftNavArticle"):
+            a = article.find("a")
+            if not a:
                 continue
 
-            patch_type = cells[2].get_text(strip=True).lower()  # col 2: Patch Type (Baseline / Standard / OOB)
-            if "baseline" in patch_type:
+            text = unescape(a.get_text(strip=True))
+            m = _OS_BUILD_RE.match(text)
+            if not m:
                 continue
 
-            cell4 = cells[3]  # col 3: KB article number + href
-            kb_match = _KB_RE.search(cell4.get_text())
-            if not kb_match:
-                continue
+            description = m.group(1).strip()
+            versions_raw = m.group(2)
+            suffix = m.group(3).strip()
 
-            href_match = None
-            for a in cell4.find_all("a", href=True):
-                hm = _HOTPATCH_HREF_RE.search(str(a["href"]))
-                if hm:
-                    href_match = hm
-                    break
-            if not href_match:
-                continue
+            pd = _HOTPATCH_DESC_RE.match(description)
+            if not pd:
+                continue  # e.g. component security updates listed alongside hotpatches
 
-            month_name = href_match.group(1).capitalize()
-            day = href_match.group(2)
-            year = href_match.group(3)
-            build1 = f"{href_match.group(4)}.{href_match.group(5)}"
-            build2 = f"{href_match.group(6)}.{href_match.group(7)}"
-            kb_article = kb_match.group(0).upper()
-            article_url = kb_article_url(kb_article)
-
-            release_date = parse_date(f"{month_name} {day}, {year}")
+            release_date = parse_date(pd.group(1).strip())
             if not release_date:
-                logger.warning("Skipping row: could not parse date %r", f"{month_name} {day}, {year}")
+                logger.warning("Skipping hotpatch row: could not parse date %r", pd.group(1).strip())
                 continue
 
-            is_oob = "out-of-band" in patch_type or "oob" in patch_type
+            kb_article = pd.group(2).upper()
+            is_oob = "OUT-OF-BAND" in suffix.upper()
             release_type = "Hotpatch-OOB" if is_oob else "Hotpatch"
 
-            for build in (build1, build2):
+            for build in [v.strip() for v in re.split(r"\s+and\s+|,", versions_raw) if v.strip()]:
                 records.append(
                     WinBuildNumber(
                         full_version=f"10.0.{build}",
                         build=build,
                         os_type="client",
                         major_version=11,
-                        windows_version=current_version or "25H2",
+                        windows_version=current_version,
                         release_date=release_date,
                         kb_article=kb_article,
                         release_type=release_type,
                         is_expired=False,
-                        article_url=article_url,
+                        article_url=kb_article_url(kb_article),
                     )
                 )
 

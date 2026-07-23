@@ -208,6 +208,27 @@ class TestParseHotpatchPage:
         for r in _parse_hotpatch_page(hotpatch_html):
             assert r.full_version.startswith("10.0.")
 
+    def test_includes_slugless_oob_entry(self, hotpatch_html):
+        # Regression: KB5121768's article slug ("kb5121768-hotpatch-out-of-band")
+        # carries no date or builds, so slug-based parsing silently dropped it.
+        records = _parse_hotpatch_page(hotpatch_html)
+        kb = [r for r in records if r.kb_article == "KB5121768"]
+        assert {r.build for r in kb} == {"26200.8893", "26100.8893"}
+        assert all(r.release_date == "2026-07-18" for r in kb)
+        assert all(r.release_type == "Hotpatch-OOB" for r in kb)
+
+    def test_includes_single_build_entry(self, hotpatch_html):
+        # Regression: slug-based parsing required exactly two builds per entry.
+        records = _parse_hotpatch_page(hotpatch_html)
+        assert any(r.kb_article == "KB5072753" and r.build == "26200.7093" for r in records)
+
+    def test_excludes_baselines_and_previews(self, hotpatch_html):
+        records = _parse_hotpatch_page(hotpatch_html)
+        # Baseline entries are ordinary CUs already captured from standard pages;
+        # Public Preview sections are out of scope.
+        assert all("Hotpatch" in r.release_type for r in records)
+        assert not any(r.kb_article == "KB5074109" for r in records)  # 2026.01 Baseline
+
 
 class TestWinBuildNumbersScraper:
     def test_parse_total_records(self, all_pages):
