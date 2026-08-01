@@ -3,12 +3,12 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "exchange-server-build-numbers",
-    "recordCount": 329,
+    "recordCount": 333,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates"
     ],
-    "lastModified": "2026-07-01T09:39:29Z",
-    "lastCollected": "2026-07-01T09:39:29Z"
+    "lastModified": "2026-08-01T08:13:39Z",
+    "lastCollected": "2026-08-01T08:13:39Z"
   },
   "data": [
     {
@@ -1643,6 +1643,13 @@
       "release_date": "2026-06-09"
     },
     {
+      "product_name": "Exchange Server 2016 CU23 Jul26SU",
+      "exchange_version": "2016",
+      "build": "15.1.2507.71",
+      "build_long": "15.01.2507.071",
+      "release_date": "2026-07-14"
+    },
+    {
       "product_name": "Exchange Server 2019 Preview",
       "exchange_version": "2019",
       "build": "15.2.196.0",
@@ -2259,6 +2266,20 @@
       "release_date": "2026-06-09"
     },
     {
+      "product_name": "Exchange Server 2019 CU14 Jul26SU",
+      "exchange_version": "2019",
+      "build": "15.2.1544.43",
+      "build_long": "15.02.1544.043",
+      "release_date": "2026-07-14"
+    },
+    {
+      "product_name": "Exchange Server 2019 CU15 Jul26SU",
+      "exchange_version": "2019",
+      "build": "15.2.1748.48",
+      "build_long": "15.02.1748.048",
+      "release_date": "2026-07-14"
+    },
+    {
       "product_name": "Exchange Server SE RTM",
       "exchange_version": "SE",
       "build": "15.2.2562.17",
@@ -2313,6 +2334,13 @@
       "build": "15.2.2562.43",
       "build_long": "15.02.2562.043",
       "release_date": "2026-06-09"
+    },
+    {
+      "product_name": "Exchange Server SE RTM Jul26SU",
+      "exchange_version": "SE",
+      "build": "15.2.2562.45",
+      "build_long": "15.02.2562.045",
+      "release_date": "2026-07-14"
     }
   ]
 }
