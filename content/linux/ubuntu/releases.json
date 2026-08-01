@@ -7,8 +7,8 @@
     "sourceUrls": [
       "https://api.launchpad.net/1.0/ubuntu/series?ws.size=75"
     ],
-    "lastModified": "2026-05-28T02:04:41Z",
-    "lastCollected": "2026-05-28T02:04:41Z"
+    "lastModified": "2026-08-01T08:28:06Z",
+    "lastCollected": "2026-08-01T08:28:06Z"
   },
   "data": [
     {
@@ -26,7 +26,7 @@
       "codename": "Questing Quokka",
       "series": "questing",
       "release_date": "2025-10-09",
-      "status": "Supported",
+      "status": "Obsolete",
       "is_lts": false,
       "standard_support_end": "2026-07-09",
       "esm_support_end": null
