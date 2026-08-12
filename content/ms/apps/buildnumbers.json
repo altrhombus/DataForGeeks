@@ -3,14 +3,42 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "m365-update-history",
-    "recordCount": 915,
+    "recordCount": 919,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ],
-    "lastModified": "2026-08-05T08:10:02Z",
-    "lastCollected": "2026-08-05T08:10:02Z"
+    "lastModified": "2026-08-12T07:00:45Z",
+    "lastCollected": "2026-08-12T07:00:45Z"
   },
   "data": [
+    {
+      "release_date": "2026-08-11",
+      "channel": "Current",
+      "build": "20228.20190",
+      "version": "2607",
+      "full_build": "16.0.20228.20190"
+    },
+    {
+      "release_date": "2026-08-11",
+      "channel": "Monthly Enterprise",
+      "build": "20131.20206",
+      "version": "2606",
+      "full_build": "16.0.20131.20206"
+    },
+    {
+      "release_date": "2026-08-11",
+      "channel": "Monthly Enterprise",
+      "build": "20228.20188",
+      "version": "2607",
+      "full_build": "16.0.20228.20188"
+    },
+    {
+      "release_date": "2026-08-11",
+      "channel": "Semi-Annual Enterprise",
+      "build": "20228.20186",
+      "version": "2607",
+      "full_build": "16.0.20228.20186"
+    },
     {
       "release_date": "2026-08-04",
       "channel": "Current",
