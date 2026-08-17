@@ -3,14 +3,104 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "sql-server-build-numbers",
-    "recordCount": 591,
+    "recordCount": 657,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server"
     ],
-    "lastModified": "2026-07-20T08:56:45Z",
-    "lastCollected": "2026-07-20T08:56:45Z"
+    "lastModified": "2026-08-17T06:53:40Z",
+    "lastCollected": "2026-08-17T06:53:40Z"
   },
   "data": [
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.2047",
+      "service_pack": "SP1",
+      "update_type": "Service Pack",
+      "kb_article": null,
+      "release_date": "2006-04-18",
+      "article_url": null
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3042",
+      "service_pack": "SP2",
+      "update_type": "Service Pack",
+      "kb_article": "KB937137",
+      "release_date": "2007-02-19",
+      "article_url": "https://support.microsoft.com/help/937137"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3161",
+      "service_pack": "SP2",
+      "update_type": "CU1",
+      "kb_article": "KB935356",
+      "release_date": "2007-04-16",
+      "article_url": "https://support.microsoft.com/help/935356"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3152",
+      "service_pack": "SP2",
+      "update_type": "Hotfix",
+      "kb_article": "KB933097",
+      "release_date": "2007-05-15",
+      "article_url": "https://support.microsoft.com/help/933097"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3175",
+      "service_pack": "SP2",
+      "update_type": "CU2",
+      "kb_article": "KB936305",
+      "release_date": "2007-06-18",
+      "article_url": "https://support.microsoft.com/help/936305"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3186",
+      "service_pack": "SP2",
+      "update_type": "CU3",
+      "kb_article": "KB939537",
+      "release_date": "2007-08-20",
+      "article_url": "https://support.microsoft.com/help/939537"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3200",
+      "service_pack": "SP2",
+      "update_type": "CU4",
+      "kb_article": "KB941450",
+      "release_date": "2007-10-15",
+      "article_url": "https://support.microsoft.com/help/941450"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3215",
+      "service_pack": "SP2",
+      "update_type": "CU5",
+      "kb_article": "KB943656",
+      "release_date": "2007-12-17",
+      "article_url": "https://support.microsoft.com/help/943656"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3228",
+      "service_pack": "SP2",
+      "update_type": "CU6",
+      "kb_article": "KB946608",
+      "release_date": "2008-02-18",
+      "article_url": "https://support.microsoft.com/help/946608"
+    },
     {
       "sql_version": "SQL Server 2005",
       "major_version": 2005,
@@ -34,6 +124,26 @@
     {
       "sql_version": "SQL Server 2005",
       "major_version": 2005,
+      "build": "9.00.3068",
+      "service_pack": "SP2",
+      "update_type": "MS08-040: GDR Security Update",
+      "kb_article": "KB948109",
+      "release_date": "2008-07-08",
+      "article_url": "https://support.microsoft.com/help/948109"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3233",
+      "service_pack": "SP2",
+      "update_type": "MS08-040: QFE Security Update",
+      "kb_article": "KB948108",
+      "release_date": "2008-07-08",
+      "article_url": "https://support.microsoft.com/help/948108"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
       "build": "9.00.3282",
       "service_pack": "SP2",
       "update_type": "CU9",
@@ -44,9 +154,49 @@
     {
       "sql_version": "SQL Server 2005",
       "major_version": 2005,
+      "build": "9.00.3073",
+      "service_pack": "SP2",
+      "update_type": "MS08-052: GDR Security Update",
+      "kb_article": "KB954606",
+      "release_date": "2008-09-09",
+      "article_url": "https://support.microsoft.com/help/954606"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3282",
+      "service_pack": "SP2",
+      "update_type": "MS08-052: Security Update",
+      "kb_article": "KB954607",
+      "release_date": "2008-09-09",
+      "article_url": "https://support.microsoft.com/help/954607"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3294",
+      "service_pack": "SP2",
+      "update_type": "CU10",
+      "kb_article": "KB956854",
+      "release_date": "2008-10-21",
+      "article_url": "https://support.microsoft.com/help/956854"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3301",
+      "service_pack": "SP2",
+      "update_type": "CU11",
+      "kb_article": "KB958735",
+      "release_date": "2008-12-15",
+      "article_url": "https://support.microsoft.com/help/958735"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
       "build": "9.00.4035",
       "service_pack": "SP3",
-      "update_type": "RTW",
+      "update_type": "Service Pack",
       "kb_article": "KB955706",
       "release_date": "2008-12-15",
       "article_url": "https://support.microsoft.com/help/955706"
@@ -54,12 +204,42 @@
     {
       "sql_version": "SQL Server 2005",
       "major_version": 2005,
+      "build": "9.00.4207",
+      "service_pack": "SP3",
+      "update_type": "CU1",
+      "kb_article": "KB959195",
+      "release_date": "2008-12-19",
+      "article_url": "https://support.microsoft.com/help/959195"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
       "build": "9.00.3077",
-      "service_pack": "SP4",
-      "update_type": "MS09-004: GDR Security update",
+      "service_pack": "RTM",
+      "update_type": "MS09-004: GDR Security Update",
       "kb_article": "KB960089",
       "release_date": "2009-02-10",
       "article_url": "https://support.microsoft.com/help/960089"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3310",
+      "service_pack": "SP2",
+      "update_type": "MS09-004: QFE Security Update",
+      "kb_article": "KB960090",
+      "release_date": "2009-02-10",
+      "article_url": "https://support.microsoft.com/help/960090"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3315",
+      "service_pack": "SP2",
+      "update_type": "CU12",
+      "kb_article": "KB960485",
+      "release_date": "2009-02-16",
+      "article_url": "https://support.microsoft.com/help/960485"
     },
     {
       "sql_version": "SQL Server 2005",
@@ -84,12 +264,42 @@
     {
       "sql_version": "SQL Server 2005",
       "major_version": 2005,
+      "build": "9.00.4220",
+      "service_pack": "SP3",
+      "update_type": "CU3",
+      "kb_article": "KB967909",
+      "release_date": "2009-04-20",
+      "article_url": "https://support.microsoft.com/help/967909"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3328",
+      "service_pack": "SP2",
+      "update_type": "CU14",
+      "kb_article": "KB970278",
+      "release_date": "2009-06-15",
+      "article_url": "https://support.microsoft.com/help/970278"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
       "build": "9.00.4226",
       "service_pack": "SP3",
       "update_type": "CU4",
       "kb_article": "KB970279",
       "release_date": "2009-06-15",
       "article_url": "https://support.microsoft.com/help/970279"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3330",
+      "service_pack": "SP2",
+      "update_type": "CU15",
+      "kb_article": "KB972510",
+      "release_date": "2009-08-17",
+      "article_url": "https://support.microsoft.com/help/972510"
     },
     {
       "sql_version": "SQL Server 2005",
@@ -104,12 +314,112 @@
     {
       "sql_version": "SQL Server 2005",
       "major_version": 2005,
+      "build": "9.00.3080",
+      "service_pack": "SP2",
+      "update_type": "MS09-062: GDR Security Update",
+      "kb_article": "KB970895",
+      "release_date": "2009-10-13",
+      "article_url": "https://support.microsoft.com/help/970895"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3353",
+      "service_pack": "SP2",
+      "update_type": "MS09-062: QFE Security Update",
+      "kb_article": "KB970896",
+      "release_date": "2009-10-13",
+      "article_url": "https://support.microsoft.com/help/970896"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.4053",
+      "service_pack": "SP3",
+      "update_type": "MS09-062: GDR Security Update",
+      "kb_article": "KB970892",
+      "release_date": "2009-10-13",
+      "article_url": "https://support.microsoft.com/help/970892"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.4262",
+      "service_pack": "SP3",
+      "update_type": "MS09-062: QFE Security Update",
+      "kb_article": "KB970894",
+      "release_date": "2009-10-13",
+      "article_url": "https://support.microsoft.com/help/970894"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3355",
+      "service_pack": "SP2",
+      "update_type": "CU16",
+      "kb_article": "KB974647",
+      "release_date": "2009-10-19",
+      "article_url": "https://support.microsoft.com/help/974647"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.4266",
+      "service_pack": "SP3",
+      "update_type": "CU6",
+      "kb_article": "KB974648",
+      "release_date": "2009-10-19",
+      "article_url": "https://support.microsoft.com/help/974648"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.3356",
+      "service_pack": "SP2",
+      "update_type": "CU17",
+      "kb_article": "KB976952",
+      "release_date": "2009-12-21",
+      "article_url": "https://support.microsoft.com/help/976952"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.4273",
+      "service_pack": "SP3",
+      "update_type": "CU7",
+      "kb_article": "KB976951",
+      "release_date": "2009-12-21",
+      "article_url": "https://support.microsoft.com/help/976951"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
       "build": "9.00.4285",
       "service_pack": "SP3",
       "update_type": "CU8",
       "kb_article": "KB978915",
       "release_date": "2010-02-16",
       "article_url": "https://support.microsoft.com/help/978915"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.5259",
+      "service_pack": "SP4",
+      "update_type": "CU2",
+      "kb_article": "KB2489409",
+      "release_date": "2010-02-21",
+      "article_url": "https://support.microsoft.com/help/2489409"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.4294",
+      "service_pack": "SP3",
+      "update_type": "CU9",
+      "kb_article": "KB980176",
+      "release_date": "2010-04-19",
+      "article_url": "https://support.microsoft.com/help/980176"
     },
     {
       "sql_version": "SQL Server 2005",
@@ -134,19 +444,79 @@
     {
       "sql_version": "SQL Server 2005",
       "major_version": 2005,
+      "build": "9.00.4311",
+      "service_pack": "SP3",
+      "update_type": "CU12",
+      "kb_article": "KB2345449",
+      "release_date": "2010-10-18",
+      "article_url": "https://support.microsoft.com/help/2345449"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
       "build": "9.00.5000",
       "service_pack": "SP4",
-      "update_type": "RTW / PCU4",
-      "kb_article": null,
+      "update_type": "Service Pack",
+      "kb_article": "KB2463332",
       "release_date": "2010-12-16",
-      "article_url": null
+      "article_url": "https://support.microsoft.com/help/2463332"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.4315",
+      "service_pack": "SP3",
+      "update_type": "CU13",
+      "kb_article": "KB2438344",
+      "release_date": "2010-12-20",
+      "article_url": "https://support.microsoft.com/help/2438344"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.5254",
+      "service_pack": "SP4",
+      "update_type": "CU1",
+      "kb_article": "KB2464079",
+      "release_date": "2010-12-23",
+      "article_url": "https://support.microsoft.com/help/2464079"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.4317",
+      "service_pack": "SP3",
+      "update_type": "CU14",
+      "kb_article": "KB2489375",
+      "release_date": "2011-02-21",
+      "article_url": "https://support.microsoft.com/help/2489375"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.4325",
+      "service_pack": "SP3",
+      "update_type": "CU15",
+      "kb_article": "KB2507766",
+      "release_date": "2011-03-22",
+      "article_url": "https://support.microsoft.com/help/2507766"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
+      "build": "9.00.5266",
+      "service_pack": "SP4",
+      "update_type": "CU3",
+      "kb_article": "KB2507769",
+      "release_date": "2011-03-22",
+      "article_url": "https://support.microsoft.com/help/2507769"
     },
     {
       "sql_version": "SQL Server 2005",
       "major_version": 2005,
       "build": "9.00.4060",
       "service_pack": "SP3",
-      "update_type": "MS11-049: GDR Security update",
+      "update_type": "MS11-049: GDR Security Update",
       "kb_article": "KB2494113",
       "release_date": "2011-06-14",
       "article_url": "https://support.microsoft.com/help/2494113"
@@ -154,9 +524,19 @@
     {
       "sql_version": "SQL Server 2005",
       "major_version": 2005,
+      "build": "9.00.4340",
+      "service_pack": "SP3",
+      "update_type": "MS11-049: QFE Security Update",
+      "kb_article": "KB2494112",
+      "release_date": "2011-06-14",
+      "article_url": "https://support.microsoft.com/help/2494112"
+    },
+    {
+      "sql_version": "SQL Server 2005",
+      "major_version": 2005,
       "build": "9.00.5057",
       "service_pack": "SP4",
-      "update_type": "MS11-049: GDR Security update",
+      "update_type": "MS11-049: GDR Security Update",
       "kb_article": "KB2494120",
       "release_date": "2011-06-14",
       "article_url": "https://support.microsoft.com/help/2494120"
@@ -166,7 +546,7 @@
       "major_version": 2005,
       "build": "9.00.5292",
       "service_pack": "SP4",
-      "update_type": "MS11-049: QFE Security update",
+      "update_type": "MS11-049: QFE Security Update",
       "kb_article": "KB2494123",
       "release_date": "2011-06-14",
       "article_url": "https://support.microsoft.com/help/2494123"
@@ -176,7 +556,7 @@
       "major_version": 2005,
       "build": "9.00.5069",
       "service_pack": "SP4",
-      "update_type": "MS12-070: GDR Security update",
+      "update_type": "MS12-070: QFE Security Update",
       "kb_article": "KB2716429",
       "release_date": "2012-10-09",
       "article_url": "https://support.microsoft.com/help/2716429"
@@ -186,7 +566,7 @@
       "major_version": 2005,
       "build": "9.00.5324",
       "service_pack": "SP4",
-      "update_type": "MS12-070: QFE Security update",
+      "update_type": "MS12-070: QFE Security Update",
       "kb_article": "KB2716427",
       "release_date": "2012-10-09",
       "article_url": "https://support.microsoft.com/help/2716427"
@@ -204,7 +584,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.1763.0",
+      "build": "10.00.1763.00",
       "service_pack": "RTM",
       "update_type": "CU1",
       "kb_article": "KB956717",
@@ -214,7 +594,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.1779.0",
+      "build": "10.00.1779.00",
       "service_pack": "RTM",
       "update_type": "CU2",
       "kb_article": "KB958186",
@@ -224,7 +604,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.1787.0",
+      "build": "10.00.1787.00",
       "service_pack": "RTM",
       "update_type": "CU3",
       "kb_article": "KB960484",
@@ -234,7 +614,27 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2710.0",
+      "build": "10.00.1798.00",
+      "service_pack": "RTM",
+      "update_type": "CU4",
+      "kb_article": "KB963036",
+      "release_date": "2009-03-16",
+      "article_url": "https://support.microsoft.com/help/963036"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.2531.00",
+      "service_pack": "SP1",
+      "update_type": "Service Pack",
+      "kb_article": null,
+      "release_date": "2009-04-07",
+      "article_url": null
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.2710.00",
       "service_pack": "SP1",
       "update_type": "CU1",
       "kb_article": "KB969099",
@@ -244,7 +644,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2714.0",
+      "build": "10.00.1806.00",
+      "service_pack": "RTM",
+      "update_type": "CU5",
+      "kb_article": "KB969531",
+      "release_date": "2009-05-18",
+      "article_url": "https://support.microsoft.com/help/969531"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.2714.00",
       "service_pack": "SP1",
       "update_type": "CU2",
       "kb_article": "KB970315",
@@ -254,7 +664,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2723.0",
+      "build": "10.00.1812.00",
+      "service_pack": "RTM",
+      "update_type": "CU6",
+      "kb_article": "KB971490",
+      "release_date": "2009-07-20",
+      "article_url": "https://support.microsoft.com/help/971490"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.2723.00",
       "service_pack": "SP1",
       "update_type": "CU3",
       "kb_article": "KB971491",
@@ -264,7 +684,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2734.0",
+      "build": "10.00.1818.00",
+      "service_pack": "RTM",
+      "update_type": "CU7",
+      "kb_article": "KB973601",
+      "release_date": "2009-09-21",
+      "article_url": "https://support.microsoft.com/help/973601"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.2734.00",
       "service_pack": "SP1",
       "update_type": "CU4",
       "kb_article": "KB973602",
@@ -274,7 +704,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.1823.0",
+      "build": "10.00.1823.00",
       "service_pack": "RTM",
       "update_type": "CU8",
       "kb_article": "KB975976",
@@ -284,7 +714,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2746.0",
+      "build": "10.00.2746.00",
       "service_pack": "SP1",
       "update_type": "CU5",
       "kb_article": "KB975977",
@@ -294,12 +724,42 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.1835.0",
+      "build": "10.00.1828.00",
+      "service_pack": "RTM",
+      "update_type": "CU9",
+      "kb_article": "KB977444",
+      "release_date": "2010-01-18",
+      "article_url": "https://support.microsoft.com/help/977444"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.2757.00",
+      "service_pack": "SP1",
+      "update_type": "CU6",
+      "kb_article": "KB977443",
+      "release_date": "2010-01-18",
+      "article_url": "https://support.microsoft.com/help/977443"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.1835.00",
       "service_pack": "RTM",
       "update_type": "CU10",
       "kb_article": "KB979064",
       "release_date": "2010-03-15",
       "article_url": "https://support.microsoft.com/help/979064"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.2766.00",
+      "service_pack": "SP1",
+      "update_type": "CU7",
+      "kb_article": "KB979065",
+      "release_date": "2010-03-26",
+      "article_url": "https://support.microsoft.com/help/979065"
     },
     {
       "sql_version": "SQL Server 2008",
@@ -314,7 +774,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2775.0",
+      "build": "10.00.2775.00",
       "service_pack": "SP1",
       "update_type": "CU8",
       "kb_article": "KB981702",
@@ -324,7 +784,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1702.0",
+      "build": "10.50.1702.00",
       "service_pack": "RTM",
       "update_type": "CU1",
       "kb_article": "KB981355",
@@ -334,7 +794,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1720.0",
+      "build": "10.50.1720.00",
       "service_pack": "RTM",
       "update_type": "CU2",
       "kb_article": "KB2072493",
@@ -344,7 +804,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1734.0",
+      "build": "10.00.2789.00",
+      "service_pack": "SP1",
+      "update_type": "CU9",
+      "kb_article": "KB2083921",
+      "release_date": "2010-07-19",
+      "article_url": "https://support.microsoft.com/help/2083921"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.50.1734.00",
       "service_pack": "RTM",
       "update_type": "CU3",
       "kb_article": "KB2261464",
@@ -354,9 +824,19 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4000.0",
+      "build": "10.00.2799.00",
+      "service_pack": "SP1",
+      "update_type": "CU10",
+      "kb_article": "KB2279604",
+      "release_date": "2010-09-20",
+      "article_url": "https://support.microsoft.com/help/2279604"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.4000.00",
       "service_pack": "SP2",
-      "update_type": "RTW / PCU 2",
+      "update_type": "Service Pack",
       "kb_article": "KB2285068",
       "release_date": "2010-09-29",
       "article_url": "https://support.microsoft.com/help/2285068"
@@ -364,7 +844,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1746.0",
+      "build": "10.50.1746.00",
       "service_pack": "RTM",
       "update_type": "CU4",
       "kb_article": "KB2345451",
@@ -374,7 +854,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2804.0",
+      "build": "10.00.2804.00",
       "service_pack": "SP1",
       "update_type": "CU11",
       "kb_article": "KB2413738",
@@ -384,7 +864,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4266.0",
+      "build": "10.00.4266.00",
       "service_pack": "SP2",
       "update_type": "CU1",
       "kb_article": "KB2289254",
@@ -394,7 +874,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1753.0",
+      "build": "10.50.1753.00",
       "service_pack": "RTM",
       "update_type": "CU5",
       "kb_article": "KB2438347",
@@ -404,7 +884,37 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1765.0",
+      "build": "10.00.2808.00",
+      "service_pack": "SP1",
+      "update_type": "CU12",
+      "kb_article": "KB2467236",
+      "release_date": "2011-01-17",
+      "article_url": "https://support.microsoft.com/help/2467236"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.4272.00",
+      "service_pack": "SP2",
+      "update_type": "CU2",
+      "kb_article": "KB2467239",
+      "release_date": "2011-01-17",
+      "article_url": "https://support.microsoft.com/help/2467239"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.2816.00",
+      "service_pack": "SP1",
+      "update_type": "CU13",
+      "kb_article": "KB2497673",
+      "release_date": "2011-02-17",
+      "article_url": "https://support.microsoft.com/help/2497673"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.50.1765.00",
       "service_pack": "RTM",
       "update_type": "CU6",
       "kb_article": "KB2489376",
@@ -414,17 +924,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2816.0",
-      "service_pack": "SP1",
-      "update_type": "CU13",
-      "kb_article": "KB2497673",
-      "release_date": "2011-03-17",
-      "article_url": "https://support.microsoft.com/help/2497673"
-    },
-    {
-      "sql_version": "SQL Server 2008",
-      "major_version": 2008,
-      "build": "10.00.4279.0",
+      "build": "10.00.4279.00",
       "service_pack": "SP2",
       "update_type": "CU3",
       "kb_article": "KB2498535",
@@ -434,7 +934,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1777.0",
+      "build": "10.50.1777.00",
       "service_pack": "RTM",
       "update_type": "CU7",
       "kb_article": "KB2507770",
@@ -444,7 +944,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2821.0",
+      "build": "10.00.2821.00",
       "service_pack": "SP1",
       "update_type": "CU14",
       "kb_article": "KB2527187",
@@ -454,7 +954,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4285.0",
+      "build": "10.00.4285.00",
       "service_pack": "SP2",
       "update_type": "CU4",
       "kb_article": "KB2527180",
@@ -464,9 +964,9 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.2573.0",
+      "build": "10.00.2573.00",
       "service_pack": "SP1",
-      "update_type": "MS11-049: GDR Security update",
+      "update_type": "MS11-049: GDR Security Update",
       "kb_article": "KB2494096",
       "release_date": "2011-06-14",
       "article_url": "https://support.microsoft.com/help/2494096"
@@ -484,7 +984,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4064.0",
+      "build": "10.00.4064.00",
       "service_pack": "SP2",
       "update_type": "MS11-049: GDR Security Update",
       "kb_article": "KB2494089",
@@ -494,7 +994,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4311.0",
+      "build": "10.00.4311.00",
       "service_pack": "SP2",
       "update_type": "MS11-049: QFE Security Update",
       "kb_article": "KB2494094",
@@ -504,7 +1004,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1617.0",
+      "build": "10.50.1617.00",
       "service_pack": "RTM",
       "update_type": "MS11-049: GDR Security Update",
       "kb_article": "KB2494088",
@@ -514,7 +1014,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1790.0",
+      "build": "10.50.1790.00",
       "service_pack": "RTM",
       "update_type": "MS11-049: QFE Security Update",
       "kb_article": "KB2494086",
@@ -524,9 +1024,19 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
+      "build": "10.50.1797.00",
+      "service_pack": "RTM",
+      "update_type": "CU8",
+      "kb_article": "KB2534352",
+      "release_date": "2011-06-21",
+      "article_url": "https://support.microsoft.com/help/2534352"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
       "build": "10.50.2500.0",
       "service_pack": "SP1",
-      "update_type": "RTW/PCU1",
+      "update_type": "Service Pack",
       "kb_article": "KB2528583",
       "release_date": "2011-07-12",
       "article_url": "https://support.microsoft.com/help/2528583"
@@ -544,7 +1054,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4316.0",
+      "build": "10.00.4316.00",
       "service_pack": "SP2",
       "update_type": "CU5",
       "kb_article": "KB2555408",
@@ -554,7 +1064,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2769.0",
+      "build": "10.50.2769.00",
       "service_pack": "SP1",
       "update_type": "CU1",
       "kb_article": "KB2544793",
@@ -564,7 +1074,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1804.0",
+      "build": "10.50.1804.00",
       "service_pack": "RTM",
       "update_type": "CU9",
       "kb_article": "KB2567713",
@@ -574,7 +1084,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2772.0",
+      "build": "10.50.2772.00",
       "service_pack": "SP1",
       "update_type": "CU2",
       "kb_article": "KB2567714",
@@ -594,7 +1104,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4321.0",
+      "build": "10.00.4321.00",
       "service_pack": "SP2",
       "update_type": "CU6",
       "kb_article": "KB2582285",
@@ -604,9 +1114,9 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5500.0",
+      "build": "10.00.5500.00",
       "service_pack": "SP3",
-      "update_type": "RTW / PCU 3",
+      "update_type": "Service Pack",
       "kb_article": "KB2546951",
       "release_date": "2011-10-06",
       "article_url": "https://support.microsoft.com/help/2546951"
@@ -614,7 +1124,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5766.0",
+      "build": "10.00.5766.00",
       "service_pack": "SP3",
       "update_type": "CU1",
       "kb_article": "KB2617146",
@@ -624,7 +1134,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1807.0",
+      "build": "10.50.1807.00",
       "service_pack": "RTM",
       "update_type": "CU10",
       "kb_article": "KB2591746",
@@ -634,7 +1144,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2789.0",
+      "build": "10.50.2789.00",
       "service_pack": "SP1",
       "update_type": "CU3",
       "kb_article": "KB2591748",
@@ -644,7 +1154,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4323.0",
+      "build": "10.00.4323.00",
       "service_pack": "SP2",
       "update_type": "CU7",
       "kb_article": "KB2617148",
@@ -654,7 +1164,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5768.0",
+      "build": "10.00.5768.00",
       "service_pack": "SP3",
       "update_type": "CU2",
       "kb_article": "KB2633143",
@@ -664,7 +1174,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2796.0",
+      "build": "10.50.1809.00",
+      "service_pack": "RTM",
+      "update_type": "CU11",
+      "kb_article": "KB2633145",
+      "release_date": "2011-12-19",
+      "article_url": "https://support.microsoft.com/help/2633145"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.50.2796.00",
       "service_pack": "SP1",
       "update_type": "CU4",
       "kb_article": "KB2633146",
@@ -674,7 +1194,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4326.0",
+      "build": "10.00.4326.00",
       "service_pack": "SP2",
       "update_type": "CU8",
       "kb_article": "KB2648096",
@@ -684,7 +1204,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1810.0",
+      "build": "10.00.5770.00",
+      "service_pack": "SP3",
+      "update_type": "CU3",
+      "kb_article": "KB2648098",
+      "release_date": "2012-01-16",
+      "article_url": "https://support.microsoft.com/help/2648098"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.50.1810.00",
       "service_pack": "RTM",
       "update_type": "CU12",
       "kb_article": "KB2659692",
@@ -694,7 +1224,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2806.0",
+      "build": "10.50.2806.00",
       "service_pack": "SP1",
       "update_type": "CU5",
       "kb_article": "KB2659694",
@@ -704,7 +1234,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4330.0",
+      "build": "10.00.4330.00",
       "service_pack": "SP2",
       "update_type": "CU9",
       "kb_article": "KB2673382",
@@ -714,7 +1244,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.1815.0",
+      "build": "10.00.5775.00",
+      "service_pack": "SP3",
+      "update_type": "CU4",
+      "kb_article": "KB2673383",
+      "release_date": "2012-03-19",
+      "article_url": "https://support.microsoft.com/help/2673383"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.50.1815.00",
       "service_pack": "RTM",
       "update_type": "CU13",
       "kb_article": "KB2679366",
@@ -724,7 +1264,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2811.0",
+      "build": "10.50.2811.00",
       "service_pack": "SP1",
       "update_type": "CU6",
       "kb_article": "KB2679367",
@@ -734,7 +1274,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4332.0",
+      "build": "10.00.4332.00",
       "service_pack": "SP2",
       "update_type": "CU10",
       "kb_article": "KB2696625",
@@ -744,7 +1284,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5785.0",
+      "build": "10.00.5785.00",
       "service_pack": "SP3",
       "update_type": "CU5",
       "kb_article": "KB2696626",
@@ -754,7 +1294,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2817.0",
+      "build": "10.50.2817.00",
       "service_pack": "SP1",
       "update_type": "CU7",
       "kb_article": "KB2703282",
@@ -764,7 +1304,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5788.0",
+      "build": "10.00.4333.00",
+      "service_pack": "SP2",
+      "update_type": "CU11",
+      "kb_article": "KB2715951",
+      "release_date": "2012-07-16",
+      "article_url": "https://support.microsoft.com/help/2715951"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.5788.00",
       "service_pack": "SP3",
       "update_type": "CU6",
       "kb_article": "KB2715953",
@@ -774,7 +1324,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4260.0",
+      "build": "10.50.4260.00",
       "service_pack": "SP2",
       "update_type": "CU1",
       "kb_article": "KB2720425",
@@ -786,7 +1336,7 @@
       "major_version": 2008,
       "build": "10.50.4000.0",
       "service_pack": "SP2",
-      "update_type": "RTW/PCU2",
+      "update_type": "Service Pack",
       "kb_article": "KB2630458",
       "release_date": "2012-07-26",
       "article_url": "https://support.microsoft.com/help/2630458"
@@ -794,7 +1344,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2822.0",
+      "build": "10.50.2822.00",
       "service_pack": "SP1",
       "update_type": "CU8",
       "kb_article": "KB2723743",
@@ -804,7 +1354,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4263.0",
+      "build": "10.50.4263.00",
       "service_pack": "SP2",
       "update_type": "CU2",
       "kb_article": "KB2740411",
@@ -814,7 +1364,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5794.0",
+      "build": "10.50.2861.00",
+      "service_pack": "SP1",
+      "update_type": "MS12-070: QFE Security Update",
+      "kb_article": "KB2716439",
+      "release_date": "2012-09-09",
+      "article_url": "https://support.microsoft.com/help/2716439"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.5794.00",
       "service_pack": "SP3",
       "update_type": "CU7",
       "kb_article": "KB2738350",
@@ -824,7 +1384,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4067.0",
+      "build": "10.00.4067.00",
       "service_pack": "SP2",
       "update_type": "MS12-070: GDR Security Update",
       "kb_article": "KB2716434",
@@ -834,7 +1394,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.4371.0",
+      "build": "10.00.4371.00",
       "service_pack": "SP2",
       "update_type": "MS12-070: QFE Security Update",
       "kb_article": "KB2716433",
@@ -844,7 +1404,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5512.0",
+      "build": "10.00.5512.00",
       "service_pack": "SP3",
       "update_type": "MS12-070: GDR Security Update",
       "kb_article": "KB2716436",
@@ -854,7 +1414,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5826.0",
+      "build": "10.00.5826.00",
       "service_pack": "SP3",
       "update_type": "MS12-070: QFE Security Update",
       "kb_article": "KB2716435",
@@ -864,8 +1424,8 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2550.0",
-      "service_pack": "SP1",
+      "build": "10.50.2550.00",
+      "service_pack": null,
       "update_type": "MS12-070: GDR Security Update",
       "kb_article": "KB2754849",
       "release_date": "2012-10-09",
@@ -874,17 +1434,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2861.0",
-      "service_pack": "SP1",
-      "update_type": "MS12-070: QFE Security Update",
-      "kb_article": "KB2716439",
-      "release_date": "2012-10-09",
-      "article_url": "https://support.microsoft.com/help/2716439"
-    },
-    {
-      "sql_version": "SQL Server 2008",
-      "major_version": 2008,
-      "build": "10.50.2866.0",
+      "build": "10.50.2866.00",
       "service_pack": "SP1",
       "update_type": "CU9",
       "kb_article": "KB2756574",
@@ -894,7 +1444,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4266.0",
+      "build": "10.50.4266.00",
       "service_pack": "SP2",
       "update_type": "CU3",
       "kb_article": "KB2754552",
@@ -904,7 +1454,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5828.0",
+      "build": "10.00.5828.00",
       "service_pack": "SP3",
       "update_type": "CU8",
       "kb_article": "KB2771833",
@@ -914,7 +1464,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4270.0",
+      "build": "10.50.2868.00",
+      "service_pack": "SP1",
+      "update_type": "CU10",
+      "kb_article": "KB2783135",
+      "release_date": "2012-12-17",
+      "article_url": "https://support.microsoft.com/help/2783135"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.50.4270.00",
       "service_pack": "SP2",
       "update_type": "CU4",
       "kb_article": "KB2777358",
@@ -924,7 +1484,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5829.0",
+      "build": "10.00.5829.00",
       "service_pack": "SP3",
       "update_type": "CU9",
       "kb_article": "KB2799883",
@@ -934,7 +1494,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2869.0",
+      "build": "10.50.2869.00",
       "service_pack": "SP1",
       "update_type": "CU11",
       "kb_article": "KB2812683",
@@ -944,7 +1504,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4276.0",
+      "build": "10.50.4276.00",
       "service_pack": "SP2",
       "update_type": "CU5",
       "kb_article": "KB2797460",
@@ -954,7 +1514,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5835.0",
+      "build": "10.00.5835.00",
       "service_pack": "SP3",
       "update_type": "CU10",
       "kb_article": "KB2814783",
@@ -964,7 +1524,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2874.0",
+      "build": "10.50.2874.00",
       "service_pack": "SP1",
       "update_type": "CU12",
       "kb_article": "KB2828727",
@@ -984,7 +1544,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5840.0",
+      "build": "10.00.5840.00",
       "service_pack": "SP3",
       "update_type": "CU11",
       "kb_article": "KB2834048",
@@ -994,7 +1554,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2876.0",
+      "build": "10.50.2876.00",
       "service_pack": "SP1",
       "update_type": "CU13",
       "kb_article": "KB2855792",
@@ -1014,7 +1574,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5844.0",
+      "build": "10.00.5844.00",
       "service_pack": "SP3",
       "update_type": "CU12",
       "kb_article": "KB2863205",
@@ -1024,7 +1584,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.2881.0",
+      "build": "10.50.2881.00",
       "service_pack": "SP1",
       "update_type": "CU14",
       "kb_article": "KB2868244",
@@ -1034,7 +1594,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5846.0",
+      "build": "10.50.4290.00",
+      "service_pack": "SP2",
+      "update_type": "CU8",
+      "kb_article": "KB2871401",
+      "release_date": "2013-08-22",
+      "article_url": "https://support.microsoft.com/help/2871401"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.5846.00",
       "service_pack": "SP3",
       "update_type": "CU13",
       "kb_article": "KB2880350",
@@ -1044,7 +1614,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4295.0",
+      "build": "10.50.4295.00",
       "service_pack": "SP2",
       "update_type": "CU9",
       "kb_article": "KB2887606",
@@ -1054,7 +1624,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5848.0",
+      "build": "10.00.5848.00",
       "service_pack": "SP3",
       "update_type": "CU14",
       "kb_article": "KB2893410",
@@ -1064,7 +1634,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4297.0",
+      "build": "10.50.4297.00",
       "service_pack": "SP2",
       "update_type": "CU10",
       "kb_article": "KB2908087",
@@ -1074,7 +1644,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5850.0",
+      "build": "10.00.5850.00",
       "service_pack": "SP3",
       "update_type": "CU15",
       "kb_article": "KB2923520",
@@ -1084,7 +1654,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4302.0",
+      "build": "10.50.4302.00",
       "service_pack": "SP2",
       "update_type": "CU11",
       "kb_article": "KB2926028",
@@ -1094,7 +1664,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5852.0",
+      "build": "10.00.5852.00",
       "service_pack": "SP3",
       "update_type": "CU16",
       "kb_article": "KB2936421",
@@ -1104,17 +1674,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4305.0",
-      "service_pack": "SP2",
-      "update_type": "CU12",
-      "kb_article": "KB2938478",
-      "release_date": "2014-04-21",
-      "article_url": "https://support.microsoft.com/help/2938478"
-    },
-    {
-      "sql_version": "SQL Server 2008",
-      "major_version": 2008,
-      "build": "10.00.5861.0",
+      "build": "10.00.5861.00",
       "service_pack": "SP3",
       "update_type": "CU17",
       "kb_article": "KB2958696",
@@ -1124,7 +1684,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4319.0",
+      "build": "10.50.4319.00",
       "service_pack": "SP2",
       "update_type": "CU13",
       "kb_article": "KB2967540",
@@ -1134,7 +1694,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5520.0",
+      "build": "10.00.5520.00",
       "service_pack": "SP3",
       "update_type": "MS14-044: GDR Security Update",
       "kb_article": "KB2977321",
@@ -1144,17 +1704,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5869.0",
+      "build": "10.00.5869.00",
       "service_pack": "SP3",
       "update_type": "MS14-044: QFE Security Update",
-      "kb_article": "KB29843402977322",
+      "kb_article": "KB2977322",
       "release_date": "2014-08-12",
-      "article_url": "https://support.microsoft.com/help/2984340"
+      "article_url": "https://support.microsoft.com/help/2977322"
     },
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4033.0",
+      "build": "10.50.4033.00",
       "service_pack": "SP2",
       "update_type": "MS14-044: GDR Security Update",
       "kb_article": "KB2977320",
@@ -1164,7 +1724,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4321.0",
+      "build": "10.50.4321.00",
       "service_pack": "SP2",
       "update_type": "MS14-044: QFE Security Update",
       "kb_article": "KB2977319",
@@ -1174,9 +1734,19 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
+      "build": "10.50.4305.00",
+      "service_pack": "SP2",
+      "update_type": "CU12",
+      "kb_article": "KB2938478",
+      "release_date": "2014-08-21",
+      "article_url": "https://support.microsoft.com/help/2938478"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
       "build": "10.50.6000.34",
       "service_pack": "SP3",
-      "update_type": "RTW/PCU3",
+      "update_type": "Service Pack",
       "kb_article": "KB2979597",
       "release_date": "2014-09-26",
       "article_url": "https://support.microsoft.com/help/2979597"
@@ -1184,7 +1754,17 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5538.0",
+      "build": "10.00.6000.29",
+      "service_pack": "SP4",
+      "update_type": "Service Pack",
+      "kb_article": "KB2979596",
+      "release_date": "2014-09-30",
+      "article_url": "https://support.microsoft.com/help/2979596"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
+      "build": "10.00.5538.00",
       "service_pack": "SP3",
       "update_type": "MS15-058: GDR Security Update",
       "kb_article": "KB3045305",
@@ -1194,9 +1774,9 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.5890.0",
+      "build": "10.00.5890.00",
       "service_pack": "SP3",
-      "update_type": "MS15-058: QFE Security Update",
+      "update_type": "MS15-060: QFE Security Update",
       "kb_article": "KB3045303",
       "release_date": "2015-07-14",
       "article_url": "https://support.microsoft.com/help/3045303"
@@ -1204,9 +1784,9 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.6241.0",
+      "build": "10.00.6241.00",
       "service_pack": "SP4",
-      "update_type": "MS15-058: GDR Security Update",
+      "update_type": "MS15-059: GDR Security Update",
       "kb_article": "KB3045311",
       "release_date": "2015-07-14",
       "article_url": "https://support.microsoft.com/help/3045311"
@@ -1214,7 +1794,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.00.6535.0",
+      "build": "10.00.6535.00",
       "service_pack": "SP4",
       "update_type": "MS15-058: QFE Security Update",
       "kb_article": "KB3045308",
@@ -1224,7 +1804,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4042.0",
+      "build": "10.50.4042.00",
       "service_pack": "SP2",
       "update_type": "MS15-058: GDR Security Update",
       "kb_article": "KB3045313",
@@ -1234,7 +1814,7 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
-      "build": "10.50.4339.0",
+      "build": "10.50.4339.00",
       "service_pack": "SP2",
       "update_type": "MS15-058: QFE Security Update",
       "kb_article": "KB3045312",
@@ -1246,7 +1826,7 @@
       "major_version": 2008,
       "build": "10.50.6220.0",
       "service_pack": "SP3",
-      "update_type": "MS15-058: QFE Security Update",
+      "update_type": "MS15-058: GDR Security Update",
       "kb_article": "KB3045316",
       "release_date": "2015-07-14",
       "article_url": "https://support.microsoft.com/help/3045316"
@@ -1266,7 +1846,7 @@
       "major_version": 2008,
       "build": "10.50.6560.0",
       "service_pack": "SP3",
-      "update_type": "GDR Security Update",
+      "update_type": "ADV180002: GDR Security Update",
       "kb_article": "KB4057113",
       "release_date": "2018-01-06",
       "article_url": "https://support.microsoft.com/help/4057113"
@@ -1274,9 +1854,19 @@
     {
       "sql_version": "SQL Server 2008",
       "major_version": 2008,
+      "build": "10.00.6556.0",
+      "service_pack": "SP4",
+      "update_type": "GDR for Service Pack",
+      "kb_article": "KB4057114",
+      "release_date": "2018-01-12",
+      "article_url": "https://support.microsoft.com/help/4057114"
+    },
+    {
+      "sql_version": "SQL Server 2008",
+      "major_version": 2008,
       "build": "10.0.6814.4",
       "service_pack": "SP4",
-      "update_type": "GDR Security Update",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5020863",
       "release_date": "2023-02-14",
       "article_url": "https://support.microsoft.com/help/5020863"
@@ -1304,7 +1894,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2316.0",
+      "build": "11.0.2316.00",
       "service_pack": "RTM",
       "update_type": "CU1",
       "kb_article": "KB2679368",
@@ -1314,7 +1904,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2325.0",
+      "build": "11.0.2325.00",
       "service_pack": "RTM",
       "update_type": "CU2",
       "kb_article": "KB2703275",
@@ -1324,7 +1914,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2332.0",
+      "build": "11.0.2332.00",
       "service_pack": "RTM",
       "update_type": "CU3",
       "kb_article": "KB2723749",
@@ -1334,7 +1924,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2218.0",
+      "build": "11.0.2218.00",
       "service_pack": "RTM",
       "update_type": "MS12-070: GDR Security Update",
       "kb_article": "KB2716442",
@@ -1344,9 +1934,9 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2376.0",
+      "build": "11.0.2376.00",
       "service_pack": "RTM",
-      "update_type": "MS12-070: QFE Security Update",
+      "update_type": "MS12-070: GDR Security Update",
       "kb_article": "KB2716441",
       "release_date": "2012-10-09",
       "article_url": "https://support.microsoft.com/help/2716441"
@@ -1354,7 +1944,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2383.0",
+      "build": "11.0.2383.00",
       "service_pack": "RTM",
       "update_type": "CU4",
       "kb_article": "KB2758687",
@@ -1364,9 +1954,9 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3000.0",
+      "build": "11.0.3000.00",
       "service_pack": "SP1",
-      "update_type": "RTW/PCU1",
+      "update_type": "Service Pack",
       "kb_article": "KB2674319",
       "release_date": "2012-11-07",
       "article_url": "https://support.microsoft.com/help/2674319"
@@ -1374,7 +1964,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3321.0",
+      "build": "11.0.3321.00",
       "service_pack": "SP1",
       "update_type": "CU1",
       "kb_article": "KB2765331",
@@ -1384,7 +1974,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2395.0",
+      "build": "11.0.2395.00",
       "service_pack": "RTM",
       "update_type": "CU5",
       "kb_article": "KB2777772",
@@ -1394,7 +1984,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3339.0",
+      "build": "11.0.3339.00",
       "service_pack": "SP1",
       "update_type": "CU2",
       "kb_article": "KB2790947",
@@ -1404,7 +1994,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2401.0",
+      "build": "11.0.2401.00",
       "service_pack": "RTM",
       "update_type": "CU6",
       "kb_article": "KB2728897",
@@ -1414,7 +2004,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3349.0",
+      "build": "11.0.3349.00",
       "service_pack": "SP1",
       "update_type": "CU3",
       "kb_article": "KB2812412",
@@ -1424,7 +2014,17 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3368.0",
+      "build": "11.0.2405.00",
+      "service_pack": "RTM",
+      "update_type": "CU7",
+      "kb_article": "KB2823247",
+      "release_date": "2013-04-15",
+      "article_url": "https://support.microsoft.com/help/2823247"
+    },
+    {
+      "sql_version": "SQL Server 2012",
+      "major_version": 2012,
+      "build": "11.0.3368.00",
       "service_pack": "SP1",
       "update_type": "CU4",
       "kb_article": "KB2833645",
@@ -1434,7 +2034,17 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3373.0",
+      "build": "11.0.2410.00",
+      "service_pack": "RTM",
+      "update_type": "CU8",
+      "kb_article": "KB2844205",
+      "release_date": "2013-06-17",
+      "article_url": "https://support.microsoft.com/help/2844205"
+    },
+    {
+      "sql_version": "SQL Server 2012",
+      "major_version": 2012,
+      "build": "11.0.3373.00",
       "service_pack": "SP1",
       "update_type": "CU5",
       "kb_article": "KB2861107",
@@ -1444,7 +2054,17 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3381.0",
+      "build": "11.0.2419.00",
+      "service_pack": "RTM",
+      "update_type": "CU9",
+      "kb_article": "KB2867319",
+      "release_date": "2013-08-20",
+      "article_url": "https://support.microsoft.com/help/2867319"
+    },
+    {
+      "sql_version": "SQL Server 2012",
+      "major_version": 2012,
+      "build": "11.0.3381.00",
       "service_pack": "SP1",
       "update_type": "CU6",
       "kb_article": "KB2874879",
@@ -1454,7 +2074,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2420.0",
+      "build": "11.0.2420.00",
       "service_pack": "RTM",
       "update_type": "CU10",
       "kb_article": "KB2891666",
@@ -1464,7 +2084,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3393.0",
+      "build": "11.0.3393.00",
       "service_pack": "SP1",
       "update_type": "CU7",
       "kb_article": "KB2894115",
@@ -1474,7 +2094,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.2424.0",
+      "build": "11.0.2424.00",
       "service_pack": "RTM",
       "update_type": "CU11",
       "kb_article": "KB2908007",
@@ -1484,7 +2104,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3401.0",
+      "build": "11.0.3401.00",
       "service_pack": "SP1",
       "update_type": "CU8",
       "kb_article": "KB2917531",
@@ -1494,7 +2114,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3412.0",
+      "build": "11.0.3412.00",
       "service_pack": "SP1",
       "update_type": "CU9",
       "kb_article": "KB2931078",
@@ -1504,7 +2124,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3431.0",
+      "build": "11.0.3431.00",
       "service_pack": "SP1",
       "update_type": "CU10",
       "kb_article": "KB2954099",
@@ -1514,17 +2134,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.5058.0",
-      "service_pack": "SP2",
-      "update_type": "RTW/PCU2",
-      "kb_article": "KB2958429",
-      "release_date": "2014-06-10",
-      "article_url": "https://support.microsoft.com/help/2958429"
-    },
-    {
-      "sql_version": "SQL Server 2012",
-      "major_version": 2012,
-      "build": "11.0.3449.0",
+      "build": "11.0.3449.00",
       "service_pack": "SP1",
       "update_type": "CU11",
       "kb_article": "KB2975396",
@@ -1544,7 +2154,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3153.0",
+      "build": "11.0.3153.00",
       "service_pack": "SP1",
       "update_type": "MS14-044: GDR Security Update",
       "kb_article": "KB2977326",
@@ -1564,7 +2174,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3470.0",
+      "build": "11.0.3470.00",
       "service_pack": "SP1",
       "update_type": "CU12",
       "kb_article": "KB2991533",
@@ -1584,7 +2194,7 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3482.0",
+      "build": "11.0.3482.00",
       "service_pack": "SP1",
       "update_type": "CU13",
       "kb_article": "KB3002044",
@@ -1628,13 +2238,23 @@
       "service_pack": "SP2",
       "update_type": "CU6",
       "kb_article": "KB3052468",
-      "release_date": "2015-05-18",
+      "release_date": "2015-05-08",
       "article_url": "https://support.microsoft.com/help/3052468"
     },
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.3156.0",
+      "build": "11.0.5058.0",
+      "service_pack": "SP2",
+      "update_type": "Service Pack",
+      "kb_article": "KB2958429",
+      "release_date": "2015-06-10",
+      "article_url": "https://support.microsoft.com/help/2958429"
+    },
+    {
+      "sql_version": "SQL Server 2012",
+      "major_version": 2012,
+      "build": "11.0.3156.00",
       "service_pack": "SP1",
       "update_type": "MS15-058: GDR Security Update",
       "kb_article": "KB3045318",
@@ -1706,7 +2326,7 @@
       "major_version": 2012,
       "build": "11.0.6020.0",
       "service_pack": "SP3",
-      "update_type": "RTW/PCU3",
+      "update_type": "Service Pack",
       "kb_article": "KB3072779",
       "release_date": "2015-11-20",
       "article_url": "https://support.microsoft.com/help/3072779"
@@ -1718,7 +2338,7 @@
       "service_pack": "SP2",
       "update_type": "CU10",
       "kb_article": "KB3120313",
-      "release_date": "2016-01-19",
+      "release_date": "2016-01-20",
       "article_url": "https://support.microsoft.com/help/3120313"
     },
     {
@@ -1728,8 +2348,28 @@
       "service_pack": "SP3",
       "update_type": "CU1",
       "kb_article": "KB3123299",
-      "release_date": "2016-01-19",
+      "release_date": "2016-01-20",
       "article_url": "https://support.microsoft.com/help/3123299"
+    },
+    {
+      "sql_version": "SQL Server 2012",
+      "major_version": 2012,
+      "build": "11.0.5646.0",
+      "service_pack": "SP2",
+      "update_type": "CU11",
+      "kb_article": "KB3137745",
+      "release_date": "2016-03-21",
+      "article_url": "https://support.microsoft.com/help/3137745"
+    },
+    {
+      "sql_version": "SQL Server 2012",
+      "major_version": 2012,
+      "build": "11.0.6523.0",
+      "service_pack": "SP3",
+      "update_type": "CU2",
+      "kb_article": "KB3137746",
+      "release_date": "2016-03-21",
+      "article_url": "https://support.microsoft.com/help/3137746"
     },
     {
       "sql_version": "SQL Server 2012",
@@ -1778,7 +2418,7 @@
       "service_pack": "SP2",
       "update_type": "CU14",
       "kb_article": "KB3180914",
-      "release_date": "2016-09-19",
+      "release_date": "2016-09-20",
       "article_url": "https://support.microsoft.com/help/3180914"
     },
     {
@@ -1788,7 +2428,7 @@
       "service_pack": "SP3",
       "update_type": "CU5",
       "kb_article": "KB3180915",
-      "release_date": "2016-09-19",
+      "release_date": "2016-09-21",
       "article_url": "https://support.microsoft.com/help/3180915"
     },
     {
@@ -1796,7 +2436,7 @@
       "major_version": 2012,
       "build": "11.0.5388.0",
       "service_pack": "SP2",
-      "update_type": "MS16-136 GDR Security Update",
+      "update_type": "MS16-136: GDR Security Update",
       "kb_article": "KB3194719",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194719"
@@ -1805,8 +2445,8 @@
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
       "build": "11.0.5676.0",
-      "service_pack": "SP3",
-      "update_type": "MS16-136 QFE Security Update",
+      "service_pack": "SP2",
+      "update_type": "MS16-136: GDR Security Update",
       "kb_article": "KB3194725",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194725"
@@ -1816,7 +2456,7 @@
       "major_version": 2012,
       "build": "11.0.6248.0",
       "service_pack": "SP3",
-      "update_type": "MS16-136 GDR Security Update",
+      "update_type": "MS16-136: GDR Security Update",
       "kb_article": "KB3194721",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194721"
@@ -1826,7 +2466,7 @@
       "major_version": 2012,
       "build": "11.0.6567.0",
       "service_pack": "SP3",
-      "update_type": "MS16-136 QFE Security Update",
+      "update_type": "MS16-136: GDR Security Update",
       "kb_article": "KB3194724",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194724"
@@ -1844,16 +2484,6 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
-      "build": "11.0.5678.0",
-      "service_pack": "SP2",
-      "update_type": "CU16",
-      "kb_article": "KB3205054",
-      "release_date": "2016-11-17",
-      "article_url": "https://support.microsoft.com/help/3205054"
-    },
-    {
-      "sql_version": "SQL Server 2012",
-      "major_version": 2012,
       "build": "11.0.6567.0",
       "service_pack": "SP3",
       "update_type": "CU6",
@@ -1864,11 +2494,21 @@
     {
       "sql_version": "SQL Server 2012",
       "major_version": 2012,
+      "build": "11.0.5678.0",
+      "service_pack": "SP2",
+      "update_type": "CU16",
+      "kb_article": "KB3205054",
+      "release_date": "2017-01-18",
+      "article_url": "https://support.microsoft.com/help/3205054"
+    },
+    {
+      "sql_version": "SQL Server 2012",
+      "major_version": 2012,
       "build": "11.0.6579.0",
       "service_pack": "SP3",
       "update_type": "CU7",
       "kb_article": "KB3205051",
-      "release_date": "2017-01-17",
+      "release_date": "2017-01-18",
       "article_url": "https://support.microsoft.com/help/3205051"
     },
     {
@@ -1878,7 +2518,7 @@
       "service_pack": "SP3",
       "update_type": "CU8",
       "kb_article": "KB4013104",
-      "release_date": "2017-03-20",
+      "release_date": "2017-03-21",
       "article_url": "https://support.microsoft.com/help/4013104"
     },
     {
@@ -1888,7 +2528,7 @@
       "service_pack": "SP3",
       "update_type": "CU9",
       "kb_article": "KB4016762",
-      "release_date": "2017-05-15",
+      "release_date": "2017-05-16",
       "article_url": "https://support.microsoft.com/help/4016762"
     },
     {
@@ -1896,7 +2536,7 @@
       "major_version": 2012,
       "build": "11.0.6251.0",
       "service_pack": "SP3",
-      "update_type": "QFE Security Update",
+      "update_type": "GDR Security Update",
       "kb_article": "KB4019092",
       "release_date": "2017-08-08",
       "article_url": "https://support.microsoft.com/help/4019092"
@@ -1916,9 +2556,9 @@
       "major_version": 2012,
       "build": "11.0.7001.0",
       "service_pack": "SP4",
-      "update_type": "RTW/PCU4",
+      "update_type": "Service Pack",
       "kb_article": "KB4018073",
-      "release_date": "2017-10-02",
+      "release_date": "2017-10-04",
       "article_url": "https://support.microsoft.com/help/4018073"
     },
     {
@@ -1926,7 +2566,7 @@
       "major_version": 2012,
       "build": "11.0.6260.1",
       "service_pack": "SP3",
-      "update_type": "GDR Security Update",
+      "update_type": "ADV180002: GDR Security Update",
       "kb_article": "KB4057115",
       "release_date": "2018-01-16",
       "article_url": "https://support.microsoft.com/help/4057115"
@@ -1936,7 +2576,7 @@
       "major_version": 2012,
       "build": "11.0.6614.2",
       "service_pack": "SP3",
-      "update_type": "QFE Security Update",
+      "update_type": "ADV180002: GDR Security Update",
       "kb_article": "KB4057121",
       "release_date": "2018-01-16",
       "article_url": "https://support.microsoft.com/help/4057121"
@@ -1946,7 +2586,7 @@
       "major_version": 2012,
       "build": "11.0.7462.6",
       "service_pack": "SP4",
-      "update_type": "GDR Security Update",
+      "update_type": "ADV180002: GDR Security Update",
       "kb_article": "KB4057116",
       "release_date": "2018-01-16",
       "article_url": "https://support.microsoft.com/help/4057116"
@@ -1956,7 +2596,7 @@
       "major_version": 2012,
       "build": "11.0.7493.4",
       "service_pack": "SP4",
-      "update_type": "GDR Security Update",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4532098",
       "release_date": "2020-02-11",
       "article_url": "https://support.microsoft.com/help/4532098"
@@ -1966,7 +2606,7 @@
       "major_version": 2012,
       "build": "11.0.7507.2",
       "service_pack": "SP4",
-      "update_type": "GDR Security Update",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4583465",
       "release_date": "2021-01-12",
       "article_url": "https://support.microsoft.com/help/4583465"
@@ -1976,7 +2616,7 @@
       "major_version": 2012,
       "build": "11.0.7512.11",
       "service_pack": "SP4",
-      "update_type": "GDR Security Update",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5021123",
       "release_date": "2023-02-14",
       "article_url": "https://support.microsoft.com/help/5021123"
@@ -2086,7 +2726,7 @@
       "major_version": 2014,
       "build": "12.0.4100.1",
       "service_pack": "SP1",
-      "update_type": "RTW/PCU1",
+      "update_type": "Service Pack",
       "kb_article": "KB3058865",
       "release_date": "2015-05-04",
       "article_url": "https://support.microsoft.com/help/3058865"
@@ -2214,7 +2854,7 @@
     {
       "sql_version": "SQL Server 2014",
       "major_version": 2014,
-      "build": "12.0.4438.0",
+      "build": "12.0.4439.1",
       "service_pack": "SP1",
       "update_type": "CU5",
       "kb_article": "KB3130926",
@@ -2234,21 +2874,11 @@
     {
       "sql_version": "SQL Server 2014",
       "major_version": 2014,
-      "build": "12.0.4449.0",
-      "service_pack": "SP1",
-      "update_type": "CU6",
-      "kb_article": "KB3144524",
-      "release_date": "2016-04-18",
-      "article_url": "https://support.microsoft.com/help/3144524"
-    },
-    {
-      "sql_version": "SQL Server 2014",
-      "major_version": 2014,
       "build": "12.0.4457.0",
       "service_pack": "SP1",
       "update_type": "CU6",
       "kb_article": "KB3167392",
-      "release_date": "2016-05-30",
+      "release_date": "2016-04-18",
       "article_url": "https://support.microsoft.com/help/3167392"
     },
     {
@@ -2276,7 +2906,7 @@
       "major_version": 2014,
       "build": "12.0.5000.0",
       "service_pack": "SP2",
-      "update_type": "RTW/PCU2",
+      "update_type": "Service Pack",
       "kb_article": "KB3171021",
       "release_date": "2016-07-11",
       "article_url": "https://support.microsoft.com/help/3171021"
@@ -2288,7 +2918,7 @@
       "service_pack": "SP1",
       "update_type": "CU8",
       "kb_article": "KB3174038",
-      "release_date": "2016-08-15",
+      "release_date": "2016-08-16",
       "article_url": "https://support.microsoft.com/help/3174038"
     },
     {
@@ -2308,7 +2938,7 @@
       "service_pack": "SP1",
       "update_type": "CU9",
       "kb_article": "KB3186964",
-      "release_date": "2016-10-17",
+      "release_date": "2016-10-18",
       "article_url": "https://support.microsoft.com/help/3186964"
     },
     {
@@ -2318,7 +2948,7 @@
       "service_pack": "SP2",
       "update_type": "CU2",
       "kb_article": "KB3188778",
-      "release_date": "2016-10-17",
+      "release_date": "2016-10-18",
       "article_url": "https://support.microsoft.com/help/3188778"
     },
     {
@@ -2326,7 +2956,7 @@
       "major_version": 2014,
       "build": "12.0.4232.0",
       "service_pack": "SP1",
-      "update_type": "GDR",
+      "update_type": "MS16-136: GDR Security Update",
       "kb_article": "KB3194720",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194720"
@@ -2336,7 +2966,7 @@
       "major_version": 2014,
       "build": "12.0.4487.0",
       "service_pack": "SP1",
-      "update_type": "GDR",
+      "update_type": "MS16-136: QFE Security Update",
       "kb_article": "KB3194722",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194722"
@@ -2346,7 +2976,7 @@
       "major_version": 2014,
       "build": "12.0.5203.0",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "MS16-136: GDR Security Update",
       "kb_article": "KB3194714",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194714"
@@ -2356,7 +2986,7 @@
       "major_version": 2014,
       "build": "12.0.5532.0",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "MS16-136: QFE Security Update",
       "kb_article": "KB3194718",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194718"
@@ -2368,7 +2998,7 @@
       "service_pack": "SP1",
       "update_type": "CU10",
       "kb_article": "KB3204399",
-      "release_date": "2016-12-19",
+      "release_date": "2016-12-27",
       "article_url": "https://support.microsoft.com/help/3204399"
     },
     {
@@ -2378,7 +3008,7 @@
       "service_pack": "SP2",
       "update_type": "CU3",
       "kb_article": "KB3204388",
-      "release_date": "2016-12-19",
+      "release_date": "2016-12-28",
       "article_url": "https://support.microsoft.com/help/3204388"
     },
     {
@@ -2404,6 +3034,16 @@
     {
       "sql_version": "SQL Server 2014",
       "major_version": 2014,
+      "build": "12.0.5546.0",
+      "service_pack": "SP2",
+      "update_type": "CU5",
+      "kb_article": "KB4013098",
+      "release_date": "2017-02-21",
+      "article_url": "https://support.microsoft.com/help/4013098"
+    },
+    {
+      "sql_version": "SQL Server 2014",
+      "major_version": 2014,
       "build": "12.0.4511.0",
       "service_pack": "SP1",
       "update_type": "CU12",
@@ -2414,19 +3054,9 @@
     {
       "sql_version": "SQL Server 2014",
       "major_version": 2014,
-      "build": "12.0.5546.0",
-      "service_pack": "SP2",
-      "update_type": "CU5",
-      "kb_article": "KB4013098",
-      "release_date": "2017-04-17",
-      "article_url": "https://support.microsoft.com/help/4013098"
-    },
-    {
-      "sql_version": "SQL Server 2014",
-      "major_version": 2014,
       "build": "12.0.4237.0",
       "service_pack": "SP1",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4019091",
       "release_date": "2017-08-08",
       "article_url": "https://support.microsoft.com/help/4019091"
@@ -2446,7 +3076,7 @@
       "major_version": 2014,
       "build": "12.0.5207.0",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4019093",
       "release_date": "2017-08-08",
       "article_url": "https://support.microsoft.com/help/4019093"
@@ -2488,7 +3118,7 @@
       "service_pack": "SP2",
       "update_type": "CU9",
       "kb_article": "KB4055557",
-      "release_date": "2017-12-18",
+      "release_date": "2017-12-24",
       "article_url": "https://support.microsoft.com/help/4055557"
     },
     {
@@ -2496,7 +3126,7 @@
       "major_version": 2014,
       "build": "12.0.5214.6",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "ADV180002: GDR",
       "kb_article": "KB4057120",
       "release_date": "2018-01-16",
       "article_url": "https://support.microsoft.com/help/4057120"
@@ -2506,7 +3136,7 @@
       "major_version": 2014,
       "build": "12.0.5571.0",
       "service_pack": "SP2",
-      "update_type": "CU10",
+      "update_type": "CU10-ADV180002",
       "kb_article": "KB4052725",
       "release_date": "2018-01-16",
       "article_url": "https://support.microsoft.com/help/4052725"
@@ -2528,7 +3158,7 @@
       "service_pack": "SP2",
       "update_type": "CU12",
       "kb_article": "KB4130489",
-      "release_date": "2018-06-18",
+      "release_date": "2018-06-19",
       "article_url": "https://support.microsoft.com/help/4130489"
     },
     {
@@ -2556,7 +3186,7 @@
       "major_version": 2014,
       "build": "12.0.6024.0",
       "service_pack": "SP3",
-      "update_type": "RTW/PCU3",
+      "update_type": "Service Pack",
       "kb_article": "KB4022619",
       "release_date": "2018-10-30",
       "article_url": "https://support.microsoft.com/help/4022619"
@@ -2626,7 +3256,7 @@
       "major_version": 2014,
       "build": "12.0.5223.6",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4505217",
       "release_date": "2019-07-09",
       "article_url": "https://support.microsoft.com/help/4505217"
@@ -2646,7 +3276,7 @@
       "major_version": 2014,
       "build": "12.0.6108.1",
       "service_pack": "SP3",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4505218",
       "release_date": "2019-07-09",
       "article_url": "https://support.microsoft.com/help/4505218"
@@ -2686,7 +3316,7 @@
       "major_version": 2014,
       "build": "12.0.6118.4",
       "service_pack": "SP3",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4532095",
       "release_date": "2020-02-11",
       "article_url": "https://support.microsoft.com/help/4532095"
@@ -2706,7 +3336,7 @@
       "major_version": 2014,
       "build": "12.0.6164.21",
       "service_pack": "SP3",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4583463",
       "release_date": "2021-01-12",
       "article_url": "https://support.microsoft.com/help/4583463"
@@ -2726,7 +3356,7 @@
       "major_version": 2014,
       "build": "12.0.6169.19",
       "service_pack": "SP3",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5014165",
       "release_date": "2022-06-14",
       "article_url": "https://support.microsoft.com/help/5014165"
@@ -2746,7 +3376,7 @@
       "major_version": 2014,
       "build": "12.0.6174.8",
       "service_pack": "SP3",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5021037",
       "release_date": "2023-02-14",
       "article_url": "https://support.microsoft.com/help/5021037"
@@ -2765,8 +3395,8 @@
       "sql_version": "SQL Server 2014",
       "major_version": 2014,
       "build": "12.0.6179.1",
-      "service_pack": null,
-      "update_type": "SQL Server 2014 SP3 GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5029184",
       "release_date": "2023-10-10",
       "article_url": "https://support.microsoft.com/help/5029184"
@@ -2775,8 +3405,8 @@
       "sql_version": "SQL Server 2014",
       "major_version": 2014,
       "build": "12.0.6449.1",
-      "service_pack": null,
-      "update_type": "SQL Server 2014 SP3 CU4 + GDR",
+      "service_pack": "SP3",
+      "update_type": "CU4 + GDR",
       "kb_article": "KB5029185",
       "release_date": "2023-10-10",
       "article_url": "https://support.microsoft.com/help/5029185"
@@ -2785,7 +3415,7 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.1601.5",
-      "service_pack": null,
+      "service_pack": "RTM",
       "update_type": "RTM",
       "kb_article": null,
       "release_date": "2016-06-01",
@@ -2798,8 +3428,18 @@
       "service_pack": "RTM",
       "update_type": "CU1",
       "kb_article": "KB3164674",
-      "release_date": "2016-07-25",
+      "release_date": "2016-06-01",
       "article_url": "https://support.microsoft.com/help/3164674"
+    },
+    {
+      "sql_version": "SQL Server 2016",
+      "major_version": 2016,
+      "build": "13.0.1708.0",
+      "service_pack": "RTM",
+      "update_type": "GDR",
+      "kb_article": "KB3164398",
+      "release_date": "2016-06-03",
+      "article_url": "https://support.microsoft.com/help/3164398"
     },
     {
       "sql_version": "SQL Server 2016",
@@ -2816,7 +3456,7 @@
       "major_version": 2016,
       "build": "13.0.1722.0",
       "service_pack": "RTM",
-      "update_type": "GDR",
+      "update_type": "MS16-136: GDR",
       "kb_article": "KB3194716",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194716"
@@ -2826,10 +3466,20 @@
       "major_version": 2016,
       "build": "13.0.2186.6",
       "service_pack": "RTM",
-      "update_type": "CU3 + GDR",
+      "update_type": "CU3-MS16-136",
       "kb_article": "KB3194717",
       "release_date": "2016-11-08",
       "article_url": "https://support.microsoft.com/help/3194717"
+    },
+    {
+      "sql_version": "SQL Server 2016",
+      "major_version": 2016,
+      "build": "13.0.4001.0",
+      "service_pack": "SP1",
+      "update_type": "Service Pack",
+      "kb_article": "KB3182545",
+      "release_date": "2016-11-15",
+      "article_url": "https://support.microsoft.com/help/3182545"
     },
     {
       "sql_version": "SQL Server 2016",
@@ -2838,25 +3488,15 @@
       "service_pack": "RTM",
       "update_type": "CU3",
       "kb_article": "KB3205413",
-      "release_date": "2016-11-16",
+      "release_date": "2016-11-17",
       "article_url": "https://support.microsoft.com/help/3205413"
-    },
-    {
-      "sql_version": "SQL Server 2016",
-      "major_version": 2016,
-      "build": "13.0.4001.0",
-      "service_pack": "SP1",
-      "update_type": "RTW/PCU1",
-      "kb_article": "KB3182545",
-      "release_date": "2016-11-16",
-      "article_url": "https://support.microsoft.com/help/3182545"
     },
     {
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.1728.2",
       "service_pack": "RTM",
-      "update_type": "CU3 + GDR",
+      "update_type": "CU3",
       "kb_article": "KB3210111",
       "release_date": "2016-12-16",
       "article_url": "https://support.microsoft.com/help/3210111"
@@ -2865,8 +3505,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.4202.2",
-      "service_pack": "RTM",
-      "update_type": "GDR",
+      "service_pack": "SP1",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB3210089",
       "release_date": "2016-12-16",
       "article_url": "https://support.microsoft.com/help/3210089"
@@ -2878,7 +3518,7 @@
       "service_pack": "RTM",
       "update_type": "CU4",
       "kb_article": "KB3205052",
-      "release_date": "2017-01-17",
+      "release_date": "2017-01-18",
       "article_url": "https://support.microsoft.com/help/3205052"
     },
     {
@@ -2888,7 +3528,7 @@
       "service_pack": "SP1",
       "update_type": "CU1",
       "kb_article": "KB3208177",
-      "release_date": "2017-01-17",
+      "release_date": "2017-01-18",
       "article_url": "https://support.microsoft.com/help/3208177"
     },
     {
@@ -2928,8 +3568,18 @@
       "service_pack": "SP1",
       "update_type": "CU3",
       "kb_article": "KB4019916",
-      "release_date": "2017-05-15",
+      "release_date": "2017-05-16",
       "article_url": "https://support.microsoft.com/help/4019916"
+    },
+    {
+      "sql_version": "SQL Server 2016",
+      "major_version": 2016,
+      "build": "13.0.1742.0",
+      "service_pack": "RTM",
+      "update_type": "GDR",
+      "kb_article": "KB3164398",
+      "release_date": "2017-08-08",
+      "article_url": "https://support.microsoft.com/help/3164398"
     },
     {
       "sql_version": "SQL Server 2016",
@@ -2946,7 +3596,7 @@
       "major_version": 2016,
       "build": "13.0.4206.0",
       "service_pack": "SP1",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4019089",
       "release_date": "2017-08-08",
       "article_url": "https://support.microsoft.com/help/4019089"
@@ -2988,7 +3638,7 @@
       "service_pack": "RTM",
       "update_type": "CU9",
       "kb_article": "KB4037357",
-      "release_date": "2017-11-20",
+      "release_date": "2017-11-30",
       "article_url": "https://support.microsoft.com/help/4037357"
     },
     {
@@ -2998,7 +3648,7 @@
       "service_pack": "SP1",
       "update_type": "CU6",
       "kb_article": "KB4037354",
-      "release_date": "2017-11-20",
+      "release_date": "2017-11-30",
       "article_url": "https://support.microsoft.com/help/4037354"
     },
     {
@@ -3006,9 +3656,9 @@
       "major_version": 2016,
       "build": "13.0.4210.6",
       "service_pack": "SP1",
-      "update_type": "GDR",
+      "update_type": "ADV180002: GDR",
       "kb_article": "KB4057118",
-      "release_date": "2018-01-03",
+      "release_date": "2018-01-15",
       "article_url": "https://support.microsoft.com/help/4057118"
     },
     {
@@ -3016,9 +3666,9 @@
       "major_version": 2016,
       "build": "13.0.4466.4",
       "service_pack": "SP1",
-      "update_type": "CU7",
+      "update_type": "CU7-ADV180002",
       "kb_article": "KB4057119",
-      "release_date": "2018-01-04",
+      "release_date": "2018-01-15",
       "article_url": "https://support.microsoft.com/help/4057119"
     },
     {
@@ -3026,9 +3676,9 @@
       "major_version": 2016,
       "build": "13.0.1745.2",
       "service_pack": "RTM",
-      "update_type": "GDR",
+      "update_type": "ADV180002: GDR",
       "kb_article": "KB4058560",
-      "release_date": "2018-01-06",
+      "release_date": "2018-01-16",
       "article_url": "https://support.microsoft.com/help/4058560"
     },
     {
@@ -3036,9 +3686,9 @@
       "major_version": 2016,
       "build": "13.0.2218.0",
       "service_pack": "RTM",
-      "update_type": "CU9 + GDR",
+      "update_type": "CU9-ADV180002",
       "kb_article": "KB4058559",
-      "release_date": "2018-01-06",
+      "release_date": "2018-01-16",
       "article_url": "https://support.microsoft.com/help/4058559"
     },
     {
@@ -3056,7 +3706,7 @@
       "major_version": 2016,
       "build": "13.0.5026.0",
       "service_pack": "SP2",
-      "update_type": "RTW/PCU2",
+      "update_type": "Service Pack",
       "kb_article": "KB4052908",
       "release_date": "2018-04-24",
       "article_url": "https://support.microsoft.com/help/4052908"
@@ -3088,8 +3738,18 @@
       "service_pack": "SP1",
       "update_type": "CU10",
       "kb_article": "KB4341569",
-      "release_date": "2018-07-16",
+      "release_date": "2018-07-17",
       "article_url": "https://support.microsoft.com/help/4341569"
+    },
+    {
+      "sql_version": "SQL Server 2016",
+      "major_version": 2016,
+      "build": "13.0.5153.0",
+      "service_pack": "SP2",
+      "update_type": "CU2",
+      "kb_article": "KB4340355",
+      "release_date": "2018-07-17",
+      "article_url": "https://support.microsoft.com/help/4340355"
     },
     {
       "sql_version": "SQL Server 2016",
@@ -3106,7 +3766,7 @@
       "major_version": 2016,
       "build": "13.0.5081.1",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4293802",
       "release_date": "2018-08-14",
       "article_url": "https://support.microsoft.com/help/4293802"
@@ -3114,7 +3774,7 @@
     {
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
-      "build": "13.0.5201.2",
+      "build": "13.0.5161.0",
       "service_pack": "SP2",
       "update_type": "CU2 + GDR",
       "kb_article": "KB4458621",
@@ -3236,7 +3896,7 @@
       "major_version": 2016,
       "build": "13.0.4259.0",
       "service_pack": "SP1",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4505219",
       "release_date": "2019-07-09",
       "article_url": "https://support.microsoft.com/help/4505219"
@@ -3256,7 +3916,7 @@
       "major_version": 2016,
       "build": "13.0.5101.9",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4505220",
       "release_date": "2019-07-09",
       "article_url": "https://support.microsoft.com/help/4505220"
@@ -3306,7 +3966,7 @@
       "major_version": 2016,
       "build": "13.0.5102.14",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4532097",
       "release_date": "2020-02-11",
       "article_url": "https://support.microsoft.com/help/4532097"
@@ -3328,7 +3988,7 @@
       "service_pack": "SP2",
       "update_type": "CU12",
       "kb_article": "KB4536648",
-      "release_date": "2020-02-24",
+      "release_date": "2020-02-25",
       "article_url": "https://support.microsoft.com/help/4536648"
     },
     {
@@ -3366,7 +4026,7 @@
       "major_version": 2016,
       "build": "13.0.5103.6",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB4583460",
       "release_date": "2021-01-12",
       "article_url": "https://support.microsoft.com/help/4583460"
@@ -3406,7 +4066,7 @@
       "major_version": 2016,
       "build": "13.0.6300.2",
       "service_pack": "SP3",
-      "update_type": "RTW/PCU3",
+      "update_type": "Service Pack",
       "kb_article": "KB5003279",
       "release_date": "2021-09-15",
       "article_url": "https://support.microsoft.com/help/5003279"
@@ -3416,7 +4076,7 @@
       "major_version": 2016,
       "build": "13.0.7000.253",
       "service_pack": "SP3",
-      "update_type": "Azure Connect pack",
+      "update_type": "Azure Connect feature pack",
       "kb_article": "KB5014242",
       "release_date": "2022-05-19",
       "article_url": "https://support.microsoft.com/help/5014242"
@@ -3426,7 +4086,7 @@
       "major_version": 2016,
       "build": "13.0.5108.50",
       "service_pack": "SP2",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5014365",
       "release_date": "2022-06-14",
       "article_url": "https://support.microsoft.com/help/5014365"
@@ -3446,7 +4106,7 @@
       "major_version": 2016,
       "build": "13.0.6419.1",
       "service_pack": "SP3",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5014355",
       "release_date": "2022-06-14",
       "article_url": "https://support.microsoft.com/help/5014355"
@@ -3456,7 +4116,7 @@
       "major_version": 2016,
       "build": "13.0.7016.1",
       "service_pack": "SP3",
-      "update_type": "Azure Connect pack + GDR",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5015371",
       "release_date": "2022-06-14",
       "article_url": "https://support.microsoft.com/help/5015371"
@@ -3466,7 +4126,7 @@
       "major_version": 2016,
       "build": "13.0.6430.49",
       "service_pack": "SP3",
-      "update_type": "GDR",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5021129",
       "release_date": "2023-02-14",
       "article_url": "https://support.microsoft.com/help/5021129"
@@ -3476,7 +4136,7 @@
       "major_version": 2016,
       "build": "13.0.7024.30",
       "service_pack": "SP3",
-      "update_type": "Azure Connect pack + GDR",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5021128",
       "release_date": "2023-02-14",
       "article_url": "https://support.microsoft.com/help/5021128"
@@ -3485,8 +4145,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6435.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5029186",
       "release_date": "2023-10-10",
       "article_url": "https://support.microsoft.com/help/5029186"
@@ -3495,8 +4155,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7029.3",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5029187",
       "release_date": "2023-10-10",
       "article_url": "https://support.microsoft.com/help/5029187"
@@ -3505,8 +4165,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6441.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5040946",
       "release_date": "2024-07-09",
       "article_url": "https://support.microsoft.com/help/5040946"
@@ -3515,8 +4175,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7037.1",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5040944",
       "release_date": "2024-07-09",
       "article_url": "https://support.microsoft.com/help/5040944"
@@ -3525,8 +4185,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6445.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5042207",
       "release_date": "2024-09-10",
       "article_url": "https://support.microsoft.com/help/5042207"
@@ -3535,8 +4195,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7040.1",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5042209",
       "release_date": "2024-09-10",
       "article_url": "https://support.microsoft.com/help/5042209"
@@ -3545,8 +4205,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6450.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5046063",
       "release_date": "2024-10-08",
       "article_url": "https://support.microsoft.com/help/5046063"
@@ -3555,8 +4215,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7045.2",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5046062",
       "release_date": "2024-10-08",
       "article_url": "https://support.microsoft.com/help/5046062"
@@ -3565,8 +4225,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6455.2",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5046855",
       "release_date": "2024-11-12",
       "article_url": "https://support.microsoft.com/help/5046855"
@@ -3575,8 +4235,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7050.2",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5046856",
       "release_date": "2024-11-12",
       "article_url": "https://support.microsoft.com/help/5046856"
@@ -3585,8 +4245,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6460.7",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5058718",
       "release_date": "2025-07-08",
       "article_url": "https://support.microsoft.com/help/5058718"
@@ -3595,8 +4255,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7055.9",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5058717",
       "release_date": "2025-07-08",
       "article_url": "https://support.microsoft.com/help/5058717"
@@ -3605,8 +4265,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6465.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5063762",
       "release_date": "2025-08-12",
       "article_url": "https://support.microsoft.com/help/5063762"
@@ -3615,8 +4275,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7060.1",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5063761",
       "release_date": "2025-08-12",
       "article_url": "https://support.microsoft.com/help/5063761"
@@ -3625,8 +4285,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6470.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5065226",
       "release_date": "2025-09-09",
       "article_url": "https://support.microsoft.com/help/5065226"
@@ -3635,8 +4295,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7065.1",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5065227",
       "release_date": "2025-09-09",
       "article_url": "https://support.microsoft.com/help/5065227"
@@ -3645,8 +4305,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6475.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5068401",
       "release_date": "2025-11-11",
       "article_url": "https://support.microsoft.com/help/5068401"
@@ -3655,8 +4315,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7070.1",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5068400",
       "release_date": "2025-11-11",
       "article_url": "https://support.microsoft.com/help/5068400"
@@ -3665,8 +4325,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6480.4",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5077474",
       "release_date": "2026-03-10",
       "article_url": "https://support.microsoft.com/help/5077474"
@@ -3675,8 +4335,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7075.5",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5077473",
       "release_date": "2026-03-10",
       "article_url": "https://support.microsoft.com/help/5077473"
@@ -3685,8 +4345,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6485.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5084821",
       "release_date": "2026-04-14",
       "article_url": "https://support.microsoft.com/help/5084821"
@@ -3695,8 +4355,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7080.1",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5084820",
       "release_date": "2026-04-14",
       "article_url": "https://support.microsoft.com/help/5084820"
@@ -3705,8 +4365,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6490.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5089271",
       "release_date": "2026-05-12",
       "article_url": "https://support.microsoft.com/help/5089271"
@@ -3715,8 +4375,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7085.1",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5089270",
       "release_date": "2026-05-12",
       "article_url": "https://support.microsoft.com/help/5089270"
@@ -3725,8 +4385,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.6500.1",
-      "service_pack": null,
-      "update_type": "SP3 + GDR",
+      "service_pack": "SP3",
+      "update_type": "GDR for Service Pack",
       "kb_article": "KB5102340",
       "release_date": "2026-07-14",
       "article_url": "https://support.microsoft.com/help/5102340"
@@ -3735,8 +4395,8 @@
       "sql_version": "SQL Server 2016",
       "major_version": 2016,
       "build": "13.0.7095.1",
-      "service_pack": null,
-      "update_type": "Azure Connect Pack + GDR",
+      "service_pack": "SP3",
+      "update_type": "Azure Connect feature pack + GDR",
       "kb_article": "KB5102339",
       "release_date": "2026-07-14",
       "article_url": "https://support.microsoft.com/help/5102339"
@@ -3758,7 +4418,7 @@
       "service_pack": null,
       "update_type": "CU1",
       "kb_article": "KB4038634",
-      "release_date": "2017-10-24",
+      "release_date": "2017-10-25",
       "article_url": "https://support.microsoft.com/help/4038634"
     },
     {
@@ -3768,7 +4428,7 @@
       "service_pack": null,
       "update_type": "CU2",
       "kb_article": "KB4052574",
-      "release_date": "2017-11-28",
+      "release_date": "2017-12-05",
       "article_url": "https://support.microsoft.com/help/4052574"
     },
     {
@@ -3776,7 +4436,7 @@
       "major_version": 2017,
       "build": "14.0.2000.63",
       "service_pack": null,
-      "update_type": "GDR",
+      "update_type": "ADV180002: GDR",
       "kb_article": "KB4057122",
       "release_date": "2018-01-03",
       "article_url": "https://support.microsoft.com/help/4057122"
@@ -3786,20 +4446,10 @@
       "major_version": 2017,
       "build": "14.0.3015.40",
       "service_pack": null,
-      "update_type": "CU3 + GDR",
+      "update_type": "CU3-ADV180002",
       "kb_article": "KB4058562",
       "release_date": "2018-01-03",
       "article_url": "https://support.microsoft.com/help/4058562"
-    },
-    {
-      "sql_version": "SQL Server 2017",
-      "major_version": 2017,
-      "build": "14.0.3015.40",
-      "service_pack": null,
-      "update_type": "CU3",
-      "kb_article": "KB4052987",
-      "release_date": "2018-01-04",
-      "article_url": "https://support.microsoft.com/help/4052987"
     },
     {
       "sql_version": "SQL Server 2017",
@@ -3818,7 +4468,7 @@
       "service_pack": null,
       "update_type": "CU5",
       "kb_article": "KB4092643",
-      "release_date": "2018-03-20",
+      "release_date": "2018-03-21",
       "article_url": "https://support.microsoft.com/help/4092643"
     },
     {
@@ -3828,7 +4478,7 @@
       "service_pack": null,
       "update_type": "CU6",
       "kb_article": "KB4101464",
-      "release_date": "2018-04-17",
+      "release_date": "2018-04-18",
       "article_url": "https://support.microsoft.com/help/4101464"
     },
     {
@@ -3838,7 +4488,7 @@
       "service_pack": null,
       "update_type": "CU7",
       "kb_article": "KB4229789",
-      "release_date": "2018-05-23",
+      "release_date": "2018-05-24",
       "article_url": "https://support.microsoft.com/help/4229789"
     },
     {
@@ -3848,7 +4498,7 @@
       "service_pack": null,
       "update_type": "CU8",
       "kb_article": "KB4338363",
-      "release_date": "2018-06-21",
+      "release_date": "2018-05-24",
       "article_url": "https://support.microsoft.com/help/4338363"
     },
     {
@@ -3858,7 +4508,7 @@
       "service_pack": null,
       "update_type": "CU9",
       "kb_article": "KB4341265",
-      "release_date": "2018-07-18",
+      "release_date": "2018-07-17",
       "article_url": "https://support.microsoft.com/help/4341265"
     },
     {
@@ -4306,7 +4956,7 @@
       "major_version": 2017,
       "build": "14.0.3490.10",
       "service_pack": null,
-      "update_type": "Azure Connect pack",
+      "update_type": "Azure Connect feature pack",
       "kb_article": "KB5050533",
       "release_date": "2025-03-06",
       "article_url": "https://support.microsoft.com/help/5050533"
@@ -4568,7 +5218,7 @@
       "service_pack": null,
       "update_type": "CU8",
       "kb_article": "KB4577194",
-      "release_date": "2020-09-30",
+      "release_date": "2020-10-01",
       "article_url": "https://support.microsoft.com/help/4577194"
     },
     {
@@ -5756,7 +6406,7 @@
       "major_version": 2025,
       "build": "17.0.1000.7",
       "service_pack": null,
-      "update_type": "RTM/GA",
+      "update_type": "RTM",
       "kb_article": null,
       "release_date": "2025-11-18",
       "article_url": null
@@ -5920,6 +6570,16 @@
       "kb_article": "KB5096981",
       "release_date": "2026-07-16",
       "article_url": "https://support.microsoft.com/help/5096981"
+    },
+    {
+      "sql_version": "SQL Server 2025",
+      "major_version": 2025,
+      "build": "17.0.4075.5",
+      "service_pack": null,
+      "update_type": "CU8",
+      "kb_article": "KB5104822",
+      "release_date": "2026-08-13",
+      "article_url": "https://support.microsoft.com/help/5104822"
     }
   ]
 }
