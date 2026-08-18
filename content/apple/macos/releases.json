@@ -3,13 +3,13 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "macos-releases",
-    "recordCount": 122,
+    "recordCount": 123,
     "sourceUrls": [
       "https://support.apple.com/en-us/100100",
       "https://support.apple.com/en-us/121012"
     ],
-    "lastModified": "2026-08-11T07:07:07Z",
-    "lastCollected": "2026-08-11T07:07:07Z"
+    "lastModified": "2026-08-18T06:41:42Z",
+    "lastCollected": "2026-08-18T06:41:42Z"
   },
   "data": [
     {
@@ -743,6 +743,12 @@
       "version": "26.6.1",
       "major_version": 26,
       "release_date": "2026-08-06"
+    },
+    {
+      "os_name": "Tahoe",
+      "version": "26.6.2",
+      "major_version": 26,
+      "release_date": "2026-08-17"
     }
   ]
 }
