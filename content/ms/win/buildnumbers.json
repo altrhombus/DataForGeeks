@@ -3,7 +3,7 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "windows-update-history",
-    "recordCount": 1885,
+    "recordCount": 1888,
     "sourceUrls": [
       "https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda",
       "https://aka.ms/Windows11UpdateHistory",
@@ -13,8 +13,8 @@
       "https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7",
       "https://support.microsoft.com/en-us/topic/release-notes-for-hotpatch-on-windows-11-enterprise-version-25h2-0bbaa1c7-5070-41ca-a7c9-4ead79602dbf"
     ],
-    "lastModified": "2026-08-12T01:09:51Z",
-    "lastCollected": "2026-08-12T01:09:51Z"
+    "lastModified": "2026-08-28T01:56:08Z",
+    "lastCollected": "2026-08-28T01:56:08Z"
   },
   "data": [
     {
@@ -22636,6 +22636,42 @@
       "release_type": "Standard",
       "is_expired": false,
       "article_url": "https://support.microsoft.com/help/5121000"
+    },
+    {
+      "full_version": "10.0.26100.9278",
+      "build": "26100.9278",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "24H2",
+      "release_date": "2026-08-27",
+      "kb_article": "KB5120998",
+      "release_type": "Preview",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5120998"
+    },
+    {
+      "full_version": "10.0.26200.9278",
+      "build": "26200.9278",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "25H2",
+      "release_date": "2026-08-27",
+      "kb_article": "KB5120998",
+      "release_type": "Preview",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5120998"
+    },
+    {
+      "full_version": "10.0.28000.2804",
+      "build": "28000.2804",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "26H1",
+      "release_date": "2026-08-27",
+      "kb_article": "KB5120996",
+      "release_type": "Preview",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5120996"
     }
   ]
 }
