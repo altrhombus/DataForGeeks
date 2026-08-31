@@ -3,13 +3,13 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "edge-releases",
-    "recordCount": 344,
+    "recordCount": 346,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel",
       "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-archive-stable-channel"
     ],
-    "lastModified": "2026-08-24T06:57:07Z",
-    "lastCollected": "2026-08-24T06:57:07Z"
+    "lastModified": "2026-08-31T12:51:28Z",
+    "lastCollected": "2026-08-31T12:51:28Z"
   },
   "data": [
     {
@@ -1731,6 +1731,16 @@
       "version": "150.0.4078.144",
       "major_version": 150,
       "release_date": "2026-08-21"
+    },
+    {
+      "version": "151.0.4129.107",
+      "major_version": 151,
+      "release_date": "2026-08-24"
+    },
+    {
+      "version": "152.0.4191.53",
+      "major_version": 152,
+      "release_date": "2026-08-27"
     }
   ]
 }
