@@ -9,7 +9,7 @@ $d4gData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/DataF
 
 Add-Type -AssemblyName System.Web
 
-$rxBuildData  = [regex]::New('(?i)>(.*?) \(OS Build.*?(\d.*?)\)(.*?)<')
+$rxBuildData  = [regex]::New('(?i)>([^<]*?) \(OS Build.*?(\d[^)]*?)\)([^<]*?)<')
 $rxPatchDesc  = [regex]::New('(?i)^(.*? \d{1,2}[,|] \d{4}).*?(K.*)$')
 
 $patchList = [System.Collections.ArrayList]::new()

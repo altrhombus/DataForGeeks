@@ -7,29 +7,61 @@ if ($pageData.StatusCode -ne 200) {
     Throw "Error $($pageData.StatusCode) retrieving $sourceUrl"
 }
 
-$rxTable       = [regex]::New('(?msi)<table>(?:.*?)<tbody>(.*?)<\/tbody>')
+$rxTable       = [regex]::New('(?msi)<table>(?:.*?)<thead>(.*?)<\/thead>(?:.*?)<tbody>(.*?)<\/tbody>')
 $rxRow         = [regex]::New('(?msi)<tr>(.*?)<\/tr>')
-$rxCell        = [regex]::New('(?msi)<td(?:[^>]*)>(.*?)<\/td>')
+$rxCell        = [regex]::New('(?msi)<t[dh](?:[^>]*)>(.*?)<\/t[dh]>')
 $rxLink        = [regex]::New('(?msi)<a(?:[^>])*>(.*?)<\/a>')
+$rxHtmlStrip   = [regex]::New('<[^>]+>')
 $rxVersionBuild = [regex]::New('(?msi)Version (.*?) \(Build {1,}(.*?)\)')
 
-$tables = $rxTable.Matches($pageData.Content)
-if ($tables.Count -lt 2) {
-    Throw "Expected at least 2 tables; found $($tables.Count) - the page structure may have changed"
+# Header text -> channel label. Column positions are derived from the header
+# row at parse time so a column insertion, reorder, or removal cannot silently
+# mislabel channels.
+$channelHeaderMap = [ordered]@{
+    "Current Channel"                = "Current"
+    "Monthly Enterprise Channel"     = "Monthly Enterprise"
+    "Semi-Annual Enterprise Channel" = "Semi-Annual Enterprise"
 }
 
-# Table at index 1 is the version history table with columns:
-#   Year | Date | Current | Monthly Enterprise | Semi-Annual Enterprise Preview | Semi-Annual Enterprise
-$versionHistoryRows = $rxRow.Matches($tables[1].Groups[1].Value)
+$historyTable = $null
+foreach ($tableMatch in $rxTable.Matches($pageData.Content)) {
+    $headerRow = $rxRow.Match($tableMatch.Groups[1].Value)
+    if (-not $headerRow.Success) { continue }
+
+    $headerCells = @($rxCell.Matches($headerRow.Groups[1].Value) | ForEach-Object { $rxHtmlStrip.Replace($_.Groups[1].Value, '').Trim() })
+    if ($headerCells -notcontains 'Year' -or $headerCells -notcontains 'Release Date') { continue }
+
+    $matchedChannels = @($headerCells | Where-Object { $channelHeaderMap.Contains($_) })
+    if ($matchedChannels.Count -ne $channelHeaderMap.Count) {
+        Throw "History table channel columns changed: expected $(@($channelHeaderMap.Keys) -join ', '); found $($matchedChannels -join ', ') - the page structure may have changed"
+    }
+
+    $historyTable = [PSCustomObject]@{ Headers = $headerCells; Body = $tableMatch.Groups[2].Value }
+    break
+}
+
+if (-not $historyTable) {
+    Throw "Version history table not found - the page structure may have changed"
+}
+
+$yearIndex  = [array]::IndexOf($historyTable.Headers, 'Year')
+$dateIndex  = [array]::IndexOf($historyTable.Headers, 'Release Date')
+$channelMap = @{}
+foreach ($header in $channelHeaderMap.Keys) {
+    $channelMap[[array]::IndexOf($historyTable.Headers, $header)] = $channelHeaderMap[$header]
+}
+$maxIndex = ($channelMap.Keys + $yearIndex + $dateIndex | Measure-Object -Maximum).Maximum
+
+$versionHistoryRows = $rxRow.Matches($historyTable.Body)
 
 $m365Releases = [System.Collections.ArrayList]::new()
 
 $versionHistoryRows.ForEach{
     $cellData = $rxCell.Matches($_.Groups[1].Value)
-    if ($cellData.Count -lt 6) { return }
+    if ($cellData.Count -le $maxIndex) { return }
 
-    $releaseYear = $cellData[0].Groups[1].Value.Trim()
-    $releaseDate = ($cellData[1].Groups[1].Value -replace '<br(?:[^>])*>', '').Trim()
+    $releaseYear = $cellData[$yearIndex].Groups[1].Value.Trim()
+    $releaseDate = ($cellData[$dateIndex].Groups[1].Value -replace '<br(?:[^>])*>', '').Trim()
 
     if (-not $releaseYear) {
         $releaseYear = $lastReleaseYear
@@ -37,13 +69,10 @@ $versionHistoryRows.ForEach{
         $lastReleaseYear = $releaseYear
     }
 
-    $release = $(Get-Date "$releaseDate $releaseYear" -Format "yyyy-MM-dd")
-
-    $channelMap = @{
-        2 = "Current"
-        3 = "Monthly Enterprise"
-        4 = "Semi-Annual Enterprise Preview"
-        5 = "Semi-Annual Enterprise"
+    try {
+        $release = Get-Date "$releaseDate $releaseYear" -Format "yyyy-MM-dd" -ErrorAction Stop
+    } catch {
+        return
     }
 
     foreach ($colIndex in $channelMap.Keys) {

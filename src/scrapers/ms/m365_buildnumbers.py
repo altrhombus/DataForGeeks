@@ -18,7 +18,6 @@ _VERSION_BUILD_RE = re.compile(r"Version\s+(\S+)\s+\(Build\s+([^)]+)\)", re.IGNO
 _CHANNEL_HEADERS = {
     "Current Channel": "Current",
     "Monthly Enterprise Channel": "Monthly Enterprise",
-    "Semi-Annual Enterprise Channel (Preview)": "Semi-Annual Enterprise Preview",
     "Semi-Annual Enterprise Channel": "Semi-Annual Enterprise",
 }
 
