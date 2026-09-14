@@ -3,7 +3,7 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "windows-update-history",
-    "recordCount": 1902,
+    "recordCount": 1907,
     "sourceUrls": [
       "https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda",
       "https://aka.ms/Windows11UpdateHistory",
@@ -13,8 +13,8 @@
       "https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7",
       "https://support.microsoft.com/en-us/topic/release-notes-for-hotpatch-on-windows-11-enterprise-version-25h2-0bbaa1c7-5070-41ca-a7c9-4ead79602dbf"
     ],
-    "lastModified": "2026-09-08T20:30:31Z",
-    "lastCollected": "2026-09-08T20:30:31Z"
+    "lastModified": "2026-09-14T17:17:12Z",
+    "lastCollected": "2026-09-14T17:17:12Z"
   },
   "data": [
     {
@@ -22840,6 +22840,66 @@
       "release_type": "Standard",
       "is_expired": false,
       "article_url": "https://support.microsoft.com/help/5124012"
+    },
+    {
+      "full_version": "10.0.17763.9247",
+      "build": "17763.9247",
+      "os_type": "server",
+      "major_version": 2019,
+      "windows_version": "1809",
+      "release_date": "2026-09-14",
+      "kb_article": "KB5129238",
+      "release_type": "Out-of-band",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5129238"
+    },
+    {
+      "full_version": "10.0.22631.7584",
+      "build": "22631.7584",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "23H2",
+      "release_date": "2026-09-14",
+      "kb_article": "KB5129242",
+      "release_type": "Out-of-band",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5129242"
+    },
+    {
+      "full_version": "10.0.26100.9457",
+      "build": "26100.9457",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "24H2",
+      "release_date": "2026-09-14",
+      "kb_article": "KB5129195",
+      "release_type": "Out-of-band",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5129195"
+    },
+    {
+      "full_version": "10.0.26200.9457",
+      "build": "26200.9457",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "25H2",
+      "release_date": "2026-09-14",
+      "kb_article": "KB5129195",
+      "release_type": "Out-of-band",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5129195"
+    },
+    {
+      "full_version": "10.0.28000.2956",
+      "build": "28000.2956",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "26H1",
+      "release_date": "2026-09-14",
+      "kb_article": "KB5129194",
+      "release_type": "Out-of-band",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5129194"
     }
   ]
 }
