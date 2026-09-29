@@ -1,8 +1,8 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2026-02-10T19:56:10.2480001Z",
+    "LastUpdatedUTC": "2026-09-29T21:59:07.2296412Z",
     "SourceList": [
-      "https://docs.microsoft.com/en-us/windows/release-health/release-information",
+      "https://learn.microsoft.com/en-us/windows/release-health/release-information",
       "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information"
     ]
   },
@@ -101,6 +101,11 @@
       "Version": "26200",
       "FullVersion": "10.0.26200",
       "Build": "25H2"
+    },
+    {
+      "Version": "26300",
+      "FullVersion": "10.0.26300",
+      "Build": "26H2"
     },
     {
       "Version": "28000",
