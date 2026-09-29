@@ -3,13 +3,13 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "macos-releases",
-    "recordCount": 125,
+    "recordCount": 127,
     "sourceUrls": [
       "https://support.apple.com/en-us/100100",
       "https://support.apple.com/en-us/121012"
     ],
-    "lastModified": "2026-09-15T11:13:34Z",
-    "lastCollected": "2026-09-15T11:13:34Z"
+    "lastModified": "2026-09-29T12:14:35Z",
+    "lastCollected": "2026-09-29T12:14:35Z"
   },
   "data": [
     {
@@ -761,6 +761,18 @@
       "version": "26.7",
       "major_version": 26,
       "release_date": "2026-09-14"
+    },
+    {
+      "os_name": "Sequoia",
+      "version": "15.8.1",
+      "major_version": 15,
+      "release_date": "2026-09-28"
+    },
+    {
+      "os_name": "Tahoe",
+      "version": "26.7.1",
+      "major_version": 26,
+      "release_date": "2026-09-28"
     }
   ]
 }
