@@ -3,15 +3,15 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "windows-lifecycle-client",
-    "recordCount": 40,
+    "recordCount": 42,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro"
     ],
-    "lastModified": "2026-08-05T08:45:08Z",
-    "lastCollected": "2026-08-05T08:45:08Z"
+    "lastModified": "2026-09-30T12:20:24Z",
+    "lastCollected": "2026-09-30T12:20:24Z"
   },
   "data": [
     {
@@ -253,6 +253,18 @@
       "sku": "Windows 11 Home and Pro",
       "start_date": "2/10/2026 ",
       "end_date": "3/15/2028 "
+    },
+    {
+      "version": "26H2",
+      "sku": "Windows 11 Enterprise and Education",
+      "start_date": "9/29/2026 ",
+      "end_date": "10/9/2029 "
+    },
+    {
+      "version": "26H2",
+      "sku": "Windows 11 Home and Pro",
+      "start_date": "9/29/2026 ",
+      "end_date": "10/10/2028"
     }
   ]
 }
