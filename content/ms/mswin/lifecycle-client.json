@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2026-02-10T20:48:24.8933936Z",
+    "LastUpdatedUTC": "2026-09-30T11:29:52.0993311Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education",
@@ -47,21 +47,15 @@
     },
     {
       "Version": "1703",
-      "SKU": "Windows 10 Enterprise and Education",
-      "StartDate": "2017-04-11",
-      "EndDate": "2019-10-09"
-    },
-    {
-      "Version": "1703",
       "SKU": "Windows 10 Home and Pro",
       "StartDate": "2017-04-11",
       "EndDate": "2018-10-10"
     },
     {
-      "Version": "1709",
+      "Version": "1703",
       "SKU": "Windows 10 Enterprise and Education",
-      "StartDate": "2017-10-17",
-      "EndDate": "2020-10-14"
+      "StartDate": "2017-04-11",
+      "EndDate": "2019-10-09"
     },
     {
       "Version": "1709",
@@ -70,15 +64,27 @@
       "EndDate": "2019-04-10"
     },
     {
+      "Version": "1709",
+      "SKU": "Windows 10 Enterprise and Education",
+      "StartDate": "2017-10-17",
+      "EndDate": "2020-10-14"
+    },
+    {
+      "Version": "1803",
+      "SKU": "Windows 10 Enterprise and Education",
+      "StartDate": "2018-04-30",
+      "EndDate": "2021-05-12"
+    },
+    {
       "Version": "1803",
       "SKU": "Windows 10 Home and Pro",
       "StartDate": "2018-04-30",
       "EndDate": "2019-11-13"
     },
     {
-      "Version": "1803",
+      "Version": "1809",
       "SKU": "Windows 10 Enterprise and Education",
-      "StartDate": "2018-04-30",
+      "StartDate": "2018-11-13",
       "EndDate": "2021-05-12"
     },
     {
@@ -88,20 +94,14 @@
       "EndDate": "2020-11-11"
     },
     {
-      "Version": "1809",
-      "SKU": "Windows 10 Enterprise and Education",
-      "StartDate": "2018-11-13",
-      "EndDate": "2021-05-12"
-    },
-    {
       "Version": "1903",
-      "SKU": "Windows 10 Enterprise and Education",
+      "SKU": "Windows 10 Home and Pro",
       "StartDate": "2019-05-21",
       "EndDate": "2020-12-09"
     },
     {
       "Version": "1903",
-      "SKU": "Windows 10 Home and Pro",
+      "SKU": "Windows 10 Enterprise and Education",
       "StartDate": "2019-05-21",
       "EndDate": "2020-12-09"
     },
@@ -119,27 +119,27 @@
     },
     {
       "Version": "2004",
-      "SKU": "Windows 10 Home and Pro",
+      "SKU": "Windows 10 Enterprise and Education",
       "StartDate": "2020-05-27",
       "EndDate": "2021-12-15"
     },
     {
       "Version": "2004",
-      "SKU": "Windows 10 Enterprise and Education",
+      "SKU": "Windows 10 Home and Pro",
       "StartDate": "2020-05-27",
       "EndDate": "2021-12-15"
+    },
+    {
+      "Version": "20H2",
+      "SKU": "Windows 10 Home and Pro",
+      "StartDate": "2020-10-20",
+      "EndDate": "2022-05-11"
     },
     {
       "Version": "20H2",
       "SKU": "Windows 10 Enterprise and Education",
       "StartDate": "2020-10-20",
       "EndDate": "2023-05-10"
-    },
-    {
-      "Version": "20H2",
-      "SKU": "Windows 10 Home and Pro",
-      "StartDate": "2020-10-20",
-      "EndDate": "2022-05-11"
     },
     {
       "Version": "21H1",
@@ -248,6 +248,18 @@
       "SKU": "Windows 11 Home and Pro",
       "StartDate": "2026-02-10",
       "EndDate": "2028-03-15"
+    },
+    {
+      "Version": "26H2",
+      "SKU": "Windows 11 Enterprise and Education",
+      "StartDate": "2026-09-29",
+      "EndDate": "2029-10-09"
+    },
+    {
+      "Version": "26H2",
+      "SKU": "Windows 11 Home and Pro",
+      "StartDate": "2026-09-29",
+      "EndDate": "2028-10-10"
     }
   ]
 }
