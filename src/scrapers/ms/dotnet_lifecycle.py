@@ -1,6 +1,7 @@
 import logging
 import re
 from datetime import datetime as dt
+from datetime import timedelta
 
 from bs4 import BeautifulSoup
 
@@ -25,6 +26,13 @@ def _parse_date(raw: str) -> str | None:
     m = _ISO_DATE_RE.match(raw)
     if m:
         return m.group(1)
+    # <local-time> UTC timestamp: "11/15/2028 6:59:59 AM". The page renders these in
+    # America/Los_Angeles (starts at 08:00 UTC, ends at 06:59:59 UTC the next day);
+    # a fixed UTC-8 shift lands on the correct Pacific date regardless of DST.
+    try:
+        return (dt.strptime(raw, "%m/%d/%Y %I:%M:%S %p") - timedelta(hours=8)).strftime("%Y-%m-%d")
+    except ValueError:
+        pass
     # Fallback: "Month DD, YYYY"
     try:
         return dt.strptime(raw, "%B %d, %Y").strftime("%Y-%m-%d")

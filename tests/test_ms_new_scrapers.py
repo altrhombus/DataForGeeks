@@ -6,7 +6,12 @@ from pathlib import Path
 import pytest
 
 from src.exceptions import StructureChangedError
-from src.scrapers.ms.dotnet_lifecycle import _DOTNET_URL, _FRAMEWORK_URL, DotnetLifecycleScraper
+from src.scrapers.ms.dotnet_lifecycle import (
+    _DOTNET_URL,
+    _FRAMEWORK_URL,
+    DotnetLifecycleScraper,
+    _parse_date,
+)
 from src.scrapers.ms.edge_releases import _ARCHIVE_URL, EdgeReleasesScraper
 from src.scrapers.ms.edge_releases import _SOURCE_URL as EDGE_URL
 from src.scrapers.ms.exchange_buildnumbers import _SOURCE_URL as EXCH_URL
@@ -192,6 +197,18 @@ class TestDotnetLifecycle:
         records = DotnetLifecycleScraper().parse(dotnet_pages)
         keys = [(r["product"], r["version"]) for r in records]
         assert len(keys) == len(set(keys))
+
+    @pytest.mark.parametrize(
+        ("raw", "expected"),
+        [
+            ("11/11/2025 8:00:00 AM", "2025-11-11"),  # start, PST
+            ("8/9/2022 8:00:00 AM", "2022-08-09"),  # start, PDT
+            ("11/15/2028 6:59:59 AM", "2028-11-14"),  # end-of-day, PST
+            ("5/15/2024 6:59:59 AM", "2024-05-14"),  # end-of-day, PDT
+        ],
+    )
+    def test_parse_local_time_utc(self, raw, expected):
+        assert _parse_date(raw) == expected
 
     def test_dataset_slug(self):
         assert DotnetLifecycleScraper.dataset == "ms/other/dotnet-lifecycle"
