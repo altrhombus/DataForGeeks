@@ -1,11 +1,13 @@
 """Tests for the Windows build numbers scraper using saved HTML fixtures."""
 
+import json
 from datetime import date
 from pathlib import Path
 
 import pytest
 
 from src.exceptions import StructureChangedError
+from src.scrapers.ms import win_buildnumbers
 from src.scrapers.ms.win_buildnumbers import (
     _HOTPATCH_URL,
     _SERVER2016_URL,
@@ -15,6 +17,7 @@ from src.scrapers.ms.win_buildnumbers import (
     _WIN10_URL,
     _WIN11_URL,
     WinBuildNumbersScraper,
+    _load_manual_records,
     _parse_hotpatch_page,
     _parse_standard_page,
 )
@@ -284,6 +287,67 @@ class TestWinBuildNumbersScraper:
 
     def test_sources_count(self):
         assert len(WinBuildNumbersScraper.sources) == 7
+
+
+# ── Manual records ────────────────────────────────────────────────────────────
+
+
+class TestLoadManualRecords:
+    def test_missing_file_returns_empty(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(win_buildnumbers, "_MANUAL_RECORDS_PATH", tmp_path / "does-not-exist.json")
+        assert _load_manual_records() == []
+
+    def test_loads_entries_and_derives_article_url(self, tmp_path, monkeypatch):
+        manual_file = tmp_path / "win_buildnumbers.json"
+        manual_file.write_text(
+            json.dumps(
+                [
+                    {
+                        "full_version": "10.0.26300.9457",
+                        "build": "26300.9457",
+                        "os_type": "client",
+                        "major_version": 11,
+                        "windows_version": "26H2",
+                        "release_date": "2026-09-14",
+                        "kb_article": "KB5129195",
+                        "release_type": "Out-of-band",
+                    }
+                ]
+            ),
+            encoding="utf-8",
+        )
+        monkeypatch.setattr(win_buildnumbers, "_MANUAL_RECORDS_PATH", manual_file)
+
+        records = _load_manual_records()
+        assert len(records) == 1
+        r = records[0]
+        assert r.full_version == "10.0.26300.9457"
+        assert r.is_expired is False  # defaulted, not present in the file
+        assert r.article_url == "https://support.microsoft.com/help/5129195"
+
+    def test_merged_into_scraper_output(self, all_pages, tmp_path, monkeypatch):
+        manual_file = tmp_path / "win_buildnumbers.json"
+        manual_file.write_text(
+            json.dumps(
+                [
+                    {
+                        "full_version": "10.0.26300.9457",
+                        "build": "26300.9457",
+                        "os_type": "client",
+                        "major_version": 11,
+                        "windows_version": "26H2",
+                        "release_date": "2026-09-14",
+                        "kb_article": "KB5129195",
+                        "release_type": "Out-of-band",
+                    }
+                ]
+            ),
+            encoding="utf-8",
+        )
+        monkeypatch.setattr(win_buildnumbers, "_MANUAL_RECORDS_PATH", manual_file)
+
+        records = WinBuildNumbersScraper().parse(all_pages)
+        assert any(r["full_version"] == "10.0.26300.9457" and r["kb_article"] == "KB5129195" for r in records)
 
 
 # ── ValueError guard test ─────────────────────────────────────────────────────

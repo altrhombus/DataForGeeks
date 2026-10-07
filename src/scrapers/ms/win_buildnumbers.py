@@ -1,6 +1,8 @@
+import json
 import logging
 import re
 from html import unescape
+from pathlib import Path
 
 from bs4 import BeautifulSoup
 
@@ -14,6 +16,8 @@ from src.utils.scraper_helpers import (
 )
 
 logger = logging.getLogger(__name__)
+
+_MANUAL_RECORDS_PATH = Path(__file__).parent / "manual" / "win_buildnumbers.json"
 
 _WIN10_URL = "https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda"
 _WIN11_URL = "https://aka.ms/Windows11UpdateHistory"
@@ -61,6 +65,35 @@ _LTSC_TITLE_RE = re.compile(r"\bLTSC\b|\bLTSB\b|Long.Term Servicing|IoT Enterpri
 _SERVER_ONLY_BUILDS = {"10.0.14393.5127"}
 
 
+def _load_manual_records() -> list[WinBuildNumber]:
+    """Load hand-maintained entries for builds the page parsers won't pick up on their own
+
+    (e.g. a KB article whose support page covers some builds but not all of the ones it
+    shipped — KB5129195's page lists 26100.x/26200.x but not 26300.9457). Edit
+    manual/win_buildnumbers.json to add or remove entries; this scraper's code never
+    needs to change for that.
+    """
+    if not _MANUAL_RECORDS_PATH.exists():
+        return []
+
+    entries = json.loads(_MANUAL_RECORDS_PATH.read_text(encoding="utf-8"))
+    return [
+        WinBuildNumber(
+            full_version=entry["full_version"],
+            build=entry["build"],
+            os_type=entry["os_type"],
+            major_version=entry["major_version"],
+            windows_version=entry["windows_version"],
+            release_date=entry["release_date"],
+            kb_article=entry["kb_article"],
+            release_type=entry["release_type"],
+            is_expired=entry.get("is_expired", False),
+            article_url=kb_article_url(entry["kb_article"]),
+        )
+        for entry in entries
+    ]
+
+
 class WinBuildNumbersScraper(BaseScraper):
     """Scrapes Windows 10/11 and Server cumulative update build numbers from support.microsoft.com."""
 
@@ -81,6 +114,8 @@ class WinBuildNumbersScraper(BaseScraper):
 
         if not records:
             raise StructureChangedError("No build entries parsed — page structure may have changed")
+
+        records.extend(_load_manual_records())
 
         # Dedup: one record per (full_version, os_type). Sort ascending by (release_date, build)
         # so the earliest occurrence wins — the first release of any base build is always from
