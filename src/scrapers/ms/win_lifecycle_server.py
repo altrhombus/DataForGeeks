@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from src.exceptions import StructureChangedError
 from src.models.ms.win_lifecycle_server import WinLifecycleServer
 from src.scrapers.base import BaseScraper
-from src.utils.scraper_helpers import deduplicate_sorted
+from src.utils.scraper_helpers import deduplicate_sorted, local_time_date
 
 _SOURCES = [
     "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008",
@@ -82,4 +82,4 @@ class WinLifecycleServerScraper(BaseScraper):
 
 
 def _lt_date(local_time) -> str:
-    return str(local_time.get("datetime") or "")[:10]
+    return local_time_date(str(local_time.get("datetime") or "")) or ""

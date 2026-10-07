@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from src.exceptions import StructureChangedError
 from src.models.ms.win_lifecycle_client import WinLifecycleClient
 from src.scrapers.base import BaseScraper
-from src.utils.scraper_helpers import deduplicate_sorted
+from src.utils.scraper_helpers import deduplicate_sorted, local_time_date
 
 _SOURCES = [
     "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
@@ -43,8 +43,8 @@ class WinLifecycleClientScraper(BaseScraper):
                 if len(local_times) < 2:
                     continue
 
-                start_date = str(local_times[0].get("datetime") or "")[:10]
-                end_date = str(local_times[1].get("datetime") or "")[:10]
+                start_date = local_time_date(str(local_times[0].get("datetime") or "")) or ""
+                end_date = local_time_date(str(local_times[1].get("datetime") or "")) or ""
 
                 records.append(
                     WinLifecycleClient(

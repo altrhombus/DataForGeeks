@@ -13,6 +13,7 @@ from src.utils.json_output import build_envelope, write_if_changed
 from src.utils.scraper_helpers import (
     deduplicate_sorted,
     kb_article_url,
+    local_time_date,
     normalize_ms_url,
     parse_date,
 )
@@ -300,6 +301,22 @@ def test_parse_date_invalid_returns_none():
 def test_parse_date_custom_formats():
     result = parse_date("2026-05-13", formats=["%Y-%m-%d"])
     assert result == "2026-05-13"
+
+
+@pytest.mark.parametrize(
+    ("raw", "expected"),
+    [
+        ("2022-08-09T00:00:00.000-08:00", "2022-08-09"),  # older ISO form
+        ("8/2/2016 8:00:00 AM", "2016-08-02"),  # start, PDT
+        ("11/11/2025 8:00:00 AM", "2025-11-11"),  # start, PST
+        ("10/11/2028 6:59:59 AM", "2028-10-10"),  # end-of-day, PDT
+        ("1/13/2027 6:59:59 AM", "2027-01-12"),  # end-of-day, PST
+        ("", None),
+        ("See Note", None),
+    ],
+)
+def test_local_time_date(raw, expected):
+    assert local_time_date(raw) == expected
 
 
 def test_normalize_ms_url_absolute():
