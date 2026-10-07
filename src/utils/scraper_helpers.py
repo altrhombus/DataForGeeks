@@ -1,7 +1,9 @@
 """Shared parsing utilities used across scraper implementations."""
 
+import re
 from collections.abc import Callable, Generator, Hashable
 from datetime import datetime as dt
+from datetime import timedelta
 from re import Pattern
 from typing import Any
 
@@ -51,6 +53,29 @@ def parse_date(raw: str, *, formats: list[str] | None = None) -> str | None:
         except ValueError:
             continue
     return None
+
+
+_ISO_DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})(?:T[\d:.+-]+)?")
+
+
+def local_time_date(raw: str) -> str | None:
+    """Convert a learn.microsoft.com ``<local-time datetime="...">`` value to YYYY-MM-DD.
+
+    Accepts the older ISO form ("2022-08-09T00:00:00.000-08:00") and the current UTC
+    form ("11/15/2028 6:59:59 AM"). The page renders UTC values in America/Los_Angeles
+    (starts at 08:00 UTC, ends at 06:59:59 UTC the next day); a fixed UTC-8 shift lands
+    on the correct Pacific date regardless of DST. Returns None on no match. Never raises.
+    """
+    raw = raw.strip()
+    if not raw:
+        return None
+    m = _ISO_DATE_RE.match(raw)
+    if m:
+        return m.group(1)
+    try:
+        return (dt.strptime(raw, "%m/%d/%Y %I:%M:%S %p") - timedelta(hours=8)).strftime("%Y-%m-%d")
+    except ValueError:
+        return None
 
 
 def iter_versioned_tables(

@@ -1,43 +1,22 @@
 import logging
 import re
-from datetime import datetime as dt
-from datetime import timedelta
 
 from bs4 import BeautifulSoup
 
 from src.exceptions import StructureChangedError
 from src.models.ms.dotnet_lifecycle import DotnetLifecycle
 from src.scrapers.base import BaseScraper
-from src.utils.scraper_helpers import deduplicate_sorted
+from src.utils.scraper_helpers import deduplicate_sorted, local_time_date, parse_date
 
 logger = logging.getLogger(__name__)
 
 _FRAMEWORK_URL = "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-net-framework"
 _DOTNET_URL = "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-net-and-net-core"
 
-# ISO 8601 timestamp with optional timezone: 2022-08-09T00:00:00.000-08:00
-_ISO_DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})(?:T[\d:.+-]+)?")
-
 
 def _parse_date(raw: str) -> str | None:
-    raw = raw.strip()
-    if not raw:
-        return None
-    m = _ISO_DATE_RE.match(raw)
-    if m:
-        return m.group(1)
-    # <local-time> UTC timestamp: "11/15/2028 6:59:59 AM". The page renders these in
-    # America/Los_Angeles (starts at 08:00 UTC, ends at 06:59:59 UTC the next day);
-    # a fixed UTC-8 shift lands on the correct Pacific date regardless of DST.
-    try:
-        return (dt.strptime(raw, "%m/%d/%Y %I:%M:%S %p") - timedelta(hours=8)).strftime("%Y-%m-%d")
-    except ValueError:
-        pass
-    # Fallback: "Month DD, YYYY"
-    try:
-        return dt.strptime(raw, "%B %d, %Y").strftime("%Y-%m-%d")
-    except ValueError:
-        return None
+    # <local-time> timestamp, with a "Month DD, YYYY" fallback
+    return local_time_date(raw) or parse_date(raw, formats=["%B %d, %Y"])
 
 
 def _parse_lifecycle_page(html: str, product_label: str) -> list[DotnetLifecycle]:
