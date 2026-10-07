@@ -14,53 +14,79 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Collect failed runs from the last 24 hours
+      # A workflow counts as failing while its latest completed run on the default branch
+      # failed, so monthly jobs stay reported until their next run succeeds.
+      - name: Find workflows whose latest run failed
+        id: report
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
-        run: |
-          set -euo pipefail
-          since=$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)
-          gh api "repos/$REPO/actions/runs?created=%3E$since&per_page=100" --paginate \
-            -q '.workflow_runs[] | select(.conclusion == "failure") | {name, html_url}' > failures.jsonl || true
-
-      - name: Build report
-        id: report
+          BRANCH: ${{ github.event.repository.default_branch }}
+          SELF: ${{ github.workflow }}
         run: |
           python3 - <<'EOF'
           import json
           import os
-          from collections import Counter
+          import subprocess
           from datetime import UTC, datetime
 
-          failures = []
-          with open("failures.jsonl", encoding="utf-8") as f:
-              for line in f:
-                  if line.strip():
-                      failures.append(json.loads(line))
+          repo, branch, self_name = os.environ["REPO"], os.environ["BRANCH"], os.environ["SELF"]
+          failed_conclusions = {"failure", "timed_out", "startup_failure"}
+          settled_conclusions = failed_conclusions | {"success"}
 
-          if failures:
-              counts = Counter(r["name"] for r in failures)
-              last_url = {r["name"]: r["html_url"] for r in failures}
+          def gh_api(path):
+              out = subprocess.run(["gh", "api", path], check=True, capture_output=True, text=True).stdout
+              return json.loads(out)
+
+          workflows, page = [], 1
+          while True:
+              batch = gh_api(f"repos/{repo}/actions/workflows?per_page=100&page={page}")["workflows"]
+              workflows += batch
+              if len(batch) < 100:
+                  break
+              page += 1
+
+          failing = []
+          for wf in workflows:
+              if wf["state"] != "active" or wf["name"] == self_name:
+                  continue
+              runs = gh_api(
+                  f"repos/{repo}/actions/workflows/{wf['id']}/runs"
+                  f"?branch={branch}&status=completed&per_page=20"
+              )["workflow_runs"]
+              # Ignore cancelled/skipped runs; judge by the latest run that actually finished.
+              runs = [r for r in runs if r["conclusion"] in settled_conclusions]
+              if not runs or runs[0]["conclusion"] not in failed_conclusions:
+                  continue
+              streak = 0
+              for r in runs:
+                  if r["conclusion"] not in failed_conclusions:
+                      break
+                  streak += 1
+              streak_label = f"{streak}+" if streak == len(runs) else str(streak)
+              failing.append((wf["name"], runs[0]["created_at"], streak_label, runs[0]["html_url"]))
+
+          if failing:
               now = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
               lines = [
-                  f"The following workflows had failed runs in the 24 hours before {now}:",
+                  f"As of {now}, the latest run of these workflows failed:",
                   "",
-                  "| Failures | Workflow | A failed run |",
-                  "|---|---|---|",
+                  "| Workflow | Latest run | Consecutive failures | Failed run |",
+                  "|---|---|---|---|",
               ]
-              for name, count in counts.most_common():
-                  lines.append(f"| {count} | {name} | {last_url[name]} |")
+              for name, created, streak, url in sorted(failing, key=lambda f: f[1]):
+                  lines.append(f"| {name} | {created} | {streak} | {url} |")
               lines += [
                   "",
-                  "_Opened automatically by the Workflow Health Check. Updated daily while "
-                  "failures persist; closed automatically after a failure-free day._",
+                  "_Opened automatically by the Workflow Health Check. Updated daily while any "
+                  "workflow's latest run is failing; closed automatically once every workflow's "
+                  "latest run succeeds._",
               ]
               with open("body.md", "w", encoding="utf-8") as f:
                   f.write("\n".join(lines) + "\n")
 
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
-              f.write(f"has_failures={'true' if failures else 'false'}\n")
+              f.write(f"has_failures={'true' if failing else 'false'}\n")
           EOF
 
       - name: Open, update, or close the health issue
@@ -82,12 +108,12 @@ jobs:
               gh issue create --repo "$REPO" --title "$issue_title" --body-file body.md
               echo "Created new health issue"
             fi
-            echo "::warning::Failed scheduled runs in the last 24h — see the '$issue_title' issue."
+            echo "::warning::Some workflows' latest runs failed — see the '$issue_title' issue."
           else
-            echo "No failed runs in the last 24 hours."
+            echo "Every workflow's latest run succeeded."
             if [ -n "$existing" ]; then
               gh issue close "$existing" --repo "$REPO" \
-                --comment "No failed runs in the last 24 hours — closing automatically."
+                --comment "Every workflow's latest run now succeeds — closing automatically."
               echo "Closed issue #$existing"
             fi
           fi
