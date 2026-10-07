@@ -6,7 +6,12 @@ from pathlib import Path
 import pytest
 
 from src.exceptions import StructureChangedError
-from src.scrapers.ms.dotnet_lifecycle import _DOTNET_URL, _FRAMEWORK_URL, DotnetLifecycleScraper, _parse_date
+from src.scrapers.ms.dotnet_lifecycle import (
+    _DOTNET_URL,
+    _FRAMEWORK_URL,
+    DotnetLifecycleScraper,
+    _parse_date,
+)
 from src.scrapers.ms.edge_releases import _ARCHIVE_URL, EdgeReleasesScraper
 from src.scrapers.ms.edge_releases import _SOURCE_URL as EDGE_URL
 from src.scrapers.ms.exchange_buildnumbers import _SOURCE_URL as EXCH_URL
