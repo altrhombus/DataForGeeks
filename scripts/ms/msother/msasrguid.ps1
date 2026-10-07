@@ -7,39 +7,20 @@ if ($pageData.StatusCode -ne 200) {
     Throw "Error $($pageData.StatusCode) retrieving $sourceUrl"
 }
 
-$rxTable  = [regex]::New('(?msi)<table>(?:.*?)<tbody>(.*?)<\/tbody>')
-$rxRow    = [regex]::New('(?msi)<tr>(.*?)<\/tr>')
-$rxCell   = [regex]::New('(?msi)<td(?:[^>]*)>(.*?)<\/td>')
-$rxHtml   = [regex]::New('(?msi)<[^>]+>')
-$rxUuid   = [regex]::New('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-
-$tables = $rxTable.Matches($pageData.Content)
-
-# Find the GUID matrix table by looking for rows whose second cell contains a UUID.
-$guidTable = $null
-foreach ($table in $tables) {
-    $rows = $rxRow.Matches($table.Groups[1].Value)
-    if ($rows.Count -eq 0) { continue }
-    $cells = $rxCell.Matches($rows[0].Groups[1].Value)
-    if ($cells.Count -eq 2 -and $rxUuid.IsMatch($cells[1].Groups[1].Value)) {
-        $guidTable = $table
-        break
-    }
-}
-
-if (-not $guidTable) {
-    Throw "GUID matrix table not found - the page structure may have changed"
-}
+# Each rule is an <h4> heading followed by a list containing "<strong>GUID</strong>: <code>...</code>".
+$rxSection = [regex]::New('(?msi)<h4[^>]*>(.*?)<\/h4>(.*?)(?=<h[1-4][\s>]|\z)')
+$rxGuid    = [regex]::New('(?msi)<strong>GUID<\/strong>\s*:\s*<code>\s*([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\s*<\/code>')
+$rxHtml    = [regex]::New('(?msi)<[^>]+>')
+$rxSuffix  = [regex]::New('\s*\((?:Device|User)\)\s*$')
 
 $guids = [System.Collections.ArrayList]::new()
-$rxRow.Matches($guidTable.Groups[1].Value).ForEach{
-    $cells = $rxCell.Matches($_.Groups[1].Value)
-    if ($cells.Count -lt 2) { return }
+$rxSection.Matches($pageData.Content).ForEach{
+    $guidMatch = $rxGuid.Match($_.Groups[2].Value)
+    if (-not $guidMatch.Success) { return }
 
-    $asrName = $rxHtml.Replace($cells[0].Groups[1].Value, '').Trim()
-    $asrGuid = $rxHtml.Replace($cells[1].Groups[1].Value, '').Trim()
-
-    if (-not $rxUuid.IsMatch($asrGuid)) { return }
+    $asrName = [System.Net.WebUtility]::HtmlDecode($rxHtml.Replace($_.Groups[1].Value, '')).Trim()
+    $asrName = $rxSuffix.Replace($asrName, '')
+    $asrGuid = $guidMatch.Groups[1].Value.ToLower()
 
     $guids.Add([PSCustomObject]@{
         AsrName = $asrName
