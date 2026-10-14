@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2026-01-16T23:13:30.5126167Z",
+    "LastUpdatedUTC": "2026-10-14T11:10:00.8116717Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/windows/release-health/release-information"
     ]
@@ -12,7 +12,7 @@
       "Build": "14393",
       "StartDate": "2016-08-02",
       "MainstreamEndDate": "End of updates",
-      "ExtendedEndDate": "2026-10-13"
+      "ExtendedEndDate": "End"
     },
     {
       "Version": "2019 (1809)",
