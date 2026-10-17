@@ -13,8 +13,8 @@
       "https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7",
       "https://support.microsoft.com/en-us/topic/release-notes-for-hotpatch-on-windows-11-enterprise-version-25h2-0bbaa1c7-5070-41ca-a7c9-4ead79602dbf"
     ],
-    "lastModified": "2026-10-13T22:06:18Z",
-    "lastCollected": "2026-10-13T22:06:18Z"
+    "lastModified": "2026-10-17T02:15:52Z",
+    "lastCollected": "2026-10-17T02:15:52Z"
   },
   "data": [
     {
@@ -22782,11 +22782,11 @@
       "article_url": "https://support.microsoft.com/help/5122882"
     },
     {
-      "full_version": "10.0.22621.7582",
-      "build": "22621.7582",
+      "full_version": "10.0.22631.7582",
+      "build": "22631.7582",
       "os_type": "client",
       "major_version": 11,
-      "windows_version": "22H2",
+      "windows_version": "23H2",
       "release_date": "2026-09-08",
       "kb_article": "KB5122880",
       "release_type": "Standard",
@@ -23130,11 +23130,11 @@
       "article_url": "https://support.microsoft.com/help/5126655"
     },
     {
-      "full_version": "10.0.22621.7652",
-      "build": "22621.7652",
+      "full_version": "10.0.22631.7652",
+      "build": "22631.7652",
       "os_type": "client",
       "major_version": 11,
-      "windows_version": "22H2",
+      "windows_version": "23H2",
       "release_date": "2026-10-13",
       "kb_article": "KB5126653",
       "release_type": "Standard",
