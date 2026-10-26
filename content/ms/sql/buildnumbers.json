@@ -3,12 +3,12 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "sql-server-build-numbers",
-    "recordCount": 675,
+    "recordCount": 676,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server"
     ],
-    "lastModified": "2026-10-19T12:15:53Z",
-    "lastCollected": "2026-10-19T12:15:53Z"
+    "lastModified": "2026-10-26T12:20:07Z",
+    "lastCollected": "2026-10-26T12:20:07Z"
   },
   "data": [
     {
@@ -6760,6 +6760,16 @@
       "kb_article": "KB5126967",
       "release_date": "2026-10-13",
       "article_url": "https://support.microsoft.com/en-us/help/5126967"
+    },
+    {
+      "sql_version": "SQL Server 2025",
+      "major_version": 2025,
+      "build": "17.0.5035.5",
+      "service_pack": null,
+      "update_type": "CU10",
+      "kb_article": "KB5125471",
+      "release_date": "2026-10-22",
+      "article_url": "https://support.microsoft.com/en-us/help/5125471"
     }
   ]
 }
