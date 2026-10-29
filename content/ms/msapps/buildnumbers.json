@@ -1,11 +1,18 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2026-10-22T03:07:47.3638778Z",
+    "LastUpdatedUTC": "2026-10-29T04:12:27.3188268Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ]
   },
   "Data": [
+    {
+      "ReleaseDate": "2026-10-28",
+      "Channel": "Current",
+      "Build": "20527.20112",
+      "Version": "2610",
+      "FullBuild": "16.0.20527.20112"
+    },
     {
       "ReleaseDate": "2026-10-21",
       "Channel": "Current",
@@ -372,13 +379,6 @@
     },
     {
       "ReleaseDate": "2026-05-14",
-      "Channel": "Monthly Enterprise",
-      "Build": "19929.20172",
-      "Version": "2604",
-      "FullBuild": "16.0.19929.20172"
-    },
-    {
-      "ReleaseDate": "2026-05-14",
       "Channel": "Semi-Annual Enterprise",
       "Build": "19127.20648",
       "Version": "2508",
@@ -387,9 +387,23 @@
     {
       "ReleaseDate": "2026-05-14",
       "Channel": "Monthly Enterprise",
+      "Build": "19929.20172",
+      "Version": "2604",
+      "FullBuild": "16.0.19929.20172"
+    },
+    {
+      "ReleaseDate": "2026-05-14",
+      "Channel": "Monthly Enterprise",
       "Build": "19822.20254",
       "Version": "2603",
       "FullBuild": "16.0.19822.20254"
+    },
+    {
+      "ReleaseDate": "2026-05-12",
+      "Channel": "Current",
+      "Build": "19929.20164",
+      "Version": "2604",
+      "FullBuild": "16.0.19929.20164"
     },
     {
       "ReleaseDate": "2026-05-12",
@@ -418,13 +432,6 @@
       "Build": "19725.20320",
       "Version": "2602",
       "FullBuild": "16.0.19725.20320"
-    },
-    {
-      "ReleaseDate": "2026-05-12",
-      "Channel": "Current",
-      "Build": "19929.20164",
-      "Version": "2604",
-      "FullBuild": "16.0.19929.20164"
     },
     {
       "ReleaseDate": "2026-05-05",
