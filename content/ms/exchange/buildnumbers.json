@@ -3,12 +3,12 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "exchange-server-build-numbers",
-    "recordCount": 341,
+    "recordCount": 349,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates"
     ],
-    "lastModified": "2026-10-01T12:21:00Z",
-    "lastCollected": "2026-10-01T12:21:00Z"
+    "lastModified": "2026-11-01T12:36:30Z",
+    "lastCollected": "2026-11-01T12:36:30Z"
   },
   "data": [
     {
@@ -1664,6 +1664,20 @@
       "release_date": "2026-09-08"
     },
     {
+      "product_name": "Exchange Server 2016 CU23 Sep26SUv2",
+      "exchange_version": "2016",
+      "build": "15.1.2507.75",
+      "build_long": "15.01.2507.075",
+      "release_date": "2026-10-02"
+    },
+    {
+      "product_name": "Exchange Server 2016 CU23 Oct26SU",
+      "exchange_version": "2016",
+      "build": "15.1.2507.77",
+      "build_long": "15.01.2507.077",
+      "release_date": "2026-10-13"
+    },
+    {
       "product_name": "Exchange Server 2019 Preview",
       "exchange_version": "2019",
       "build": "15.2.196.0",
@@ -2322,6 +2336,34 @@
       "release_date": "2026-09-08"
     },
     {
+      "product_name": "Exchange Server 2019 CU14 Sep26SUv2",
+      "exchange_version": "2019",
+      "build": "15.2.1544.48",
+      "build_long": "15.02.1544.048",
+      "release_date": "2026-10-02"
+    },
+    {
+      "product_name": "Exchange Server 2019 CU15 Sep26SUv2",
+      "exchange_version": "2019",
+      "build": "15.2.1748.53",
+      "build_long": "15.02.1748.053",
+      "release_date": "2026-10-02"
+    },
+    {
+      "product_name": "Exchange Server 2019 CU14 Oct26SU",
+      "exchange_version": "2019",
+      "build": "15.2.1544.50",
+      "build_long": "15.02.1544.050",
+      "release_date": "2026-10-13"
+    },
+    {
+      "product_name": "Exchange Server 2019 CU15 Oct26SU",
+      "exchange_version": "2019",
+      "build": "15.2.1748.55",
+      "build_long": "15.02.1748.055",
+      "release_date": "2026-10-13"
+    },
+    {
       "product_name": "Exchange Server SE RTM",
       "exchange_version": "SE",
       "build": "15.2.2562.17",
@@ -2397,6 +2439,20 @@
       "build": "15.2.2562.49",
       "build_long": "15.02.2562.049",
       "release_date": "2026-09-08"
+    },
+    {
+      "product_name": "Exchange Server SE RTM Sep26SUv2",
+      "exchange_version": "SE",
+      "build": "15.2.2562.53",
+      "build_long": "15.02.2562.053",
+      "release_date": "2026-10-02"
+    },
+    {
+      "product_name": "Exchange Server SE RTM Oct26SU",
+      "exchange_version": "SE",
+      "build": "15.2.2562.56",
+      "build_long": "15.02.2562.056",
+      "release_date": "2026-10-13"
     }
   ]
 }
