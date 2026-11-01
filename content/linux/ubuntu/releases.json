@@ -3,20 +3,30 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "ubuntu-releases",
-    "recordCount": 44,
+    "recordCount": 45,
     "sourceUrls": [
       "https://api.launchpad.net/1.0/ubuntu/series?ws.size=75"
     ],
-    "lastModified": "2026-08-01T08:28:06Z",
-    "lastCollected": "2026-08-01T08:28:06Z"
+    "lastModified": "2026-11-01T12:59:17Z",
+    "lastCollected": "2026-11-01T12:59:17Z"
   },
   "data": [
+    {
+      "version": "26.10",
+      "codename": "Stonking Stingray",
+      "series": "stonking",
+      "release_date": "2026-10-15",
+      "status": "Current Stable Release",
+      "is_lts": false,
+      "standard_support_end": "2027-07-15",
+      "esm_support_end": null
+    },
     {
       "version": "26.04",
       "codename": "Resolute Raccoon",
       "series": "resolute",
       "release_date": "2026-04-23",
-      "status": "Current Stable Release",
+      "status": "Supported",
       "is_lts": true,
       "standard_support_end": "2031-04-23",
       "esm_support_end": "2036-04-23"
