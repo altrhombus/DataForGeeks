@@ -3,7 +3,7 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "windows-update-history",
-    "recordCount": 1948,
+    "recordCount": 1964,
     "sourceUrls": [
       "https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda",
       "https://aka.ms/Windows11UpdateHistory",
@@ -13,8 +13,8 @@
       "https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7",
       "https://support.microsoft.com/en-us/topic/release-notes-for-hotpatch-on-windows-11-enterprise-version-25h2-0bbaa1c7-5070-41ca-a7c9-4ead79602dbf"
     ],
-    "lastModified": "2026-10-28T17:40:50Z",
-    "lastCollected": "2026-10-28T17:40:50Z"
+    "lastModified": "2026-11-10T22:40:03Z",
+    "lastCollected": "2026-11-10T22:40:03Z"
   },
   "data": [
     {
@@ -23392,6 +23392,198 @@
       "release_type": "Preview",
       "is_expired": false,
       "article_url": "https://support.microsoft.com/help/5127653"
+    },
+    {
+      "full_version": "10.0.14393.9688",
+      "build": "14393.9688",
+      "os_type": "client",
+      "major_version": 10,
+      "windows_version": "1607",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5131291",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5131291"
+    },
+    {
+      "full_version": "10.0.14393.9688",
+      "build": "14393.9688",
+      "os_type": "server",
+      "major_version": 2016,
+      "windows_version": "1607",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5131291",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5131291"
+    },
+    {
+      "full_version": "10.0.17763.9487",
+      "build": "17763.9487",
+      "os_type": "client",
+      "major_version": 10,
+      "windows_version": "1809",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5131085",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5131085"
+    },
+    {
+      "full_version": "10.0.17763.9487",
+      "build": "17763.9487",
+      "os_type": "server",
+      "major_version": 2019,
+      "windows_version": "1809",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5131085",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5131085"
+    },
+    {
+      "full_version": "10.0.19044.7846",
+      "build": "19044.7846",
+      "os_type": "client",
+      "major_version": 10,
+      "windows_version": "21H2",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5131096",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5131096"
+    },
+    {
+      "full_version": "10.0.19045.7846",
+      "build": "19045.7846",
+      "os_type": "client",
+      "major_version": 10,
+      "windows_version": "22H2",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5131096",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5131096"
+    },
+    {
+      "full_version": "10.0.20348.5870",
+      "build": "20348.5870",
+      "os_type": "server",
+      "major_version": 2022,
+      "windows_version": "2022",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5131090",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5131090"
+    },
+    {
+      "full_version": "10.0.22631.7711",
+      "build": "22631.7711",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "23H2",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5131087",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5131087"
+    },
+    {
+      "full_version": "10.0.26100.33822",
+      "build": "26100.33822",
+      "os_type": "server",
+      "major_version": 2025,
+      "windows_version": "2025",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5131080",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5131080"
+    },
+    {
+      "full_version": "10.0.26100.9911",
+      "build": "26100.9911",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "24H2",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5132043",
+      "release_type": "Hotpatch",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5132043"
+    },
+    {
+      "full_version": "10.0.26100.9974",
+      "build": "26100.9974",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "24H2",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5132061",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5132061"
+    },
+    {
+      "full_version": "10.0.26200.9911",
+      "build": "26200.9911",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "25H2",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5132043",
+      "release_type": "Hotpatch",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5132043"
+    },
+    {
+      "full_version": "10.0.26200.9974",
+      "build": "26200.9974",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "25H2",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5132061",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5132061"
+    },
+    {
+      "full_version": "10.0.26300.9911",
+      "build": "26300.9911",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "26H2",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5132043",
+      "release_type": "Hotpatch",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5132043"
+    },
+    {
+      "full_version": "10.0.26300.9974",
+      "build": "26300.9974",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "26H2",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5132061",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5132061"
+    },
+    {
+      "full_version": "10.0.28000.3501",
+      "build": "28000.3501",
+      "os_type": "client",
+      "major_version": 11,
+      "windows_version": "26H1",
+      "release_date": "2026-11-10",
+      "kb_article": "KB5132059",
+      "release_type": "Standard",
+      "is_expired": false,
+      "article_url": "https://support.microsoft.com/help/5132059"
     }
   ]
 }
