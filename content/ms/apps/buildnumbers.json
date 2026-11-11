@@ -3,14 +3,63 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "m365-update-history",
-    "recordCount": 690,
+    "recordCount": 697,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ],
-    "lastModified": "2026-11-04T22:55:28Z",
-    "lastCollected": "2026-11-04T22:55:28Z"
+    "lastModified": "2026-11-11T12:59:50Z",
+    "lastCollected": "2026-11-11T12:59:50Z"
   },
   "data": [
+    {
+      "release_date": "2026-11-10",
+      "channel": "Current",
+      "build": "20527.20196",
+      "version": "2610",
+      "full_build": "16.0.20527.20196"
+    },
+    {
+      "release_date": "2026-11-10",
+      "channel": "Monthly Enterprise",
+      "build": "20527.20194",
+      "version": "2610",
+      "full_build": "16.0.20527.20194"
+    },
+    {
+      "release_date": "2026-11-10",
+      "channel": "Monthly Enterprise",
+      "build": "20430.20264",
+      "version": "2609",
+      "full_build": "16.0.20430.20264"
+    },
+    {
+      "release_date": "2026-11-10",
+      "channel": "Monthly Enterprise",
+      "build": "20326.20320",
+      "version": "2608",
+      "full_build": "16.0.20326.20320"
+    },
+    {
+      "release_date": "2026-11-10",
+      "channel": "Semi-Annual Enterprise",
+      "build": "20527.20192",
+      "version": "2610",
+      "full_build": "16.0.20527.20192"
+    },
+    {
+      "release_date": "2026-11-10",
+      "channel": "Semi-Annual Enterprise",
+      "build": "20430.20262",
+      "version": "2609",
+      "full_build": "16.0.20430.20262"
+    },
+    {
+      "release_date": "2026-11-10",
+      "channel": "Semi-Annual Enterprise",
+      "build": "20326.20318",
+      "version": "2608",
+      "full_build": "16.0.20326.20318"
+    },
     {
       "release_date": "2026-11-04",
       "channel": "Current",
