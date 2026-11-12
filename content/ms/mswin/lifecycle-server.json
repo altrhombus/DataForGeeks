@@ -1,6 +1,6 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2026-05-14T12:39:14.962714Z",
+    "LastUpdatedUTC": "2026-11-12T14:50:03.4224126Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2",
@@ -110,6 +110,20 @@
       "StartDate": "2013-11-25",
       "MainstreamEndDate": "2018-10-10",
       "ExtendedEndDate": "2023-10-11"
+    },
+    {
+      "Version": "Windows Server 2016",
+      "Tier": "ESU Year 1",
+      "StartDate": "2027-01-13",
+      "MainstreamEndDate": "2028-01-11",
+      "ExtendedEndDate": "2029-01-09"
+    },
+    {
+      "Version": "Windows Server 2016",
+      "Tier": "ESU Year 3",
+      "StartDate": "2029-01-10",
+      "MainstreamEndDate": "2030-01-08",
+      "ExtendedEndDate": "2027-01-13"
     },
     {
       "Version": "Windows Server 2016",
