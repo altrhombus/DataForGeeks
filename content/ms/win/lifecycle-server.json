@@ -3,7 +3,7 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "windows-lifecycle-server",
-    "recordCount": 28,
+    "recordCount": 32,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2008-r2",
@@ -14,8 +14,8 @@
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022",
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025"
     ],
-    "lastModified": "2026-10-07T01:46:04Z",
-    "lastCollected": "2026-10-07T01:46:04Z"
+    "lastModified": "2026-11-12T14:10:29Z",
+    "lastCollected": "2026-11-12T14:10:29Z"
   },
   "data": [
     {
@@ -185,6 +185,34 @@
       "start_date": "2013-11-25",
       "mainstream_end_date": "2018-10-09",
       "extended_end_date": "2023-10-10"
+    },
+    {
+      "version": "Windows Server 2016",
+      "tier": "ESU Year 1",
+      "start_date": "2027-01-13",
+      "mainstream_end_date": "2028-01-11",
+      "extended_end_date": "2028-01-11"
+    },
+    {
+      "version": "Windows Server 2016",
+      "tier": "ESU Year 2",
+      "start_date": "2028-01-12",
+      "mainstream_end_date": "2029-01-09",
+      "extended_end_date": "2029-01-09"
+    },
+    {
+      "version": "Windows Server 2016",
+      "tier": "ESU Year 3",
+      "start_date": "2029-01-10",
+      "mainstream_end_date": "2030-01-08",
+      "extended_end_date": "2030-01-08"
+    },
+    {
+      "version": "Windows Server 2016",
+      "tier": "Original Release",
+      "start_date": "2016-10-15",
+      "mainstream_end_date": "2027-01-12",
+      "extended_end_date": "2027-01-12"
     },
     {
       "version": "Windows Server 2016",
