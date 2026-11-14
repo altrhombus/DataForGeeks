@@ -1,19 +1,11 @@
 {
   "DataForGeeks": {
-    "LastUpdatedUTC": "2026-10-14T11:10:00.8116717Z",
+    "LastUpdatedUTC": "2026-11-14T12:56:59.0290252Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/windows/release-health/release-information"
     ]
   },
   "Data": [
-    {
-      "Version": "2016 (1607)",
-      "ServicingOption": "Long-Term Servicing Branch (LTSB)",
-      "Build": "14393",
-      "StartDate": "2016-08-02",
-      "MainstreamEndDate": "End of updates",
-      "ExtendedEndDate": "End"
-    },
     {
       "Version": "2019 (1809)",
       "ServicingOption": "Long-Term Servicing Channel (LTSC)",
