@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '0 6 * * 2'
   workflow_dispatch:
+    inputs:
+      allow_record_count_drop:
+        description: 'Allow the record count to drop more than 10% (e.g. a retired product was removed upstream)'
+        type: boolean
+        default: false
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
@@ -26,6 +31,8 @@ jobs:
         run: uv sync
       - name: Run scraper
         run: uv run python run.py macos-releases
+        env:
+          ALLOW_RECORD_COUNT_DROP: ${{ inputs.allow_record_count_drop && '1' || '' }}
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v7

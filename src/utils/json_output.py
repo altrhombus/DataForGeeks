@@ -58,5 +58,6 @@ def _check_record_count_drop(existing: dict, envelope: dict, output_path: Path) 
         raise RecordCountDropError(
             f"Refusing to write {output_path.name}: record count dropped from "
             f"{old_count} to {new_count} (below {_MIN_COUNT_RATIO:.0%} threshold) — "
-            f"likely a partial parse failure. Set ALLOW_RECORD_COUNT_DROP=1 to override."
+            f"likely a partial parse failure. If the drop is expected, re-run the workflow "
+            f"manually with 'allow_record_count_drop' checked (or set ALLOW_RECORD_COUNT_DROP=1)."
         )
