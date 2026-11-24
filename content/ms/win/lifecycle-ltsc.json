@@ -3,23 +3,15 @@
     "provider": "DataForGeeks",
     "apiVersion": "v2",
     "dataset": "windows-lifecycle-ltsc",
-    "recordCount": 4,
+    "recordCount": 3,
     "sourceUrls": [
       "https://learn.microsoft.com/en-us/windows/release-health/release-information",
       "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information"
     ],
-    "lastModified": "2026-10-14T11:00:45Z",
-    "lastCollected": "2026-10-14T11:00:45Z"
+    "lastModified": "2026-11-24T21:39:02Z",
+    "lastCollected": "2026-11-24T21:39:02Z"
   },
   "data": [
-    {
-      "version": "2016 (1607)",
-      "servicing_option": "Long-Term Servicing Branch (LTSB)",
-      "build": "14393",
-      "start_date": "2016-08-02",
-      "mainstream_end_date": "End of updates",
-      "extended_end_date": "End"
-    },
     {
       "version": "2019 (1809)",
       "servicing_option": "Long-Term Servicing Channel (LTSC)",
